@@ -24,3 +24,25 @@ Route::get('/site', function () {
 Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
     return view('dashboard');
 })->name('dashboard');
+
+
+// Land
+Route::prefix('home')->group(function () {
+
+
+    Route::get('/', 'AccountController@index');
+
+
+
+});
+
+Route::group(['middleware' => ['auth']], function () {
+    Route::prefix('home')->group(function () {
+
+        Route::get('/porojo', [\App\Models\Post::class, 'index']);
+
+
+
+    });
+});
+
