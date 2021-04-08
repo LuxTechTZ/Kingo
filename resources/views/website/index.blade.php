@@ -45,6 +45,9 @@
 <main>
     <!-- Header -->
     <header id="js-header" class="u-header u-header--static u-shadow-v19">
+
+        <div style="height: 140px; background-color: red; background-image: url('kingo-assets/kingo-footer.png'); background-size: contain; background-repeat: no-repeat; background-position: center"></div>
+
         <!-- Top Bar -->
         <div class="u-header__section g-brd-bottom g-brd-gray-light-v4 g-py-18">
             <div class="container">
@@ -72,7 +75,7 @@
                     <!-- End Subscribe Form -->
 
                     <!-- Language -->
-                    <div class="col-4 col-lg-2 g-pos-rel g-px-15 ml-auto">
+                    {{-- <div class="col-4 col-lg-2 g-pos-rel g-px-15 ml-auto">
                         <a id="languages-dropdown-invoker" class="g-color-secondary-dark-v1 g-color-primary--hover g-text-underline--none--hover" href="#!"
                            aria-controls="languages-dropdown"
                            aria-haspopup="true"
@@ -159,11 +162,11 @@
                                 </a>
                             </li>
                         </ul>
-                    </div>
+                    </div> --}}
                     <!-- End Language -->
 
                     <!-- Account -->
-                    <div class="col-1">
+                    {{-- <div class="col-1">
                         <a id="account-dropdown-invoker" class="media align-items-center float-right g-text-underline--none--hover" href="#!"
                            aria-controls="account-dropdown"
                            aria-haspopup="true"
@@ -198,7 +201,7 @@
                                 <a class="d-block g-color-secondary-dark-v1 g-color-primary--hover g-text-underline--none--hover g-py-5 g-px-20" href="#!">Signout</a>
                             </li>
                         </ul>
-                    </div>
+                    </div> --}}
                     <!-- End Account -->
                 </div>
             </div>
@@ -232,86 +235,54 @@
                     <!-- Navigation -->
                     <div class="collapse navbar-collapse align-items-center flex-sm-row g-pt-10 g-pt-5--lg" id="navBar">
                         <ul class="navbar-nav g-font-weight-600">
-
-                            <li class="nav-item g-mr-10--lg g-mr-20--xl">
-                                <a id="nav-link--home" class="nav-link text-uppercase g-color-primary--hover g-px-0" href="#!"
-                                   aria-haspopup="true"
-                                   aria-expanded="false"
-                                   aria-controls="nav-submenu--home">
+                           
+                            <li class="nav-item g-mx-10--lg g-mx-20--xl">
+                                <a id="nav-link--pages" class="nav-link text-uppercase g-color-primary--hover g-px-0" href="../../../index.html">
                                     SEBULENI
                                 </a>
                             </li>
 
-                            <li class="nav-item g-mr-10--lg g-mr-20--xl">
-                                <a id="nav-link--home" class="nav-link text-uppercase g-color-primary--hover g-px-0" href="#!"
-                                   aria-haspopup="true"
-                                   aria-expanded="false"
-                                   aria-controls="nav-submenu--home">
+                            <li class="nav-item g-mx-10--lg g-mx-20--xl">
+                                <a id="nav-link--pages" class="nav-link text-uppercase g-color-primary--hover g-px-0" href="../../../index.html">
                                     POROJO
                                 </a>
                             </li>
 
-                            <li class="nav-item g-mr-10--lg g-mr-20--xl">
-                                <a id="nav-link--home" class="nav-link text-uppercase g-color-primary--hover g-px-0" href="#!"
-                                   aria-haspopup="true"
-                                   aria-expanded="false"
-                                   aria-controls="nav-submenu--home">
+                            <li class="nav-item g-mx-10--lg g-mx-20--xl">
+                                <a id="nav-link--pages" class="nav-link text-uppercase g-color-primary--hover g-px-0" href="../../../index.html">
                                     DOMOKAYA
                                 </a>
                             </li>
 
-                            <li class="nav-item g-mr-10--lg g-mr-20--xl">
-                                <a id="nav-link--home" class="nav-link text-uppercase g-color-primary--hover g-px-0" href="#!"
-                                   aria-haspopup="true"
-                                   aria-expanded="false"
-                                   aria-controls="nav-submenu--home">
+                            <li class="nav-item g-mx-10--lg g-mx-20--xl">
+                                <a id="nav-link--pages" class="nav-link text-uppercase g-color-primary--hover g-px-0" href="../../../index.html">
                                     POROJO LIVE
                                 </a>
                             </li>
 
-                            <li class="nav-item g-mr-10--lg g-mr-20--xl">
-                                <a id="nav-link--home" class="nav-link text-uppercase g-color-primary--hover g-px-0" href="#!"
-                                   aria-haspopup="true"
-                                   aria-expanded="false"
-                                   aria-controls="nav-submenu--home">
+                            <li class="nav-item g-mx-10--lg g-mx-20--xl">
+                                <a id="nav-link--pages" class="nav-link text-uppercase g-color-primary--hover g-px-0" href="../../../index.html">
                                     MJUE MAARUFU
                                 </a>
                             </li>
 
-                            <li class="nav-item g-mr-10--lg g-mr-20--xl">
-                                <a id="nav-link--home" class="nav-link text-uppercase g-color-primary--hover g-px-0" href="#!"
-                                   aria-haspopup="true"
-                                   aria-expanded="false"
-                                   aria-controls="nav-submenu--home">
+                            <li class="nav-item g-mx-10--lg g-mx-20--xl">
+                                <a id="nav-link--pages" class="nav-link text-uppercase g-color-primary--hover g-px-0" href="../../../index.html">
                                     VIDEO
                                 </a>
                             </li>
 
-                            <li class="nav-item g-mr-10--lg g-mr-20--xl">
-                                <a id="nav-link--home" class="nav-link text-uppercase g-color-primary--hover g-px-0" href="#!"
-                                   aria-haspopup="true"
-                                   aria-expanded="false"
-                                   aria-controls="nav-submenu--home">
+                            <li class="nav-item g-mx-10--lg g-mx-20--xl">
+                                <a id="nav-link--pages" class="nav-link text-uppercase g-color-primary--hover g-px-0" href="../../../index.html">
                                     RIWAYA
                                 </a>
                             </li>
 
-                            <li class="nav-item  g-mr-10--lg g-mr-20--xl">
-                                <a id="nav-link--home" class="nav-link text-uppercase g-color-primary--hover g-px-0" href="#!"
-                                   aria-haspopup="true"
-                                   aria-expanded="false"
-                                   aria-controls="nav-submenu--home">
+                            <li class="nav-item g-mx-10--lg g-mx-20--xl">
+                                <a id="nav-link--pages" class="nav-link text-uppercase g-color-primary--hover g-px-0" href="../../../index.html">
                                     KINGO KATUNI
                                 </a>
                             </li>
-                            
-
-                           
-                            {{-- <li class="nav-item g-mx-10--lg g-mx-20--xl">
-                                <a id="nav-link--pages" class="nav-link text-uppercase g-color-primary--hover g-px-0" href="../../../index.html">
-                                    Main
-                                </a>
-                            </li> --}}
                            
                         </ul>
                     </div>
