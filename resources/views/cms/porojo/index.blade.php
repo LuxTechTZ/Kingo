@@ -1,7 +1,11 @@
 <x-app-layout>
     <x-slot name="header">
         <h2 class="font-semibold text-xl text-gray-800 leading-tight">
-            {{ __('Dashboard') }}
+            {{ __('Porojo') }}
+            <a href="{{route('create_porojo')}}" class="inline-flex justify-center py-2 px-4
+                                            border border-transparent shadow-sm text-sm font-medium rounded-md
+                                            text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none
+                                            focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 " >Add New</a>
         </h2>
     </x-slot>
 
@@ -16,64 +20,48 @@
                                     <thead class="bg-gray-50">
                                     <tr>
                                         <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
-                                            Project Name
+                                            Post Name
                                         </th>
+
+
                                         <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
-                                            Description
+                                            Post Date
                                         </th>
-                                        <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
-                                            Status
-                                        </th>
-                                        <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
-                                            Start Date
-                                        </th>
-                                        <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
-                                            Batches
-                                        </th>
+
                                         <th scope="col" class="relative px-6 py-3">
                                             <span class="sr-only">Edit</span>
                                         </th>
                                     </tr>
                                     </thead>
                                     <tbody class="bg-white divide-y divide-gray-200">
-                                    @foreach($post as $project)
+                                    @foreach($posts as $post)
                                         <tr>
                                             <td class="px-6 py-4 whitespace-nowrap">
                                                 <div class="flex items-center">
+                                                    <div class="flex-shrink-0 h-10 w-10">
+                                                        <img class="h-10 w-10 rounded-full"
+                                                             src="{{url('/')}}/{{$post->image_url}}" alt="">
+                                                    </div>
 
                                                     <div class="ml-4">
                                                         <div class="text-sm font-medium text-gray-900">
-                                                            {{$project->name}}
+                                                            {{$post->title}}
                                                         </div>
                                                         <div class="text-sm text-gray-500">
-                                                            {{number_format($project->capital)}} Tsh
+                                                            {{$post->desc}}
 post                              </div>
                                                     </div>
                                                 </div>
                                             </td>
-                                            <td class="px-6 py-4 whitespace-nowrap">
-                                                <div class="text-sm text-gray-900">{{$project->desc}}</div>
-                                                <div class="text-sm text-gray-500">{{$project->category->name}}</div>
-                                            </td>
-                                            <td class="px-6 py-4 whitespace-nowrap">
-                                                @if(isset($project->deleated_at))
-                                                    <span class="px-2 inline-flex text-xs leading-5 font-semibold rounded-full
-                                 bg-red-100 text-red-800">Deactivated</span>
-                                                @else
-                                                    <span class="px-2 inline-flex text-xs leading-5 font-semibold rounded-full
-                                 bg-green-100 text-green-800">Active</span>
-                                                @endif
-                                            </td>
+
+
                                             <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">
-                                                {{date('d M Y', strtotime($project->start_date))}}
-                                            </td>
-                                            <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">
-                                                {{count($project->batches)}}
+                                                {{date('d M Y', strtotime($post->post_date))}}
                                             </td>
 
                                             <td class="px-6 py-4 whitespace-nowrap text-right text-sm font-medium">
-                                                <a href="/projects/show/{{$project->id}}" class="inline-block rounded-lg shadow-lg text-xs px-3 py-1 bg-green-500 text-white ">View</a>
-                                                <a href="/projects/edit/{{$project->id}}" class="inline-block rounded-lg shadow-lg text-xs px-3 py-1 bg-indigo-500 text-white ">Edit</a>
+                                                <a href="/projects/show/{{$post->id}}" class="inline-block rounded-lg shadow-lg text-xs px-3 py-1 bg-green-500 text-white ">View</a>
+                                                <a href="/projects/edit/{{$post->id}}" class="inline-block rounded-lg shadow-lg text-xs px-3 py-1 bg-indigo-500 text-white ">Edit</a>
                                             </td>
                                         </tr>
                                     @endforeach

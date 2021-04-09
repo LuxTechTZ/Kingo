@@ -7,11 +7,7 @@ use Illuminate\Http\Request;
 
 class PostController extends Controller
 {
-    /**
-     * Display a listing of the resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
+
     public function index()
     {
         $posts = Post::get();
@@ -19,14 +15,11 @@ class PostController extends Controller
         return view('cms.porojo.index',compact('posts'));
     }
 
-    /**
-     * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
+
     public function create()
     {
         //
+        return view('cms.porojo.create');
     }
 
     /**
@@ -38,6 +31,17 @@ class PostController extends Controller
     public function store(Request $request)
     {
         //
+    }
+
+    public function storePorojo(Request $request)
+    {
+        if (isset($request['image'])) {
+            $request['image_url'] = $this->upload_image($request['image']);
+        }
+
+        $request['post_category_id'] = 1;
+        Post::create($request->all());
+        return redirect()->back();
     }
 
     /**
@@ -83,5 +87,20 @@ class PostController extends Controller
     public function destroy($id)
     {
         //
+    }
+
+    public function upload_image($file)
+    {
+
+        $file_type = $file->extension();
+
+        $file_name  = microtime(true).".".$file_type;
+
+        // $file_size = $file->getClientSize();
+
+        $file->move('uploads/sliders/',$file_name);
+
+        return $request['image_url'] = 'uploads/sliders/'.$file_name;
+
     }
 }

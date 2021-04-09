@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\PostController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -37,12 +38,11 @@ Route::prefix('home')->group(function () {
 });
 
 Route::group(['middleware' => ['auth']], function () {
-    Route::prefix('home')->group(function () {
 
-        Route::get('/porojo', [\App\Models\Post::class, 'index']);
-
-
-
+    Route::prefix('home/porojo')->group(function () {
+        Route::get('/', [PostController::class, 'index'])->name('porojo');
+        Route::get('/create', [PostController::class, 'create'])->name('create_porojo');
+        Route::post('/store', [PostController::class, 'storePorojo']);
     });
 });
 

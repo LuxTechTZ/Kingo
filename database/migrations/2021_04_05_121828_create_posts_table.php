@@ -19,6 +19,7 @@ class CreatePostsTable extends Migration
             $table->string('artist_name');
             $table->string('title');
             $table->string('desc');
+            $table->string('image_url');
             $table->longText('content');
             $table->integer('status')->default(0);
             $table->date('post_date')->nullable();

@@ -12,7 +12,8 @@
     <meta http-equiv="x-ua-compatible" content="ie=edge">
 
     <!-- Favicon -->
-    <link rel="shortcut icon" href="../../../favicon.ico">
+    <link href="{{url('/')}}/assets/kingo-favi.png" rel="icon">
+
 
     <!-- Google Fonts -->
     <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Roboto+Slab:300,400,700%7COpen+Sans:400,600,700">
@@ -51,8 +52,8 @@
                 <div class="row align-items-center">
                     <!-- Logo -->
                     <div class="col-md-3 g-hidden-md-down">
-                        <a href="bm-classic-home-page-1.html" class="navbar-brand">
-                            <img style="max-height: 70px" src="{{url('/')}}/assets-magazine/img/logo-new.jpg" alt="Logo">
+                        <a href="{{url('/')}}" class="navbar-brand">
+                            <img style="max-height: 60px" src="{{url('/')}}/assets-magazine/img/logo-new.png" alt="Logo">
                         </a>
                     </div>
                     <!-- End Logo -->
@@ -209,8 +210,8 @@
             <nav class="js-mega-menu navbar navbar-expand-lg g-px-0">
                 <div class="container g-px-15">
                     <!-- Logo -->
-                    <a class="navbar-brand g-hidden-lg-up" href="bm-classic-home-page-1.html">
-                        <img src="{{url('/')}}/assets-magazine/img/logo.png" alt="Logo">
+                    <a class="navbar-brand g-hidden-lg-up" href="{{url('/')}}">
+                        <img style="height: 50px" src="{{url('/')}}/assets-magazine/img/logo-new.png" alt="Logo">
                     </a>
                     <!-- End Logo -->
 
@@ -304,15 +305,15 @@
                                     KINGO KATUNI
                                 </a>
                             </li>
-                            
 
-                           
+
+
                             {{-- <li class="nav-item g-mx-10--lg g-mx-20--xl">
                                 <a id="nav-link--pages" class="nav-link text-uppercase g-color-primary--hover g-px-0" href="../../../index.html">
                                     Main
                                 </a>
                             </li> --}}
-                           
+
                         </ul>
                     </div>
                     <!-- End Navigation -->
@@ -2530,8 +2531,8 @@
                 <div class="row align-items-center">
                     <div class="col-md-4 g-hidden-sm-down g-mb-30">
                         <!-- Logo -->
-                        <a href="bm-classic-home-2.html">
-                            <img class="g-width-150" src="{{url('/')}}/assets-magazine/img/logo.png" alt="Logo">
+                        <a href="{{url('/')}}">
+                            <img class="g-width-150" src="{{url('/')}}/assets-magazine/img/logo-new.png" alt="Logo">
                         </a>
                         <!-- End Logo -->
                     </div>
