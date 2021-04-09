@@ -302,12 +302,12 @@
                     <!-- Article -->
                     <article class="u-block-hover">
                         <figure class="u-shadow-v25 g-bg-cover g-bg-white-gradient-opacity-v1--after">
-                            <img class="img-fluid w-100 u-block-hover__main--zoom-v1" src="{{url('/')}}/kingo-assets/Domokaya/magufuli-baisikeli.png" alt="Image Description">
+                            <img class="img-fluid w-100 u-block-hover__main--zoom-v1" src="https://kingo.s3-eu-west-1.amazonaws.com/dynamic-content/images/small-4703-20210326153526-335798.jpg" alt="Image Description">
                         </figure>
 
-                        <span class="g-hidden-xs-down u-icon-v3 u-icon-size--sm g-font-size-13 g-bg-white rounded-circle g-pos-abs g-top-30 g-right-30">
+                        {{-- <span class="g-hidden-xs-down u-icon-v3 u-icon-size--sm g-font-size-13 g-bg-white rounded-circle g-pos-abs g-top-30 g-right-30">
                   <i class="icon-camera"></i>
-                </span>
+                </span> --}}
 
                         <span class="g-hidden-xs-down g-pos-abs g-top-30 g-left-30">
                   <a class="btn btn-xs u-btn-darkpurple text-uppercase rounded-0" href="#!">DOMOKAYA</a>
@@ -344,12 +344,12 @@
                     <!-- Article -->
                     <article class="u-block-hover">
                         <figure class="u-shadow-v25 g-bg-cover g-bg-white-gradient-opacity-v1--after">
-                            <img class="img-fluid w-100 u-block-hover__main--zoom-v1" src="{{url('/')}}/kingo-assets/Domokaya/magufuli-baisikeli.png" alt="Image Description">
+                            <img class="img-fluid w-100 u-block-hover__main--zoom-v1" src="https://kingo.s3-eu-west-1.amazonaws.com/dynamic-content/images/small-1989-20210329080719-335214.jpg" alt="Image Description">
                         </figure>
 
-                        <span class="g-hidden-xs-down u-icon-v3 u-icon-size--sm g-font-size-13 g-bg-white rounded-circle g-pos-abs g-top-30 g-right-30">
+                        {{-- <span class="g-hidden-xs-down u-icon-v3 u-icon-size--sm g-font-size-13 g-bg-white rounded-circle g-pos-abs g-top-30 g-right-30">
                   <i class="fa fa-play g-left-2"></i>
-                </span>
+                </span> --}}
 
                         <span class="g-hidden-xs-down g-pos-abs g-top-30 g-left-30">
                   <a class="btn btn-xs u-btn-red text-uppercase rounded-0" href="#!">POROJO</a>
@@ -457,7 +457,7 @@
                     <!-- Latest News -->
                     <div class="g-mb-50">
                         <div class="u-heading-v3-1 g-mb-30">
-                            <h2 class="h5 u-heading-v3__title g-font-primary g-font-weight-700 g-color-gray-dark-v1 text-uppercase g-brd-primary">Latest News</h2>
+                            <h2 class="h5 u-heading-v3__title g-font-primary g-font-weight-700 g-color-gray-dark-v1 text-uppercase g-brd-primary">POST MPYA</h2>
                         </div>
 
                         <div class="row">
@@ -465,22 +465,22 @@
                             <div class="col-lg-7 g-mb-50 g-mb-0--lg">
                                 <article>
                                     <figure class="u-shadow-v25 g-pos-rel g-mb-20">
-                                        <img class="img-fluid w-100" src="{{url('/')}}/assets-magazine/img-temp/500x450/img7.jpg" alt="Image Description">
+                                        <img class="img-fluid w-100" src="https://kingo.s3-eu-west-1.amazonaws.com/dynamic-content/images/4578-20210407134706-454802.jpg" alt="Image Description">
 
                                         <figcaption class="g-pos-abs g-top-20 g-left-20">
-                                            <a class="btn btn-xs u-btn-teal text-uppercase rounded-0" href="#!">Office</a>
+                                            <a class="btn btn-xs u-btn-teal text-uppercase rounded-0" href="#!">DOMOKAYA</a>
                                         </figcaption>
                                     </figure>
 
                                     <h3 class="h4 g-mb-10">
-                                        <a class="u-link-v5 g-color-gray-dark-v1 g-color-primary--hover" href="#!">Exclusive interview with InVision's CEO</a>
+                                        <a class="u-link-v5 g-color-gray-dark-v1 g-color-primary--hover" href="#!">Alipata kusema</a>
                                     </h3>
 
                                     <ul class="list-inline g-color-gray-dark-v4 g-font-size-12">
-                                        <li class="list-inline-item">
+                                        {{-- <li class="list-inline-item">
                                             <a class="u-link-v5 g-color-gray-dark-v4 g-color-primary--hover" href="#!">Mike Coolman</a>
-                                        </li>
-                                        <li class="list-inline-item">/</li>
+                                        </li> --}}
+                                        {{-- <li class="list-inline-item">/</li>
                                         <li class="list-inline-item">
                                             July 20, 2017
                                         </li>
@@ -493,7 +493,7 @@
                                     </ul>
 
                                     <p class="g-color-gray-dark-v2">Clark Valberg is the founder and CEO of InVision. If you are a designer, you have probably gotten. If you are a designer, you have probably gotten.</p>
-                                    <a class="g-font-size-12" href="#!">Read More..</a>
+                                    <a class="g-font-size-12" href="#!">Read More..</a> --}}
                                 </article>
                             </div>
                             <!-- End Article (Leftside) -->
@@ -503,7 +503,7 @@
                                 <!-- Article -->
                                 <article class="media">
                                     <a class="d-flex u-shadow-v25 align-self-center mr-3" href="#!">
-                                        <img class="g-width-80 g-height-80" src="{{url('/')}}/assets-magazine/img-temp/230x230/img1.jpg" alt="Image Description">
+                                        <img class="g-width-80 g-height-80" src="https://kingo.s3-eu-west-1.amazonaws.com/dynamic-content/images/large-5987-20210405100545-304418.jpg" alt="Image Description">
                                     </a>
 
                                     <div class="media-body">
@@ -531,7 +531,7 @@
                                 <!-- Article -->
                                 <article class="media">
                                     <a class="d-flex u-shadow-v25 align-self-center mr-3" href="#!">
-                                        <img class="g-width-80 g-height-80" src="{{url('/')}}/assets-magazine/img-temp/230x230/img2.jpg" alt="Image Description">
+                                        <img class="g-width-80 g-height-80" src="https://kingo.s3-eu-west-1.amazonaws.com/dynamic-content/images/small-5222-20210405000931-413090.jpg" alt="Image Description">
                                     </a>
 
                                     <div class="media-body">
@@ -556,59 +556,7 @@
 
                                 <hr class="g-brd-gray-light-v4 g-my-25">
 
-                                <!-- Article -->
-                                <article class="media">
-                                    <a class="d-flex u-shadow-v25 align-self-center mr-3" href="#!">
-                                        <img class="g-width-80 g-height-80" src="{{url('/')}}/assets-magazine/img-temp/230x230/img4.jpg" alt="Image Description">
-                                    </a>
-
-                                    <div class="media-body">
-                                        <h3 class="h6">
-                                            <a class="u-link-v5 g-color-gray-dark-v1 g-color-primary--hover" href="#!">Government plans to test new primary school pupils and teachers..</a>
-                                        </h3>
-
-                                        <ul class="u-list-inline g-font-size-12 g-color-gray-dark-v4">
-                                            <li class="list-inline-item">
-                                                July 07, 2017
-                                            </li>
-                                            <li class="list-inline-item">/</li>
-                                            <li class="list-inline-item">
-                                                <a class="g-color-gray-dark-v4 g-text-underline--none--hover" href="#!">
-                                                    <i class="icon-finance-206 u-line-icon-pro align-middle g-pos-rel g-top-1 mr-1"></i> 24
-                                                </a>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                </article>
-                                <!-- End Article -->
-
-                                <hr class="g-brd-gray-light-v4 g-my-25">
-
-                                <!-- Article -->
-                                <article class="media">
-                                    <a class="d-flex u-shadow-v25 align-self-center mr-3" href="#!">
-                                        <img class="g-width-80 g-height-80" src="{{url('/')}}/assets-magazine/img-temp/230x230/img3.jpg" alt="Image Description">
-                                    </a>
-
-                                    <div class="media-body">
-                                        <h3 class="h6">
-                                            <a class="u-link-v5 g-color-gray-dark-v1 g-color-primary--hover" href="#!">Things to do - see and purchase only stylish stuff this week</a>
-                                        </h3>
-
-                                        <ul class="u-list-inline g-font-size-12 g-color-gray-dark-v4">
-                                            <li class="list-inline-item">
-                                                July 16, 2017
-                                            </li>
-                                            <li class="list-inline-item">/</li>
-                                            <li class="list-inline-item">
-                                                <a class="g-color-gray-dark-v4 g-text-underline--none--hover" href="#!">
-                                                    <i class="icon-finance-206 u-line-icon-pro align-middle g-pos-rel g-top-1 mr-1"></i> 31
-                                                </a>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                </article>
-                                <!-- End Article -->
+                               
                             </div>
                             <!-- End Article (Rightside) -->
                         </div>
@@ -618,17 +566,17 @@
                     <!-- Breaking News -->
                     <div class="g-mb-60">
                         <div class="u-heading-v3-1 g-mb-30">
-                            <h2 class="h5 u-heading-v3__title g-font-primary g-font-weight-700 g-color-gray-dark-v1 text-uppercase g-brd-primary">Breaking News</h2>
+                            <h2 class="h5 u-heading-v3__title g-font-primary g-font-weight-700 g-color-gray-dark-v1 text-uppercase g-brd-primary">ZILIZOSOMWA ZAIDI</h2>
                         </div>
 
                         <div class="row g-mb-30">
                             <!-- Article Image -->
                             <div class="col-md-5">
                                 <figure class="u-shadow-v25 g-pos-rel g-mb-20 g-mb-0--lg">
-                                    <img class="img-fluid w-100" src="{{url('/')}}/assets-magazine/img-temp/400x270/img3.jpg" alt="Image Description">
+                                    <img class="img-fluid w-100" src="https://kingo.s3-eu-west-1.amazonaws.com/dynamic-content/images/small-3754-20200418183132-217954.jpg" alt="Image Description">
 
                                     <figcaption class="g-pos-abs g-top-20 g-left-20">
-                                        <a class="btn btn-xs u-btn-pink text-uppercase rounded-0" href="#!">Internet</a>
+                                        <a class="btn btn-xs u-btn-pink text-uppercase rounded-0" href="#!">POROJO</a>
                                     </figcaption>
                                 </figure>
                             </div>
@@ -637,13 +585,13 @@
                             <!-- Article Content -->
                             <div class="col-md-7 align-self-center">
                                 <h3 class="h4 g-mb-15">
-                                    <a class="u-link-v5 g-color-gray-dark-v1 g-color-primary--hover" href="#!">10 Best Tips for UX/UI Designers in 2017</a>
+                                    <a class="u-link-v5 g-color-gray-dark-v1 g-color-primary--hover" href="#!">Kibatari na Embe za watoto</a>
                                 </h3>
 
                                 <ul class="list-inline g-color-gray-dark-v4 g-font-size-12">
-                                    <li class="list-inline-item">
+                                    {{-- <li class="list-inline-item">
                                         <a class="u-link-v5 g-color-gray-dark-v4 g-color-primary--hover" href="#!">Mike Coolman</a>
-                                    </li>
+                                    </li> --}}
                                     <li class="list-inline-item">/</li>
                                     <li class="list-inline-item">
                                         July 19, 2017
@@ -656,8 +604,8 @@
                                     </li>
                                 </ul>
 
-                                <p class="g-color-gray-dark-v2">Pellentesque turpis lacus, a pulvinar leo ultricies ut. Ut fringilla lectus tellusimp imperdiet molestie est volutpat at. Sed viverra cursus nibh. Sed ultrices velit vitae tortor posuere ultrices.</p>
-                                <a class="g-font-size-12" href="#!">Read More..</a>
+                                <p class="g-color-gray-dark-v2">Kuna kisa cha jamaa aliyefunga safari kwenda kuwasalimia ndugu zake  kijijini. Njiani alinunua embe tano kama zawadi ya watoto wa mwenyeji wake.</p>
+                                <a class="g-font-size-12" href="#!">Soma Zaidi..</a>
                             </div>
                             <!-- End Article Content -->
                         </div>
@@ -667,7 +615,7 @@
                     <!-- Featured Articles -->
                     <div class="g-mb-60">
                         <div class="u-heading-v3-1 g-mb-30">
-                            <h2 class="h5 u-heading-v3__title g-font-primary g-font-weight-700 g-color-gray-dark-v1 text-uppercase g-brd-primary">Featured Articles</h2>
+                            <h2 class="h5 u-heading-v3__title g-font-primary g-font-weight-700 g-color-gray-dark-v1 text-uppercase g-brd-primary">UNAWEZA ANGALIA PIA</h2>
                         </div>
 
                         <div class="row g-mb-60">
@@ -675,22 +623,18 @@
                                 <!-- Article -->
                                 <article class="g-mb-30">
                                     <figure class="u-shadow-v25 g-pos-rel g-mb-20">
-                                        <img class="img-fluid w-100" src="{{url('/')}}/assets-magazine/img-temp/500x450/img3.jpg" alt="Image Description">
+                                        <img class="img-fluid w-100" src="https://kingo.s3-eu-west-1.amazonaws.com/dynamic-content/images/small-5222-20210405000931-413090.jpg" alt="Image Description">
 
                                         <figcaption class="g-pos-abs g-top-20 g-left-20">
-                                            <a class="btn btn-xs u-btn-red text-uppercase rounded-0" href="#!">Drons</a>
+                                            <a class="btn btn-xs u-btn-red text-uppercase rounded-0" href="#!">DOMOKAYA</a>
                                         </figcaption>
                                     </figure>
 
                                     <h3 class="h4 g-mb-10">
-                                        <a class="u-link-v5 g-color-gray-dark-v1 g-color-primary--hover" href="#!">We Love Education</a>
+                                        <a class="u-link-v5 g-color-gray-dark-v1 g-color-primary--hover" href="#!">Mwana wa Kondoo Kafufuka</a>
                                     </h3>
 
                                     <ul class="list-inline g-color-gray-dark-v4 g-font-size-12">
-                                        <li class="list-inline-item">
-                                            <a class="u-link-v5 g-color-gray-dark-v4 g-color-primary--hover" href="#!">Mike Coolman</a>
-                                        </li>
-                                        <li class="list-inline-item">/</li>
                                         <li class="list-inline-item">
                                             July 20, 2017
                                         </li>
@@ -702,82 +646,60 @@
                                         </li>
                                     </ul>
 
-                                    <p class="g-color-gray-dark-v2">How to run a ticket: Best 10 point approaches for people who stands. Clark Valberg is the founder and CEO of InVision. If you are a designer, you have probably gotten.</p>
-                                    <a class="g-font-size-12" href="#!">Read More..</a>
+                                    {{-- <p class="g-color-gray-dark-v2">How to run a ticket: Best 10 point approaches for people who stands. Clark Valberg is the founder and CEO of InVision. If you are a designer, you have probably gotten.</p>
+                                    <a class="g-font-size-12" href="#!">Read More..</a> --}}
                                 </article>
                                 <!-- End Article -->
 
                                 <!-- Article -->
-                                <article>
-                      <span class="g-font-size-12">
-                        <a class="u-link-v5 g-color-gray-dark-v4" href="#!">Evan Bartlett</a>
-                      </span>
-                                    <h3 class="h6">
-                                        <a class="g-color-gray-dark-v1" href="#!">Cameron's silence on defence is shameful</a>
+                                <article class="g-mb-30">
+                                    <figure class="u-shadow-v25 g-pos-rel g-mb-20">
+                                        <img class="img-fluid w-100" src="https://kingo.s3-eu-west-1.amazonaws.com/dynamic-content/images/small-5222-20210405000931-413090.jpg" alt="Image Description">
+
+                                        <figcaption class="g-pos-abs g-top-20 g-left-20">
+                                            <a class="btn btn-xs u-btn-red text-uppercase rounded-0" href="#!">DOMOKAYA</a>
+                                        </figcaption>
+                                    </figure>
+
+                                    <h3 class="h4 g-mb-10">
+                                        <a class="u-link-v5 g-color-gray-dark-v1 g-color-primary--hover" href="#!">Mwana wa Kondoo Kafufuka</a>
                                     </h3>
+
+                                    <ul class="list-inline g-color-gray-dark-v4 g-font-size-12">
+                                        <li class="list-inline-item">
+                                            July 20, 2017
+                                        </li>
+                                        <li class="list-inline-item">/</li>
+                                        <li class="list-inline-item">
+                                            <a class="u-link-v5 g-color-gray-dark-v4 g-color-primary--hover" href="#!">
+                                                <i class="icon-finance-206 u-line-icon-pro align-middle g-pos-rel g-top-1 mr-1"></i> 24
+                                            </a>
+                                        </li>
+                                    </ul>
+
+                                    {{-- <p class="g-color-gray-dark-v2">How to run a ticket: Best 10 point approaches for people who stands. Clark Valberg is the founder and CEO of InVision. If you are a designer, you have probably gotten.</p>
+                                    <a class="g-font-size-12" href="#!">Read More..</a> --}}
                                 </article>
                                 <!-- End Article -->
 
-                                <hr class="g-brd-gray-light-v4 g-mt-15 g-mb-10">
-
-                                <!-- Article -->
-                                <article>
-                      <span class="g-font-size-12">
-                        <a class="u-link-v5 g-color-gray-dark-v4" href="#!">Jonathan Owen</a>
-                      </span>
-                                    <h3 class="h6">
-                                        <a class="g-color-gray-dark-v1" href="#!">Architects plan to stop skyscrapers from blocking out sunlight</a>
-                                    </h3>
-                                </article>
-                                <!-- End Article -->
-
-                                <hr class="g-brd-gray-light-v4 g-mt-15 g-mb-10">
-
-                                <!-- Article -->
-                                <article>
-                      <span class="g-font-size-12">
-                        <a class="u-link-v5 g-color-gray-dark-v4" href="#!">James Doe</a>
-                      </span>
-                                    <h3 class="h6">
-                                        <a class="g-color-gray-dark-v1" href="#!">Cooltex is one of the best technology company of our age and future</a>
-                                    </h3>
-                                </article>
-                                <!-- End Article -->
-
-                                <hr class="g-brd-gray-light-v4 g-mt-15 g-mb-10">
-
-                                <!-- Article -->
-                                <article>
-                      <span class="g-font-size-12">
-                        <a class="u-link-v5 g-color-gray-dark-v4" href="#!">Albert Coolmen</a>
-                      </span>
-                                    <h3 class="h6">
-                                        <a class="g-color-gray-dark-v1" href="#!">Some text goes here with plain English and much more other texts go there..</a>
-                                    </h3>
-                                </article>
-                                <!-- End Article -->
                             </div>
 
                             <div class="col-lg-6">
                                 <!-- Article -->
                                 <article class="g-mb-30">
                                     <figure class="u-shadow-v25 g-pos-rel g-mb-20">
-                                        <img class="img-fluid w-100" src="{{url('/')}}/assets-magazine/img-temp/500x450/img4.jpg" alt="Image Description">
+                                        <img class="img-fluid w-100" src="https://kingo.s3-eu-west-1.amazonaws.com/dynamic-content/images/small-7703-20210402112420-211462.jpg" alt="Image Description">
 
                                         <figcaption class="g-pos-abs g-top-20 g-left-20">
-                                            <a class="btn btn-xs u-btn-cyan text-uppercase rounded-0" href="#!">Office</a>
+                                            <a class="btn btn-xs u-btn-cyan text-uppercase rounded-0" href="#!">DOMOKAYA</a>
                                         </figcaption>
                                     </figure>
 
                                     <h3 class="h4 g-mb-10">
-                                        <a class="u-link-v5 g-color-gray-dark-v1 g-color-primary--hover" href="#!">Awesome New Year Event</a>
+                                        <a class="u-link-v5 g-color-gray-dark-v1 g-color-primary--hover" href="#!">Heri James aomba msamaha</a>
                                     </h3>
 
                                     <ul class="list-inline g-color-gray-dark-v4 g-font-size-12">
-                                        <li class="list-inline-item">
-                                            <a class="u-link-v5 g-color-gray-dark-v4 g-color-primary--hover" href="#!">Kathy Reyes</a>
-                                        </li>
-                                        <li class="list-inline-item">/</li>
                                         <li class="list-inline-item">
                                             July 25, 2017
                                         </li>
@@ -788,59 +710,37 @@
                                             </a>
                                         </li>
                                     </ul>
-
-                                    <p class="g-color-gray-dark-v2">Architects plan to stop skyscrapers from blocking out sunlight. Clark Valberg is the founder and CEO of InVision. If you are a designer, you have probably gotten.</p>
-                                    <a class="g-font-size-12" href="#!">Read More..</a>
                                 </article>
                                 <!-- End Article -->
 
                                 <!-- Article -->
-                                <article>
-                      <span class="g-font-size-12">
-                        <a class="u-link-v5 g-color-gray-dark-v4" href="#!">Susie Lau</a>
-                      </span>
-                                    <h3 class="h6">
-                                        <a class="g-color-gray-dark-v1" href="#!">Fashion's first selfies: It was a 16th century German..</a>
+                                <article class="g-mb-30">
+                                    <figure class="u-shadow-v25 g-pos-rel g-mb-20">
+                                        <img class="img-fluid w-100" src="https://kingo.s3-eu-west-1.amazonaws.com/dynamic-content/images/small-5222-20210405000931-413090.jpg" alt="Image Description">
+
+                                        <figcaption class="g-pos-abs g-top-20 g-left-20">
+                                            <a class="btn btn-xs u-btn-red text-uppercase rounded-0" href="#!">DOMOKAYA</a>
+                                        </figcaption>
+                                    </figure>
+
+                                    <h3 class="h4 g-mb-10">
+                                        <a class="u-link-v5 g-color-gray-dark-v1 g-color-primary--hover" href="#!">Mwana wa Kondoo Kafufuka</a>
                                     </h3>
-                                </article>
-                                <!-- End Article -->
 
-                                <hr class="g-brd-gray-light-v4 g-mt-15 g-mb-10">
+                                    <ul class="list-inline g-color-gray-dark-v4 g-font-size-12">
+                                        <li class="list-inline-item">
+                                            July 20, 2017
+                                        </li>
+                                        <li class="list-inline-item">/</li>
+                                        <li class="list-inline-item">
+                                            <a class="u-link-v5 g-color-gray-dark-v4 g-color-primary--hover" href="#!">
+                                                <i class="icon-finance-206 u-line-icon-pro align-middle g-pos-rel g-top-1 mr-1"></i> 24
+                                            </a>
+                                        </li>
+                                    </ul>
 
-                                <!-- Article -->
-                                <article>
-                      <span class="g-font-size-12">
-                        <a class="u-link-v5 g-color-gray-dark-v4" href="#!">John Rentoul</a>
-                      </span>
-                                    <h3 class="h6">
-                                        <a class="g-color-gray-dark-v1" href="#!">How to run a ticket: Best 10 point approaches for people who stands..</a>
-                                    </h3>
-                                </article>
-                                <!-- End Article -->
-
-                                <hr class="g-brd-gray-light-v4 g-mt-15 g-mb-10">
-
-                                <!-- Article -->
-                                <article>
-                      <span class="g-font-size-12">
-                        <a class="u-link-v5 g-color-gray-dark-v4" href="#!">Evan Bartlett</a>
-                      </span>
-                                    <h3 class="h6">
-                                        <a class="g-color-gray-dark-v1" href="#!">Skyscrapers from blocking cameron's silence on defence shameful</a>
-                                    </h3>
-                                </article>
-                                <!-- End Article -->
-
-                                <hr class="g-brd-gray-light-v4 g-mt-15 g-mb-10">
-
-                                <!-- Article -->
-                                <article>
-                      <span class="g-font-size-12">
-                        <a class="u-link-v5 g-color-gray-dark-v4" href="#!">Jonathan Owen</a>
-                      </span>
-                                    <h3 class="h6">
-                                        <a class="g-color-gray-dark-v1" href="#!">Architects plan to stop skyscrapers from blocking out sunlight</a>
-                                    </h3>
+                                    {{-- <p class="g-color-gray-dark-v2">How to run a ticket: Best 10 point approaches for people who stands. Clark Valberg is the founder and CEO of InVision. If you are a designer, you have probably gotten.</p>
+                                    <a class="g-font-size-12" href="#!">Read More..</a> --}}
                                 </article>
                                 <!-- End Article -->
                             </div>
@@ -850,7 +750,7 @@
 
                     <!-- Recent Videos -->
                     <div class="u-heading-v3-1 g-mb-30">
-                        <h2 class="h5 u-heading-v3__title g-font-primary g-font-weight-700 g-color-gray-dark-v1 text-uppercase g-brd-primary">Recent Videos</h2>
+                        <h2 class="h5 u-heading-v3__title g-font-primary g-font-weight-700 g-color-gray-dark-v1 text-uppercase g-brd-primary">VIDEO MPYA</h2>
                     </div>
 
                     <div class="row">
@@ -858,11 +758,11 @@
                         <div class="col-lg-4 col-sm-6 g-mb-30">
                             <article>
                                 <figure class="u-shadow-v25 g-pos-rel g-mb-20">
-                                    <img class="img-fluid w-100" src="{{url('/')}}/assets-magazine/img-temp/400x270/img2.jpg" alt="Image Description">
+                                    <img class="img-fluid w-100" src="https://kingo.s3-eu-west-1.amazonaws.com/dynamic-content/images/medium-5427-20210227133202-304514.jpg" alt="Image Description">
 
-                                    <figcaption class="g-pos-abs g-top-10 g-left-10">
+                                    {{-- <figcaption class="g-pos-abs g-top-10 g-left-10">
                                         <a class="btn btn-xs u-btn-blue text-uppercase rounded-0" href="#!">Spa</a>
-                                    </figcaption>
+                                    </figcaption> --}}
 
                                     <span class="u-icon-v3 u-icon-size--sm g-font-size-13 g-bg-white g-bg-black--hover g-color-white--hover rounded-circle g-cursor-pointer g-absolute-centered">
                         <i class="fa fa-play g-left-2"></i>
@@ -870,7 +770,7 @@
                                 </figure>
 
                                 <h3 class="g-font-size-16 g-mb-10">
-                                    <a class="u-link-v5 g-color-gray-dark-v1 g-color-primary--hover" href="#!">Clark Valberg is a new CEO of InVision..</a>
+                                    <a class="u-link-v5 g-color-gray-dark-v1 g-color-primary--hover" href="#!">Fimbo 2</a>
                                 </h3>
                             </article>
                         </div>
@@ -880,33 +780,11 @@
                         <div class="col-lg-4 col-sm-6 g-mb-30">
                             <article>
                                 <figure class="u-shadow-v25 g-pos-rel g-mb-20">
-                                    <img class="img-fluid w-100" src="{{url('/')}}/assets-magazine/img-temp/400x270/img6.jpg" alt="Image Description">
+                                    <img class="img-fluid w-100" src="https://kingo.s3-eu-west-1.amazonaws.com/dynamic-content/images/medium-5427-20210227133202-304514.jpg" alt="Image Description">
 
-                                    <figcaption class="g-pos-abs g-top-10 g-left-10">
-                                        <a class="btn btn-xs u-btn-pink text-uppercase rounded-0" href="#!">Marketing</a>
-                                    </figcaption>
-
-                                    <span class="u-icon-v3 u-icon-size--sm g-font-size-13 g-bg-white g-bg-black--hover g-color-white--hover rounded-circle g-cursor-pointer g-absolute-centered">
-                        <i class="fa fa-play g-left-2"></i>
-                      </span>
-                                </figure>
-
-                                <h3 class="g-font-size-16 g-mb-10">
-                                    <a class="u-link-v5 g-color-gray-dark-v1 g-color-primary--hover" href="#!">How to run a ticket: Best 10 point..</a>
-                                </h3>
-                            </article>
-                        </div>
-                        <!-- End Article Video -->
-
-                        <!-- Article Video -->
-                        <div class="col-lg-4 col-sm-6 g-mb-30">
-                            <article>
-                                <figure class="u-shadow-v25 g-pos-rel g-mb-20">
-                                    <img class="img-fluid w-100" src="{{url('/')}}/assets-magazine/img-temp/400x270/img7.jpg" alt="Image Description">
-
-                                    <figcaption class="g-pos-abs g-top-10 g-left-10">
-                                        <a class="btn btn-xs u-btn-teal text-uppercase rounded-0" href="#!">Art</a>
-                                    </figcaption>
+                                    {{-- <figcaption class="g-pos-abs g-top-10 g-left-10">
+                                        <a class="btn btn-xs u-btn-blue text-uppercase rounded-0" href="#!">Spa</a>
+                                    </figcaption> --}}
 
                                     <span class="u-icon-v3 u-icon-size--sm g-font-size-13 g-bg-white g-bg-black--hover g-color-white--hover rounded-circle g-cursor-pointer g-absolute-centered">
                         <i class="fa fa-play g-left-2"></i>
@@ -914,77 +792,34 @@
                                 </figure>
 
                                 <h3 class="g-font-size-16 g-mb-10">
-                                    <a class="u-link-v5 g-color-gray-dark-v1 g-color-primary--hover" href="#!">Skyscrapers from blocking sunlight..</a>
+                                    <a class="u-link-v5 g-color-gray-dark-v1 g-color-primary--hover" href="#!">Fimbo 1</a>
                                 </h3>
                             </article>
                         </div>
                         <!-- End Article Video -->
 
-                        <!-- Article Video -->
-                        <div class="col-lg-4 col-sm-6 g-mb-30 g-mb-0--sm">
-                            <article>
-                                <figure class="u-shadow-v25 g-pos-rel g-mb-20">
-                                    <img class="img-fluid w-100" src="{{url('/')}}/assets-magazine/img-temp/400x270/img9.jpg" alt="Image Description">
+                       <!-- Article Video -->
+                       <div class="col-lg-4 col-sm-6 g-mb-30">
+                        <article>
+                            <figure class="u-shadow-v25 g-pos-rel g-mb-20">
+                                <img class="img-fluid w-100" src="https://kingo.s3-eu-west-1.amazonaws.com/dynamic-content/images/medium-5427-20210227133202-304514.jpg" alt="Image Description">
 
-                                    <figcaption class="g-pos-abs g-top-10 g-left-10">
-                                        <a class="btn btn-xs u-btn-darkred text-uppercase rounded-0" href="#!">Architecture</a>
-                                    </figcaption>
+                                {{-- <figcaption class="g-pos-abs g-top-10 g-left-10">
+                                    <a class="btn btn-xs u-btn-blue text-uppercase rounded-0" href="#!">Spa</a>
+                                </figcaption> --}}
 
-                                    <span class="u-icon-v3 u-icon-size--sm g-font-size-13 g-bg-white g-bg-black--hover g-color-white--hover rounded-circle g-cursor-pointer g-absolute-centered">
-                        <i class="fa fa-play g-left-2"></i>
-                      </span>
-                                </figure>
+                                <span class="u-icon-v3 u-icon-size--sm g-font-size-13 g-bg-white g-bg-black--hover g-color-white--hover rounded-circle g-cursor-pointer g-absolute-centered">
+                    <i class="fa fa-play g-left-2"></i>
+                  </span>
+                            </figure>
 
-                                <h3 class="g-font-size-16 g-mb-10">
-                                    <a class="u-link-v5 g-color-gray-dark-v1 g-color-primary--hover" href="#!">Architects plan to from blocking out sunlight..</a>
-                                </h3>
-                            </article>
-                        </div>
-                        <!-- End Article Video -->
+                            <h3 class="g-font-size-16 g-mb-10">
+                                <a class="u-link-v5 g-color-gray-dark-v1 g-color-primary--hover" href="#!">Fimbo 2</a>
+                            </h3>
+                        </article>
+                    </div>
+                    <!-- End Article Video -->
 
-                        <!-- Article Video -->
-                        <div class="col-lg-4 col-sm-6 g-mb-30 g-mb-0--sm">
-                            <article>
-                                <figure class="u-shadow-v25 g-pos-rel g-mb-20">
-                                    <img class="img-fluid w-100" src="{{url('/')}}/assets-magazine/img-temp/400x270/img8.jpg" alt="Image Description">
-
-                                    <figcaption class="g-pos-abs g-top-10 g-left-10">
-                                        <a class="btn btn-xs u-btn-indigo text-uppercase rounded-0" href="#!">Coworking</a>
-                                    </figcaption>
-
-                                    <span class="u-icon-v3 u-icon-size--sm g-font-size-13 g-bg-white g-bg-black--hover g-color-white--hover rounded-circle g-cursor-pointer g-absolute-centered">
-                        <i class="fa fa-play g-left-2"></i>
-                      </span>
-                                </figure>
-
-                                <h3 class="g-font-size-16 g-mb-10">
-                                    <a class="u-link-v5 g-color-gray-dark-v1 g-color-primary--hover" href="#!">Cooltex is one of the best technology company..</a>
-                                </h3>
-                            </article>
-                        </div>
-                        <!-- End Article Video -->
-
-                        <!-- Article Video -->
-                        <div class="col-lg-4 col-sm-6">
-                            <article>
-                                <figure class="u-shadow-v25 g-pos-rel g-mb-20">
-                                    <img class="img-fluid w-100" src="{{url('/')}}/assets-magazine/img-temp/400x270/img10.jpg" alt="Image Description">
-
-                                    <figcaption class="g-pos-abs g-top-10 g-left-10">
-                                        <a class="btn btn-xs u-btn-brown text-uppercase rounded-0" href="#!">Apple</a>
-                                    </figcaption>
-
-                                    <span class="u-icon-v3 u-icon-size--sm g-font-size-13 g-bg-white g-bg-black--hover g-color-white--hover rounded-circle g-cursor-pointer g-absolute-centered">
-                        <i class="fa fa-play g-left-2"></i>
-                      </span>
-                                </figure>
-
-                                <h3 class="g-font-size-16 g-mb-10">
-                                    <a class="u-link-v5 g-color-gray-dark-v1 g-color-primary--hover" href="#!">Cameron's silence on defence is shameful..</a>
-                                </h3>
-                            </article>
-                        </div>
-                        <!-- End Article Video -->
                     </div>
                     <!-- End Recent Videos -->
 
