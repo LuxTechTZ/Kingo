@@ -628,56 +628,24 @@
                             <div class="u-heading-v3-1 g-mb-30">
                                 <h2
                                     class="h5 u-heading-v3__title g-font-primary g-font-weight-700 g-color-gray-dark-v1 text-uppercase g-brd-primary">
-                                    ZILIZOSOMWA ZAIDI</h2>
+                                    KINGO KATUNI</h2>
                             </div>
 
                             <div class="row g-mb-30">
                                 <!-- Article Image -->
-                                <div class="col-md-5">
+                                <div class="col-md-12">
+                                    <h3 class="h4 g-mb-10">
+                                        <a class="u-link-v5 g-color-gray-dark-v1 g-color-primary--hover"
+                                            href="#!">Kiongozi wa watu!</a>
+                                    </h3>
                                     <figure class="u-shadow-v25 g-pos-rel g-mb-20 g-mb-0--lg">
                                         <img class="img-fluid w-100"
-                                            src="https://kingo.s3-eu-west-1.amazonaws.com/dynamic-content/images/small-3754-20200418183132-217954.jpg"
+                                            src="https://kingo.s3-eu-west-1.amazonaws.com/dynamic-content/images/medium-1901-20210108130443-557922.jpg"
                                             alt="Image Description">
-
-                                        <figcaption class="g-pos-abs g-top-20 g-left-20">
-                                            <a class="btn btn-xs u-btn-pink text-uppercase rounded-0"
-                                                href="#!">POROJO</a>
-                                        </figcaption>
                                     </figure>
                                 </div>
                                 <!-- End Article Image -->
 
-                                <!-- Article Content -->
-                                <div class="col-md-7 align-self-center">
-                                    <h3 class="h4 g-mb-15">
-                                        <a class="u-link-v5 g-color-gray-dark-v1 g-color-primary--hover"
-                                            href="#!">Kibatari na Embe za watoto</a>
-                                    </h3>
-
-                                    <ul class="list-inline g-color-gray-dark-v4 g-font-size-12">
-                                        {{-- <li class="list-inline-item">
-                                        <a class="u-link-v5 g-color-gray-dark-v4 g-color-primary--hover" href="#!">Mike Coolman</a>
-                                    </li> --}}
-                                        <li class="list-inline-item">/</li>
-                                        <li class="list-inline-item">
-                                            July 19, 2017
-                                        </li>
-                                        <li class="list-inline-item">/</li>
-                                        <li class="list-inline-item">
-                                            <a class="u-link-v5 g-color-gray-dark-v4 g-color-primary--hover" href="#!">
-                                                <i
-                                                    class="icon-finance-206 u-line-icon-pro align-middle g-pos-rel g-top-1 mr-1"></i>
-                                                38
-                                            </a>
-                                        </li>
-                                    </ul>
-
-                                    <p class="g-color-gray-dark-v2">Kuna kisa cha jamaa aliyefunga safari kwenda
-                                        kuwasalimia ndugu zake kijijini. Njiani alinunua embe tano kama zawadi ya watoto
-                                        wa mwenyeji wake.</p>
-                                    <a class="g-font-size-12" href="#!">Soma Zaidi..</a>
-                                </div>
-                                <!-- End Article Content -->
                             </div>
                         </div>
                         <!-- End Breaking News -->
@@ -1030,21 +998,20 @@
                             <div class="u-heading-v3-1 g-mb-30">
                                 <h2
                                     class="h5 u-heading-v3__title g-font-primary g-font-weight-700 g-color-gray-dark-v1 text-uppercase g-brd-primary">
-                                    Recent Posts</h2>
+                                    Zilizosomwa Zaidi</h2>
                             </div>
 
                             <!-- Article -->
                             <article class="media g-mb-30">
                                 <a class="d-flex u-shadow-v25 mr-3" href="#!">
                                     <img class="g-width-60 g-height-60"
-                                        src="{{url('/')}}/assets-magazine/img-temp/100x100/img4.jpg"
+                                        src="https://kingo.s3-eu-west-1.amazonaws.com/dynamic-content/images/small-3754-20200418183132-217954.jpg"
                                         alt="Image Description">
                                 </a>
 
                                 <div class="media-body">
                                     <h3 class="h6">
-                                        <a class="u-link-v5 g-color-gray-dark-v1 g-color-primary--hover" href="#!">Best
-                                            dessert recipes for breakfast which will..</a>
+                                        <a class="u-link-v5 g-color-gray-dark-v1 g-color-primary--hover" href="#!">Kibatari na Embe za watoto</a>
                                     </h3>
 
                                     <ul class="u-list-inline g-font-size-12 g-color-gray-dark-v4">
@@ -1068,26 +1035,25 @@
                             <article class="media g-mb-30">
                                 <a class="d-flex u-shadow-v25 mr-3" href="#!">
                                     <img class="g-width-60 g-height-60"
-                                        src="{{url('/')}}/assets-magazine/img-temp/100x100/img5.jpg"
+                                        src="https://kingo.s3-eu-west-1.amazonaws.com/dynamic-content/images/small-3754-20200418183132-217954.jpg"
                                         alt="Image Description">
                                 </a>
 
                                 <div class="media-body">
                                     <h3 class="h6">
-                                        <a class="u-link-v5 g-color-gray-dark-v1 g-color-primary--hover"
-                                            href="#!">Stylish things to do, see and purchase..</a>
+                                        <a class="u-link-v5 g-color-gray-dark-v1 g-color-primary--hover" href="#!">Kibatari na Embe za watoto</a>
                                     </h3>
 
                                     <ul class="u-list-inline g-font-size-12 g-color-gray-dark-v4">
                                         <li class="list-inline-item">
-                                            July 16, 2017
+                                            July 20, 2017
                                         </li>
                                         <li class="list-inline-item">/</li>
                                         <li class="list-inline-item">
                                             <a class="g-color-gray-dark-v4 g-text-underline--none--hover" href="#!">
                                                 <i
                                                     class="icon-finance-206 u-line-icon-pro align-middle g-pos-rel g-top-1 mr-1"></i>
-                                                31
+                                                18
                                             </a>
                                         </li>
                                     </ul>
@@ -1099,26 +1065,25 @@
                             <article class="media g-mb-30">
                                 <a class="d-flex u-shadow-v25 mr-3" href="#!">
                                     <img class="g-width-60 g-height-60"
-                                        src="{{url('/')}}/assets-magazine/img-temp/100x100/img6.jpg"
+                                        src="https://kingo.s3-eu-west-1.amazonaws.com/dynamic-content/images/small-3754-20200418183132-217954.jpg"
                                         alt="Image Description">
                                 </a>
 
                                 <div class="media-body">
                                     <h3 class="h6">
-                                        <a class="u-link-v5 g-color-gray-dark-v1 g-color-primary--hover"
-                                            href="#!">Government plans to test new primary school..</a>
+                                        <a class="u-link-v5 g-color-gray-dark-v1 g-color-primary--hover" href="#!">Kibatari na Embe za watoto</a>
                                     </h3>
 
                                     <ul class="u-list-inline g-font-size-12 g-color-gray-dark-v4">
                                         <li class="list-inline-item">
-                                            July 07, 2017
+                                            July 20, 2017
                                         </li>
                                         <li class="list-inline-item">/</li>
                                         <li class="list-inline-item">
                                             <a class="g-color-gray-dark-v4 g-text-underline--none--hover" href="#!">
                                                 <i
                                                     class="icon-finance-206 u-line-icon-pro align-middle g-pos-rel g-top-1 mr-1"></i>
-                                                24
+                                                18
                                             </a>
                                         </li>
                                     </ul>
@@ -1127,29 +1092,28 @@
                             <!-- End Article -->
 
                             <!-- Article -->
-                            <article class="media">
+                            <article class="media g-mb-30">
                                 <a class="d-flex u-shadow-v25 mr-3" href="#!">
                                     <img class="g-width-60 g-height-60"
-                                        src="{{url('/')}}/assets-magazine/img-temp/100x100/img7.jpg"
+                                        src="https://kingo.s3-eu-west-1.amazonaws.com/dynamic-content/images/small-3754-20200418183132-217954.jpg"
                                         alt="Image Description">
                                 </a>
 
                                 <div class="media-body">
                                     <h3 class="h6">
-                                        <a class="u-link-v5 g-color-gray-dark-v1 g-color-primary--hover" href="#!">Top
-                                            10 Luxury Hotels - 5 Star Best Luxury Hotels</a>
+                                        <a class="u-link-v5 g-color-gray-dark-v1 g-color-primary--hover" href="#!">Kibatari na Embe za watoto</a>
                                     </h3>
 
                                     <ul class="u-list-inline g-font-size-12 g-color-gray-dark-v4">
                                         <li class="list-inline-item">
-                                            July 11, 2017
+                                            July 20, 2017
                                         </li>
                                         <li class="list-inline-item">/</li>
                                         <li class="list-inline-item">
                                             <a class="g-color-gray-dark-v4 g-text-underline--none--hover" href="#!">
                                                 <i
                                                     class="icon-finance-206 u-line-icon-pro align-middle g-pos-rel g-top-1 mr-1"></i>
-                                                46
+                                                18
                                             </a>
                                         </li>
                                     </ul>
