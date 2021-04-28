@@ -325,166 +325,124 @@
         <!-- Promo Block -->
         <section class="g-py-50">
             <div class="container">
-                <!-- News Section -->
+
                 <div class="row no-gutters">
-                    <div class="col-lg-6 g-pr-1--lg g-mb-30 g-mb-2--lg">
-                        <!-- Article -->
+                    {{-- first column --}}
+                    <div class="col-lg-3 g-pr-1--lg g-mb-30 g-mb-2--lg">
+                        
+                        {{-- article --}}
                         <article class="u-block-hover">
+                            <figure class="u-shadow-v25 g-bg-cover g-bg-white-gradient-opacity-v1--after">
+                                <img class="img-fluid w-100 u-block-hover__main--zoom-v1"
+                                    src="https://kingo.s3-eu-west-1.amazonaws.com/dynamic-content/images/small-4206-20210427073010-157595.jpg"
+                                    alt="Image Description">
+                            </figure>
+
+                            <span class="g-hidden-xs-down g-pos-abs g-top-30 g-left-30">
+                                <a class="btn btn-xs u-btn-darkpurple text-uppercase rounded-0" href="#!">LATEST</a>
+                            </span>
+                        </article>
+
+                        {{-- article --}}
+                        <article class="u-block-hover">
+                            <figure class="u-shadow-v25 g-bg-cover g-bg-white-gradient-opacity-v1--after">
+                                <img class="img-fluid w-100 u-block-hover__main--zoom-v1"
+                                    src="https://kingo.s3-eu-west-1.amazonaws.com/dynamic-content/images/small-6779-20210424121250-399198.jpg"
+                                    alt="Image Description">
+                            </figure>
+
+                            <span class="g-hidden-xs-down g-pos-abs g-top-30 g-left-30">
+                                <a class="btn btn-xs u-btn-teal text-uppercase rounded-0" href="#!">METHALI MPYA</a>
+                            </span>
+                        </article>
+
+                        {{-- article --}}
+                        <article>
+                            <figure class="u-shadow-v25 g-pos-rel g-mb-20">
+                                <img class="img-fluid w-100"
+                                    src="https://kingo.s3-eu-west-1.amazonaws.com/dynamic-content/images/medium-5427-20210227133202-304514.jpg"
+                                    alt="Image Description">
+
+                            <span class="g-hidden-xs-down g-pos-abs g-top-30 g-left-30">
+                                <a class="btn btn-xs u-btn-cyan text-uppercase rounded-0" href="#!">VIDEO</a>
+                            </span>
+
+                                <span
+                                    class="u-icon-v3 u-icon-size--sm g-font-size-13 g-bg-white g-bg-black--hover g-color-white--hover rounded-circle g-cursor-pointer g-absolute-centered">
+                                    <i class="fa fa-play g-left-2"></i>
+                                </span>
+
+
+                            </figure>
+
+                        </article>
+
+                    </div>
+
+                    {{-- second column --}}
+                    <div class="col-lg-6 g-pr-1--lg g-mb-30 g-mb-2--lg">
+
+
+                        {{-- article --}}
+                        <article class="u-block-hover" style="height: 232px">
+                            <figure class="u-shadow-v25 g-bg-cover g-bg-white-gradient-opacity-v1--after">
+                                <img class="img-fluid w-100 u-block-hover__main--zoom-v1"
+                                src="https://kingo.s3-eu-west-1.amazonaws.com/dynamic-content/images/small-5212-20210428124444-416406.jpg"
+                                    alt="Image Description">
+                            </figure>
+
+                            <span class="g-hidden-xs-down g-pos-abs g-top-30 g-left-30">
+                                <a class="btn btn-xs u-btn-teal text-uppercase rounded-0" href="#!">DOMOKAYA</a>
+                            </span>
+                        </article>
+
+                        {{-- article --}}
+                        <article class="u-block-hover" style="height: 232px">
                             <figure class="u-shadow-v25 g-bg-cover g-bg-white-gradient-opacity-v1--after">
                                 <img class="img-fluid w-100 u-block-hover__main--zoom-v1"
                                     src="https://kingo.s3-eu-west-1.amazonaws.com/dynamic-content/images/small-4703-20210326153526-335798.jpg"
                                     alt="Image Description">
                             </figure>
 
-                            {{-- <span class="g-hidden-xs-down u-icon-v3 u-icon-size--sm g-font-size-13 g-bg-white rounded-circle g-pos-abs g-top-30 g-right-30">
-                  <i class="icon-camera"></i>
-                </span> --}}
-
                             <span class="g-hidden-xs-down g-pos-abs g-top-30 g-left-30">
-                                <a class="btn btn-xs u-btn-darkpurple text-uppercase rounded-0" href="#!">DOMOKAYA</a>
+                                <a class="btn btn-xs u-btn-teal text-uppercase rounded-0" href="#!">POROJO</a>
                             </span>
-
-                            <div class="g-pos-abs g-bottom-30 g-left-30 g-right-30">
-                                <small class="g-color-white">
-                                    <i class="icon-clock g-pos-rel g-top-1 g-mr-2"></i> July 8, 2016
-                                </small>
-
-                                {{-- <h3 class="h4 g-my-10">
-                                <a class="g-color-white g-color-white--hover" href="#!">Our goal is to be the next billion company. In order to do that, we should work hard.</a>
-                            </h3> --}}
-
-                                <ul class="g-hidden-xs-down u-list-inline g-font-size-12 g-color-white">
-                                    <li class="list-inline-item">
-                                        <i class="icon-eye g-pos-rel g-top-1 g-mr-2"></i> 264
-                                    </li>
-                                    <li class="list-inline-item">/</li>
-                                    <li class="list-inline-item">
-                                        <i
-                                            class="icon-finance-206 u-line-icon-pro align-middle g-pos-rel g-top-1 g-mr-2"></i>
-                                        52
-                                    </li>
-                                    <li class="list-inline-item">/</li>
-                                    <li class="list-inline-item">
-                                        <i class="icon-share g-pos-rel g-top-1 g-mr-2"></i> 26
-                                    </li>
-                                </ul>
-                            </div>
                         </article>
-                        <!-- End Article -->
+
                     </div>
 
-                    <div class="col-lg-6 g-pl-1--lg g-mb-30 g-mb-2--lg">
-                        <!-- Article -->
+                    {{-- third column --}}
+                    <div class="col-lg-3 g-pr-1--lg g-mb-30 g-mb-2--lg">
+
+                        {{-- article --}}
+                        <article class="u-block-hover">
+                            <figure class="u-shadow-v25 g-bg-cover g-bg-white-gradient-opacity-v1--after" style="height: 308px">
+                                <img class="img-fluid w-100 u-block-hover__main--zoom-v1"
+                                    src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTuvA_gclGs0Y69hEf1Xs2AcdbYP6264mY5Gg&usqp=CAU"
+                                    alt="Image Description">
+                            </figure>
+
+                            <span class="g-hidden-xs-down g-pos-abs g-top-30 g-left-30">
+                                <a class="btn btn-xs u-btn-darkpurple text-uppercase rounded-0" href="#!">COMIC</a>
+                            </span>
+                        </article>
+
+                        {{-- article --}}
                         <article class="u-block-hover">
                             <figure class="u-shadow-v25 g-bg-cover g-bg-white-gradient-opacity-v1--after">
                                 <img class="img-fluid w-100 u-block-hover__main--zoom-v1"
-                                    src="https://kingo.s3-eu-west-1.amazonaws.com/dynamic-content/images/small-1989-20210329080719-335214.jpg"
+                                    src="https://kingo.s3-eu-west-1.amazonaws.com/dynamic-content/images/medium-1901-20210108130443-557922.jpg"
                                     alt="Image Description">
                             </figure>
-
-                            {{-- <span class="g-hidden-xs-down u-icon-v3 u-icon-size--sm g-font-size-13 g-bg-white rounded-circle g-pos-abs g-top-30 g-right-30">
-                  <i class="fa fa-play g-left-2"></i>
-                </span> --}}
 
                             <span class="g-hidden-xs-down g-pos-abs g-top-30 g-left-30">
-                                <a class="btn btn-xs u-btn-red text-uppercase rounded-0" href="#!">POROJO</a>
+                                <a class="btn btn-xs u-btn-yellow text-uppercase rounded-0" href="#!">KINGO</a>
                             </span>
-
-                            <div class="g-pos-abs g-bottom-30 g-left-30 g-right-30">
-                                <small class="g-color-white">
-                                    <i class="icon-clock g-pos-rel g-top-1 g-mr-2"></i> July 22, 2016
-                                </small>
-
-                                {{-- <h3 class="h4 g-my-10">
-                                <a class="g-color-white g-color-white--hover" href="#!">Why your customer support is very important? Learn the next 10 best tips.</a>
-                            </h3> --}}
-
-                                <ul class="g-hidden-xs-down u-list-inline g-font-size-12 g-color-white">
-                                    <li class="list-inline-item">
-                                        <i class="icon-eye g-pos-rel g-top-1 g-mr-2"></i> 127
-                                    </li>
-                                    <li class="list-inline-item">/</li>
-                                    <li class="list-inline-item">
-                                        <i
-                                            class="icon-finance-206 u-line-icon-pro align-middle g-pos-rel g-top-1 g-mr-2"></i>
-                                        152
-                                    </li>
-                                    <li class="list-inline-item">/</li>
-                                    <li class="list-inline-item">
-                                        <i class="icon-share g-pos-rel g-top-1 g-mr-2"></i> 32
-                                    </li>
-                                </ul>
-                            </div>
                         </article>
-                        <!-- End Article -->
-                    </div>
 
-                    <div class="col-lg-4 g-pr-1--lg g-mb-30 g-mb-0--lg">
-                        <!-- Article -->
-                        <article class="u-block-hover">
-                            <figure class="u-shadow-v25 u-bg-overlay g-bg-white-gradient-opacity-v1--after">
-                                <img class="u-block-hover__main--zoom-v1 img-fluid w-100"
-                                    src="{{url('/')}}/kingo-assets/Porojo/Vuvuzela.png" alt="Image Description">
-                            </figure>
-
-                            <div class="w-100 text-center g-absolute-centered g-px-30">
-                                <a class="btn btn-xs u-btn-cyan text-uppercase rounded-0" href="#!">RIWAYA</a>
-                                {{-- <h3 class="h4 g-mt-10">
-                                <a class="g-color-white" href="#!">Be ready, fashion of the year is coming this year</a>
-                            </h3> --}}
-                                <small class="g-color-white">
-                                    <i class="icon-clock g-pos-rel g-top-1 g-mr-2"></i> July 26, 2017
-                                </small>
-                            </div>
-                        </article>
-                        <!-- End Article -->
-                    </div>
-
-                    <div class="col-lg-4 g-px-1--lg g-mb-30 g-mb-0--lg">
-                        <!-- Article -->
-                        <article class="u-block-hover">
-                            <figure class="u-shadow-v25 u-bg-overlay g-bg-white-gradient-opacity-v1--after">
-                                <img class="u-block-hover__main--zoom-v1 img-fluid w-100"
-                                    src="{{url('/')}}/kingo-assets/Mjue Maarufu/Mjue maarufu.png"
-                                    alt="Image Description">
-                            </figure>
-
-                            <div class="w-100 text-center g-absolute-centered g-px-30">
-                                <a class="btn btn-xs u-btn-pink text-uppercase rounded-0" href="#!">MJUE MAARUFU</a>
-                                {{-- <h3 class="h4 g-mt-10">
-                                <a class="g-color-white" href="#!">Must be visited places in the USA - Florida Beaches</a>
-                            </h3> --}}
-                                <small class="g-color-white">
-                                    <i class="icon-clock g-pos-rel g-top-1 g-mr-2"></i> July 18, 2017
-                                </small>
-                            </div>
-                        </article>
-                        <!-- End Article -->
-                    </div>
-
-                    <div class="col-lg-4 g-pl-1--lg">
-                        <!-- Article -->
-                        <article class="u-block-hover">
-                            <figure class="u-shadow-v25 u-bg-overlay g-bg-white-gradient-opacity-v1--after">
-                                <img class="u-block-hover__main--zoom-v1 img-fluid w-100"
-                                    src="{{url('/')}}/kingo-assets/Kingo katuni/kiongozi wa watu!.png"
-                                    alt="Image Description">
-                            </figure>
-
-                            <div class="w-100 text-center g-absolute-centered g-px-30">
-                                <a class="btn btn-xs u-btn-primary text-uppercase rounded-0" href="#!">POROJO LIVE</a>
-                                {{-- <h3 class="h4 g-mt-10">
-                                <a class="g-color-white" href="#!">Why your next glass of juice will cost you more</a>
-                            </h3> --}}
-                                <small class="g-color-white">
-                                    <i class="icon-clock g-pos-rel g-top-1 g-mr-2"></i> July 5, 2017
-                                </small>
-                            </div>
-                        </article>
-                        <!-- End Article -->
                     </div>
                 </div>
-                <!-- News Section -->
+
             </div>
         </section>
         <!-- End Promo Block -->
@@ -1011,7 +969,8 @@
 
                                 <div class="media-body">
                                     <h3 class="h6">
-                                        <a class="u-link-v5 g-color-gray-dark-v1 g-color-primary--hover" href="#!">Kibatari na Embe za watoto</a>
+                                        <a class="u-link-v5 g-color-gray-dark-v1 g-color-primary--hover"
+                                            href="#!">Kibatari na Embe za watoto</a>
                                     </h3>
 
                                     <ul class="u-list-inline g-font-size-12 g-color-gray-dark-v4">
@@ -1041,7 +1000,8 @@
 
                                 <div class="media-body">
                                     <h3 class="h6">
-                                        <a class="u-link-v5 g-color-gray-dark-v1 g-color-primary--hover" href="#!">Kibatari na Embe za watoto</a>
+                                        <a class="u-link-v5 g-color-gray-dark-v1 g-color-primary--hover"
+                                            href="#!">Kibatari na Embe za watoto</a>
                                     </h3>
 
                                     <ul class="u-list-inline g-font-size-12 g-color-gray-dark-v4">
@@ -1071,7 +1031,8 @@
 
                                 <div class="media-body">
                                     <h3 class="h6">
-                                        <a class="u-link-v5 g-color-gray-dark-v1 g-color-primary--hover" href="#!">Kibatari na Embe za watoto</a>
+                                        <a class="u-link-v5 g-color-gray-dark-v1 g-color-primary--hover"
+                                            href="#!">Kibatari na Embe za watoto</a>
                                     </h3>
 
                                     <ul class="u-list-inline g-font-size-12 g-color-gray-dark-v4">
@@ -1101,7 +1062,8 @@
 
                                 <div class="media-body">
                                     <h3 class="h6">
-                                        <a class="u-link-v5 g-color-gray-dark-v1 g-color-primary--hover" href="#!">Kibatari na Embe za watoto</a>
+                                        <a class="u-link-v5 g-color-gray-dark-v1 g-color-primary--hover"
+                                            href="#!">Kibatari na Embe za watoto</a>
                                     </h3>
 
                                     <ul class="u-list-inline g-font-size-12 g-color-gray-dark-v4">
@@ -1208,7 +1170,7 @@
                 <div class="row">
                     <!-- Articles Content -->
                     <div class="col-lg-9 g-mb-50 g-mb-0--lg">
-                       
+
 
                         <!-- Weekly News -->
                         <div class="g-mb-60">
@@ -1243,7 +1205,7 @@
                                     </h3>
 
                                     <ul class="list-inline g-color-gray-dark-v4 g-font-size-12">
-                                        
+
                                         <li class="list-inline-item">
                                             July 19, 2017
                                         </li>
@@ -1257,7 +1219,8 @@
                                         </li>
                                     </ul>
 
-                                    <p class="g-color-gray-dark-v2">Ukitaka mtu mzuri wa kukusimulia madhila ya mabomu ya kutegwa ardhini, mtafute M-angola akusimulie..</p>
+                                    <p class="g-color-gray-dark-v2">Ukitaka mtu mzuri wa kukusimulia madhila ya mabomu
+                                        ya kutegwa ardhini, mtafute M-angola akusimulie..</p>
                                     <a class="g-font-size-12" href="#!">Soma zaidi..</a>
                                 </div>
                                 <!-- End Article Content -->
@@ -1289,7 +1252,7 @@
                                     </h3>
 
                                     <ul class="list-inline g-color-gray-dark-v4 g-font-size-12">
-                                        
+
                                         <li class="list-inline-item">
                                             July 19, 2017
                                         </li>
@@ -1303,7 +1266,8 @@
                                         </li>
                                     </ul>
 
-                                    <p class="g-color-gray-dark-v2">Ukitaka mtu mzuri wa kukusimulia madhila ya mabomu ya kutegwa ardhini, mtafute M-angola akusimulie..</p>
+                                    <p class="g-color-gray-dark-v2">Ukitaka mtu mzuri wa kukusimulia madhila ya mabomu
+                                        ya kutegwa ardhini, mtafute M-angola akusimulie..</p>
                                     <a class="g-font-size-12" href="#!">Soma zaidi..</a>
                                 </div>
                                 <!-- End Article Content -->
@@ -1335,7 +1299,7 @@
                                     </h3>
 
                                     <ul class="list-inline g-color-gray-dark-v4 g-font-size-12">
-                                        
+
                                         <li class="list-inline-item">
                                             July 19, 2017
                                         </li>
@@ -1349,7 +1313,8 @@
                                         </li>
                                     </ul>
 
-                                    <p class="g-color-gray-dark-v2">Ukitaka mtu mzuri wa kukusimulia madhila ya mabomu ya kutegwa ardhini, mtafute M-angola akusimulie..</p>
+                                    <p class="g-color-gray-dark-v2">Ukitaka mtu mzuri wa kukusimulia madhila ya mabomu
+                                        ya kutegwa ardhini, mtafute M-angola akusimulie..</p>
                                     <a class="g-font-size-12" href="#!">Soma zaidi..</a>
                                 </div>
                                 <!-- End Article Content -->
@@ -1399,7 +1364,7 @@
 
                     <!-- Sidebar -->
                     <div class="col-lg-3">
-                       
+
 
                     </div>
                     <!-- End Sidebar -->
@@ -1410,7 +1375,8 @@
         <!-- End News Content -->
 
         <!-- Footer -->
-        <footer style="background-color: red; color: white; background-image: url('kingo-assets/kingo-footer.png'); height: 200px; background-size: contain; background-position: right; background-repeat: no-repeat">
+        <footer
+            style="background-color: red; color: white; background-image: url('kingo-assets/kingo-footer.png'); height: 200px; background-size: contain; background-position: right; background-repeat: no-repeat">
             <div class="container">
 
             </div>
@@ -1490,6 +1456,7 @@
                 $.HSCore.components.HSStickyBlock.init('.js-sticky-block');
             }, 1);
         });
+
     </script>
 </body>
 
