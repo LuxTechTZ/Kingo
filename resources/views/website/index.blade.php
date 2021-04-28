@@ -339,7 +339,7 @@
                             </figure>
 
                             <span class="g-hidden-xs-down g-pos-abs g-top-30 g-left-30">
-                                <a class="btn btn-xs u-btn-darkpurple text-uppercase rounded-0" href="#!">LATEST</a>
+                                <a class="btn btn-xs u-btn-darkpurple text-uppercase rounded-0" href="#!">POST MPYA</a>
                             </span>
                         </article>
 
@@ -405,7 +405,7 @@
                             </figure>
 
                             <span class="g-hidden-xs-down g-pos-abs g-top-30 g-left-30">
-                                <a class="btn btn-xs u-btn-teal text-uppercase rounded-0" href="#!">POROJO</a>
+                                <a class="btn btn-xs u-btn-red text-uppercase rounded-0" href="#!">POROJO</a>
                             </span>
                         </article>
 
