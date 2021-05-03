@@ -37,7 +37,7 @@
     <link rel="stylesheet" href="{{url('/')}}/assets-main/vendor/fancybox/jquery.fancybox.css">
 
     <!-- CSS Unify Theme -->
-    <link rel="stylesheet" href="{{url('/')}}/assets-magazine/css/styles.bm-classic.css">
+    <link rel="stylesheet" href="{{url('/')}}/assets-magazine/css/styles.bm-classic.css?v.1">
 
     <!-- CSS Customization -->
     <link rel="stylesheet" href="{{url('/')}}/assets-main/css/custom.css">
@@ -58,7 +58,7 @@
                     <div class="row align-items-center">
                         <!-- Logo -->
                         <div class="col-md-6 g-hidden-md-down">
-                            <a href="bm-classic-home-page-1.html" class="navbar-brand">
+                            <a href="#" class="navbar-brand">
                                 <img style="max-height: 70px"
                                     src="https://kingo.s3-eu-west-1.amazonaws.com/web-assets/images/logo-new.jpg"
                                     alt="Logo">
@@ -84,7 +84,7 @@
                         </div>
                         <!-- End Subscribe Form -->
 
-                        <div class="col-md-2">
+                        <div class="col-md-2 mt-2">
                             <i class="fa fa-facebook-official pr-3" style="font-size: 20px" aria-hidden="true"></i>
                             <i class="fa fa-instagram pr-3" style="font-size: 20px" aria-hidden="true"></i>
                             <i class="fa fa-twitter" style="font-size: 20px" aria-hidden="true"></i>
@@ -101,7 +101,7 @@
                     <div class="container g-px-15">
                         <!-- Logo -->
                         <a class="navbar-brand g-hidden-lg-up" href="bm-classic-home-page-1.html">
-                            <img src="{{url('/')}}/assets-magazine/img/logo.png" alt="Logo">
+                            <img src="https://kingo.s3-eu-west-1.amazonaws.com/web-assets/images/logo-new.jpg" style="max-height: 50px" alt="Logo">
                         </a>
                         <!-- End Logo -->
 
@@ -126,6 +126,7 @@
                                 <li class="nav-item g-mx-10--lg g-mx-20--xl bg-danger px-2">
                                     <a id="nav-link--pages"
                                         class="nav-link text-uppercase g-color-primary--hover g-px-0 text-white"
+                                        style="color: white !important"
                                         href="#">
                                         SEBULENI
                                     </a>
