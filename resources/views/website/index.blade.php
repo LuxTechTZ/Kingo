@@ -57,16 +57,17 @@
                 <div class="container">
                     <div class="row align-items-center">
                         <!-- Logo -->
-                        <div class="col-md-3 g-hidden-md-down">
+                        <div class="col-md-6 g-hidden-md-down">
                             <a href="bm-classic-home-page-1.html" class="navbar-brand">
-                                <img style="max-height: 70px" src="{{url('/')}}/assets-magazine/img/logo-new.jpg"
+                                <img style="max-height: 70px"
+                                    src="https://kingo.s3-eu-west-1.amazonaws.com/web-assets/images/logo-new.jpg"
                                     alt="Logo">
-                            </a>
+                            </a> <span style="font-weight: bold; font-size: 12pt">| Jarida la Porojo na Mizaha</span>
                         </div>
                         <!-- End Logo -->
 
                         <!-- Subscribe Form -->
-                        <div class="col-6 col-md-5">
+                        <div class="col-md-4">
                             <form class="input-group rounded">
                                 <input
                                     class="form-control g-brd-secondary-light-v2 g-brd-primary--focus g-color-secondary-dark-v1 g-placeholder-secondary-dark-v1 g-bg-white g-font-weight-400 g-font-size-13 g-px-20 g-py-12"
@@ -83,142 +84,9 @@
                         </div>
                         <!-- End Subscribe Form -->
 
-                        <!-- Language -->
-                        {{-- <div class="col-4 col-lg-2 g-pos-rel g-px-15 ml-auto">
-                        <a id="languages-dropdown-invoker" class="g-color-secondary-dark-v1 g-color-primary--hover g-text-underline--none--hover" href="#!"
-                           aria-controls="languages-dropdown"
-                           aria-haspopup="true"
-                           aria-expanded="false"
-                           data-dropdown-event="hover"
-                           data-dropdown-target="#languages-dropdown"
-                           data-dropdown-type="css-animation"
-                           data-dropdown-duration="300"
-                           data-dropdown-hide-on-scroll="false"
-                           data-dropdown-animation-in="fadeIn"
-                           data-dropdown-animation-out="fadeOut">
-                            <svg xmlns="http://www.w3.org/2000/svg" height="11" width="27" viewBox="0 0 640 480">
-                                <defs>
-                                    <clipPath id="a">
-                                        <path fill-opacity=".67" d="M-85.333 0h682.67v512h-682.67z"/>
-                                    </clipPath>
-                                </defs>
-                                <g clip-path="url(#a)" transform="translate(80) scale(.94)">
-                                    <g stroke-width="1pt">
-                                        <path fill="#006" d="M-256 0H768.02v512.01H-256z"/>
-                                        <path d="M-256 0v57.244l909.535 454.768H768.02V454.77L-141.515 0H-256zM768.02 0v57.243L-141.515 512.01H-256v-57.243L653.535 0H768.02z" fill="#fff"/>
-                                        <path d="M170.675 0v512.01h170.67V0h-170.67zM-256 170.67v170.67H768.02V170.67H-256z" fill="#fff"/>
-                                        <path d="M-256 204.804v102.402H768.02V204.804H-256zM204.81 0v512.01h102.4V0h-102.4zM-256 512.01L85.34 341.34h76.324l-341.34 170.67H-256zM-256 0L85.34 170.67H9.016L-256 38.164V0zm606.356 170.67L691.696 0h76.324L426.68 170.67h-76.324zM768.02 512.01L426.68 341.34h76.324L768.02 473.848v38.162z" fill="#c00"/>
-                                    </g>
-                                </g>
-                            </svg>
-                            <span>English</span> <i class="g-hidden-sm-down fa fa-angle-down g-ml-7"></i>
-                        </a>
-                        <ul id="languages-dropdown" class="list-unstyled g-width-160 g-brd-around g-brd-secondary-light-v2 g-bg-white rounded g-pos-abs g-py-5 g-mt-32"
-                            aria-labelledby="languages-dropdown-invoker">
-                            <li>
-                                <a class="d-block g-color-secondary-dark-v1 g-color-primary--hover g-text-underline--none--hover g-py-5 g-px-20" href="#!">
-                                    <svg class="mr-1 g-ml-minus-6" xmlns="http://www.w3.org/2000/svg" height="11" width="27" viewBox="0 0 640 480">
-                                        <defs>
-                                            <clipPath id="a">
-                                                <path fill-opacity=".67" d="M-85.333 0h682.67v512h-682.67z"/>
-                                            </clipPath>
-                                        </defs>
-                                        <g clip-path="url(#a)" transform="translate(80) scale(.94)">
-                                            <g stroke-width="1pt">
-                                                <path fill="#006" d="M-256 0H768.02v512.01H-256z"/>
-                                                <path d="M-256 0v57.244l909.535 454.768H768.02V454.77L-141.515 0H-256zM768.02 0v57.243L-141.515 512.01H-256v-57.243L653.535 0H768.02z" fill="#fff"/>
-                                                <path d="M170.675 0v512.01h170.67V0h-170.67zM-256 170.67v170.67H768.02V170.67H-256z" fill="#fff"/>
-                                                <path d="M-256 204.804v102.402H768.02V204.804H-256zM204.81 0v512.01h102.4V0h-102.4zM-256 512.01L85.34 341.34h76.324l-341.34 170.67H-256zM-256 0L85.34 170.67H9.016L-256 38.164V0zm606.356 170.67L691.696 0h76.324L426.68 170.67h-76.324zM768.02 512.01L426.68 341.34h76.324L768.02 473.848v38.162z" fill="#c00"/>
-                                            </g>
-                                        </g>
-                                    </svg>
-                                    English
-                                </a>
-                            </li>
-                            <li>
-                                <a class="d-block g-color-secondary-dark-v1 g-color-primary--hover g-text-underline--none--hover g-py-5 g-px-20" href="#!">
-                                    <svg class="mr-1 g-ml-minus-6" xmlns="http://www.w3.org/2000/svg" height="11" width="27" viewBox="0 0 640 480">
-                                        <g stroke-width="1pt" fill-rule="evenodd">
-                                            <path fill="#fff" d="M0 0h640v480H0z"/>
-                                            <path fill="#00267f" d="M0 0h213.33v480H0z"/>
-                                            <path fill="#f31830" d="M426.67 0H640v480H426.67z"/>
-                                        </g>
-                                    </svg>
-                                    Spanish
-                                </a>
-                            </li>
-                            <li>
-                                <a class="d-block g-color-secondary-dark-v1 g-color-primary--hover g-text-underline--none--hover g-py-5 g-px-20" href="#!">
-                                    <svg class="mr-1 g-ml-minus-6" xmlns="http://www.w3.org/2000/svg" height="11" width="27" viewBox="0 0 640 480">
-                                        <g fill-rule="evenodd" stroke-width="1pt">
-                                            <path fill="#fff" d="M0 0h640v480H0z"/>
-                                            <path fill="#0039a6" d="M0 160.003h640V480H0z"/>
-                                            <path fill="#d52b1e" d="M0 319.997h640V480H0z"/>
-                                        </g>
-                                    </svg>
-                                    Russian
-                                </a>
-                            </li>
-                            <li>
-                                <a class="d-block g-color-secondary-dark-v1 g-color-primary--hover g-text-underline--none--hover g-py-5 g-px-20" href="#!">
-                                    <svg class="mr-1 g-ml-minus-6" xmlns="http://www.w3.org/2000/svg" height="11" width="27" viewBox="0 0 640 480">
-                                        <path fill="#ffce00" d="M0 320h640v160.002H0z"/>
-                                        <path d="M0 0h640v160H0z"/>
-                                        <path fill="#d00" d="M0 160h640v160H0z"/>
-                                    </svg>
-                                    German
-                                </a>
-                            </li>
-                        </ul>
-                    </div> --}}
-                        <!-- End Language -->
 
-                        <!-- Account -->
-                        {{-- <div class="col-1">
-                        <a id="account-dropdown-invoker" class="media align-items-center float-right g-text-underline--none--hover" href="#!"
-                           aria-controls="account-dropdown"
-                           aria-haspopup="true"
-                           aria-expanded="false"
-                           data-dropdown-event="hover"
-                           data-dropdown-target="#account-dropdown"
-                           data-dropdown-type="css-animation"
-                           data-dropdown-duration="300"
-                           data-dropdown-hide-on-scroll="false"
-                           data-dropdown-animation-in="fadeIn"
-                           data-dropdown-animation-out="fadeOut">
-                            <div class="d-flex g-width-30 g-height-30 mr-2">
-                                <img class="img-fluid rounded-circle" src="{{url('/')}}/assets-magazine/img-temp/100x100/img11.jpg"
-                        alt="Image Description">
                     </div>
-                    <div class="media-body">
-                        <span
-                            class="d-block g-hidden-sm-down g-color-main g-font-weight-600 g-font-size-13">Martin</span>
-                    </div>
-                    </a>
-                    <ul id="account-dropdown"
-                        class="list-unstyled text-right g-width-160 g-brd-around g-brd-secondary-light-v2 g-bg-white rounded g-pos-abs g-right-0 g-py-5 g-mt-57"
-                        aria-labelledby="account-dropdown-invoker">
-                        <li>
-                            <a class="d-block g-color-secondary-dark-v1 g-color-primary--hover g-text-underline--none--hover g-py-5 g-px-20"
-                                href="#!">My Account</a>
-                        </li>
-                        <li>
-                            <a class="d-block g-color-secondary-dark-v1 g-color-primary--hover g-text-underline--none--hover g-py-5 g-px-20"
-                                href="#!">Notifications</a>
-                        </li>
-                        <li>
-                            <a class="d-block g-color-secondary-dark-v1 g-color-primary--hover g-text-underline--none--hover g-py-5 g-px-20"
-                                href="#!">Settings</a>
-                        </li>
-                        <li>
-                            <a class="d-block g-color-secondary-dark-v1 g-color-primary--hover g-text-underline--none--hover g-py-5 g-px-20"
-                                href="#!">Signout</a>
-                        </li>
-                    </ul>
-                </div> --}}
-                <!-- End Account -->
-            </div>
-            </div>
+                </div>
             </div>
             <!-- End Top Bar -->
 
@@ -249,66 +117,59 @@
                             id="navBar">
                             <ul class="navbar-nav g-font-weight-600">
 
-                                <li class="nav-item g-mx-10--lg g-mx-20--xl">
+                                <li class="nav-item g-mx-10--lg g-mx-20--xl bg-danger px-2">
                                     <a id="nav-link--pages"
-                                        class="nav-link text-uppercase g-color-primary--hover g-px-0"
-                                        href="../../../index.html">
+                                        class="nav-link text-uppercase g-color-primary--hover g-px-0 text-white"
+                                        href="#">
                                         SEBULENI
                                     </a>
                                 </li>
 
                                 <li class="nav-item g-mx-10--lg g-mx-20--xl">
                                     <a id="nav-link--pages"
-                                        class="nav-link text-uppercase g-color-primary--hover g-px-0"
-                                        href="../../../index.html">
+                                        class="nav-link text-uppercase g-color-primary--hover g-px-0" href="#">
                                         POROJO
                                     </a>
                                 </li>
 
                                 <li class="nav-item g-mx-10--lg g-mx-20--xl">
                                     <a id="nav-link--pages"
-                                        class="nav-link text-uppercase g-color-primary--hover g-px-0"
-                                        href="../../../index.html">
+                                        class="nav-link text-uppercase g-color-primary--hover g-px-0" href="#">
                                         DOMOKAYA
                                     </a>
                                 </li>
 
                                 <li class="nav-item g-mx-10--lg g-mx-20--xl">
                                     <a id="nav-link--pages"
-                                        class="nav-link text-uppercase g-color-primary--hover g-px-0"
-                                        href="../../../index.html">
+                                        class="nav-link text-uppercase g-color-primary--hover g-px-0" href="#">
                                         POROJO LIVE
                                     </a>
                                 </li>
 
                                 <li class="nav-item g-mx-10--lg g-mx-20--xl">
                                     <a id="nav-link--pages"
-                                        class="nav-link text-uppercase g-color-primary--hover g-px-0"
-                                        href="../../../index.html">
+                                        class="nav-link text-uppercase g-color-primary--hover g-px-0" href="#">
                                         MJUE MAARUFU
                                     </a>
                                 </li>
 
                                 <li class="nav-item g-mx-10--lg g-mx-20--xl">
                                     <a id="nav-link--pages"
-                                        class="nav-link text-uppercase g-color-primary--hover g-px-0"
-                                        href="../../../index.html">
+                                        class="nav-link text-uppercase g-color-primary--hover g-px-0" href="#">
                                         VIDEO
                                     </a>
                                 </li>
 
                                 <li class="nav-item g-mx-10--lg g-mx-20--xl">
                                     <a id="nav-link--pages"
-                                        class="nav-link text-uppercase g-color-primary--hover g-px-0"
-                                        href="../../../index.html">
+                                        class="nav-link text-uppercase g-color-primary--hover g-px-0" href="#">
                                         RIWAYA
                                     </a>
                                 </li>
 
                                 <li class="nav-item g-mx-10--lg g-mx-20--xl">
                                     <a id="nav-link--pages"
-                                        class="nav-link text-uppercase g-color-primary--hover g-px-0"
-                                        href="../../../index.html">
+                                        class="nav-link text-uppercase g-color-primary--hover g-px-0" href="#">
                                         KINGO KATUNI
                                     </a>
                                 </li>
@@ -326,10 +187,11 @@
         <section class="g-py-50">
             <div class="container">
 
-                <div class="row no-gutters">
+                <div class="row">
                     {{-- first column --}}
-                    <div class="col-lg-3 g-pr-1--lg g-mb-30 g-mb-2--lg">
-                        
+                    <div class="col-lg-3 g-mb-30 g-mb-2--lg"
+                        style="padding-right: 15px;border-right: 1px solid rgb(195, 193, 193)">
+
                         {{-- article --}}
                         <article class="u-block-hover">
                             <figure class="u-shadow-v25 g-bg-cover g-bg-white-gradient-opacity-v1--after">
@@ -338,10 +200,18 @@
                                     alt="Image Description">
                             </figure>
 
-                            <span class="g-hidden-xs-down g-pos-abs g-top-30 g-left-30">
-                                <a class="btn btn-xs u-btn-darkpurple text-uppercase rounded-0" href="#!">POST MPYA</a>
-                            </span>
                         </article>
+
+                        <span class="g-mb-10">
+                            <a class="btn btn-xs u-btn-red text-uppercase rounded-0" href="#!">POST MPYA</a>
+                        </span>
+
+                        <h5 class="h5"
+                            style="border-bottom: 1px solid rgb(195, 193, 193); margin-bottom: 20px; padding-bottom: 5px">
+                            <a class="u-link-v5 g-color-gray-dark-v1 g-color-primary--hover" href="#!">Mwana wa Kondoo
+                                Kafufuka</a>
+                        </h5>
+
 
                         {{-- article --}}
                         <article class="u-block-hover">
@@ -351,81 +221,112 @@
                                     alt="Image Description">
                             </figure>
 
-                            <span class="g-hidden-xs-down g-pos-abs g-top-30 g-left-30">
-                                <a class="btn btn-xs u-btn-teal text-uppercase rounded-0" href="#!">METHALI MPYA</a>
-                            </span>
                         </article>
 
+                        <span class="g-mb-10">
+                            <a class="btn btn-xs u-btn-red text-uppercase rounded-0" href="#!">METHALI MPYA</a>
+                        </span>
+
+                        <h5 class="h5"
+                            style="border-bottom: 1px solid rgb(195, 193, 193); margin-bottom: 20px; padding-bottom: 5px">
+                            <a class="u-link-v5 g-color-gray-dark-v1 g-color-primary--hover" href="#!">Mwana wa Kondoo
+                                Kafufuka</a>
+                        </h5>
+
                         {{-- article --}}
-                        <article>
-                            <figure class="u-shadow-v25 g-pos-rel g-mb-20">
-                                <img class="img-fluid w-100"
+                        <article class="u-block-hover">
+                            <figure class="u-shadow-v25 g-bg-cover g-bg-white-gradient-opacity-v1--after">
+                                <img class="img-fluid w-100 u-block-hover__main--zoom-v1"
                                     src="https://kingo.s3-eu-west-1.amazonaws.com/dynamic-content/images/medium-5427-20210227133202-304514.jpg"
                                     alt="Image Description">
-
-                            <span class="g-hidden-xs-down g-pos-abs g-top-30 g-left-30">
-                                <a class="btn btn-xs u-btn-cyan text-uppercase rounded-0" href="#!">VIDEO</a>
-                            </span>
 
                                 <span
                                     class="u-icon-v3 u-icon-size--sm g-font-size-13 g-bg-white g-bg-black--hover g-color-white--hover rounded-circle g-cursor-pointer g-absolute-centered">
                                     <i class="fa fa-play g-left-2"></i>
                                 </span>
-
-
                             </figure>
 
                         </article>
+
+                        <span class="g-mb-10">
+                            <a class="btn btn-xs u-btn-red text-uppercase rounded-0" href="#!">VIDEO</a>
+                        </span>
+
+                        <h5 class="h5 g-mb-10">
+                            <a class="u-link-v5 g-color-gray-dark-v1 g-color-primary--hover" href="#!">Fimbo</a>
+                        </h5>
 
                     </div>
 
                     {{-- second column --}}
-                    <div class="col-lg-6 g-pr-1--lg g-mb-30 g-mb-2--lg">
+                    <div class="col-lg-6 g-mb-30 g-mb-2--lg" style="padding: 0 40px 0 40px">
 
 
                         {{-- article --}}
-                        <article class="u-block-hover" style="height: 232px">
+                        <article class="u-block-hover">
                             <figure class="u-shadow-v25 g-bg-cover g-bg-white-gradient-opacity-v1--after">
                                 <img class="img-fluid w-100 u-block-hover__main--zoom-v1"
-                                src="https://kingo.s3-eu-west-1.amazonaws.com/dynamic-content/images/small-5212-20210428124444-416406.jpg"
+                                    src="https://kingo.s3-eu-west-1.amazonaws.com/dynamic-content/images/medium-6211-20210501112309-385626.jpg"
                                     alt="Image Description">
                             </figure>
 
-                            <span class="g-hidden-xs-down g-pos-abs g-top-30 g-left-30">
-                                <a class="btn btn-xs u-btn-teal text-uppercase rounded-0" href="#!">DOMOKAYA</a>
-                            </span>
                         </article>
 
+                        <span class="g-mb-10">
+                            <a class="btn btn-xs u-btn-red text-uppercase rounded-0" href="#!">DOMOKAYA</a>
+                        </span>
+
+                        <h5 class="h5"
+                            style="border-bottom: 1px solid rgb(195, 193, 193); margin-bottom: 20px;padding-bottom: 10px">
+                            <a class="u-link-v5 g-color-gray-dark-v1 g-color-primary--hover" href="#!">Speed
+                                Governer</a>
+                        </h5>
+
                         {{-- article --}}
-                        <article class="u-block-hover" style="height: 232px">
+                        <article class="u-block-hover">
                             <figure class="u-shadow-v25 g-bg-cover g-bg-white-gradient-opacity-v1--after">
                                 <img class="img-fluid w-100 u-block-hover__main--zoom-v1"
                                     src="https://kingo.s3-eu-west-1.amazonaws.com/dynamic-content/images/small-4703-20210326153526-335798.jpg"
                                     alt="Image Description">
                             </figure>
 
-                            <span class="g-hidden-xs-down g-pos-abs g-top-30 g-left-30">
-                                <a class="btn btn-xs u-btn-red text-uppercase rounded-0" href="#!">POROJO</a>
-                            </span>
                         </article>
+
+                        <span class="g-mb-10">
+                            <a class="btn btn-xs u-btn-red text-uppercase rounded-0" href="#!">POROJO</a>
+                        </span>
+
+                        <h5 class="h5 g-mb-10">
+                            <a class="u-link-v5 g-color-gray-dark-v1 g-color-primary--hover" href="#!">Mwana wa Kondoo
+                                Kafufuka</a>
+                        </h5>
 
                     </div>
 
                     {{-- third column --}}
-                    <div class="col-lg-3 g-pr-1--lg g-mb-30 g-mb-2--lg">
+                    <div class="col-lg-3 g-mb-30 g-mb-2--lg"
+                        style="padding-left: 15px;border-left: 1px solid rgb(195, 193, 193)">
 
                         {{-- article --}}
                         <article class="u-block-hover">
-                            <figure class="u-shadow-v25 g-bg-cover g-bg-white-gradient-opacity-v1--after" style="height: 308px">
+                            <figure class="u-shadow-v25 g-bg-cover g-bg-white-gradient-opacity-v1--after"
+                                style="height: 308px">
                                 <img class="img-fluid w-100 u-block-hover__main--zoom-v1"
                                     src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTuvA_gclGs0Y69hEf1Xs2AcdbYP6264mY5Gg&usqp=CAU"
                                     alt="Image Description">
                             </figure>
 
-                            <span class="g-hidden-xs-down g-pos-abs g-top-30 g-left-30">
-                                <a class="btn btn-xs u-btn-darkpurple text-uppercase rounded-0" href="#!">COMIC</a>
-                            </span>
                         </article>
+
+                        <span class="g-mb-10">
+                            <a class="btn btn-xs u-btn-red text-uppercase rounded-0" href="#!">COMIC</a>
+                        </span>
+
+                        <h5 class="h5"
+                            style="border-bottom: 1px solid rgb(195, 193, 193); margin-bottom: 20px;padding-bottom: 5px">
+                            <a class="u-link-v5 g-color-gray-dark-v1 g-color-primary--hover" href="#!">Mwana wa Kondoo
+                                Kafufuka</a>
+                        </h5>
 
                         {{-- article --}}
                         <article class="u-block-hover">
@@ -435,10 +336,16 @@
                                     alt="Image Description">
                             </figure>
 
-                            <span class="g-hidden-xs-down g-pos-abs g-top-30 g-left-30">
-                                <a class="btn btn-xs u-btn-yellow text-uppercase rounded-0" href="#!">KINGO</a>
-                            </span>
                         </article>
+
+                        <span class="g-mb-10">
+                            <a class="btn btn-xs u-btn-red text-uppercase rounded-0" href="#!">KINGO</a>
+                        </span>
+
+                        <h5 class="h5" style="margin-bottom: 20px">
+                            <a class="u-link-v5 g-color-gray-dark-v1 g-color-primary--hover" href="#!">Umdhaniaye ndiye
+                                siye, usiyemdhania ...</a>
+                        </h5>
 
                     </div>
                 </div>
