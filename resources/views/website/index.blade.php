@@ -84,6 +84,12 @@
                         </div>
                         <!-- End Subscribe Form -->
 
+                        <div class="col-md-2">
+                            <i class="fa fa-facebook-official pr-3" style="font-size: 20px" aria-hidden="true"></i>
+                            <i class="fa fa-instagram pr-3" style="font-size: 20px" aria-hidden="true"></i>
+                            <i class="fa fa-twitter" style="font-size: 20px" aria-hidden="true"></i>
+                        </div>
+
 
                     </div>
                 </div>
