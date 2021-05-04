@@ -41,6 +41,13 @@ Route::prefix('home')->group(function () {
 
 Route::group(['middleware' => ['auth']], function () {
 
+    Route::get('/home/post/show/{id}', [PostController::class, 'showPost'])->name('post');
+    Route::post('/home/post/store', [PostController::class, 'store'])->name('store_post');
+    Route::get('/home/create/{caregory}', [PostController::class, 'create'])->name('create_post');
+    Route::get('/home/post/edit/{id}', [PostController::class, 'editPost'])->name('edit_post');
+    Route::post('/home/post/update/{id}', [PostController::class, 'update'])->name('update_post');
+    Route::get('/home/post/delete/{id}', [PostController::class, 'destroy'])->name('delete_post');
+
     Route::prefix('home/porojo')->group(function () {
         Route::get('/', [PostController::class, 'porojo'])->name('porojo');
         Route::get('/create', [PostController::class, 'createPorojo'])->name('create_porojo');
@@ -49,6 +56,12 @@ Route::group(['middleware' => ['auth']], function () {
 
     Route::prefix('home/domokaya')->group(function () {
         Route::get('/', [PostController::class, 'domokaya'])->name('domokaya');
+        Route::get('/create', [PostController::class, 'createDomokaya'])->name('create_domokaya');
+        Route::post('/store', [PostController::class, 'storeDomokaya']);
+    });
+
+    Route::prefix('home/porojo_live')->group(function () {
+        Route::get('/', [PostController::class, 'porojoLive'])->name('porojo_live');
         Route::get('/create', [PostController::class, 'createDomokaya'])->name('create_domokaya');
         Route::post('/store', [PostController::class, 'storeDomokaya']);
     });

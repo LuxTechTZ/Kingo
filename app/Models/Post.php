@@ -22,4 +22,14 @@ class Post extends Model
         'post_date',
         'image_url',
     ];
+
+    public function category()
+    {
+        return $this->belongsTo('App\Models\PostCategory','post_category_id');
+    }
+
+    public function images()
+    {
+        return $this->hasMany('App\Models\PostImage');
+    }
 }

@@ -2,7 +2,7 @@
     <x-slot name="header">
         <h2 class="font-semibold text-xl text-gray-800 leading-tight">
             {{ __('Porojo') }}
-            <a href="{{route('create_porojo')}}" class="inline-flex justify-center py-2 px-4
+            <a href="{{url('/')}}/home/create/{{$category}}" class="inline-flex justify-center py-2 px-4
                                             border border-transparent shadow-sm text-sm font-medium rounded-md
                                             text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none
                                             focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 " >Add New</a>
@@ -76,7 +76,7 @@
                                             </td>
 
                                             <td class="px-6 py-4 whitespace-nowrap text-right text-sm font-medium">
-                                                <a href="/home/post/{{$post->id}}" class="inline-block rounded-lg shadow-lg text-xs px-3 py-1 bg-green-500 text-white ">View</a>
+                                                <a href="/home/post/show/{{$post->id}}" class="inline-block rounded-lg shadow-lg text-xs px-3 py-1 bg-green-500 text-white ">View</a>
                                                 <a href="/home/post/edit/{{$post->id}}" class="inline-block rounded-lg shadow-lg text-xs px-3 py-1 bg-indigo-500 text-white ">Edit</a>
                                                 <a href="/home/post/delete/{{$post->id}}" class="inline-block rounded-lg shadow-lg text-xs px-3 py-1 bg-red-500 text-white ">Delete</a>
                                             </td>

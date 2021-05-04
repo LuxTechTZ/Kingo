@@ -273,7 +273,7 @@
                         <article class="u-block-hover">
                             <figure class="u-shadow-v25 g-bg-cover g-bg-white-gradient-opacity-v1--after">
                                 <img class="img-fluid w-100 u-block-hover__main--zoom-v1"
-                                    src="{{url('/')}}/{{Illuminate\Support\Facades\Storage::url($porojo->image_url)}}"
+                                    src="{{url('/')}}/{{Illuminate\Support\Facades\Storage::url($domokaya->image_url)}}"
                                     alt="Image Description">
                             </figure>
 
@@ -292,7 +292,7 @@
                         <article class="u-block-hover">
                             <figure class="u-shadow-v25 g-bg-cover g-bg-white-gradient-opacity-v1--after">
                                 <img class="img-fluid w-100 u-block-hover__main--zoom-v1"
-                                    src="{{url('/')}}/{{Illuminate\Support\Facades\Storage::url($domokaya->image_url)}}"
+                                    src="{{url('/')}}/{{Illuminate\Support\Facades\Storage::url($porojo->image_url)}}"
                                     alt="Image Description">
                             </figure>
 

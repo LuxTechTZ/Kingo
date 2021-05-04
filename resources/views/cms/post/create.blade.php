@@ -23,9 +23,10 @@
                                 </div>
                             </div>
                             <div class="mt-5 md:mt-0 md:col-span-2">
-                                <form action="{{url('/')}}/home/porojo/store" method="POST"
+                                <form action="{{url('/')}}/home/post/store" method="POST"
                                       enctype="multipart/form-data">
                                     @csrf
+                                    <input hidden value="{{$category->id}}" name="post_category_id">
                                     <div class="shadow overflow-hidden sm:rounded-md">
                                         <div class="px-4 py-5 bg-white sm:p-6">
                                             <div class="grid grid-cols-6 gap-6">
@@ -52,6 +53,7 @@
                                                 </div>
 
 
+                                                @if($category->id != 3)
                                                 <div class="col-span-6">
                                                     <label for="desc"
                                                            class="block text-sm font-medium
@@ -61,6 +63,7 @@
                                                            focus:border-indigo-500 block w-full shadow-sm
                                                            sm:text-sm border-gray-300 rounded-md"></textarea>
                                                 </div>
+                                                @endif
 
                                                 <div class="col-span-6 sm:col-span-6 lg:col-span-3">
                                                     <label for="button" class="block text-sm font-medium
@@ -77,6 +80,8 @@
                                                     focus:ring-indigo-500 focus:border-indigo-500 block
                                                     w-full shadow-sm sm:text-sm border-gray-300 rounded-md">
                                                 </div>
+
+
 
                                             </div>
                                             <div>

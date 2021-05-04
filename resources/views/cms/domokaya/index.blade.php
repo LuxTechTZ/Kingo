@@ -74,9 +74,10 @@
                                                 @endif
                                             </td>
 
-                                            <td class="px-6 py-4 whitespace-nowrap text-right text-sm font-medium">
-                                                <a href="/projects/show/{{$post->id}}" class="inline-block rounded-lg shadow-lg text-xs px-3 py-1 bg-green-500 text-white ">View</a>
-                                                <a href="/projects/edit/{{$post->id}}" class="inline-block rounded-lg shadow-lg text-xs px-3 py-1 bg-indigo-500 text-white ">Edit</a>
+                                             <td class="px-6 py-4 whitespace-nowrap text-right text-sm font-medium">
+                                                <a href="/home/post/{{$post->id}}" class="inline-block rounded-lg shadow-lg text-xs px-3 py-1 bg-green-500 text-white ">View</a>
+                                                <a href="/home/post/edit/{{$post->id}}" class="inline-block rounded-lg shadow-lg text-xs px-3 py-1 bg-indigo-500 text-white ">Edit</a>
+                                                 <a href="/home/post/delete/{{$post->id}}" class="inline-block rounded-lg shadow-lg text-xs px-3 py-1 bg-red-500 text-white ">Delete</a>
                                             </td>
                                         </tr>
                                     @endforeach

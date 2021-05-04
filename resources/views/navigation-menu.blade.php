@@ -18,10 +18,10 @@
                     <x-jet-nav-link href="{{ route('porojo') }}" :active="request()->routeIs('porojo','create_porojo')">
                         Porojo
                     </x-jet-nav-link>
-                    <x-jet-nav-link href="{{ route('domokaya') }}" :active="request()->routeIs('domokaya','create_domokaya')">
+                    <x-jet-nav-link href="{{ route('domokaya') }}" :active="request()->routeIs('domokaya','create_domokaya','edit_post')">
                         Domokaya
                     </x-jet-nav-link>
-                    <x-jet-nav-link href="{{ route('dashboard') }}" :active="request()->routeIs('dashboard')">
+                    <x-jet-nav-link href="{{ route('porojo_live') }}" :active="request()->routeIs('porojo_live')">
                         Porojo Live
                     </x-jet-nav-link>
                     <x-jet-nav-link href="{{ route('dashboard') }}" :active="request()->routeIs('dashboard')">

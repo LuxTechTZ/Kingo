@@ -23,7 +23,7 @@
                                 </div>
                             </div>
                             <div class="mt-5 md:mt-0 md:col-span-2">
-                                <form action="{{url('/')}}/home/porojo/store" method="POST"
+                                <form action="{{url('/')}}/home/post/update/{{$post->id}}" method="POST"
                                       enctype="multipart/form-data">
                                     @csrf
                                     <div class="shadow overflow-hidden sm:rounded-md">
@@ -32,7 +32,7 @@
                                                 <div class="col-span-6 sm:col-span-3">
                                                     <label for="first_name" class="block text-sm
                                                     font-medium text-gray-700">Post Title</label>
-                                                    <input required type="text" name="title" id="title"
+                                                    <input value="{{$post->title}}" required type="text" name="title" id="title"
                                                            autocomplete="given-name" class="mt-1
                                                            focus:ring-indigo-500 focus:border-indigo-500
                                                            block w-full shadow-sm sm:text-sm border-gray-300
@@ -45,8 +45,13 @@
                                                     <select name="status" required class="mt-1 focus:ring-indigo-500
                                                            focus:border-indigo-500 block w-full shadow-sm
                                                            sm:text-sm border-gray-300 rounded-md">
-                                                        <option value="0">Normal</option>
+                                                        @if($post->status == 0)
+                                                        <option selected value="0">Normal</option>
                                                         <option value="1">Main</option>
+                                                        @else
+                                                        <option value="0">Normal</option>
+                                                        <option selected value="1">Main</option>
+                                                        @endif
                                                     </select>
 
                                                 </div>
@@ -59,13 +64,13 @@
                                                     <textarea name="content" required
                                                            id="content" rows="10" class="mt-1 focus:ring-indigo-500
                                                            focus:border-indigo-500 block w-full shadow-sm
-                                                           sm:text-sm border-gray-300 rounded-md"></textarea>
+                                                           sm:text-sm border-gray-300 rounded-md">{{$post->content}}</textarea>
                                                 </div>
 
                                                 <div class="col-span-6 sm:col-span-6 lg:col-span-3">
                                                     <label for="button" class="block text-sm font-medium
                                                     text-gray-700">Author/Artist Name</label>
-                                                    <input required type="text" name="artist_name" id="artist_name" class="mt-1
+                                                    <input value="{{$post->artist_name}}" required type="text" name="artist_name" id="artist_name" class="mt-1
                                                     focus:ring-indigo-500 focus:border-indigo-500 block
                                                     w-full shadow-sm sm:text-sm border-gray-300 rounded-md">
                                                 </div>
@@ -73,16 +78,21 @@
                                                 <div class="col-span-6 sm:col-span-3 lg:col-span-3">
                                                     <label for="button_url" class="block text-sm font-medium
                                                     text-gray-700">Date To Post</label>
-                                                    <input required type="date" name="post_date" id="post_date" class="mt-1
+                                                    <input value="{{$post->post_date}}" required type="date" name="post_date" id="post_date" class="mt-1
                                                     focus:ring-indigo-500 focus:border-indigo-500 block
                                                     w-full shadow-sm sm:text-sm border-gray-300 rounded-md">
                                                 </div>
+
+
 
                                             </div>
                                             <div>
                                                 <label class="block text-sm font-medium text-gray-700">
                                                     Post Image
                                                 </label>
+                                                <div>
+                                                    <img src="{{url('/')}}/{{Illuminate\Support\Facades\Storage::url($post->image_url)}}">
+                                                </div>
                                                 <div class="mt-1 flex justify-center px-6 pt-5 pb-6 border-2
                                                 border-gray-300 border-dashed rounded-md">
                                                     <div class="space-y-1 text-center">
@@ -103,7 +113,7 @@
                                                             focus-within:ring-offset-2
                                                             focus-within:ring-indigo-500">
                                                                 <span>Upload a file</span>
-                                                                <input required id="image" name="image"
+                                                                <input id="image" name="image"
                                                                        type="file" class="sr-only" accept="image/jpeg, image/png">
                                                             </label>
                                                             <p class="pl-1"></p>
