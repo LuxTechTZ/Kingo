@@ -273,7 +273,7 @@
                         <article class="u-block-hover">
                             <figure class="u-shadow-v25 g-bg-cover g-bg-white-gradient-opacity-v1--after">
                                 <img class="img-fluid w-100 u-block-hover__main--zoom-v1"
-                                    src="https://kingo.s3-eu-west-1.amazonaws.com/dynamic-content/images/medium-6211-20210501112309-385626.jpg"
+                                    src="{{url('/')}}/{{$domokaya->image_url}}"
                                     alt="Image Description">
                             </figure>
 
@@ -285,15 +285,14 @@
 
                         <h5 class="h5"
                             style="border-bottom: 1px solid rgb(195, 193, 193); margin-bottom: 20px;padding-bottom: 10px">
-                            <a class="u-link-v5 g-color-gray-dark-v1 g-color-primary--hover" href="#!">Speed
-                                Governer</a>
+                            <a class="u-link-v5 g-color-gray-dark-v1 g-color-primary--hover" href="#!">{{$domokaya->title}}</a>
                         </h5>
 
                         {{-- article --}}
                         <article class="u-block-hover">
                             <figure class="u-shadow-v25 g-bg-cover g-bg-white-gradient-opacity-v1--after">
                                 <img class="img-fluid w-100 u-block-hover__main--zoom-v1"
-                                    src="https://kingo.s3-eu-west-1.amazonaws.com/dynamic-content/images/small-4703-20210326153526-335798.jpg"
+                                    src="{{url('/')}}/{{$porojo->image_url}}"
                                     alt="Image Description">
                             </figure>
 
@@ -304,8 +303,14 @@
                         </span>
 
                         <h5 class="h5 g-mb-10">
-                            <a class="u-link-v5 g-color-gray-dark-v1 g-color-primary--hover" href="#!">Mwana wa Kondoo
-                                Kafufuka</a>
+                            <a class="u-link-v5 g-color-gray-dark-v1 g-color-primary--hover" href="#!">{{$porojo->title}}</a>
+                            <p>
+                                @if (strlen($porojo->content) > 60)
+                                    {{$porojo->content = substr($porojo->content, 0, 57) . '...'}}
+                                @else
+                                    {{$porojo->content}}
+                                @endif
+                            </p>
                         </h5>
 
                     </div>

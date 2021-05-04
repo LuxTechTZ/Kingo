@@ -1,7 +1,7 @@
 <x-app-layout>
     <x-slot name="header">
         <h2 class="font-semibold text-xl text-gray-800 leading-tight">
-            Create A Porojo Post
+            Create A Domokaya Post
         </h2>
     </x-slot>
 
@@ -23,7 +23,7 @@
                                 </div>
                             </div>
                             <div class="mt-5 md:mt-0 md:col-span-2">
-                                <form action="{{url('/')}}/home/porojo/store" method="POST"
+                                <form action="{{url('/')}}/home/domokaya/store" method="POST"
                                       enctype="multipart/form-data">
                                     @csrf
                                     <div class="shadow overflow-hidden sm:rounded-md">
@@ -57,7 +57,7 @@
                                                            class="block text-sm font-medium
                                                             text-gray-700">Description/Article</label>
                                                     <textarea name="content" required
-                                                           id="content" rows="10" class="mt-1 focus:ring-indigo-500
+                                                           id="content" class="mt-1 focus:ring-indigo-500
                                                            focus:border-indigo-500 block w-full shadow-sm
                                                            sm:text-sm border-gray-300 rounded-md"></textarea>
                                                 </div>

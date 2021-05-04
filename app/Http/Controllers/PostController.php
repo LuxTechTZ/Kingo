@@ -15,33 +15,71 @@ class PostController extends Controller
         return view('cms.porojo.index',compact('posts'));
     }
 
+    public function porojo()
+    {
+        $posts = Post::where('post_category_id','1')->get();
 
-    public function create()
+        return view('cms.porojo.index',compact('posts'));
+    }
+
+    public function createPorojo()
     {
         //
         return view('cms.porojo.create');
     }
 
-    /**
-     * Store a newly created resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\Response
-     */
-    public function store(Request $request)
-    {
-        //
-    }
-
-    public function storePorojo(Request $request)
+        public function storePorojo(Request $request)
     {
         if (isset($request['image'])) {
             $request['image_url'] = $this->upload_image($request['image']);
         }
 
+        if ($request['status'] == 1){
+            $posts = Post::where('post_category_id','1')->where('status',1)->get();
+            foreach ($posts as $post){
+                $post->status = 0;
+                $post->save();
+            }
+        }
+
         $request['post_category_id'] = 1;
+        $request['desc'] = $request['title'];
         Post::create($request->all());
         return redirect()->route('porojo');
+    }
+
+    public function domokaya()
+    {
+        $posts = Post::where('post_category_id','2')->get();
+
+        return view('cms.domokaya.index',compact('posts'));
+    }
+
+    public function createDomokaya()
+    {
+        //
+        return view('cms.domokaya.create');
+    }
+
+
+    public function storeDomokaya(Request $request)
+    {
+        if (isset($request['image'])) {
+            $request['image_url'] = $this->upload_image($request['image']);
+        }
+
+        if ($request['status'] == 1){
+            $posts = Post::where('post_category_id','2')->where('status',1)->get();
+            foreach ($posts as $post){
+                $post->status = 0;
+                $post->save();
+            }
+        }
+
+        $request['post_category_id'] = 2;
+        $request['desc'] = $request['title'];
+        Post::create($request->all());
+        return redirect()->route('domokaya');
     }
 
     /**

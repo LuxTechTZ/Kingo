@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\PostController;
+use App\Http\Controllers\SiteController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -14,11 +15,8 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('website.index');
+Route::get('/', [SiteController::class, 'index']);
 
-    return view('welcome');
-});
 
 Route::get('/site', function () {
     return view('website.index');
@@ -44,8 +42,14 @@ Route::prefix('home')->group(function () {
 Route::group(['middleware' => ['auth']], function () {
 
     Route::prefix('home/porojo')->group(function () {
-        Route::get('/', [PostController::class, 'index'])->name('porojo');
-        Route::get('/create', [PostController::class, 'create'])->name('create_porojo');
+        Route::get('/', [PostController::class, 'porojo'])->name('porojo');
+        Route::get('/create', [PostController::class, 'createPorojo'])->name('create_porojo');
         Route::post('/store', [PostController::class, 'storePorojo']);
+    });
+
+    Route::prefix('home/domokaya')->group(function () {
+        Route::get('/', [PostController::class, 'domokaya'])->name('domokaya');
+        Route::get('/create', [PostController::class, 'createDomokaya'])->name('create_domokaya');
+        Route::post('/store', [PostController::class, 'storeDomokaya']);
     });
 });

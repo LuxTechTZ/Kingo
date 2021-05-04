@@ -1,8 +1,8 @@
 <x-app-layout>
     <x-slot name="header">
         <h2 class="font-semibold text-xl text-gray-800 leading-tight">
-            {{ __('Porojo') }}
-            <a href="{{route('create_porojo')}}" class="inline-flex justify-center py-2 px-4
+            {{ __('Domokaya') }}
+            <a href="{{route('create_domokaya')}}" class="inline-flex justify-center py-2 px-4
                                             border border-transparent shadow-sm text-sm font-medium rounded-md
                                             text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none
                                             focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 " >Add New</a>
@@ -27,6 +27,9 @@
                                         <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
                                             Post Date
                                         </th>
+                                        <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                                            Status
+                                        </th>
 
                                         <th scope="col" class="relative px-6 py-3">
                                             <span class="sr-only">Edit</span>
@@ -48,10 +51,10 @@
                                                             {{$post->title}}
                                                         </div>
                                                         <div class="text-sm text-gray-500">
-                                                            @if (strlen($post->content) > 40)
-                                                            {{$post->content = substr($post->content, 0, 37) . '...'}}
+                                                            @if (strlen($post->desc) > 40)
+                                                            {{$post->desc = substr($post->desc, 0, 37) . '...'}}
                                                             @else
-                                                                {{$post->content}}
+                                                                {{$post->desc}}
                                                             @endif
                                                         </div>
                                                     </div>
@@ -61,6 +64,14 @@
 
                                             <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">
                                                 {{date('d M Y', strtotime($post->post_date))}}
+                                            </td>
+
+                                            <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">
+                                                @if($post->status == 0)
+                                                    Normal
+                                                @else
+                                                    Main
+                                                @endif
                                             </td>
 
                                             <td class="px-6 py-4 whitespace-nowrap text-right text-sm font-medium">

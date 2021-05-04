@@ -8,7 +8,7 @@
     <div class="py-12">
         <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
             <div class="bg-white overflow-hidden shadow-xl sm:rounded-lg">
-                <iframe style="width: 100%; height: 700px" src="{{url('/')}}/site" title="Website Page">
+                <iframe style="width: 100%; height: 700px" src="{{url('/')}}" title="Website Page">
                 </iframe>
             </div>
         </div>
