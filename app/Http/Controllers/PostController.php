@@ -41,7 +41,7 @@ class PostController extends Controller
 
         $request['post_category_id'] = 1;
         Post::create($request->all());
-        return redirect()->back();
+        return redirect()->route('porojo');
     }
 
     /**

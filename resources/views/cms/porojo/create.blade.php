@@ -104,7 +104,7 @@
                                                             focus-within:ring-indigo-500">
                                                                 <span>Upload a file</span>
                                                                 <input required id="image" name="image"
-                                                                       type="file" class="sr-only">
+                                                                       type="file" class="sr-only" accept="image/jpeg, image/png">
                                                             </label>
                                                             <p class="pl-1"></p>
                                                         </div>

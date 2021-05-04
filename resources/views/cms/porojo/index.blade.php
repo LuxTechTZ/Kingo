@@ -49,7 +49,7 @@
                                                         </div>
                                                         <div class="text-sm text-gray-500">
                                                             {{$post->desc}}
-post                              </div>
+                                                        </div>
                                                     </div>
                                                 </div>
                                             </td>

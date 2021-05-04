@@ -33,8 +33,10 @@ Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
 Route::prefix('home')->group(function () {
 
 
-    Route::get('/', 'AccountController@index');
+    Route::get('/', function (){
+         return view('dashboard');
 
+    });
 
 
 });
@@ -47,4 +49,3 @@ Route::group(['middleware' => ['auth']], function () {
         Route::post('/store', [PostController::class, 'storePorojo']);
     });
 });
-
