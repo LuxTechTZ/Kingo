@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Post;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Storage;
 
 class PostController extends Controller
 {
@@ -28,10 +29,10 @@ class PostController extends Controller
         return view('cms.porojo.create');
     }
 
-        public function storePorojo(Request $request)
+    public function storePorojo(Request $request)
     {
         if (isset($request['image'])) {
-            $request['image_url'] = $this->upload_image($request['image']);
+            $request['image_url'] = Storage::putFile('public/porojo', $request->file('image'));
         }
 
         if ($request['status'] == 1){
@@ -65,7 +66,7 @@ class PostController extends Controller
     public function storeDomokaya(Request $request)
     {
         if (isset($request['image'])) {
-            $request['image_url'] = $this->upload_image($request['image']);
+            $request['image_url'] = Storage::putFile('public/domokaya', $request->file('image'), 'public');
         }
 
         if ($request['status'] == 1){
@@ -136,6 +137,7 @@ class PostController extends Controller
 
         // $file_size = $file->getClientSize();
 
+        return Storage::putFile('file/', $file, 'public');
         $file->move('uploads/sliders/',$file_name);
 
         return $request['image_url'] = 'uploads/sliders/'.$file_name;

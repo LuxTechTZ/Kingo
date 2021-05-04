@@ -43,7 +43,7 @@
                                                 <div class="flex items-center">
                                                     <div class="flex-shrink-0 h-10 w-10">
                                                         <img class="h-10 w-10 rounded-full"
-                                                             src="{{url('/')}}/{{$post->image_url}}" alt="">
+                                                             src="{{url('/')}}/{{Illuminate\Support\Facades\Storage::url($post->image_url)}}" alt="">
                                                     </div>
 
                                                     <div class="ml-4">
