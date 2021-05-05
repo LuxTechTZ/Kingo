@@ -1,7 +1,7 @@
 <x-app-layout>
     <x-slot name="header">
         <h2 class="font-semibold text-xl text-gray-800 leading-tight">
-            {{ __('Porojo') }}
+            {{ __($category) }}
             <a href="{{url('/')}}/home/create/{{$category}}" class="inline-flex justify-center py-2 px-4
                                             border border-transparent shadow-sm text-sm font-medium rounded-md
                                             text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none

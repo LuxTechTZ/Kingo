@@ -48,6 +48,12 @@ Route::group(['middleware' => ['auth']], function () {
     Route::post('/home/post/update/{id}', [PostController::class, 'update'])->name('update_post');
     Route::get('/home/post/delete/{id}', [PostController::class, 'destroy'])->name('delete_post');
 
+
+    Route::get('/home/mjue_maarufu', [PostController::class, 'mjueMaarufu'])->name('mjue_maarufu');
+    Route::get('/home/video', [PostController::class, 'video'])->name('video');
+    Route::get('/home/riwaya', [PostController::class, 'riwaya'])->name('riwaya');
+    Route::get('/home/kingo_katuni', [PostController::class, 'kingoKatuni'])->name('kingo_katuni');
+
     Route::prefix('home/porojo')->group(function () {
         Route::get('/', [PostController::class, 'porojo'])->name('porojo');
         Route::get('/create', [PostController::class, 'createPorojo'])->name('create_porojo');

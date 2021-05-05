@@ -1,7 +1,7 @@
 <x-app-layout>
     <x-slot name="header">
         <h2 class="font-semibold text-xl text-gray-800 leading-tight">
-            Create A Porojo Post
+            Create A {{ __($category->name) }} Post
         </h2>
     </x-slot>
 
@@ -53,7 +53,7 @@
                                                 </div>
 
 
-                                                @if($category->id != 3)
+                                                @if($category->id == 1 || $category->id == 4 || $category->id == 6)
                                                 <div class="col-span-6">
                                                     <label for="desc"
                                                            class="block text-sm font-medium
@@ -107,9 +107,19 @@
                                                             focus-within:outline-none focus-within:ring-2
                                                             focus-within:ring-offset-2
                                                             focus-within:ring-indigo-500">
-                                                                <span>Upload a file</span>
-                                                                <input required id="image" name="image"
+                                                                @if($category->id == 3)
+                                                                <span>Upload Multiple Image Files</span>
+                                                                <input multiple required id="image" name="image[]"
                                                                        type="file" class="sr-only" accept="image/jpeg, image/png">
+                                                                @elseif($category->id == 5)
+                                                                <span>Upload An Video File</span>
+                                                                    <input required id="image" name="image"
+                                                                       type="file" class="sr-only" accept="video/mp4">
+                                                                @else
+                                                                    <span>Upload An Image File</span>
+                                                                    <input required id="image" name="image"
+                                                                       type="file" class="sr-only" accept="image/jpeg, image/png">
+                                                                @endif
                                                             </label>
                                                             <p class="pl-1"></p>
                                                         </div>
