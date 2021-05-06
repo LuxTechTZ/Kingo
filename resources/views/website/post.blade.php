@@ -8,7 +8,7 @@
 
     <!-- Required Meta Tags Always Come First -->
     <meta charset="utf-8">
-    <meta name="{{$post->title}}" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
 
     <meta property="og:title"       content="{{$post->title}}">
@@ -47,16 +47,6 @@
   </head>
 
   <body>
-  <!-- Load Facebook SDK for JavaScript -->
-    <div id="fb-root"></div>
-    <script>(function(d, s, id) {
-    var js, fjs = d.getElementsByTagName(s)[0];
-    if (d.getElementById(id)) return;
-    js = d.createElement(s); js.id = id;
-    js.src = "https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v3.0";
-    fjs.parentNode.insertBefore(js, fjs);
-    }(document, 'script', 'facebook-jssdk'));</script>
-
 
     <main>
       @include('website.partials.header')
@@ -101,6 +91,22 @@
                   <figure class="u-shadow-v25 g-mb-30">
                       @if($post->category->id == 5)
                     <video controls class="img-fluid w-100" src="{{url('/')}}/{{Illuminate\Support\Facades\Storage::url($post->image_url)}}" alt="Image Description">
+                        @elseif($post->category->id == 3)
+                      <div class="js-carousel g-mx-minus-10"
+                     data-infinite="true"
+                     data-arrows-classes="u-arrow-v1 g-pos-abs g-absolute-centered--y g-width-30 g-height-30 g-brd-around g-brd-white g-color-white g-color-primary--hover rounded"
+                     data-arrow-left-classes="fa fa-angle-left g-left-20"
+                     data-arrow-right-classes="fa fa-angle-right g-right-20">
+                          @if(count($post->images) > 0)
+                          @foreach($post->images as $image)
+                              <div class="js-slide">
+                                <img class="img-fluid" src="{{url('/')}}/{{Illuminate\Support\Facades\Storage::url($image->path)}}" alt="Image Description">
+                              </div>
+                          @endforeach
+                          @else
+                              <img class="img-fluid" src="{{url('/')}}/{{Illuminate\Support\Facades\Storage::url($post->image_url)}}" alt="Image Description">
+                          @endif
+                    </div>
                       @else
                     <img class="img-fluid w-100" src="{{url('/')}}/{{Illuminate\Support\Facades\Storage::url($post->image_url)}}" alt="Image Description">
                       @endif
@@ -171,13 +177,13 @@
                   </div>
 
                   <div class="row">
-                  @foreach(\App\Models\Post::where('status','1')->limit(6)->get() as $popular)
+                  @foreach(\App\Models\Post::where('status','1')->where('post_category_id','!=','3')->limit(6)->get() as $popular)
                     <!-- Article Video -->
                     <div class="col-lg-4 col-sm-6 g-mb-30">
                       <article>
                         <figure class="u-shadow-v25 g-pos-rel g-mb-20">
                             @if($popular->category->id == 5)
-                          <video class="img-fluid w-100"
+                                <video class="img-fluid w-100"
                                src="{{url('/')}}/{{Illuminate\Support\Facades\Storage::url($popular->image_url)}}" alt="Image Description">
                             @else
                                 <img class="img-fluid w-100"
@@ -186,10 +192,10 @@
 
                           <figcaption class="g-pos-abs g-top-10 g-left-10">
                               @if($popular->category->id == 1)
-                            <a class="btn btn-xs u-btn-blue text-uppercase rounded-0"
-                               href="{{url('/')}}/category/{{strtolower($popular->category->name)}}">
-                                {{$popular->category->name}}
-                            </a>
+                                    <a class="btn btn-xs u-btn-blue text-uppercase rounded-0"
+                                       href="{{url('/')}}/category/{{strtolower($popular->category->name)}}">
+                                        {{$popular->category->name}}
+                                    </a>
                               @elseif($popular->category->id == 2)
                                   <a class="btn btn-xs u-btn-pink text-uppercase rounded-0"
                                      href="{{url('/')}}/category/{{strtolower($popular->category->name)}}">
@@ -398,6 +404,18 @@
 
   return t;
 }(document, "script", "twitter-wjs"));</script>
+
+      <!-- Load Facebook SDK for JavaScript -->
+    <div id="fb-root"></div>
+    <script>(function(d, s, id) {
+    var js, fjs = d.getElementsByTagName(s)[0];
+    if (d.getElementById(id)) return;
+    js = d.createElement(s); js.id = id;
+    js.src = "https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v3.0";
+    fjs.parentNode.insertBefore(js, fjs);
+    }(document, 'script', 'facebook-jssdk'));</script>
+
+
 
     <!-- JS Global Compulsory -->
     <script src="{{url('/')}}/assets-main/vendor/jquery/jquery.min.js"></script>

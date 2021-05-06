@@ -1,13 +1,20 @@
 <div class="g-mb-30">
     <div class="u-heading-v3-1 g-mb-30">
-                <h2 class="h5 u-heading-v3__title g-color-gray-dark-v1 text-uppercase g-brd-primary">Recent Posts</h2>
-              </div>
-        @foreach(\App\Models\Post::limit(5)->get() as $recent)
-              <!-- Article -->
-              <article class="media g-mb-30">
+        <h2 class="h5 u-heading-v3__title g-color-gray-dark-v1 text-uppercase g-brd-primary">
+            Mpya
+        </h2>
+    </div>
+        @foreach(\App\Models\Post::orderBy('id','desc')->limit(5)->get() as $recent)
+            <!-- Article -->
+                <article class="media g-mb-30">
                 <a class="d-flex u-shadow-v25 mr-3" href="{{url('/')}}/post/{{str_replace('?','',$recent->title)}}/{{$recent->id}}">
-                  <img class="g-width-60 g-height-60" src="{{url('/')}}/{{Illuminate\Support\Facades\Storage::url($recent->image_url)}}"
+                    @if($recent->category->id == 5)
+                        <video class="g-width-60 g-height-60" src="{{url('/')}}/{{Illuminate\Support\Facades\Storage::url($recent->image_url)}}"
+                               alt="{{$recent->title}}"></video>
+                    @else
+                        <img class="g-width-60 g-height-60" src="{{url('/')}}/{{Illuminate\Support\Facades\Storage::url($recent->image_url)}}"
                        alt="{{$recent->title}}">
+                    @endif
                 </a>
 
                 <div class="media-body">
@@ -33,5 +40,4 @@
               <!-- End Article -->
         @endforeach
 
-
-            </div>
+</div>

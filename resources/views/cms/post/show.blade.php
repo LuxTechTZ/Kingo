@@ -93,7 +93,7 @@
                       </div>
                       <div class="ml-4 flex-shrink-0">
                         <a href="#" class="font-medium text-indigo-600 hover:text-indigo-500">
-                          Download
+
                         </a>
                       </div>
                     </li>
@@ -103,12 +103,16 @@
                       <div class="w-0 flex-1 flex items-center">
                         <!-- Heroicon name: solid/paper-clip -->
                           <p >Main Image </p>
-                          <img src="{{url('/')}}/{{Illuminate\Support\Facades\Storage::url($post->image_url)}}" style="max-height: 150px">
+                          @if($post->category->id == 5)
+                              <video controls src="{{url('/')}}/{{Illuminate\Support\Facades\Storage::url($post->image_url)}}" style="max-height: 150px"></video>
+                          @else
+                              <img src="{{url('/')}}/{{Illuminate\Support\Facades\Storage::url($post->image_url)}}" style="max-height: 150px">
+                          @endif
 
                       </div>
                       <div class="ml-4 flex-shrink-0">
                         <a href="#" class="font-medium text-indigo-600 hover:text-indigo-500">
-                          Download
+
                         </a>
                       </div>
                     </li>

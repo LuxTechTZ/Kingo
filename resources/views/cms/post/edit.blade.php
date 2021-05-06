@@ -49,7 +49,6 @@
                                                         <option selected value="0">Normal</option>
                                                         <option value="1">Main</option>
                                                         @else
-                                                        <option value="0">Normal</option>
                                                         <option selected value="1">Main</option>
                                                         @endif
                                                     </select>
@@ -102,7 +101,7 @@
                                                 @foreach($post->images as $image)
                                                 <div>
                                                     <label class="block text-sm font-medium text-gray-700">
-                                                        Post Image
+                                                        Post Image / Video
                                                     </label>
                                                     <div>
                                                         <img src="{{url('/')}}/{{Illuminate\Support\Facades\Storage::url($image->path)}}">
@@ -126,7 +125,7 @@
                                                                 focus-within:outline-none focus-within:ring-2
                                                                 focus-within:ring-offset-2
                                                                 focus-within:ring-indigo-500">
-                                                                    <span>Upload a file</span>
+                                                                    <span>Change Image File</span>
                                                                     <input id="image" name="image"
                                                                            type="file" class="sr-only" accept="image/jpeg, image/png">
                                                                 </label>
@@ -145,7 +144,11 @@
                                                     Post Image
                                                 </label>
                                                 <div>
-                                                    <img src="{{url('/')}}/{{Illuminate\Support\Facades\Storage::url($post->image_url)}}">
+                                                    @if($post->category->id == 5)
+                                                        <video controls src="{{url('/')}}/{{Illuminate\Support\Facades\Storage::url($post->image_url)}}" style="max-height: 150px"></video>
+                                                    @else
+                                                        <img src="{{url('/')}}/{{Illuminate\Support\Facades\Storage::url($post->image_url)}}" style="max-height: 150px">
+                                                    @endif
                                                 </div>
                                                 <div class="mt-1 flex justify-center px-6 pt-5 pb-6 border-2
                                                 border-gray-300 border-dashed rounded-md">
