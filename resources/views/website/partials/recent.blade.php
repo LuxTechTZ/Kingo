@@ -5,14 +5,14 @@
         @foreach(\App\Models\Post::limit(5)->get() as $recent)
               <!-- Article -->
               <article class="media g-mb-30">
-                <a class="d-flex u-shadow-v25 mr-3" href="#!">
+                <a class="d-flex u-shadow-v25 mr-3" href="{{url('/')}}/post/{{str_replace('?','',$recent->title)}}/{{$recent->id}}">
                   <img class="g-width-60 g-height-60" src="{{url('/')}}/{{Illuminate\Support\Facades\Storage::url($recent->image_url)}}"
                        alt="{{$recent->title}}">
                 </a>
 
                 <div class="media-body">
                   <h3 class="h6">
-                    <a class="u-link-v5 g-color-gray-dark-v1 g-color-primary--hover" href="#!">
+                    <a class="u-link-v5 g-color-gray-dark-v1 g-color-primary--hover" href="{{url('/')}}/post/{{str_replace('?','',$recent->title)}}/{{$recent->id}}">
                         {{$recent->title}}
                     </a>
                   </h3>

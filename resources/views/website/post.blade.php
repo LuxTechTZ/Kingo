@@ -11,6 +11,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
 
+    <meta property="og:title" content="{{$post->title}}">
+    <meta property="og:image" content="{{url('/')}}/post/{{str_replace('?','',$post->title)}}/{{$post->id}}">
+
     <!-- Favicon -->
     <link rel="shortcut icon" href="../../../favicon.ico">
 
@@ -341,181 +344,16 @@
               <!-- End Popular Videos -->
 
               <!-- Social Links -->
-              <div class="g-mb-50">
-                <div class="u-heading-v3-1 g-mb-30">
-                  <h2 class="h5 u-heading-v3__title g-color-gray-dark-v1 text-uppercase g-brd-primary">Social Links</h2>
-                </div>
-
-                <ul class="list-unstyled mb-0">
-                  <li class="d-flex align-items-center justify-content-between g-mb-20">
-                    <a class="d-flex align-items-center u-link-v5 g-color-gray-dark-v1 g-color-primary--hover" href="#!">
-                      <span class="u-icon-v3 u-icon-size--xs u-shadow-v25 g-font-size-12 g-bg-facebook g-bg-facebook--hover g-color-white rounded-circle g-mr-10" href="#!">
-                        <i class="fa fa-facebook"></i>
-                      </span>
-                      Like
-                    </a>
-                    <span class="js-counter d-block g-color-gray-dark-v4">103832</span>
-                  </li>
-                  <li class="d-flex align-items-center justify-content-between g-mb-20">
-                    <a class="d-flex align-items-center u-link-v5 g-color-gray-dark-v1 g-color-primary--hover" href="#!">
-                      <span class="u-icon-v3 u-icon-size--xs u-shadow-v25 g-font-size-12 g-bg-lightred g-bg-lightred--hover g-color-white rounded-circle g-mr-10" href="#!">
-                        <i class="fa fa-google-plus"></i>
-                      </span>
-                      Add to Circle
-                    </a>
-                    <span class="js-counter d-block g-color-gray-dark-v4">47192</span>
-                  </li>
-                  <li class="d-flex align-items-center justify-content-between g-mb-20">
-                    <a class="d-flex align-items-center u-link-v5 g-color-gray-dark-v1 g-color-primary--hover" href="#!">
-                      <span class="u-icon-v3 u-icon-size--xs u-shadow-v25 g-font-size-12 g-bg-instagram g-bg-instagram--hover g-color-white rounded-circle g-mr-10" href="#!">
-                        <i class="fa fa-instagram"></i>
-                      </span>
-                      Follow Us
-                    </a>
-                    <span class="js-counter d-block g-color-gray-dark-v4">38291</span>
-                  </li>
-                  <li class="d-flex align-items-center justify-content-between g-mb-20">
-                    <a class="d-flex align-items-center u-link-v5 g-color-gray-dark-v1 g-color-primary--hover" href="#!">
-                      <span class="u-icon-v3 u-icon-size--xs u-shadow-v25 g-font-size-12 g-bg-teal g-bg-teal--hover g-color-white rounded-circle g-mr-10" href="#!">
-                        <i class="fa fa-medium"></i>
-                      </span>
-                      Writers
-                    </a>
-                    <span class="js-counter d-block g-color-gray-dark-v4">23871</span>
-                  </li>
-                  <li class="d-flex align-items-center justify-content-between">
-                    <a class="d-flex align-items-center u-link-v5 g-color-gray-dark-v1 g-color-primary--hover" href="#!">
-                      <span class="u-icon-v3 u-icon-size--xs u-shadow-v25 g-font-size-12 g-bg-twitter g-bg-twitter--hover g-color-white rounded-circle g-mr-10" href="#!">
-                        <i class="fa fa-twitter"></i>
-                      </span>
-                      Follow Us
-                    </a>
-                    <span class="js-counter d-block g-color-gray-dark-v4">391743</span>
-                  </li>
-                </ul>
-              </div>
+              @include('website.partials.social_links')
               <!-- End Social Links -->
 
-              <!-- Popular Tags -->
-              <div class="g-mb-20">
-                <div class="u-heading-v3-1 g-mb-30">
-                  <h2 class="h5 u-heading-v3__title g-color-gray-dark-v1 text-uppercase g-brd-primary">Popular Tags</h2>
-                </div>
 
-                <ul class="u-list-inline g-font-size-11 text-uppercase mb-0">
-                  <li class="list-inline-item g-mb-10">
-                    <a class="u-tags-v1 g-brd-around g-brd-gray-light-v4 g-bg-primary--hover g-brd-primary--hover g-color-black-opacity-0_8 g-color-white--hover rounded g-py-6 g-px-15" href="#!">Web Design</a>
-                  </li>
-                  <li class="list-inline-item g-mb-10">
-                    <a class="u-tags-v1 g-brd-around g-brd-gray-light-v4 g-bg-primary--hover g-brd-primary--hover g-color-black-opacity-0_8 g-color-white--hover rounded g-py-6 g-px-15" href="#!">Bootstrap</a>
-                  </li>
-                  <li class="list-inline-item g-mb-10">
-                    <a class="u-tags-v1 g-brd-around g-brd-gray-light-v4 g-bg-primary--hover g-brd-primary--hover g-color-black-opacity-0_8 g-color-white--hover rounded g-py-6 g-px-15" href="#!">SASS</a>
-                  </li>
-                  <li class="list-inline-item g-mb-10">
-                    <a class="u-tags-v1 g-brd-around g-brd-gray-light-v4 g-bg-primary--hover g-brd-primary--hover g-color-black-opacity-0_8 g-color-white--hover rounded g-py-6 g-px-15" href="#!">Marketing</a>
-                  </li>
-                  <li class="list-inline-item g-mb-10">
-                    <a class="u-tags-v1 g-brd-around g-brd-gray-light-v4 g-bg-primary--hover g-brd-primary--hover g-color-black-opacity-0_8 g-color-white--hover rounded g-py-6 g-px-15" href="#!">Unify</a>
-                  </li>
-                  <li class="list-inline-item g-mb-10">
-                    <a class="u-tags-v1 g-brd-around g-brd-gray-light-v4 g-bg-primary--hover g-brd-primary--hover g-color-black-opacity-0_8 g-color-white--hover rounded g-py-6 g-px-15" href="#!">Htmlstream</a>
-                  </li>
-                  <li class="list-inline-item g-mb-10">
-                    <a class="u-tags-v1 g-brd-around g-brd-gray-light-v4 g-bg-primary--hover g-brd-primary--hover g-color-black-opacity-0_8 g-color-white--hover rounded g-py-6 g-px-15" href="#!">Pixeel</a>
-                  </li>
-                  <li class="list-inline-item g-mb-10">
-                    <a class="u-tags-v1 g-brd-around g-brd-gray-light-v4 g-bg-primary--hover g-brd-primary--hover g-color-black-opacity-0_8 g-color-white--hover rounded g-py-6 g-px-15" href="#!">Free Themes</a>
-                  </li>
-                </ul>
-              </div>
-              <!-- End Popular Tags -->
 
               <div id="stickyblock-start" class="js-sticky-block g-sticky-block--lg g-pt-20" data-start-point="#stickyblock-start" data-end-point="#stickyblock-end">
-                <!-- News Feed -->
-                <div class="g-mb-40">
-                  <div class="u-heading-v3-1 g-mb-30">
-                    <h2 class="h5 u-heading-v3__title g-color-gray-dark-v1 text-uppercase g-brd-primary">News Feed</h2>
-                  </div>
 
-                  <!-- Article -->
-                  <article>
-                    <span class="g-font-size-12">
-                      <a class="u-link-v5 g-color-gray-dark-v4" href="#!">Jonathan Owen</a>
-                    </span>
-                    <h3 class="h6">
-                      <a class="g-color-gray-dark-v1" href="#!">Architects plan to stop skyscrapers from blocking out sunlight</a>
-                    </h3>
-                  </article>
-                  <!-- End Article -->
-
-                  <hr class="g-brd-gray-light-v4 g-mt-15 g-mb-10">
-
-                  <!-- Article -->
-                  <article>
-                    <span class="g-font-size-12">
-                      <a class="u-link-v5 g-color-gray-dark-v4" href="#!">James Doe</a>
-                    </span>
-                    <h3 class="h6">
-                      <a class="g-color-gray-dark-v1" href="#!">Cooltex is one of the best technology company of our age and future</a>
-                    </h3>
-                  </article>
-                  <!-- End Article -->
-
-                  <hr class="g-brd-gray-light-v4 g-mt-15 g-mb-10">
-
-                  <!-- Article -->
-                  <article>
-                    <span class="g-font-size-12">
-                      <a class="u-link-v5 g-color-gray-dark-v4" href="#!">Albert Coolmen</a>
-                    </span>
-                    <h3 class="h6">
-                      <a class="g-color-gray-dark-v1" href="#!">Some text goes here with plain English and much more other texts go there..</a>
-                    </h3>
-                  </article>
-                  <!-- End Article -->
-                </div>
-                <!-- End News Feed -->
 
                 <!-- Top Authors -->
-                <div class="g-mb-40">
-                  <div class="u-heading-v3-1 g-mb-30">
-                    <h2 class="h5 u-heading-v3__title g-color-gray-dark-v1 text-uppercase g-brd-primary">Top Authors</h2>
-                  </div>
-
-                  <article class="media g-mb-35">
-                    <img class="d-flex u-shadow-v25 g-width-40 g-height-40 rounded-circle mr-3" src="{{url('/')}}/assets-magazine/img-temp/100x100/img1.jpg" alt="Image Description">
-                    <div class="media-body">
-                      <h4 class="g-font-size-16">
-                        <a class="u-link-v5 g-color-gray-dark-v1 g-color-primary--hover" href="#!">Htmlstream</a> <small class="g-color-gray-dark-v4">@Htmlstream</small>
-                      </h4>
-                      <p class="g-color-gray-dark-v2">Sed ultrices velit vitae tortor posuere and dial in the details.</p>
-                      <a class="btn u-btn-outline-primary g-font-size-11 text-uppercase" href="#!">Follow</a>
-                    </div>
-                  </article>
-
-                  <article class="media g-mb-35">
-                    <img class="d-flex u-shadow-v25 g-width-40 g-height-40 rounded-circle mr-3" src="{{url('/')}}/assets-magazine/img-temp/100x100/img3.jpg" alt="Image Description">
-                    <div class="media-body">
-                      <h4 class="g-font-size-16 g-color-gray-dark-v1">
-                        <a class="u-link-v5 g-color-gray-dark-v1 g-color-primary--hover" href="#!">Pixeel</a> <small class="g-color-gray-dark-v4">@Pixeeluk</small>
-                      </h4>
-                      <p class="g-color-gray-dark-v2">This is where we sit down, grab a cup of coffee and dial in the details.</p>
-                      <a class="btn u-btn-outline-primary g-font-size-11 text-uppercase" href="#!">Follow</a>
-                    </div>
-                  </article>
-
-                  <article class="media">
-                    <img class="d-flex u-shadow-v25 g-width-40 g-height-40 rounded-circle mr-3" src="{{url('/')}}/assets-magazine/img-temp/100x100/img2.jpg" alt="Image Description">
-                    <div class="media-body">
-                      <h4 class="g-font-size-16 g-color-gray-dark-v1">
-                        <a class="u-link-v5 g-color-gray-dark-v1 g-color-primary--hover" href="#!">WrapBootstrap</a> <small class="g-color-gray-dark-v4">@WrapBootstrap</small>
-                      </h4>
-                      <p class="g-color-gray-dark-v2">Ulvinar leo ultricies ut, grab a cup of coffee and dial in the details.</p>
-                      <a class="btn u-btn-outline-primary g-font-size-11 text-uppercase" href="#!">Follow</a>
-                    </div>
-                  </article>
-                </div>
+              @include('website.partials.authors')
                 <!-- End Top Authors -->
               </div>
             </div>
