@@ -102,11 +102,11 @@
                         <div class="col-lg-5">
                           @foreach(\App\Models\Post::where('post_category_id','1')->limit(6)->get() as $poj)
                           <article class="media g-mb-20">
-                            <a class="d-flex mr-3" href="{{url('/')}}/post/{{$poj->title}}/{{$poj->id}}">
+                            <a class="d-flex mr-3" href="{{url('/')}}/post/{{str_replace('?','',$poj->title)}}/{{$poj->id}}">
                                 <img class="g-width-120 g-height-70" src="{{url('/')}}/{{Illuminate\Support\Facades\Storage::url($poj->image_url)}}"></a>
                             <div class="media-body">
                               <h3 class="h6">
-                                <a class="g-color-main" href="{{url('/')}}/post/{{$poj->title}}/{{$poj->id}}">{{$poj->title}}</a></h3>
+                                <a class="g-color-main" href="{{url('/')}}/post/{{str_replace('?','',$poj->title)}}/{{$poj->id}}">{{$poj->title}}</a></h3>
                               <ul class="u-list-inline g-font-size-12 g-color-gray-dark-v4">
                                 <li class="list-inline-item">{{date('M d, Y',strtotime($poj->post_date))}}</li>
                                 <li class="list-inline-item">/</li>
@@ -151,24 +151,24 @@
                         <div class="col-lg-2">
                           <ul class="list-unstyled mb-0">
                             <li class="g-brd-bottom g-brd-gray-light-v4 g-py-10">
-                              <a class="g-color-main g-color-main--hover" href="{{url('/')}}/porojo">Porojo</a></li>
+                              <a class="g-color-main g-color-main--hover" href="{{url('/')}}/domokaya">Domokaya</a></li>
                             <li class="g-brd-bottom g-brd-gray-light-v4 g-py-10">
-                              <a class="g-color-main g-color-main--hover" href="{{url('/')}}/porojo">Zinazokiki</a></li>
+                              <a class="g-color-main g-color-main--hover" href="{{url('/')}}/domokaya">Zinazokiki</a></li>
                             <li class="g-brd-bottom g-brd-gray-light-v4 g-py-10">
-                              <a class="g-color-main g-color-main--hover" href="{{url('/')}}/porojo">Mpya</a></li>
+                              <a class="g-color-main g-color-main--hover" href="{{url('/')}}/domokaya">Mpya</a></li>
                             <li class="g-brd-bottom g-brd-gray-light-v4 g-py-10">
-                              <a class="g-color-main g-color-main--hover" href="{{url('/')}}/porojo">Vichekesho</a></li>
+                              <a class="g-color-main g-color-main--hover" href="{{url('/')}}/domokaya">Vichekesho</a></li>
 
                           </ul>
                         </div>
                         <div class="col-lg-5">
                           @foreach(\App\Models\Post::where('post_category_id','2')->limit(6)->get() as $poj)
                           <article class="media g-mb-20">
-                            <a class="d-flex mr-3" href="{{url('/')}}/post/{{$poj->title}}/{{$poj->id}}">
+                            <a class="d-flex mr-3" href="{{url('/')}}/post/{{str_replace('?','',$poj->title)}}/{{$poj->id}}">
                                 <img class="g-width-120 g-height-70" src="{{url('/')}}/{{Illuminate\Support\Facades\Storage::url($poj->image_url)}}"></a>
                             <div class="media-body">
                               <h3 class="h6">
-                                <a class="g-color-main" href="{{url('/')}}/post/{{$poj->title}}/{{$poj->id}}">{{$poj->title}}</a></h3>
+                                <a class="g-color-main" href="{{url('/')}}/post/{{str_replace('?','',$poj->title)}}/{{$poj->id}}">{{$poj->title}}</a></h3>
                               <ul class="u-list-inline g-font-size-12 g-color-gray-dark-v4">
                                 <li class="list-inline-item">{{date('M d, Y',strtotime($poj->post_date))}}</li>
                                 <li class="list-inline-item">/</li>

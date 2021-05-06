@@ -56,26 +56,42 @@
               <figure class="g-pos-rel mb-5">
                   @if($post->category->id == 5)
                 <video controls class="img-fluid" src="{{url('/')}}/{{Illuminate\Support\Facades\Storage::url($post->image_url)}}" alt="Image Description">
+                  @elseif($post->category->id == 3)
+                      <div class="js-carousel g-mx-minus-10"
+                     data-infinite="true"
+                     data-arrows-classes="u-arrow-v1 g-pos-abs g-absolute-centered--y g-width-30 g-height-30 g-brd-around g-brd-white g-color-white g-color-primary--hover rounded"
+                     data-arrow-left-classes="fa fa-angle-left g-left-20"
+                     data-arrow-right-classes="fa fa-angle-right g-right-20">
+                          @if(count($post->images) > 0)
+                          @foreach($post->images as $image)
+                              <div class="js-slide">
+                                <img class="img-fluid" src="{{url('/')}}/{{Illuminate\Support\Facades\Storage::url($image->path)}}" alt="Image Description">
+                              </div>
+                          @endforeach
+                          @else
+                              <img class="img-fluid" src="{{url('/')}}/{{Illuminate\Support\Facades\Storage::url($post->image_url)}}" alt="Image Description">
+                          @endif
+                    </div>
                   @else
                 <img class="img-fluid" src="{{url('/')}}/{{Illuminate\Support\Facades\Storage::url($post->image_url)}}" alt="Image Description">
                 @endif
                 <!-- Figcaption -->
                 <figcaption class="w-100 g-pos-abs g-bottom-0 g-left-0 g-pa-15">
-                  <ul class="d-flex justify-content-start list-inline mb-0">
+                  <ul class="d-flex justify-content-start list-inline mb-0 ">
                     <li class="list-inline-item mx-0">
-                      <a class="d-inline-block g-brd-around g-brd-white-opacity-0_3 g-brd-primary-opacity-0_6--hover g-color-white g-bg-primary-opacity-0_6--hover g-text-underline--none--hover rounded-left g-px-15 g-py-4" href="#!">
+                      <a class=" bg-dark d-inline-block g-brd-around g-brd-white-opacity-0_3 g-brd-primary-opacity-0_6--hover g-color-white g-bg-primary-opacity-0_6--hover g-text-underline--none--hover rounded-left g-px-15 g-py-4" href="#!">
                         <i class="align-middle mr-2 icon-medical-022 u-line-icon-pro"></i>
-                        25
+                          {{$post->likes}}
                       </a>
                     </li>
                     <li class="list-inline-item g-ml-minus-1 mr-0">
-                      <a class="d-inline-block g-brd-around g-brd-white-opacity-0_3 g-brd-primary-opacity-0_6--hover g-color-white g-bg-primary-opacity-0_6--hover g-text-underline--none--hover rounded-right g-px-15 g-py-4" href="#!">
+                      <a class="bg-dark d-inline-block g-brd-around g-brd-white-opacity-0_3 g-brd-primary-opacity-0_6--hover g-color-white g-bg-primary-opacity-0_6--hover g-text-underline--none--hover rounded-right g-px-15 g-py-4" href="#!">
                         <i class="align-middle mr-2 icon-finance-206 u-line-icon-pro"></i>
-                        12
+                          {{$post->shares}}
                       </a>
                     </li>
                     <li class="list-inline-item ml-auto mr-0">
-                      <a class="d-inline-block g-color-white g-font-size-15 g-text-underline--none--hover g-px-15 g-py-4" href="#!"
+                      <a class="bg-dark d-inline-block g-color-white g-font-size-15 g-text-underline--none--hover g-px-15 g-py-4" href="#!"
                          data-toggle="tooltip"
                          data-placement="top"
                          title="Save to Read Later">
@@ -103,18 +119,21 @@
 
               <!-- Info -->
               <div class="g-px-50 g-px-100--md mb-4">
-                <h2 class="h3 mb-4"><a class="u-link-v5 g-color-main g-color-primary--hover" href="#!">{{$post->title}}</a></h2>
+                <h2 class="h3 mb-4"><a class="u-link-v5 g-color-main g-color-primary--hover" href="{{url('/')}}/post/{{$post->title}}/{{$post->id}}">
+                        {{$post->title}}</a></h2>
                 <p>@if (strlen($post->content) > 200)
-                        {{$post->content = substr($post->content, 0, 197) . '...'}}
+                        {!! $post->content = substr($post->content, 0, 197) . '...' !!}
                     @else
-                        {{$post->content}}
+                        {!! $post->content !!}
                     @endif
                 </p>
               </div>
               <!-- End Info -->
 
               <div class="g-mb-25">
-                <a class="g-font-weight-600 g-font-size-13 text-uppercase" href="{{url('/')}}/post/{{$post->title}}/{{$post->id}}">Read More</a>
+                <a class="g-font-weight-600 g-font-size-13 text-uppercase" href="{{url('/')}}/post/{{$post->title}}/{{$post->id}}">
+                    Soma zaidi
+                </a>
               </div>
 
               <!-- Social Icons -->
@@ -132,7 +151,7 @@
                   </li>
                   <li class="list-inline-item g-mx-2">
                     <a class="u-icon-v3 u-icon-size--xs g-color-primary g-color-white--hover g-bg-secondary g-bg-primary--hover rounded-circle" href="#!">
-                      <i class="fa fa-google-plus"></i>
+                      <i class="fa fa-instagram"></i>
                     </a>
                   </li>
                 </ul>
@@ -142,344 +161,7 @@
             <!-- End Article -->
               @endforeach
 
-            <!-- Article -->
-            <article class="text-center g-mb-100">
-              <figure class="g-pos-rel mb-5">
-                <img class="img-fluid" src="{{url('/')}}/assets-magazine/img-temp/900x450/img1.jpg" alt="Image Description">
 
-                <!-- Figcaption -->
-                <figcaption class="w-100 g-pos-abs g-bottom-0 g-left-0 g-pa-15">
-                  <ul class="d-flex justify-content-start list-inline mb-0">
-                    <li class="list-inline-item mx-0">
-                      <a class="d-inline-block g-brd-around g-brd-white-opacity-0_3 g-brd-primary-opacity-0_6--hover g-color-white g-bg-primary-opacity-0_6--hover g-text-underline--none--hover rounded-left g-px-15 g-py-4" href="#!">
-                        <i class="align-middle mr-2 icon-medical-022 u-line-icon-pro"></i>
-                        215
-                      </a>
-                    </li>
-                    <li class="list-inline-item g-ml-minus-1 mr-0">
-                      <a class="d-inline-block g-brd-around g-brd-white-opacity-0_3 g-brd-primary-opacity-0_6--hover g-color-white g-bg-primary-opacity-0_6--hover g-text-underline--none--hover rounded-right g-px-15 g-py-4" href="#!">
-                        <i class="align-middle mr-2 icon-finance-206 u-line-icon-pro"></i>
-                        9
-                      </a>
-                    </li>
-                    <li class="list-inline-item ml-auto mr-0">
-                      <a class="d-inline-block g-color-white g-font-size-15 g-text-underline--none--hover g-px-15 g-py-4" href="#!"
-                         data-toggle="tooltip"
-                         data-placement="top"
-                         title="Save to Read Later">
-                        <i class="fa fa-bookmark-o"></i>
-                      </a>
-                    </li>
-                  </ul>
-                </figcaption>
-                <!-- End Figcaption -->
-              </figure>
-
-              <!-- Category & Date -->
-              <ul class="list-inline g-color-secondary-dark-v1 g-font-weight-600 g-font-size-12 text-uppercase mb-3">
-                <li class="list-inline-item g-mr-10">
-                  <i class="align-middle g-color-primary mr-1 icon-communication-020 u-line-icon-pro"></i>
-                  <a class="g-font-weight-700" href="#!">Sport</a>
-                </li>
-                <li class="list-inline-item">&#8226;</li>
-                <li class="list-inline-item g-ml-10">
-                  <i class="align-middle g-color-secondary-dark-v1 mr-1 icon-education-124 u-line-icon-pro"></i>
-                  Aug 14, 2017
-                </li>
-              </ul>
-              <!-- End Category & Date -->
-
-              <!-- Info -->
-              <div class="g-px-50 g-px-100--md mb-4">
-                <h2 class="h3 mb-4"><a class="u-link-v5 g-color-main g-color-primary--hover" href="#!">The 2018 Specialized Enduro has officially landed</a></h2>
-                <p>The top line is that both platforms have been lengthened, and the 27.5 version has had a top tube tweak to give it a look more in keeping with the 29er version.</p>
-              </div>
-              <!-- End Info -->
-
-              <div class="g-mb-25">
-                <a class="g-font-weight-600 g-font-size-13 text-uppercase" href="bm-classic-single-2.html">Read More</a>
-              </div>
-
-              <!-- Social Icons -->
-              <div class="g-overflow-hidden">
-                <ul class="list-inline u-info-v10-1 mb-0">
-                  <li class="list-inline-item g-mx-2">
-                    <a class="u-icon-v3 u-icon-size--xs g-color-primary g-color-white--hover g-bg-secondary g-bg-primary--hover rounded-circle" href="#!">
-                      <i class="fa fa-facebook"></i>
-                    </a>
-                  </li>
-                  <li class="list-inline-item g-mx-2">
-                    <a class="u-icon-v3 u-icon-size--xs g-color-primary g-color-white--hover g-bg-secondary g-bg-primary--hover rounded-circle" href="#!">
-                      <i class="fa fa-twitter"></i>
-                    </a>
-                  </li>
-                  <li class="list-inline-item g-mx-2">
-                    <a class="u-icon-v3 u-icon-size--xs g-color-primary g-color-white--hover g-bg-secondary g-bg-primary--hover rounded-circle" href="#!">
-                      <i class="fa fa-google-plus"></i>
-                    </a>
-                  </li>
-                </ul>
-              </div>
-              <!-- End Social Icons -->
-            </article>
-            <!-- End Article -->
-
-            <!-- Article -->
-            <article class="text-center g-mb-100">
-              <figure class="g-pos-rel mb-5">
-                <div class="js-carousel g-mx-minus-10"
-                     data-infinite="true"
-                     data-arrows-classes="u-arrow-v1 g-pos-abs g-absolute-centered--y g-width-30 g-height-30 g-brd-around g-brd-white g-color-white g-color-primary--hover rounded"
-                     data-arrow-left-classes="fa fa-angle-left g-left-20"
-                     data-arrow-right-classes="fa fa-angle-right g-right-20">
-                  <div class="js-slide">
-                    <img class="img-fluid" src="{{url('/')}}/assets-magazine/img-temp/900x450/img2.jpg" alt="Image Description">
-                  </div>
-                  <div class="js-slide">
-                    <img class="img-fluid" src="{{url('/')}}/assets-magazine/img-temp/900x450/img4.jpg" alt="Image Description">
-                  </div>
-                </div>
-
-                <!-- Figcaption -->
-                <figcaption class="w-100 g-pos-abs g-bottom-0 g-left-0 g-pa-15">
-                  <ul class="d-flex justify-content-start list-inline mb-0">
-                    <li class="list-inline-item mx-0">
-                      <a class="d-inline-block g-brd-around g-brd-white-opacity-0_3 g-brd-primary-opacity-0_6--hover g-color-white g-bg-primary-opacity-0_6--hover g-text-underline--none--hover rounded-left g-px-15 g-py-4" href="#!">
-                        <i class="align-middle mr-2 icon-medical-022 u-line-icon-pro"></i>
-                        76
-                      </a>
-                    </li>
-                    <li class="list-inline-item g-ml-minus-1 mr-0">
-                      <a class="d-inline-block g-brd-around g-brd-white-opacity-0_3 g-brd-primary-opacity-0_6--hover g-color-white g-bg-primary-opacity-0_6--hover g-text-underline--none--hover rounded-right g-px-15 g-py-4" href="#!">
-                        <i class="align-middle mr-2 icon-finance-206 u-line-icon-pro"></i>
-                        4
-                      </a>
-                    </li>
-                    <li class="list-inline-item ml-auto mr-0">
-                      <a class="d-inline-block g-color-white g-font-size-15 g-text-underline--none--hover g-px-15 g-py-4" href="#!"
-                         data-toggle="tooltip"
-                         data-placement="top"
-                         title="Save to Read Later">
-                        <i class="fa fa-bookmark-o"></i>
-                      </a>
-                    </li>
-                  </ul>
-                </figcaption>
-                <!-- End Figcaption -->
-              </figure>
-
-              <!-- Category & Date -->
-              <ul class="list-inline g-color-secondary-dark-v1 g-font-weight-600 g-font-size-12 text-uppercase mb-3">
-                <li class="list-inline-item g-mr-10">
-                  <i class="align-middle g-color-primary mr-1 icon-communication-020 u-line-icon-pro"></i>
-                  <a class="g-font-weight-700" href="#!">Spa</a>
-                </li>
-                <li class="list-inline-item">&#8226;</li>
-                <li class="list-inline-item g-ml-10">
-                  <i class="align-middle g-color-secondary-dark-v1 mr-1 icon-education-124 u-line-icon-pro"></i>
-                  Aug 12, 2017
-                </li>
-              </ul>
-              <!-- End Category & Date -->
-
-              <!-- Info -->
-              <div class="g-px-50 g-px-100--md mb-4">
-                <h2 class="h3 mb-4"><a class="u-link-v5 g-color-main g-color-primary--hover" href="#!">Bamford Haybarn Spas opens first US site</a></h2>
-                <p>Originally created by Carole Bamford in the English Cotswolds, the Bamford Haybarn brand has migrated across the pond, with a new 4500sq ft spa in Miami Beach.</p>
-              </div>
-              <!-- End Info -->
-
-              <div class="g-mb-25">
-                <a class="g-font-weight-600 g-font-size-13 text-uppercase" href="bm-classic-single-2.html">Read More</a>
-              </div>
-
-              <!-- Social Icons -->
-              <div class="g-overflow-hidden">
-                <ul class="list-inline u-info-v10-1 mb-0">
-                  <li class="list-inline-item g-mx-2">
-                    <a class="u-icon-v3 u-icon-size--xs g-color-primary g-color-white--hover g-bg-secondary g-bg-primary--hover rounded-circle" href="#!">
-                      <i class="fa fa-facebook"></i>
-                    </a>
-                  </li>
-                  <li class="list-inline-item g-mx-2">
-                    <a class="u-icon-v3 u-icon-size--xs g-color-primary g-color-white--hover g-bg-secondary g-bg-primary--hover rounded-circle" href="#!">
-                      <i class="fa fa-twitter"></i>
-                    </a>
-                  </li>
-                  <li class="list-inline-item g-mx-2">
-                    <a class="u-icon-v3 u-icon-size--xs g-color-primary g-color-white--hover g-bg-secondary g-bg-primary--hover rounded-circle" href="#!">
-                      <i class="fa fa-google-plus"></i>
-                    </a>
-                  </li>
-                </ul>
-              </div>
-              <!-- End Social Icons -->
-            </article>
-            <!-- End Article -->
-
-            <!-- Article -->
-            <article class="text-center g-mb-100">
-              <figure class="g-pos-rel mb-5">
-                <img class="img-fluid" src="{{url('/')}}/assets-magazine/img-temp/900x450/img5.jpg" alt="Image Description">
-
-                <!-- Figcaption -->
-                <figcaption class="w-100 g-pos-abs g-bottom-0 g-left-0 g-pa-15">
-                  <ul class="d-flex justify-content-start list-inline mb-0">
-                    <li class="list-inline-item mx-0">
-                      <a class="d-inline-block g-brd-around g-brd-white-opacity-0_3 g-brd-primary-opacity-0_6--hover g-color-white g-bg-primary-opacity-0_6--hover g-text-underline--none--hover rounded-left g-px-15 g-py-4" href="#!">
-                        <i class="align-middle mr-2 icon-medical-022 u-line-icon-pro"></i>
-                        25
-                      </a>
-                    </li>
-                    <li class="list-inline-item g-ml-minus-1 mr-0">
-                      <a class="d-inline-block g-brd-around g-brd-white-opacity-0_3 g-brd-primary-opacity-0_6--hover g-color-white g-bg-primary-opacity-0_6--hover g-text-underline--none--hover rounded-right g-px-15 g-py-4" href="#!">
-                        <i class="align-middle mr-2 icon-finance-206 u-line-icon-pro"></i>
-                        12
-                      </a>
-                    </li>
-                    <li class="list-inline-item ml-auto mr-0">
-                      <a class="d-inline-block g-color-white g-font-size-15 g-text-underline--none--hover g-px-15 g-py-4" href="#!"
-                         data-toggle="tooltip"
-                         data-placement="top"
-                         title="Save to Read Later">
-                        <i class="fa fa-bookmark-o"></i>
-                      </a>
-                    </li>
-                  </ul>
-                </figcaption>
-                <!-- End Figcaption -->
-              </figure>
-
-              <!-- Category & Date -->
-              <ul class="list-inline g-color-secondary-dark-v1 g-font-weight-600 g-font-size-12 text-uppercase mb-3">
-                <li class="list-inline-item g-mr-10">
-                  <i class="align-middle g-color-primary mr-1 icon-communication-020 u-line-icon-pro"></i>
-                  <a class="g-font-weight-700" href="#!">Fashion</a>
-                </li>
-                <li class="list-inline-item">&#8226;</li>
-                <li class="list-inline-item g-ml-10">
-                  <i class="align-middle g-color-secondary-dark-v1 mr-1 icon-education-124 u-line-icon-pro"></i>
-                  Aug 16, 2017
-                </li>
-              </ul>
-              <!-- End Category & Date -->
-
-              <!-- Info -->
-              <div class="g-px-50 g-px-100--md mb-4">
-                <h2 class="h3 mb-4"><a class="u-link-v5 g-color-main g-color-primary--hover" href="#!">Attacks Are Nation’s Deadliest in Decade; Driver of Van Sought</a></h2>
-                <p>BARCELONA, Spain — Largely spared the Islamic State attacks that have plagued Europe in recent years, Spaniards were confronted on Friday with the aftermath of a devastating terrorist plot, involving an explosives factory and two vehicular assaults, that swept through Barcelona and a seaside resort town leaving at least 14 dead and scores wounded.</p>
-              </div>
-              <!-- End Info -->
-
-              <div class="g-mb-25">
-                <a class="g-font-weight-600 g-font-size-13 text-uppercase" href="bm-classic-single-2.html">Read More</a>
-              </div>
-
-              <!-- Social Icons -->
-              <div class="g-overflow-hidden">
-                <ul class="list-inline u-info-v10-1 mb-0">
-                  <li class="list-inline-item g-mx-2">
-                    <a class="u-icon-v3 u-icon-size--xs g-color-primary g-color-white--hover g-bg-secondary g-bg-primary--hover rounded-circle" href="#!">
-                      <i class="fa fa-facebook"></i>
-                    </a>
-                  </li>
-                  <li class="list-inline-item g-mx-2">
-                    <a class="u-icon-v3 u-icon-size--xs g-color-primary g-color-white--hover g-bg-secondary g-bg-primary--hover rounded-circle" href="#!">
-                      <i class="fa fa-twitter"></i>
-                    </a>
-                  </li>
-                  <li class="list-inline-item g-mx-2">
-                    <a class="u-icon-v3 u-icon-size--xs g-color-primary g-color-white--hover g-bg-secondary g-bg-primary--hover rounded-circle" href="#!">
-                      <i class="fa fa-google-plus"></i>
-                    </a>
-                  </li>
-                </ul>
-              </div>
-              <!-- End Social Icons -->
-            </article>
-            <!-- End Article -->
-
-            <!-- Article -->
-            <article class="text-center g-mb-100">
-              <figure class="g-pos-rel mb-5">
-                <img class="img-fluid" src="{{url('/')}}/assets-magazine/img-temp/900x450/img6.jpg" alt="Image Description">
-
-                <!-- Figcaption -->
-                <figcaption class="w-100 g-pos-abs g-bottom-0 g-left-0 g-pa-15">
-                  <ul class="d-flex justify-content-start list-inline mb-0">
-                    <li class="list-inline-item mx-0">
-                      <a class="d-inline-block g-brd-around g-brd-white-opacity-0_3 g-brd-primary-opacity-0_6--hover g-color-white g-bg-primary-opacity-0_6--hover g-text-underline--none--hover rounded-left g-px-15 g-py-4" href="#!">
-                        <i class="align-middle mr-2 icon-medical-022 u-line-icon-pro"></i>
-                        215
-                      </a>
-                    </li>
-                    <li class="list-inline-item g-ml-minus-1 mr-0">
-                      <a class="d-inline-block g-brd-around g-brd-white-opacity-0_3 g-brd-primary-opacity-0_6--hover g-color-white g-bg-primary-opacity-0_6--hover g-text-underline--none--hover rounded-right g-px-15 g-py-4" href="#!">
-                        <i class="align-middle mr-2 icon-finance-206 u-line-icon-pro"></i>
-                        9
-                      </a>
-                    </li>
-                    <li class="list-inline-item ml-auto mr-0">
-                      <a class="d-inline-block g-color-white g-font-size-15 g-text-underline--none--hover g-px-15 g-py-4" href="#!"
-                         data-toggle="tooltip"
-                         data-placement="top"
-                         title="Save to Read Later">
-                        <i class="fa fa-bookmark-o"></i>
-                      </a>
-                    </li>
-                  </ul>
-                </figcaption>
-                <!-- End Figcaption -->
-              </figure>
-
-              <!-- Category & Date -->
-              <ul class="list-inline g-color-secondary-dark-v1 g-font-weight-600 g-font-size-12 text-uppercase mb-3">
-                <li class="list-inline-item g-mr-10">
-                  <i class="align-middle g-color-primary mr-1 icon-communication-020 u-line-icon-pro"></i>
-                  <a class="g-font-weight-700" href="#!">Sport</a>
-                </li>
-                <li class="list-inline-item">&#8226;</li>
-                <li class="list-inline-item g-ml-10">
-                  <i class="align-middle g-color-secondary-dark-v1 mr-1 icon-education-124 u-line-icon-pro"></i>
-                  Aug 14, 2017
-                </li>
-              </ul>
-              <!-- End Category & Date -->
-
-              <!-- Info -->
-              <div class="g-px-50 g-px-100--md mb-4">
-                <h2 class="h3 mb-4"><a class="u-link-v5 g-color-main g-color-primary--hover" href="#!">The 2018 Specialized Enduro has officially landed</a></h2>
-                <p>The top line is that both platforms have been lengthened, and the 27.5 version has had a top tube tweak to give it a look more in keeping with the 29er version.</p>
-              </div>
-              <!-- End Info -->
-
-              <div class="g-mb-25">
-                <a class="g-font-weight-600 g-font-size-13 text-uppercase" href="bm-classic-single-2.html">Read More</a>
-              </div>
-
-              <!-- Social Icons -->
-              <div class="g-overflow-hidden">
-                <ul class="list-inline u-info-v10-1 mb-0">
-                  <li class="list-inline-item g-mx-2">
-                    <a class="u-icon-v3 u-icon-size--xs g-color-primary g-color-white--hover g-bg-secondary g-bg-primary--hover rounded-circle" href="#!">
-                      <i class="fa fa-facebook"></i>
-                    </a>
-                  </li>
-                  <li class="list-inline-item g-mx-2">
-                    <a class="u-icon-v3 u-icon-size--xs g-color-primary g-color-white--hover g-bg-secondary g-bg-primary--hover rounded-circle" href="#!">
-                      <i class="fa fa-twitter"></i>
-                    </a>
-                  </li>
-                  <li class="list-inline-item g-mx-2">
-                    <a class="u-icon-v3 u-icon-size--xs g-color-primary g-color-white--hover g-bg-secondary g-bg-primary--hover rounded-circle" href="#!">
-                      <i class="fa fa-google-plus"></i>
-                    </a>
-                  </li>
-                </ul>
-              </div>
-              <!-- End Social Icons -->
-            </article>
-            <!-- End Article -->
 
             <div id="stickyblock-end"></div>
 
@@ -545,115 +227,7 @@
             <!-- End Subscribe -->
 
             <!-- Recent Posts -->
-            <div class="g-mb-30">
-              <div class="u-heading-v3-1 g-mb-30">
-                <h2 class="h5 u-heading-v3__title g-color-gray-dark-v1 text-uppercase g-brd-primary">Recent Posts</h2>
-              </div>
-
-              <!-- Article -->
-              <article class="media g-mb-30">
-                <a class="d-flex u-shadow-v25 mr-3" href="#!">
-                  <img class="g-width-60 g-height-60" src="{{url('/')}}/assets-magazine/img-temp/100x100/img4.jpg" alt="Image Description">
-                </a>
-
-                <div class="media-body">
-                  <h3 class="h6">
-                    <a class="u-link-v5 g-color-gray-dark-v1 g-color-primary--hover" href="#!">Best dessert recipes for breakfast which will..</a>
-                  </h3>
-
-                  <ul class="u-list-inline g-font-size-12 g-color-gray-dark-v4">
-                    <li class="list-inline-item">
-                      July 20, 2017
-                    </li>
-                    <li class="list-inline-item">/</li>
-                    <li class="list-inline-item">
-                      <a class="g-color-gray-dark-v4 g-text-underline--none--hover" href="#!">
-                        <i class="icon-finance-206 u-line-icon-pro align-middle g-pos-rel g-top-1 mr-1"></i> 18
-                      </a>
-                    </li>
-                  </ul>
-                </div>
-              </article>
-              <!-- End Article -->
-
-              <!-- Article -->
-              <article class="media g-mb-30">
-                <a class="d-flex u-shadow-v25 mr-3" href="#!">
-                  <img class="g-width-60 g-height-60" src="{{url('/')}}/assets-magazine/img-temp/100x100/img5.jpg" alt="Image Description">
-                </a>
-
-                <div class="media-body">
-                  <h3 class="h6">
-                    <a class="u-link-v5 g-color-gray-dark-v1 g-color-primary--hover" href="#!">Stylish things to do, see and purchase..</a>
-                  </h3>
-
-                  <ul class="u-list-inline g-font-size-12 g-color-gray-dark-v4">
-                    <li class="list-inline-item">
-                      July 16, 2017
-                    </li>
-                    <li class="list-inline-item">/</li>
-                    <li class="list-inline-item">
-                      <a class="g-color-gray-dark-v4 g-text-underline--none--hover" href="#!">
-                        <i class="icon-finance-206 u-line-icon-pro align-middle g-pos-rel g-top-1 mr-1"></i> 31
-                      </a>
-                    </li>
-                  </ul>
-                </div>
-              </article>
-              <!-- End Article -->
-
-              <!-- Article -->
-              <article class="media g-mb-30">
-                <a class="d-flex u-shadow-v25 mr-3" href="#!">
-                  <img class="g-width-60 g-height-60" src="{{url('/')}}/assets-magazine/img-temp/100x100/img6.jpg" alt="Image Description">
-                </a>
-
-                <div class="media-body">
-                  <h3 class="h6">
-                    <a class="u-link-v5 g-color-gray-dark-v1 g-color-primary--hover" href="#!">Government plans to test new primary school..</a>
-                  </h3>
-
-                  <ul class="u-list-inline g-font-size-12 g-color-gray-dark-v4">
-                    <li class="list-inline-item">
-                      July 07, 2017
-                    </li>
-                    <li class="list-inline-item">/</li>
-                    <li class="list-inline-item">
-                      <a class="g-color-gray-dark-v4 g-text-underline--none--hover" href="#!">
-                        <i class="icon-finance-206 u-line-icon-pro align-middle g-pos-rel g-top-1 mr-1"></i> 24
-                      </a>
-                    </li>
-                  </ul>
-                </div>
-              </article>
-              <!-- End Article -->
-
-              <!-- Article -->
-              <article class="media">
-                <a class="d-flex u-shadow-v25 mr-3" href="#!">
-                  <img class="g-width-60 g-height-60" src="{{url('/')}}/assets-magazine/img-temp/100x100/img7.jpg" alt="Image Description">
-                </a>
-
-                <div class="media-body">
-                  <h3 class="h6">
-                    <a class="u-link-v5 g-color-gray-dark-v1 g-color-primary--hover" href="#!">Top 10 Luxury Hotels - 5 Star Best Luxury Hotels</a>
-                  </h3>
-
-                  <ul class="u-list-inline g-font-size-12 g-color-gray-dark-v4">
-                    <li class="list-inline-item">
-                      July 11, 2017
-                    </li>
-                    <li class="list-inline-item">/</li>
-                    <li class="list-inline-item">
-                      <a class="g-color-gray-dark-v4 g-text-underline--none--hover" href="#!">
-                        <i class="icon-finance-206 u-line-icon-pro align-middle g-pos-rel g-top-1 mr-1"></i> 46
-                      </a>
-                    </li>
-                  </ul>
-                </div>
-              </article>
-              <!-- End Article -->
-            </div>
+            @include('website.partials.recent')
             <!-- End Recent Posts -->
 
             <!-- Popular Videos -->

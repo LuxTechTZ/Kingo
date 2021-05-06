@@ -54,7 +54,7 @@
 
 
                                                 @if($category->id == 1 || $category->id == 4 || $category->id == 6)
-                                                <div class="col-span-6">
+                                                <div class="col-span-12">
                                                     <label for="desc"
                                                            class="block text-sm font-medium
                                                             text-gray-700">Description/Article</label>
@@ -64,6 +64,15 @@
                                                            sm:text-sm border-gray-300 rounded-md"></textarea>
                                                 </div>
                                                 @endif
+                                                <div class="col-span-12">
+                                                    <label for="tags" class="block text-sm
+                                                    font-medium text-gray-700">Tags (Separate With Coma ,)</label>
+                                                    <input type="text" name="tags" id="tags" placeholder="Siasa, Kichekesho"
+                                                           class="mt-1
+                                                           focus:ring-indigo-500 focus:border-indigo-500
+                                                           block w-full shadow-sm sm:text-sm border-gray-300
+                                                            rounded-md">
+                                                </div>
 
                                                 <div class="col-span-6 sm:col-span-6 lg:col-span-3">
                                                     <label for="button" class="block text-sm font-medium

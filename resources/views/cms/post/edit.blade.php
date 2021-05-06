@@ -29,7 +29,7 @@
                                     <div class="shadow overflow-hidden sm:rounded-md">
                                         <div class="px-4 py-5 bg-white sm:p-6">
                                             <div class="grid grid-cols-6 gap-6">
-                                                <div class="col-span-6 sm:col-span-3">
+                                                <div class="col-span-6 ">
                                                     <label for="first_name" class="block text-sm
                                                     font-medium text-gray-700">Post Title</label>
                                                     <input value="{{$post->title}}" required type="text" name="title" id="title"
@@ -39,7 +39,7 @@
                                                             rounded-md">
                                                 </div>
 
-                                                <div class="col-span-6 sm:col-span-3">
+                                                <div class="col-span-6 ">
                                                     <label for="small_title" class="block text-sm
                                                     font-medium text-gray-700">Is Main Post</label>
                                                     <select name="status" required class="mt-1 focus:ring-indigo-500
@@ -57,7 +57,7 @@
                                                 </div>
 
                                                 @if($post->category->id == 1 || $post->category->id == 4 || $post->category->id == 6)
-                                                <div class="col-span-6">
+                                                <div class="col-span-12">
                                                     <label for="desc"
                                                            class="block text-sm font-medium
                                                             text-gray-700">Description/Article</label>
@@ -68,7 +68,17 @@
                                                 </div>
                                                 @endif
 
-                                                <div class="col-span-6 sm:col-span-6 lg:col-span-3">
+                                                <div class="col-span-12">
+                                                    <label for="tags" class="block text-sm
+                                                    font-medium text-gray-700">Tags (Separate With Coma ,)</label>
+                                                    <input value="{{$post->tags}}" type="text" name="tags" id="tags" placeholder="Siasa, Kichekesho"
+                                                           class="mt-1
+                                                           focus:ring-indigo-500 focus:border-indigo-500
+                                                           block w-full shadow-sm sm:text-sm border-gray-300
+                                                            rounded-md">
+                                                </div>
+
+                                                <div class="col-span-6 sm:col-span-6 ">
                                                     <label for="button" class="block text-sm font-medium
                                                     text-gray-700">Author/Artist Name</label>
                                                     <input value="{{$post->artist_name}}" required type="text" name="artist_name" id="artist_name" class="mt-1
@@ -76,7 +86,7 @@
                                                     w-full shadow-sm sm:text-sm border-gray-300 rounded-md">
                                                 </div>
 
-                                                <div class="col-span-6 sm:col-span-3 lg:col-span-3">
+                                                <div class="col-span-6 sm:col-span-3 ">
                                                     <label for="button_url" class="block text-sm font-medium
                                                     text-gray-700">Date To Post</label>
                                                     <input value="{{$post->post_date}}" required type="date" name="post_date" id="post_date" class="mt-1

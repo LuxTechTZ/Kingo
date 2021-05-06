@@ -23,6 +23,7 @@ class CreatePostsTable extends Migration
             $table->longText('content');
             $table->integer('status')->default(0);
             $table->date('post_date')->nullable();
+
             $table->timestamps();
             $table->softDeletes();
 

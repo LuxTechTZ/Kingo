@@ -142,13 +142,15 @@ class PostController extends Controller
 
     public function update(Request $request, $id)
     {
+//        return $request['status'];
         $post = Post::findOrFail($id);
         if ($request['status'] == 1){
-            $posts = Post::where('post_category_id',$post->category->id)->where('status',1)->get();
+            $posts = Post::where('post_category_id',$post->category->id)->where('status',1)->where('id','!=',$post->id)->get();
             foreach ($posts as $pre_post){
                 $pre_post->status = 0;
                 $pre_post->save();
             }
+
         }
 
         if (isset($request['image'])) {
@@ -182,7 +184,7 @@ class PostController extends Controller
         $post = Post::findOrFail($id);
         $category = $post->category->name;
         Post::destroy($id);
-        return redirect()->route(strtolower($category));
+        return redirect()->route(str_replace(' ','_',strtolower($category)));
 
     }
 
