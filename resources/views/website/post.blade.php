@@ -95,36 +95,6 @@
 
                   <hr class="g-brd-gray-light-v4 g-my-15">
 
-                  <ul class="list-inline text-uppercase mb-0">
-                    <li class="list-inline-item g-mr-10">
-                      <strong class="align-middle g-font-size-24">{{$post->views}}</strong>
-                    </li>
-                    <li class="list-inline-item g-mr-10">
-                      <span class="g-color-gray-dark-v5">|</span>
-                    </li>
-
-                    <li class="list-inline-item g-mr-10">
-                      <a class="twitter-share-button"
-                         data-size="large">
-                        <i class="fa fa-twitter g-mr-5--sm"></i>
-                          <span class="g-hidden-xs-down">Tweet on Twitter</span>
-                      </a>
-                    </li>
-                      <li class="list-inline-item g-mr-10">
-                          <!-- Your share button code -->
-                            <div class="fb-share-button g-py-5"
-                                 data-href="{{URL::full()}}"
-                                 data-size="large"
-                                 data-layout="button_count">
-                            </div>
-                      </li>
-                    <li class="list-inline-item">
-                      <a class="btn u-btn-lightred g-font-size-12 rounded g-py-5" href="#!">
-                        <i class="fa fa-heart"></i>
-                          <span class="g-hidden-xs-down">Like Post</span>
-                      </a>
-                    </li>
-                  </ul>
                 </header>
 
                 <div class="g-font-size-16 g-line-height-1_8 g-mb-30">
