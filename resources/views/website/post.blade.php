@@ -11,9 +11,11 @@
     <meta name="{{$post->title}}" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
 
-    <meta property="og:title" content="{{$post->title}}">
-    <meta property="og:image" content="{{url('/')}}/{{Illuminate\Support\Facades\Storage::url($post->image_url)}}">
+    <meta property="og:title"       content="{{$post->title}}">
+    <meta property="og:image"       content="{{url('/')}}/{{Illuminate\Support\Facades\Storage::url($post->image_url)}}">
     <meta property="og:description" content="{{$post->content}}">
+    <meta property="og:url"         content="{{URL::full()}}">
+    <meta property="og:type"        content="website" />
 
     <!-- Favicon -->
     <link rel="shortcut icon" href="../../../favicon.ico">
@@ -43,6 +45,17 @@
   </head>
 
   <body>
+  <!-- Load Facebook SDK for JavaScript -->
+    <div id="fb-root"></div>
+    <script>(function(d, s, id) {
+    var js, fjs = d.getElementsByTagName(s)[0];
+    if (d.getElementById(id)) return;
+    js = d.createElement(s); js.id = id;
+    js.src = "https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v3.0";
+    fjs.parentNode.insertBefore(js, fjs);
+    }(document, 'script', 'facebook-jssdk'));</script>
+
+
     <main>
       @include('website.partials.header')
 
@@ -97,6 +110,13 @@
                         <i class="fa fa-twitter g-mr-5--sm"></i> <span class="g-hidden-xs-down">Tweet on Twitter</span>
                       </a>
                     </li>
+                      <li class="list-inline-item g-mr-10">
+                          <!-- Your share button code -->
+                            <div class="fb-share-button"
+                            data-href="{{URL::full()}}"
+                            data-layout="button_count">
+                            </div>
+                      </li>
                     <li class="list-inline-item">
                       <a class="btn u-btn-lightred g-font-size-12 rounded g-py-10" href="#!">
                         <i class="fa fa-pinterest"></i>
