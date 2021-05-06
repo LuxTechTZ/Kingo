@@ -127,14 +127,14 @@
                                     <a id="nav-link--pages"
                                         class="nav-link text-uppercase g-color-primary--hover g-px-0 text-white"
                                         style="color: white !important"
-                                        href="#">
+                                        href="{{url('/')}}">
                                         SEBULENI
                                     </a>
                                 </li>
 
                                 <li class="nav-item g-mx-10--lg g-mx-20--xl">
                                     <a id="nav-link--pages"
-                                        class="nav-link text-uppercase g-color-primary--hover g-px-0" href="#">
+                                        class="nav-link text-uppercase g-color-primary--hover g-px-0" href="{{url('/')}}/category/porojo">
                                         POROJO
                                     </a>
                                 </li>
@@ -243,9 +243,9 @@
                         {{-- article --}}
                         <article class="u-block-hover">
                             <figure class="u-shadow-v25 g-bg-cover g-bg-white-gradient-opacity-v1--after">
-                                <img class="img-fluid w-100 u-block-hover__main--zoom-v1"
-                                    src="https://kingo.s3-eu-west-1.amazonaws.com/dynamic-content/images/medium-5427-20210227133202-304514.jpg"
-                                    alt="Image Description">
+                                <video class="img-fluid w-100 u-block-hover__main--zoom-v1"
+                                    src="{{url('/')}}/{{Illuminate\Support\Facades\Storage::url($video->image_url)}}"
+                                    alt="{{$video->title}}">
 
                                 <span
                                     class="u-icon-v3 u-icon-size--sm g-font-size-13 g-bg-white g-bg-black--hover g-color-white--hover rounded-circle g-cursor-pointer g-absolute-centered">
@@ -260,7 +260,7 @@
                         </span>
 
                         <h5 class="h5 g-mb-10">
-                            <a class="u-link-v5 g-color-gray-dark-v1 g-color-primary--hover" href="#!">Fimbo</a>
+                            <a class="u-link-v5 g-color-gray-dark-v1 g-color-primary--hover" href="#!">{{$video->title}}</a>
                         </h5>
 
                     </div>
@@ -324,27 +324,26 @@
                             <figure class="u-shadow-v25 g-bg-cover g-bg-white-gradient-opacity-v1--after"
                                 style="height: 308px">
                                 <img class="img-fluid w-100 u-block-hover__main--zoom-v1"
-                                    src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTuvA_gclGs0Y69hEf1Xs2AcdbYP6264mY5Gg&usqp=CAU"
+                                    src="{{url('/')}}/{{Illuminate\Support\Facades\Storage::url($porojo->image_url)}}"
                                     alt="Image Description">
                             </figure>
 
                         </article>
 
                         <span class="g-mb-10">
-                            <a class="btn btn-xs u-btn-red text-uppercase rounded-0" href="#!">COMIC</a>
+                            <a class="btn btn-xs u-btn-red text-uppercase rounded-0" href="#!">Porojo Live</a>
                         </span>
 
                         <h5 class="h5"
                             style="border-bottom: 1px solid rgb(195, 193, 193); margin-bottom: 20px;padding-bottom: 5px">
-                            <a class="u-link-v5 g-color-gray-dark-v1 g-color-primary--hover" href="#!">Mwana wa Kondoo
-                                Kafufuka</a>
+                            <a class="u-link-v5 g-color-gray-dark-v1 g-color-primary--hover" href="#!">{{$porojo_live->title}}</a>
                         </h5>
 
                         {{-- article --}}
                         <article class="u-block-hover">
                             <figure class="u-shadow-v25 g-bg-cover g-bg-white-gradient-opacity-v1--after">
                                 <img class="img-fluid w-100 u-block-hover__main--zoom-v1"
-                                    src="https://kingo.s3-eu-west-1.amazonaws.com/dynamic-content/images/medium-1901-20210108130443-557922.jpg"
+                                    src="{{url('/')}}/{{Illuminate\Support\Facades\Storage::url($kingo_katuni->image_url)}}"
                                     alt="Image Description">
                             </figure>
 
@@ -355,8 +354,7 @@
                         </span>
 
                         <h5 class="h5" style="margin-bottom: 20px">
-                            <a class="u-link-v5 g-color-gray-dark-v1 g-color-primary--hover" href="#!">Umdhaniaye ndiye
-                                siye, usiyemdhania ...</a>
+                            <a class="u-link-v5 g-color-gray-dark-v1 g-color-primary--hover" href="#!">{{$kingo_katuni->title}}</a>
                         </h5>
 
                     </div>

@@ -14,9 +14,12 @@ use Illuminate\Support\Facades\Route;
 | contains the "web" middleware group. Now create something great!
 |
 */
+Route::group(['middleware' => ['web']], function () {
 
-Route::get('/', [SiteController::class, 'index']);
-
+    Route::get('/', [SiteController::class, 'index']);
+    Route::get('/category/{category}', [SiteController::class, 'category'])->name('site_category');
+    Route::get('/post/{name}/{id}', [SiteController::class, 'post'])->name('site_post');
+});
 
 Route::get('/site', function () {
     return view('website.index');

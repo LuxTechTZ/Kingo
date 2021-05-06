@@ -56,7 +56,7 @@
 
                                                 </div>
 
-                                                @if($post->category->id == 1)
+                                                @if($post->category->id == 1 || $post->category->id == 4 || $post->category->id == 6)
                                                 <div class="col-span-6">
                                                     <label for="desc"
                                                            class="block text-sm font-medium
