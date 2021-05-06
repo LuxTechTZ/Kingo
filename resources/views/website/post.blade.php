@@ -47,6 +47,16 @@
   </head>
 
   <body>
+  <!-- Load Facebook SDK for JavaScript -->
+    <div id="fb-root"></div>
+    <script>(function(d, s, id) {
+    var js, fjs = d.getElementsByTagName(s)[0];
+    if (d.getElementById(id)) return;
+    js = d.createElement(s); js.id = id;
+    js.src = "https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v3.0";
+    fjs.parentNode.insertBefore(js, fjs);
+    }(document, 'script', 'facebook-jssdk'));</script>
+
 
     <main>
       @include('website.partials.header')
@@ -193,37 +203,37 @@
                           <figcaption class="g-pos-abs g-top-10 g-left-10">
                               @if($popular->category->id == 1)
                                     <a class="btn btn-xs u-btn-blue text-uppercase rounded-0"
-                                       href="{{url('/')}}/category/{{strtolower($popular->category->name)}}">
+                                       href="{{url('/')}}/category/{{str_replace(' ','_',strtolower($popular->category->name))}}">
                                         {{$popular->category->name}}
                                     </a>
                               @elseif($popular->category->id == 2)
                                   <a class="btn btn-xs u-btn-pink text-uppercase rounded-0"
-                                     href="{{url('/')}}/category/{{strtolower($popular->category->name)}}">
+                                     href="{{url('/')}}/category/{{str_replace(' ','_',strtolower($popular->category->name))}}">
                                       {{$popular->category->name}}
                                   </a>
                               @elseif($popular->category->id == 3)
                                   <a class="btn btn-xs u-btn-teal text-uppercase rounded-0"
-                                     href="{{url('/')}}/category/{{strtolower($popular->category->name)}}">
+                                     href="{{url('/')}}/category/{{str_replace(' ','_',strtolower($popular->category->name))}}">
                                       {{$popular->category->name}}
                                   </a>
                               @elseif($popular->category->id == 4)
                                   <a class="btn btn-xs u-btn-brown text-uppercase rounded-0"
-                                     href="{{url('/')}}/category/{{strtolower($popular->category->name)}}">
+                                     href="{{url('/')}}/category/{{str_replace(' ','_',strtolower($popular->category->name))}}">
                                       {{$popular->category->name}}
                                   </a>
                               @elseif($popular->category->id == 5)
                                   <a class="btn btn-xs u-btn-darkred text-uppercase rounded-0"
-                                     href="{{url('/')}}/category/{{strtolower($popular->category->name)}}">
+                                     href="{{url('/')}}/category/{{str_replace(' ','_',strtolower($popular->category->name))}}">
                                       {{$popular->category->name}}
                                   </a>
                               @elseif($popular->category->id == 6)
                                   <a class="btn btn-xs u-btn-indigo text-uppercase rounded-0"
-                                     href="{{url('/')}}/category/{{strtolower($popular->category->name)}}">
+                                     href="{{url('/')}}/category/{{str_replace(' ','_',strtolower($popular->category->name))}}">
                                       {{$popular->category->name}}
                                   </a>
                               @elseif($popular->category->id == 7)
                                   <a class="btn btn-xs u-btn-darkred text-uppercase rounded-0"
-                                     href="{{url('/')}}/category/{{strtolower($popular->category->name)}}">
+                                     href="{{url('/')}}/category/{{str_replace(' ','_',strtolower($popular->category->name))}}">
                                       {{$popular->category->name}}
                                   </a>
                               @endif
@@ -404,18 +414,6 @@
 
   return t;
 }(document, "script", "twitter-wjs"));</script>
-
-      <!-- Load Facebook SDK for JavaScript -->
-    <div id="fb-root"></div>
-    <script>(function(d, s, id) {
-    var js, fjs = d.getElementsByTagName(s)[0];
-    if (d.getElementById(id)) return;
-    js = d.createElement(s); js.id = id;
-    js.src = "https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v3.0";
-    fjs.parentNode.insertBefore(js, fjs);
-    }(document, 'script', 'facebook-jssdk'));</script>
-
-
 
     <!-- JS Global Compulsory -->
     <script src="{{url('/')}}/assets-main/vendor/jquery/jquery.min.js"></script>

@@ -119,9 +119,13 @@
 
               <!-- Info -->
               <div class="g-px-50 g-px-100--md mb-4">
-                <h2 class="h3 mb-4"><a class="u-link-v5 g-color-main g-color-primary--hover" href="{{url('/')}}/post/{{$post->title}}/{{$post->id}}">
-                        {{$post->title}}</a></h2>
-                <p>@if (strlen($post->content) > 200)
+                <h2 class="h3 mb-4" style="font-size: 35px">
+                    <a class="u-link-v5 g-color-main g-color-primary--hover"
+                       href="{{url('/')}}/post/{{$post->title}}/{{$post->id}}">
+                        {{$post->title}}</a>
+                </h2>
+                <p style="font-size: 18px">
+                    @if (strlen($post->content) > 200)
                         {!! $post->content = substr($post->content, 0, 197) . '...' !!}
                     @else
                         {!! $post->content !!}
@@ -139,21 +143,7 @@
               <!-- Social Icons -->
               <div class="g-overflow-hidden">
                 <ul class="list-inline u-info-v10-1 mb-0">
-                  <li class="list-inline-item g-mx-2">
-                    <a class="u-icon-v3 u-icon-size--xs g-color-primary g-color-white--hover g-bg-secondary g-bg-primary--hover rounded-circle" href="#!">
-                      <i class="fa fa-facebook"></i>
-                    </a>
-                  </li>
-                  <li class="list-inline-item g-mx-2">
-                    <a class="u-icon-v3 u-icon-size--xs g-color-primary g-color-white--hover g-bg-secondary g-bg-primary--hover rounded-circle" href="#!">
-                      <i class="fa fa-twitter"></i>
-                    </a>
-                  </li>
-                  <li class="list-inline-item g-mx-2">
-                    <a class="u-icon-v3 u-icon-size--xs g-color-primary g-color-white--hover g-bg-secondary g-bg-primary--hover rounded-circle" href="#!">
-                      <i class="fa fa-instagram"></i>
-                    </a>
-                  </li>
+
                 </ul>
               </div>
               <!-- End Social Icons -->
@@ -165,6 +155,7 @@
 
             <div id="stickyblock-end"></div>
 
+                  @if(count($porojo) > 20)
             <!-- Pagination -->
             <nav class="g-pb-50" aria-label="Page Navigation">
               <ul class="list-inline text-center mb-0">
@@ -195,6 +186,7 @@
               </ul>
             </nav>
             <!-- End Pagination -->
+                  @endif
           </div>
 
           <!-- Sidebar -->
