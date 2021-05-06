@@ -4,15 +4,16 @@
 <!-- Mirrored from htmlstream.com/preview/unify-v2.6/multipage/blog-magazine/classic/bm-classic-home-page-4.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 19 Feb 2021 07:48:37 GMT -->
 <head>
     <!-- Title -->
-    <title>Multipage - Blog and Magazine Page Layout 1 | Unify - Responsive Website Template</title>
+    <title>{{$post->title}} | Kingo</title>
 
     <!-- Required Meta Tags Always Come First -->
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="{{$post->title}}" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
 
     <meta property="og:title" content="{{$post->title}}">
-    <meta property="og:image" content="{{url('/')}}/post/{{str_replace('?','',$post->title)}}/{{$post->id}}">
+    <meta property="og:image" content="{{url('/')}}/{{Illuminate\Support\Facades\Storage::url($post->image_url)}}">
+    <meta property="og:description" content="{{$post->content}}">
 
     <!-- Favicon -->
     <link rel="shortcut icon" href="../../../favicon.ico">
