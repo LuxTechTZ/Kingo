@@ -17,6 +17,8 @@
     <meta property="og:url"         content="{{URL::full()}}">
     <meta property="og:type"        content="website" />
 
+    <link rel="canonical" href="{{URL::full()}}">
+
     <!-- Favicon -->
     <link rel="shortcut icon" href="../../../favicon.ico">
 
@@ -100,26 +102,26 @@
                     <li class="list-inline-item g-mr-10">
                       <span class="g-color-gray-dark-v5">|</span>
                     </li>
+
                     <li class="list-inline-item g-mr-10">
-                      <a class="btn u-btn-facebook g-font-size-12 rounded g-px-20--sm g-py-10" href="#!">
-                        <i class="fa fa-facebook g-mr-5--sm"></i> <span class="g-hidden-xs-down">Share on Facebook</span>
-                      </a>
-                    </li>
-                    <li class="list-inline-item g-mr-10">
-                      <a class="btn u-btn-twitter g-font-size-12 rounded g-px-20--sm g-py-10" href="#!">
-                        <i class="fa fa-twitter g-mr-5--sm"></i> <span class="g-hidden-xs-down">Tweet on Twitter</span>
+                      <a class="twitter-share-button"
+                         data-size="large">
+                        <i class="fa fa-twitter g-mr-5--sm"></i>
+                          <span class="g-hidden-xs-down">Tweet on Twitter</span>
                       </a>
                     </li>
                       <li class="list-inline-item g-mr-10">
                           <!-- Your share button code -->
-                            <div class="fb-share-button"
-                            data-href="{{URL::full()}}"
-                            data-layout="button_count">
+                            <div class="fb-share-button g-py-5"
+                                 data-href="{{URL::full()}}"
+                                 data-size="large"
+                                 data-layout="button_count">
                             </div>
                       </li>
                     <li class="list-inline-item">
-                      <a class="btn u-btn-lightred g-font-size-12 rounded g-py-10" href="#!">
-                        <i class="fa fa-pinterest"></i>
+                      <a class="btn u-btn-lightred g-font-size-12 rounded g-py-5" href="#!">
+                        <i class="fa fa-heart"></i>
+                          <span class="g-hidden-xs-down">Like Post</span>
                       </a>
                     </li>
                   </ul>
@@ -164,19 +166,26 @@
                     <li class="list-inline-item g-mr-10">
                       <span class="g-color-gray-dark-v5">|</span>
                     </li>
+
                     <li class="list-inline-item g-mr-10">
-                      <a class="btn u-btn-facebook g-font-size-12 rounded g-px-20--sm g-py-10" href="#!">
-                        <i class="fa fa-facebook g-mr-5--sm"></i> <span class="g-hidden-xs-down">Share on Facebook</span>
+                      <a class="twitter-share-button"
+                         data-size="large">
+                        <i class="fa fa-twitter g-mr-5--sm"></i>
+                          <span class="g-hidden-xs-down">Tweet on Twitter</span>
                       </a>
                     </li>
-                    <li class="list-inline-item g-mr-10">
-                      <a class="btn u-btn-twitter g-font-size-12 rounded g-px-20--sm g-py-10" href="#!">
-                        <i class="fa fa-twitter g-mr-5--sm"></i> <span class="g-hidden-xs-down">Tweet on Twitter</span>
-                      </a>
-                    </li>
+                      <li class="list-inline-item g-mr-10">
+                          <!-- Your share button code -->
+                            <div class="fb-share-button g-py-5"
+                                 data-href="{{URL::full()}}"
+                                 data-size="large"
+                                 data-layout="button_count">
+                            </div>
+                      </li>
                     <li class="list-inline-item">
-                      <a class="btn u-btn-lightred g-font-size-12 rounded g-py-10" href="#!">
-                        <i class="fa fa-pinterest"></i>
+                      <a class="btn u-btn-lightred g-font-size-12 rounded g-py-5" href="#!">
+                        <i class="fa fa-heart"></i>
+                          <span class="g-hidden-xs-down">Like Post</span>
                       </a>
                     </li>
                   </ul>
@@ -402,6 +411,23 @@
     </main>
 
     <div class="u-outer-spaces-helper"></div>
+
+  <script>window.twttr = (function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0],
+    t = window.twttr || {};
+  if (d.getElementById(id)) return t;
+  js = d.createElement(s);
+  js.id = id;
+  js.src = "https://platform.twitter.com/widgets.js";
+  fjs.parentNode.insertBefore(js, fjs);
+
+  t._e = [];
+  t.ready = function(f) {
+    t._e.push(f);
+  };
+
+  return t;
+}(document, "script", "twitter-wjs"));</script>
 
     <!-- JS Global Compulsory -->
     <script src="{{url('/')}}/assets-main/vendor/jquery/jquery.min.js"></script>
