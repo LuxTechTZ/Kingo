@@ -306,58 +306,17 @@
               @include('website.partials.popular')
               <!-- End Useful Links -->
 
-              <!-- Subscribe -->
-              <div class="u-shadow-v25 u-bg-overlay g-bg-img-hero g-bg-white-gradient-opacity-v2--after g-py-40 g-px-20 g-mb-50" style="background-image: url(assets/img-temp/500x600/img1.jpg);">
-                <div class="u-bg-overlay__inner text-center">
-                  <div class="g-mb-40">
-                    <h2 class="g-color-white">Vancouver, BC</h2>
-                    <p class="g-color-white-opacity-0_8">Unit 25 Suite 3, 925 Prospect PI,<br>Beach Resort, 23001</p>
-                  </div>
-
-                  <div class="g-mb-30">
-                    <h3 class="d-inline-block g-bg-primary-opacity-0_6 g-color-white g-font-weight-600 g-font-size-12 text-uppercase g-py-5 g-px-10">Phone number</h3>
-                    <span class="d-block g-color-white g-font-size-18">+01 (0) 333 444 55</span>
-                  </div>
-
-                  <div class="input-group rounded">
-                    <input class="form-control g-brd-none g-px-13" type="email" placeholder="Your Email">
-                    <div class="input-group-append">
-                      <button class="btn u-btn-primary text-uppercase g-px-20 g-py-14" type="submit">
-                        <i class="icon-envelope g-pos-rel g-top-1"></i>
-                      </button>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <!-- End Subscribe -->
+              <!-- ad1 -->
+              @include('website.partials.add1')
+              <!-- End ad1 -->
 
               <!-- Recent Posts -->
               @include('website.partials.recent')
               <!-- End Recent Posts -->
 
-              <!-- Popular Videos -->
-              <div class="g-mb-50">
-                <article class="g-pos-rel">
-                  <figure class="u-shadow-v25 g-bg-img-hero g-min-height-400" style="background-image: url(assets/img-temp/500x650/img2.jpg);">
-                  </figure>
-
-                  <span class="text-center g-pos-abs g-top-20 g-left-0">
-                    <a class="btn u-btn-red text-uppercase rounded-0" href="#!">Discover</a>
-                    <small class="g-bg-black g-color-white g-pa-5 d-block">July 09, 2017</small>
-                  </span>
-
-                  <span class="u-icon-v3 g-font-size-18 g-bg-white g-color-black g-bg-gray-dark-v2--hover g-color-white--hover g-rounded-50 g-cursor-pointer g-absolute-centered">
-                    <i class="icon-control-play g-left-2"></i>
-                  </span>
-
-                  <header class="g-pos-abs g-bottom-20 g-left-0">
-                    <h3 class="h5 g-bg-red-opacity-0_5 g-pa-5-10--sm">
-                      <a class="g-color-white g-color-white--hover" href="#!">Traveling</a>
-                    </h3>
-                  </header>
-                </article>
-              </div>
-              <!-- End Popular Videos -->
+              <!-- Popular ad2 -->
+              @include('website.partials.ad2')
+              <!-- End Popular ad2 -->
 
               <!-- Social Links -->
               @include('website.partials.social_links')

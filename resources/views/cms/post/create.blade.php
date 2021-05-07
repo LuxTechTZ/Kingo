@@ -52,13 +52,12 @@
 
                                                 </div>
 
-
                                                 @if($category->id == 1 || $category->id == 4 || $category->id == 6)
                                                 <div class="col-span-12">
                                                     <label for="desc"
                                                            class="block text-sm font-medium
                                                             text-gray-700">Description/Article</label>
-                                                    <textarea name="content" required
+                                                    <textarea id="editor" name="content" required
                                                            id="content" rows="10" class="mt-1 focus:ring-indigo-500
                                                            focus:border-indigo-500 block w-full shadow-sm
                                                            sm:text-sm border-gray-300 rounded-md"></textarea>

@@ -20,6 +20,7 @@
 
         <!-- Scripts -->
         <script src="{{ mix('js/app.js') }}" defer></script>
+        <script src="https://cdn.ckeditor.com/ckeditor5/27.1.0/classic/ckeditor.js"></script>
     </head>
     <body class="font-sans antialiased">
         <x-jet-banner />
@@ -45,6 +46,14 @@
         @stack('modals')
 
         @livewireScripts
+
+        <script>
+            ClassicEditor
+                .create( document.querySelector( '#editor' ) )
+                .catch( error => {
+                    console.error( error );
+                } );
+        </script>
 
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-TQJJY3X1Y2"></script>

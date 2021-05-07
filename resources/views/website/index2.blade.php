@@ -233,43 +233,65 @@
               <!-- Latest News -->
               <div class="g-mb-50">
                 <div class="u-heading-v3-1 g-mb-30">
-                  <h2 class="h5 u-heading-v3__title g-font-primary g-font-weight-700 g-color-gray-dark-v1 text-uppercase g-brd-primary">Latest News</h2>
+                  <h2 class="h5 u-heading-v3__title g-font-primary g-font-weight-700 g-color-gray-dark-v1 text-uppercase g-brd-primary">
+                      Mpya
+                  </h2>
                 </div>
 
                 <div class="row">
                   <!-- Article (Leftside) -->
                   <div class="col-lg-7 g-mb-50 g-mb-0--lg">
+
                     <article>
+                        @php
+                            $new_porojo = \App\Models\Post::where('post_category_id','1')->orderBy('id','desc')->first();
+                        @endphp
                       <figure class="u-shadow-v25 g-pos-rel g-mb-20">
-                        <img class="img-fluid w-100" src="{{url('/')}}/assets-magazine/img-temp/500x450/img7.jpg" alt="Image Description">
+                        <img class="img-fluid w-100"
+                             src="{{url('/')}}/{{Illuminate\Support\Facades\Storage::url(\App\Models\Post::where('post_category_id','1')->orderBy('id','desc')->first()->image_url)}}"
+                             alt="Image Description">
 
                         <figcaption class="g-pos-abs g-top-20 g-left-20">
-                          <a class="btn btn-xs u-btn-teal text-uppercase rounded-0" href="#!">Office</a>
+                          <a class="btn btn-xs u-btn-teal text-uppercase rounded-0" href="{{url('/')}}/post/{{$new_porojo->title}}/{{$new_porojo->id}}">
+                              {{\App\Models\Post::where('post_category_id','1')->orderBy('id','desc')->first()->category->name}}
+                          </a>
                         </figcaption>
                       </figure>
 
                       <h3 class="h4 g-mb-10">
-                        <a class="u-link-v5 g-color-gray-dark-v1 g-color-primary--hover" href="#!">Exclusive interview with InVision's CEO</a>
+                        <a class="u-link-v5 g-color-gray-dark-v1 g-color-primary--hover" href="#!">
+                            {{\App\Models\Post::where('post_category_id','1')->orderBy('id','desc')->first()->title}}
+                        </a>
                       </h3>
 
                       <ul class="list-inline g-color-gray-dark-v4 g-font-size-12">
                         <li class="list-inline-item">
-                          <a class="u-link-v5 g-color-gray-dark-v4 g-color-primary--hover" href="#!">Mike Coolman</a>
+                          <a class="u-link-v5 g-color-gray-dark-v4 g-color-primary--hover" href="#!">{{$new_porojo->artist_name}}</a>
                         </li>
                         <li class="list-inline-item">/</li>
                         <li class="list-inline-item">
-                          July 20, 2017
+                          {{date('M d, Y',strtotime($new_porojo->post_date))}}
                         </li>
                         <li class="list-inline-item">/</li>
                         <li class="list-inline-item">
                           <a class="u-link-v5 g-color-gray-dark-v4 g-color-primary--hover" href="#!">
-                            <i class="icon-finance-206 u-line-icon-pro align-middle g-pos-rel g-top-1 mr-1"></i> 24
+                            <i class="icon-finance-206 u-line-icon-pro align-middle g-pos-rel g-top-1 mr-1"></i>
+                              {{$new_porojo->views}}
                           </a>
                         </li>
                       </ul>
 
-                      <p class="g-color-gray-dark-v2">Clark Valberg is the founder and CEO of InVision. If you are a designer, you have probably gotten. If you are a designer, you have probably gotten.</p>
-                      <a class="g-font-size-12" href="#!">Read More..</a>
+                      <p class="g-color-gray-dark-v2">
+
+                          @if (strlen($new_porojo->content) > 200)
+                              {{$new_porojo->content = substr($new_porojo->content, 0, 197) . '...'}}
+                          @else
+                              {{$new_porojo->content}}
+                          @endif
+                      </p>
+                      <a class="g-font-size-12" href="{{url('/')}}/post/{{$new_porojo->title}}/{{$new_porojo->id}}">
+                          Soma Zaidi...
+                      </a>
                     </article>
                   </div>
                   <!-- End Article (Leftside) -->
@@ -277,114 +299,44 @@
                   <!-- Article (Rightside) -->
                   <div class="col-lg-5">
                     <!-- Article -->
+                      @foreach(\App\Models\Post::where('post_category_id','!=','7')->where('post_category_id','!=','5')->orderBy('id','desc')->limit(4)->get() as $new_post)
                     <article class="media">
-                      <a class="d-flex u-shadow-v25 align-self-center mr-3" href="#!">
-                        <img class="g-width-80 g-height-80" src="{{url('/')}}/assets-magazine/img-temp/230x230/img1.jpg" alt="Image Description">
+                      <a class="d-flex u-shadow-v25 align-self-center mr-3"
+                         href="{{url('/')}}/post/{{$new_post->title}}/{{$new_post->id}}">
+                        <img class="g-width-80 g-height-80"
+                             src="{{url('/')}}/{{Illuminate\Support\Facades\Storage::url($new_post->image_url)}}"
+                             alt="{{$new_post->title}}">
                       </a>
 
                       <div class="media-body">
                         <h3 class="h6">
-                          <a class="u-link-v5 g-color-gray-dark-v1 g-color-primary--hover" href="#!">Best dessert recipes for breakfast which will make your day</a>
+                          <a class="u-link-v5 g-color-gray-dark-v1 g-color-primary--hover"
+                             href="{{url('/')}}/post/{{$new_post->title}}/{{$new_post->id}}">
+                              {{$new_post->title}}
+                          </a>
                         </h3>
 
                         <ul class="u-list-inline g-font-size-12 g-color-gray-dark-v4">
                           <li class="list-inline-item">
-                            July 20, 2017
+                            {{date('M d, Y',strtotime($new_post->post_date))}}
                           </li>
                           <li class="list-inline-item">/</li>
                           <li class="list-inline-item">
-                            <a class="g-color-gray-dark-v4 g-text-underline--none--hover" href="#!">
-                              <i class="icon-finance-206 u-line-icon-pro align-middle g-pos-rel g-top-1 mr-1"></i> 18
+                            <a class="g-color-gray-dark-v4 g-text-underline--none--hover">
+                              <i class="icon-eye u-line-icon-pro align-middle g-pos-rel g-top-1 mr-1"></i>
+                                {{$new_post->views}}
                             </a>
                           </li>
                         </ul>
                       </div>
                     </article>
+
                     <!-- End Article -->
+                      @if(!$loop->last)
+                        <hr class="g-brd-gray-light-v4 g-my-25">
+                      @endif
 
-                    <hr class="g-brd-gray-light-v4 g-my-25">
-
-                    <!-- Article -->
-                    <article class="media">
-                      <a class="d-flex u-shadow-v25 align-self-center mr-3" href="#!">
-                        <img class="g-width-80 g-height-80" src="{{url('/')}}/assets-magazine/img-temp/230x230/img2.jpg" alt="Image Description">
-                      </a>
-
-                      <div class="media-body">
-                        <h3 class="h6">
-                          <a class="u-link-v5 g-color-gray-dark-v1 g-color-primary--hover" href="#!">Stylish things to do, see and purchase only this week</a>
-                        </h3>
-
-                        <ul class="u-list-inline g-font-size-12 g-color-gray-dark-v4">
-                          <li class="list-inline-item">
-                            July 16, 2017
-                          </li>
-                          <li class="list-inline-item">/</li>
-                          <li class="list-inline-item">
-                            <a class="g-color-gray-dark-v4 g-text-underline--none--hover" href="#!">
-                              <i class="icon-finance-206 u-line-icon-pro align-middle g-pos-rel g-top-1 mr-1"></i> 31
-                            </a>
-                          </li>
-                        </ul>
-                      </div>
-                    </article>
-                    <!-- End Article -->
-
-                    <hr class="g-brd-gray-light-v4 g-my-25">
-
-                    <!-- Article -->
-                    <article class="media">
-                      <a class="d-flex u-shadow-v25 align-self-center mr-3" href="#!">
-                        <img class="g-width-80 g-height-80" src="{{url('/')}}/assets-magazine/img-temp/230x230/img4.jpg" alt="Image Description">
-                      </a>
-
-                      <div class="media-body">
-                        <h3 class="h6">
-                          <a class="u-link-v5 g-color-gray-dark-v1 g-color-primary--hover" href="#!">Government plans to test new primary school pupils and teachers..</a>
-                        </h3>
-
-                        <ul class="u-list-inline g-font-size-12 g-color-gray-dark-v4">
-                          <li class="list-inline-item">
-                            July 07, 2017
-                          </li>
-                          <li class="list-inline-item">/</li>
-                          <li class="list-inline-item">
-                            <a class="g-color-gray-dark-v4 g-text-underline--none--hover" href="#!">
-                              <i class="icon-finance-206 u-line-icon-pro align-middle g-pos-rel g-top-1 mr-1"></i> 24
-                            </a>
-                          </li>
-                        </ul>
-                      </div>
-                    </article>
-                    <!-- End Article -->
-
-                    <hr class="g-brd-gray-light-v4 g-my-25">
-
-                    <!-- Article -->
-                    <article class="media">
-                      <a class="d-flex u-shadow-v25 align-self-center mr-3" href="#!">
-                        <img class="g-width-80 g-height-80" src="{{url('/')}}/assets-magazine/img-temp/230x230/img3.jpg" alt="Image Description">
-                      </a>
-
-                      <div class="media-body">
-                        <h3 class="h6">
-                          <a class="u-link-v5 g-color-gray-dark-v1 g-color-primary--hover" href="#!">Things to do - see and purchase only stylish stuff this week</a>
-                        </h3>
-
-                        <ul class="u-list-inline g-font-size-12 g-color-gray-dark-v4">
-                          <li class="list-inline-item">
-                            July 16, 2017
-                          </li>
-                          <li class="list-inline-item">/</li>
-                          <li class="list-inline-item">
-                            <a class="g-color-gray-dark-v4 g-text-underline--none--hover" href="#!">
-                              <i class="icon-finance-206 u-line-icon-pro align-middle g-pos-rel g-top-1 mr-1"></i> 31
-                            </a>
-                          </li>
-                        </ul>
-                      </div>
-                    </article>
-                    <!-- End Article -->
+                  @endforeach
                   </div>
                   <!-- End Article (Rightside) -->
                 </div>
@@ -401,7 +353,9 @@
                   <!-- Article Image -->
                   <div class="col-md-5">
                     <figure class="u-shadow-v25 g-pos-rel g-mb-20 g-mb-0--lg">
-                      <img class="img-fluid w-100" src="{{url('/')}}/assets-magazine/img-temp/400x270/img3.jpg" alt="Image Description">
+                      <img class="img-fluid w-100"
+                           src="{{url('/')}}/assets-magazine/img-temp/400x270/img3.jpg"
+                           alt="Image Description">
 
                       <figcaption class="g-pos-abs g-top-20 g-left-20">
                         <a class="btn btn-xs u-btn-pink text-uppercase rounded-0" href="#!">Internet</a>
