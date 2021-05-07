@@ -122,9 +122,8 @@ class PostController extends Controller
 
         $request['desc'] = $request['title'];
         if (isset($request['image'])) {
-            $fmg = $request['image'];
-            $first_image = $fmg[0];
             if (is_array($request['image'])){
+                $first_image = $request['image'][0];
                 $request['image_url'] = Storage::putFile('public/posts', $first_image, 'public');
                 $post = Post::create($request->all());
                 foreach ($request['image'] as $img){
