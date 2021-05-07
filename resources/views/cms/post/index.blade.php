@@ -62,9 +62,9 @@
                                                         </div>
                                                         <div class="text-sm text-gray-500">
                                                             @if (strlen($post->content) > 40)
-                                                            {{$post->content = substr($post->content, 0, 37) . '...'}}
+                                                            {!! $post->content = substr($post->content, 0, 37) . '...'!!}
                                                             @else
-                                                                {{$post->content}}
+                                                                {!! $post->content !!}
                                                             @endif
                                                         </div>
                                                     </div>

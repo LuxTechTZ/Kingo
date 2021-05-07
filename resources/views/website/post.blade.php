@@ -13,7 +13,7 @@
 
     <meta property="og:title"       content="{{$post->title}}">
     <meta property="og:image"       content="{{url('/')}}/{{Illuminate\Support\Facades\Storage::url($post->image_url)}}">
-    <meta property="og:description" content="{{$post->content}}">
+    <meta property="og:description" content="{!! $post->content !!}">
     <meta property="og:url"         content="{{URL::full()}}">
     <meta property="og:type"        content="website" />
 

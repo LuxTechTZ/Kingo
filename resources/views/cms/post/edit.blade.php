@@ -60,8 +60,8 @@
                                                     <label for="desc"
                                                            class="block text-sm font-medium
                                                             text-gray-700">Description/Article</label>
-                                                    <textarea id="editor" name="content" required
-                                                           id="content" rows="10" class="mt-1 focus:ring-indigo-500
+                                                    <textarea id="editor" name="content"
+                                                              rows="10" class="mt-1 focus:ring-indigo-500
                                                            focus:border-indigo-500 block w-full shadow-sm
                                                            sm:text-sm border-gray-300 rounded-md">{{$post->content}}</textarea>
                                                 </div>
