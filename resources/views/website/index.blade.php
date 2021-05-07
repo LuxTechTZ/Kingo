@@ -1375,6 +1375,16 @@
         });
 
     </script>
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-TQJJY3X1Y2"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-TQJJY3X1Y2');
+    </script>
 </body>
 
 <!-- Mirrored from htmlstream.com/preview/unify-v2.6/multipage/blog-magazine/classic/bm-classic-home-page-1.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 19 Feb 2021 07:25:31 GMT -->

@@ -107,7 +107,7 @@
               <ul class="list-inline g-color-secondary-dark-v1 g-font-weight-600 g-font-size-12 text-uppercase mb-3">
                 <li class="list-inline-item g-mr-10">
                   <i class="align-middle g-color-primary mr-1 icon-communication-020 u-line-icon-pro"></i>
-                  <a class="g-font-weight-700" href="{{url('/')}}/{{strtolower($post->category->name)}}">{{$post->category->name}}</a>
+                  <a class="g-font-weight-700" href="{{url('/')}}/category/{{str_replace(' ','_',strtolower($post->category->name))}}">{{$post->category->name}}</a>
                 </li>
                 <li class="list-inline-item">&#8226;</li>
                 <li class="list-inline-item g-ml-10">
