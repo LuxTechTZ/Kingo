@@ -19,7 +19,7 @@ class SiteController extends Controller
         $riwaya = Post::where('post_category_id','6')->where('status',1)->orderBy('id','desc')->first();
         $kingo_katuni = Post::where('post_category_id','7')->where('status',1)->orderBy('id','desc')->first();
 
-        return view('website.index2',compact('porojo','domokaya','porojo_live','mjue_maarufu','video','riwaya','kingo_katuni'));
+        return view('website.index',compact('porojo','domokaya','porojo_live','mjue_maarufu','video','riwaya','kingo_katuni'));
     }
 
     public function category($category)
