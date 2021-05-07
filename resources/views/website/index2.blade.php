@@ -101,16 +101,19 @@
 
                         {{-- article --}}
                         <article class="u-block-hover">
+                            <a href="{{url('/')}}/post/{{$video->title}}/{{$video->id}}">
                             <figure class="u-shadow-v25 g-bg-cover g-bg-white-gradient-opacity-v1--after">
-                                <video class="img-fluid w-100 u-block-hover__main--zoom-v1"
-                                    src="{{url('/')}}/{{Illuminate\Support\Facades\Storage::url($video->image_url)}}"
-                                       alt="{{$video->title}}"></video>
-
+                                <iframe style="width: 100%; height: 150px"
+                                      src="https://www.youtube.com/embed/{{$video->image_url}}"
+                                      title="{{$video->title}}" frameborder="0"
+                                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
+                              </iframe>
                                 <span
                                     class="u-icon-v3 u-icon-size--sm g-font-size-13 g-bg-white g-bg-black--hover g-color-white--hover rounded-circle g-cursor-pointer g-absolute-centered">
                                     <i class="fa fa-play g-left-2"></i>
                                 </span>
                             </figure>
+                                </a>
 
                         </article>
 
@@ -411,19 +414,21 @@
                             @else
                                 <!-- Other Articles -->
                                     <article class="media">
-                                          <figure class="d-flex u-shadow-v25 mr-3 g-pos-rel">
                                               <a href="{{url('/')}}/post/{{$popular->title}}/{{$popular->id}}">
+                                          <figure class="d-flex u-shadow-v25 mr-3 g-pos-rel">
                                                   @if($popular->category->id == 5)
-                                                    <video class="g-width-140 g-height-80"
-                                                         src="{{url('/')}}/{{Illuminate\Support\Facades\Storage::url($popular->image_url)}}"
-                                                           alt="Image Description"></video>
+                                                      <iframe class="g-width-140 g-height-80"
+                                                              src="https://www.youtube.com/embed/{{$popular->image_url}}"
+                                                              title="{{$popular->title}}" frameborder="0"
+                                                              allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
+                                                      </iframe>
                                                   @else
                                                       <img class="g-width-140 g-height-80"
                                                          src="{{url('/')}}/{{Illuminate\Support\Facades\Storage::url($popular->image_url)}}"
                                                          alt="Image Description">
                                                   @endif
-                                              </a>
                                           </figure>
+                                              </a>
 
                                           <div class="media-body">
                                             <h3 class="g-font-size-16">

@@ -89,9 +89,22 @@
                                                     w-full shadow-sm sm:text-sm border-gray-300 rounded-md">
                                                 </div>
 
+                                                @if($category->id == 5)
+                                                    <div class="col-span-12">
+                                                    <label for="tags" class="block text-sm
+                                                    font-medium text-gray-700">Youtube Url</label>
+                                                    <input type="text" name="youtube" id="youtube"
+                                                           class="mt-1
+                                                           focus:ring-indigo-500 focus:border-indigo-500
+                                                           block w-full shadow-sm sm:text-sm border-gray-300
+                                                            rounded-md">
+                                                </div>
+                                                @endif
+
 
 
                                             </div>
+                                            @if($category->id != 5)
                                             <div>
                                                 <label class="block text-sm font-medium text-gray-700">
                                                     Post Image
@@ -119,10 +132,6 @@
                                                                 <span>Upload Multiple Image Files</span>
                                                                 <input multiple required id="image" name="image[]"
                                                                        type="file" class="sr-only" accept="image/jpeg, image/png">
-                                                                @elseif($category->id == 5)
-                                                                <span>Upload An Video File</span>
-                                                                    <input required id="image" name="image"
-                                                                       type="file" class="sr-only" accept="video/mp4">
                                                                 @else
                                                                     <span>Upload An Image File</span>
                                                                     <input required id="image" name="image"
@@ -137,6 +146,7 @@
                                                     </div>
                                                 </div>
                                             </div>
+                                            @endif
                                         </div>
                                         <div class="px-4 py-3 bg-gray-50 text-right sm:px-6">
                                             <button type="submit" class="inline-flex justify-center py-2 px-4

@@ -135,6 +135,16 @@ class PostController extends Controller
                 $request['image_url'] = Storage::putFile('public/posts', $request->file('image'), 'public');
                 $post = Post::create($request->all());
             }
+        }elseif (isset($request['youtube'])){
+            $link = $request['youtube'];
+            $code = explode('.be/',$link);
+            if (isset($code[1])){
+
+            $request['image_url'] = $code[1];
+            $post = Post::create($request->all());
+            }else{
+                redirect()->back();
+            }
         }
         return redirect('home/post/show/'.$post->id);
     }
@@ -164,6 +174,14 @@ class PostController extends Controller
                 }
             }else{
                 $request['image_url'] = Storage::putFile('public/posts', $request->file('image'), 'public');
+            }
+        }elseif (isset($request['youtube'])){
+            $link = $request['youtube'];
+            $code = explode('.be/',$link);
+            if (isset($code[1])){
+            $request['image_url'] = $code[1];
+            }else{
+                redirect()->back();
             }
         }
 

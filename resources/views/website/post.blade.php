@@ -104,7 +104,11 @@
                 <div class="g-font-size-16 g-line-height-1_8 g-mb-30">
                   <figure class="u-shadow-v25 g-mb-30">
                       @if($post->category->id == 5)
-                    <video controls class="img-fluid w-100" src="{{url('/')}}/{{Illuminate\Support\Facades\Storage::url($post->image_url)}}" alt="Image Description">
+                          <iframe style="width: 100%; height: 500px"
+                                  src="https://www.youtube.com/embed/XiiuObp9PaE"
+                                  title="{{$post->title}}" frameborder="0"
+                                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
+                          </iframe>
                         @elseif($post->category->id == 3)
                       <div class="js-carousel g-mx-minus-10"
                      data-infinite="true"

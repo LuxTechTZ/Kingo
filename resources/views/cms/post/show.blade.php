@@ -104,7 +104,11 @@
                         <!-- Heroicon name: solid/paper-clip -->
                           <p >Main Image </p>
                           @if($post->category->id == 5)
-                              <video controls src="{{url('/')}}/{{Illuminate\Support\Facades\Storage::url($post->image_url)}}" style="max-height: 150px"></video>
+                              <iframe style="width: 100%; height: 500px"
+                                  src="https://www.youtube.com/embed/{{$post->image_url}}"
+                                  title="{{$post->title}}" frameborder="0"
+                                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
+                          </iframe>
                           @else
                               <img src="{{url('/')}}/{{Illuminate\Support\Facades\Storage::url($post->image_url)}}" style="max-height: 150px">
                           @endif

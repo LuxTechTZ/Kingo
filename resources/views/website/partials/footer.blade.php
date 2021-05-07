@@ -43,10 +43,10 @@
                   <figure class="d-flex g-width-70 g-height-70 g-pos-rel mr-3">
                       @if($popular->category->id == 5)
                     <video class="img-fluid"
-                           src="{{url('/')}}/{{Illuminate\Support\Facades\Storage::url($popular->image_url)}}" alt="{{$popular->title}}"></video>
+                           src="https://img.youtube.com/vi/K2eOKKVwJeM/0.jpg" alt="{{$popular->title}}"></video>
                           <figcaption class="g-absolute-centered">
                               <a class="js-fancybox d-block" href="javascript:;"
-                                 data-src="{{url('/')}}/{{Illuminate\Support\Facades\Storage::url($popular->image_url)}}"
+                                 data-src="https://www.youtube.com/embed/{{$popular->image_url}}"
                                  data-speed="350"
                                  data-caption="Single Image">
                                 <span class="u-icon-v2 u-icon-size--xs g-brd-white g-color-white g-color-primary--hover g-bg-white--hover rounded-circle g-cursor-pointer">

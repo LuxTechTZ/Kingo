@@ -53,9 +53,11 @@
               @foreach($porojo as $post)
             <!-- Article -->
             <article class="text-center g-mb-100">
-              <figure class="g-pos-rel mb-5">
+              <figure class="g-pos-rel mb-5 ">
                   @if($post->category->id == 5)
-                <video controls class="img-fluid" src="{{url('/')}}/{{Illuminate\Support\Facades\Storage::url($post->image_url)}}" alt="Image Description">
+                      <img class="img-fluid"
+                                   src="https://img.youtube.com/vi/{{$post->image_url}}/hqdefault.jpg"
+                                   alt="Image Description">
                   @elseif($post->category->id == 3)
                       <div class="js-carousel g-mx-minus-10"
                      data-infinite="true"
