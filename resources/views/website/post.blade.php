@@ -12,7 +12,11 @@
     <meta http-equiv="x-ua-compatible" content="ie=edge">
 
     <meta property="og:title"       content="{{$post->title}}">
-    <meta property="og:image"       content="{{url('/')}}/{{Illuminate\Support\Facades\Storage::url($post->image_url)}}">
+    @if($post->category->id == 5)
+        <meta property="og:video"       content="{{url('/')}}/{{Illuminate\Support\Facades\Storage::url($post->image_url)}}">
+    @else
+        <meta property="og:image"       content="{{url('/')}}/{{Illuminate\Support\Facades\Storage::url($post->image_url)}}">
+    @endif
     <meta property="og:description" content="{!! $post->content !!}">
     <meta property="og:url"         content="{{URL::full()}}">
     <meta property="og:type"        content="website" />
