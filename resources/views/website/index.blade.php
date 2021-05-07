@@ -49,7 +49,9 @@
         <header id="js-header" class="u-header u-header--static u-shadow-v19">
 
             <div
-                style="height: 140px; background-color: red; background-image: url('kingo-assets/kingo-footer.png'); background-size: contain; background-repeat: no-repeat; background-position: center">
+                style="height: 140px; background-color: red;
+                background-image: url('kingo-assets/kingo-footer.png');
+                background-size: contain; background-repeat: no-repeat; background-position: center">
             </div>
 
             <!-- Top Bar -->

@@ -1,6 +1,7 @@
 <div class="g-mb-50">
                 <article class="g-pos-rel">
-                  <figure class="u-shadow-v25 g-bg-img-hero g-min-height-400" style="background-image: url({{url('/')}}/assets-magazine/img-temp/500x650/img2.jpg);">
+                  <figure class="u-shadow-v25 g-bg-img-hero g-min-height-400"
+                          style="background-image: url({{url('/')}}/assets-magazine/img-temp/500x650/img2.jpg);">
                   </figure>
 
                   <span class="text-center g-pos-abs g-top-20 g-left-0">

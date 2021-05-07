@@ -9,8 +9,10 @@
                 <article class="media g-mb-30">
                 <a class="d-flex u-shadow-v25 mr-3" href="{{url('/')}}/post/{{str_replace('?','',$recent->title)}}/{{$recent->id}}">
                     @if($recent->category->id == 5)
-                        <video class="g-width-60 g-height-60" src="{{url('/')}}/{{Illuminate\Support\Facades\Storage::url($recent->image_url)}}"
-                               alt="{{$recent->title}}"></video>
+                        <span class="g-width-60 g-height-60"
+                              style="background-image: url(https://img.youtube.com/vi/{{$recent->image_url}}/0.jpg);
+                                  background-size: contain; background-repeat: no-repeat; background-position: center"></span>
+
                     @else
                         <img class="g-width-60 g-height-60" src="{{url('/')}}/{{Illuminate\Support\Facades\Storage::url($recent->image_url)}}"
                        alt="{{$recent->title}}">

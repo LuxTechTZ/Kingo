@@ -191,7 +191,84 @@
                 <!-- Related Articles -->
                 <div class="g-mb-40">
                   <div class="u-heading-v3-1 g-mb-30">
-                    <h2 class="h5 u-heading-v3__title g-color-gray-dark-v1 text-uppercase g-brd-primary">Related Articles</h2>
+                    <h2 class="h5 u-heading-v3__title g-color-gray-dark-v1 text-uppercase g-brd-primary">
+                        Zinazofanana
+                    </h2>
+                  </div>
+
+                  <div class="row">
+                  @foreach(\App\Models\Post::where('post_category_id',$post->category->id)->where('id','!=',$post->id)->limit(6)->get() as $popular)
+                    <!-- Article Video -->
+                    <div class="col-lg-4 col-sm-6 g-mb-30">
+                      <article>
+                        <figure class="u-shadow-v25 g-pos-rel g-mb-20">
+                            @if($popular->category->id == 5)
+                                <img class="img-fluid w-100"
+                               src="https://img.youtube.com/vi/{{$popular->image_url}}/0.jpg" alt="Image Description">
+                            @else
+                                <img class="img-fluid w-100"
+                               src="{{url('/')}}/{{Illuminate\Support\Facades\Storage::url($popular->image_url)}}" alt="Image Description">
+                            @endif
+
+                        </figure>
+
+                        <h3 class="g-font-size-16 g-mb-10">
+                          <a class="u-link-v5 g-color-gray-dark-v1 g-color-primary--hover"
+                             href="{{url('/')}}/post/{{$popular->title}}/{{$popular->id}}">
+                              {{$popular->title}}</a>
+                        </h3>
+                      </article>
+                    </div>
+                    <!-- End Article Video -->
+                  @endforeach
+                  </div>
+                </div>
+
+                <!-- Author Block -->
+                <div class="g-mb-60">
+                  <div class="u-heading-v3-1 g-mb-30">
+                    <h2 class="h5 u-heading-v3__title g-color-gray-dark-v1 text-uppercase g-brd-primary">Kuhusu Mtunzi</h2>
+                  </div>
+
+                  <div class="media g-brd-around g-brd-gray-light-v4 rounded g-pa-30 g-mb-20">
+                    <img class="d-flex u-shadow-v25 g-width-80 g-height-80 rounded-circle g-mr-15" src="{{url('/')}}/assets-magazine/img-temp/100x100/img8.jpg" alt="Image Description">
+
+                    <div class="media-body">
+                      <h4 class="g-color-gray-dark-v1 g-mb-15">
+                        <a class="u-link-v5 g-color-gray-dark-v1 g-color-primary--hover" href="#!">{{$post->artist_name}}</a>
+                      </h4>
+
+                      <div class="g-mb-15">
+                        <p class="g-color-gray-dark-v2">About my site amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin. Cras purus odio, vestibulum in vulputate at.</p>
+                      </div>
+
+                      <ul class="list-inline mb-0">
+                        <li class="list-inline-item g-mr-10">
+                          <a class="u-icon-v3 u-icon-size--xs g-font-size-12 g-bg-gray-light-v5 g-bg-primary--hover g-color-gray-dark-v5 g-color-white--hover rounded-circle" href="#!">
+                            <i class="fa fa-facebook"></i>
+                          </a>
+                        </li>
+                        <li class="list-inline-item g-mr-10">
+                          <a class="u-icon-v3 u-icon-size--xs g-font-size-12 g-bg-gray-light-v5 g-bg-primary--hover g-color-gray-dark-v5 g-color-white--hover rounded-circle" href="#!">
+                            <i class="fa fa-instagram"></i>
+                          </a>
+                        </li>
+                        <li class="list-inline-item g-mr-10">
+                          <a class="u-icon-v3 u-icon-size--xs g-font-size-12 g-bg-gray-light-v5 g-bg-primary--hover g-color-gray-dark-v5 g-color-white--hover rounded-circle" href="#!">
+                            <i class="fa fa-twitter"></i>
+                          </a>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+                <!-- End Author Block -->
+
+                  <div class="g-mb-40">
+                  <div class="u-heading-v3-1 g-mb-30">
+                    <h2 class="h5 u-heading-v3__title g-color-gray-dark-v1 text-uppercase g-brd-primary">
+                        Mengineyo
+                    </h2>
                   </div>
 
                   <div class="row">
@@ -201,8 +278,8 @@
                       <article>
                         <figure class="u-shadow-v25 g-pos-rel g-mb-20">
                             @if($popular->category->id == 5)
-                                <video class="img-fluid w-100"
-                               src="{{url('/')}}/{{Illuminate\Support\Facades\Storage::url($popular->image_url)}}" alt="Image Description">
+                                <img class="img-fluid w-100"
+                               src="https://img.youtube.com/vi/{{$popular->image_url}}/0.jpg" alt="Image Description">
                             @else
                                 <img class="img-fluid w-100"
                                src="{{url('/')}}/{{Illuminate\Support\Facades\Storage::url($popular->image_url)}}" alt="Image Description">
@@ -259,46 +336,6 @@
                   @endforeach
                   </div>
                 </div>
-
-                <!-- Author Block -->
-                <div class="g-mb-60">
-                  <div class="u-heading-v3-1 g-mb-30">
-                    <h2 class="h5 u-heading-v3__title g-color-gray-dark-v1 text-uppercase g-brd-primary">Kuhusu Mtunzi</h2>
-                  </div>
-
-                  <div class="media g-brd-around g-brd-gray-light-v4 rounded g-pa-30 g-mb-20">
-                    <img class="d-flex u-shadow-v25 g-width-80 g-height-80 rounded-circle g-mr-15" src="{{url('/')}}/assets-magazine/img-temp/100x100/img8.jpg" alt="Image Description">
-
-                    <div class="media-body">
-                      <h4 class="g-color-gray-dark-v1 g-mb-15">
-                        <a class="u-link-v5 g-color-gray-dark-v1 g-color-primary--hover" href="#!">{{$post->artist_name}}</a>
-                      </h4>
-
-                      <div class="g-mb-15">
-                        <p class="g-color-gray-dark-v2">About my site amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin. Cras purus odio, vestibulum in vulputate at.</p>
-                      </div>
-
-                      <ul class="list-inline mb-0">
-                        <li class="list-inline-item g-mr-10">
-                          <a class="u-icon-v3 u-icon-size--xs g-font-size-12 g-bg-gray-light-v5 g-bg-primary--hover g-color-gray-dark-v5 g-color-white--hover rounded-circle" href="#!">
-                            <i class="fa fa-facebook"></i>
-                          </a>
-                        </li>
-                        <li class="list-inline-item g-mr-10">
-                          <a class="u-icon-v3 u-icon-size--xs g-font-size-12 g-bg-gray-light-v5 g-bg-primary--hover g-color-gray-dark-v5 g-color-white--hover rounded-circle" href="#!">
-                            <i class="fa fa-instagram"></i>
-                          </a>
-                        </li>
-                        <li class="list-inline-item g-mr-10">
-                          <a class="u-icon-v3 u-icon-size--xs g-font-size-12 g-bg-gray-light-v5 g-bg-primary--hover g-color-gray-dark-v5 g-color-white--hover rounded-circle" href="#!">
-                            <i class="fa fa-twitter"></i>
-                          </a>
-                        </li>
-                      </ul>
-                    </div>
-                  </div>
-                </div>
-                <!-- End Author Block -->
 
 
                 <!-- End Add Comment -->

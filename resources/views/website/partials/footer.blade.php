@@ -42,8 +42,8 @@
                 <article class="media g-bg-white g-pa-10">
                   <figure class="d-flex g-width-70 g-height-70 g-pos-rel mr-3">
                       @if($popular->category->id == 5)
-                    <video class="img-fluid"
-                           src="https://img.youtube.com/vi/K2eOKKVwJeM/0.jpg" alt="{{$popular->title}}"></video>
+                        <img class="img-fluid"
+                           src="https://img.youtube.com/vi/{{$popular->image_url}}/0.jpg" alt="{{$popular->title}}">
                           <figcaption class="g-absolute-centered">
                               <a class="js-fancybox d-block" href="javascript:;"
                                  data-src="https://www.youtube.com/embed/{{$popular->image_url}}"
@@ -55,7 +55,7 @@
                               </a>
                             </figcaption>
                       @else
-                    <img class="img-fluid" src="{{url('/')}}/{{Illuminate\Support\Facades\Storage::url($popular->image_url)}}" alt="{{$popular->title}}">
+                          <img class="img-fluid" src="{{url('/')}}/{{Illuminate\Support\Facades\Storage::url($popular->image_url)}}" alt="{{$popular->title}}">
                       @endif
 
                   </figure>

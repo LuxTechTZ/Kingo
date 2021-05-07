@@ -300,7 +300,8 @@
                         <div class="col-lg-4">
                           <article class="u-block-hover">
                             <figure class="g-bg-cover g-bg-black-gradient-opacity-v1--after">
-                                <video class="img-fluid u-block-hover__main--zoom-v1" src="{{url('/')}}/{{Illuminate\Support\Facades\Storage::url($vid->image_url)}}" alt="{{$vid->title}}"></video>
+                                <img class="img-fluid u-block-hover__main--zoom-v1"
+                                     src="https://img.youtube.com/vi/{{$vid->image_url}}/hqdefault.jpg" alt="{{$vid->title}}">
                             </figure>
                             <span class="g-pos-abs g-top-20 g-left-20">
                             <a class="btn btn-sm u-btn-red rounded-0" href="{{url('/')}}/category/video">{{$vid->category->name}}</a>
