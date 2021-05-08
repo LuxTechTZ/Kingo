@@ -12,7 +12,7 @@
     <meta http-equiv="x-ua-compatible" content="ie=edge">
 
     <!-- Favicon -->
-    <link rel="shortcut icon" href="../../../favicon.ico">
+    <link rel="shortcut icon" href="{{url('/')}}/assets/kingo-favi.png">
 
     <!-- Google Fonts -->
     <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Roboto+Slab:300,400,700%7COpen+Sans:400,600,700">
@@ -93,8 +93,8 @@
                     </li>
                     <li class="list-inline-item g-ml-minus-1 mr-0">
                       <a class="bg-dark d-inline-block g-brd-around g-brd-white-opacity-0_3 g-brd-primary-opacity-0_6--hover g-color-white g-bg-primary-opacity-0_6--hover g-text-underline--none--hover rounded-right g-px-15 g-py-4" href="#!">
-                        <i class="align-middle mr-2 icon-finance-206 u-line-icon-pro"></i>
-                          {{$post->shares}}
+                        <i class="align-middle mr-2 icon-education-007 u-line-icon-pro"></i>
+                          {{$post->views}}
                       </a>
                     </li>
                     <li class="list-inline-item ml-auto mr-0">

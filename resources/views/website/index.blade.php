@@ -13,7 +13,7 @@
     <meta http-equiv="x-ua-compatible" content="ie=edge">
 
     <!-- Favicon -->
-    <link rel="shortcut icon" href="../../../favicon.ico">
+    <link rel="shortcut icon" href="{{url('/')}}/assets/kingo-favi.png">
 
     <!-- Google Fonts -->
     <link rel="stylesheet"

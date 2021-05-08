@@ -24,7 +24,7 @@
     <link rel="canonical" href="{{URL::full()}}">
 
     <!-- Favicon -->
-    <link rel="shortcut icon" href="../../../favicon.ico">
+        <link rel="shortcut icon" href="{{url('/')}}/assets/kingo-favi.png">
 
     <!-- Google Fonts -->
     <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Roboto+Slab:300,400,700%7COpen+Sans:400,600,700">
