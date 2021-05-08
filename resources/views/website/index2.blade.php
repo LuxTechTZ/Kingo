@@ -522,11 +522,11 @@
                         <!-- Article -->
                         <article class="g-mb-30">
                           <figure class="u-shadow-v25 g-pos-rel g-mb-20">
-                              <a href="{{url('/')}}/post/{{$post->title}}/{{$post->id}}">
+                              <a href="{{url('/')}}/post/{{str_replace('?','',strtolower($post->title))}}/{{$post->id}}">
                                   @if($category->id == 5)
-                                  <video class="img-fluid w-100"
-                                       src="{{url('/')}}/{{Illuminate\Support\Facades\Storage::url($post->image_url)}}"
-                                         alt="{{$post->title}}"></video>
+                                  <img class="img-fluid w-100"
+                                       src="https://img.youtube.com/vi/{{$post->image_url}}/0.jpg"
+                                         alt="{{$post->title}}">
                                   @else
                                       <img class="img-fluid w-100"
                                        src="{{url('/')}}/{{Illuminate\Support\Facades\Storage::url($post->image_url)}}"
@@ -538,7 +538,7 @@
 
                           <h3 class="h4 g-mb-10">
                             <a class="u-link-v5 g-color-gray-dark-v1 g-color-primary--hover"
-                               href="{{url('/')}}/post/{{$post->title}}/{{$post->id}}">
+                               href="{{url('/')}}/post/{{str_replace('?','',strtolower($post->title))}}/{{$post->id}}">
                                 {{$post->title}}
                             </a>
                           </h3>

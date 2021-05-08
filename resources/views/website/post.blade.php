@@ -105,7 +105,7 @@
                   <figure class="u-shadow-v25 g-mb-30">
                       @if($post->category->id == 5)
                           <iframe style="width: 100%; height: 500px"
-                                  src="https://www.youtube.com/embed/XiiuObp9PaE"
+                                  src="https://www.youtube.com/embed/{{$post->image_url}}"
                                   title="{{$post->title}}" frameborder="0"
                                   allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
                           </iframe>
@@ -197,10 +197,11 @@
                   </div>
 
                   <div class="row">
-                  @foreach(\App\Models\Post::where('post_category_id',$post->category->id)->where('id','!=',$post->id)->limit(6)->get() as $popular)
+                  @foreach(\App\Models\Post::where('post_category_id',$post->category->id)->where('id','!=',$post->id)->limit(12)->get() as $popular)
                     <!-- Article Video -->
                     <div class="col-lg-4 col-sm-6 g-mb-30">
                       <article>
+                          <a href="{{url('/')}}/post/{{str_replace('?','',strtolower($popular->title))}}/{{$popular->id}}">
                         <figure class="u-shadow-v25 g-pos-rel g-mb-20">
                             @if($popular->category->id == 5)
                                 <img class="img-fluid w-100"
@@ -211,10 +212,11 @@
                             @endif
 
                         </figure>
+                          </a>
 
                         <h3 class="g-font-size-16 g-mb-10">
                           <a class="u-link-v5 g-color-gray-dark-v1 g-color-primary--hover"
-                             href="{{url('/')}}/post/{{$popular->title}}/{{$popular->id}}">
+                             href="{{url('/')}}/post/{{str_replace('?','',strtolower($popular->title))}}/{{$popular->id}}"">
                               {{$popular->title}}</a>
                         </h3>
                       </article>
@@ -276,6 +278,7 @@
                     <!-- Article Video -->
                     <div class="col-lg-4 col-sm-6 g-mb-30">
                       <article>
+                          <a href="{{url('/')}}/post/{{str_replace('?','',strtolower($popular->title))}}/{{$popular->id}}">
                         <figure class="u-shadow-v25 g-pos-rel g-mb-20">
                             @if($popular->category->id == 5)
                                 <img class="img-fluid w-100"
@@ -324,6 +327,7 @@
                               @endif
                           </figcaption>
                         </figure>
+                          </a>
 
                         <h3 class="g-font-size-16 g-mb-10">
                           <a class="u-link-v5 g-color-gray-dark-v1 g-color-primary--hover"
