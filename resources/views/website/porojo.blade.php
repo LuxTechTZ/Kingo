@@ -40,7 +40,7 @@
 
   <body>
     <main>
-      @include('website.partials.header');
+      @include('website.partials.header')
 
       <!-- Promo Articles -->
       <!-- End Promo Articles -->
