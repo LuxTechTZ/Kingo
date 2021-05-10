@@ -190,6 +190,13 @@ class PostController extends Controller
 //        return view('cms.post.show',compact('post'));
     }
 
+    public function search(Request $request)
+    {
+        $porojo = Post::where('title','Like','%'.$request['key'].'%')->get();
+        $category  = "Matokeo";
+        return view('website.porojo',compact('porojo','category'));
+    }
+
     /**
      * Remove the specified resource from storage.
      *

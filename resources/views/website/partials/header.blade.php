@@ -14,8 +14,11 @@
 
               <!-- Search Form -->
               <div class="col-6 col-md-5">
-                <form class="input-group rounded">
-                  <input class="form-control g-brd-secondary-light-v2 g-brd-primary--focus g-color-secondary-dark-v1 g-placeholder-secondary-dark-v1 g-bg-white g-font-weight-400 g-font-size-13 g-px-20 g-py-12" type="text" placeholder="Search the entire site">
+                <form class="input-group rounded" action="{{route('search')}}" method="GET">
+                  <input class="form-control g-brd-secondary-light-v2 g-brd-primary--focus g-color-secondary-dark-v1 g-placeholder-secondary-dark-v1 g-bg-white g-font-weight-400 g-font-size-13 g-px-20 g-py-12"
+                         type="text"
+                         name="key"
+                         placeholder="Search the entire site">
                   <span class="input-group-append g-brd-none g-py-0 g-pr-0">
                     <button class="btn u-btn-white g-color-primary--hover g-bg-secondary g-font-weight-600 g-font-size-13 text-uppercase g-py-12 g-px-20" type="submit">
                       <span class="g-hidden-md-down">Tafuta</span>
