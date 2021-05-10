@@ -197,12 +197,7 @@ class PostController extends Controller
         return view('website.porojo',compact('porojo','category'));
     }
 
-    /**
-     * Remove the specified resource from storage.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
+
     public function destroy($id)
     {
         $post = Post::findOrFail($id);

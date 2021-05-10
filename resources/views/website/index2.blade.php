@@ -60,7 +60,7 @@
 
                         {{-- article --}}
                         <article class="u-block-hover">
-                            <figure class="u-shadow-v25 g-bg-cover g-bg-white-gradient-opacity-v1--after">
+                            <figure class="u-shadow-v25 g-bg-cover ">
                                 <img class="img-fluid w-100 u-block-hover__main--zoom-v1"
                                     src="https://kingo.s3-eu-west-1.amazonaws.com/dynamic-content/images/small-4206-20210427073010-157595.jpg"
                                     alt="Image Description">
@@ -81,7 +81,7 @@
 
                         {{-- article --}}
                         <article class="u-block-hover">
-                            <figure class="u-shadow-v25 g-bg-cover g-bg-white-gradient-opacity-v1--after">
+                            <figure class="u-shadow-v25 g-bg-cover ">
                                 <img class="img-fluid w-100 u-block-hover__main--zoom-v1"
                                     src="https://kingo.s3-eu-west-1.amazonaws.com/dynamic-content/images/small-6779-20210424121250-399198.jpg"
                                     alt="Image Description">
@@ -102,7 +102,7 @@
                         {{-- article --}}
                         <article class="u-block-hover">
                             <a href="{{url('/')}}/post/{{$video->title}}/{{$video->id}}">
-                            <figure class="u-shadow-v25 g-bg-cover g-bg-white-gradient-opacity-v1--after">
+                            <figure class="u-shadow-v25 g-bg-cover ">
                                 <iframe style="width: 100%; height: 150px"
                                       src="https://www.youtube.com/embed/{{$video->image_url}}"
                                       title="{{$video->title}}" frameborder="0"
@@ -133,7 +133,7 @@
 
                         {{-- article --}}
                         <article class="u-block-hover">
-                            <figure class="u-shadow-v25 g-bg-cover g-bg-white-gradient-opacity-v1--after">
+                            <figure class="u-shadow-v25 g-bg-cover ">
                                 <img class="img-fluid w-100 u-block-hover__main--zoom-v1"
                                     src="{{url('/')}}/{{Illuminate\Support\Facades\Storage::url($domokaya->image_url)}}"
                                     alt="Image Description">
@@ -152,7 +152,7 @@
 
                         {{-- article --}}
                         <article class="u-block-hover">
-                            <figure class="u-shadow-v25 g-bg-cover g-bg-white-gradient-opacity-v1--after">
+                            <figure class="u-shadow-v25 g-bg-cover ">
                                 <img class="img-fluid w-100 u-block-hover__main--zoom-v1"
                                     src="{{url('/')}}/{{Illuminate\Support\Facades\Storage::url($porojo->image_url)}}"
                                     alt="Image Description">
@@ -183,7 +183,7 @@
 
                         {{-- article --}}
                         <article class="u-block-hover">
-                            <figure class="u-shadow-v25 g-bg-cover g-bg-white-gradient-opacity-v1--after"
+                            <figure class="u-shadow-v25 g-bg-cover "
                                 style="height: 308px">
                                 <img class="img-fluid w-100 u-block-hover__main--zoom-v1"
                                     src="{{url('/')}}/{{Illuminate\Support\Facades\Storage::url($porojo_live->image_url)}}"
@@ -203,7 +203,7 @@
 
                         {{-- article --}}
                         <article class="u-block-hover">
-                            <figure class="u-shadow-v25 g-bg-cover g-bg-white-gradient-opacity-v1--after">
+                            <figure class="u-shadow-v25 g-bg-cover ">
                                 <img class="img-fluid w-100 u-block-hover__main--zoom-v1"
                                     src="{{url('/')}}/{{Illuminate\Support\Facades\Storage::url($kingo_katuni->image_url)}}"
                                     alt="Image Description">
