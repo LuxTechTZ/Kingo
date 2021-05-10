@@ -155,7 +155,7 @@
                 <div class="g-mb-30">
                   <ul class="list-inline text-uppercase mb-0">
                     <li class="list-inline-item g-mr-10">
-                      <strong class="align-middle g-font-size-24">{{$post->views}}</strong>
+                      <strong class="align-middle g-font-size-24">{{$post->likes}}</strong>
                     </li>
                     <li class="list-inline-item g-mr-10">
                       <span class="g-color-gray-dark-v5">|</span>
@@ -177,7 +177,7 @@
                             </div>
                       </li>
                     <li class="list-inline-item">
-                      <a class="btn u-btn-lightred g-font-size-12 rounded g-py-5" href="#!">
+                      <a class="btn u-btn-lightred g-font-size-12 rounded g-py-5" href="{{route('like',$post->id)}}">
                         <i class="fa fa-heart"></i>
                           <span class="g-hidden-xs-down">Like Post</span>
                       </a>
@@ -387,7 +387,7 @@
       </section>
       <!-- End News Content -->
 
-      @include('website.partials.footer');
+      @include('website.partials.footer')
 
       <!-- Go To -->
       <a class="js-go-to u-go-to-v2" href="#!"

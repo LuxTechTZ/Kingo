@@ -197,6 +197,14 @@ class PostController extends Controller
         return view('website.porojo',compact('porojo','category'));
     }
 
+    public function like($id)
+    {
+        $post = Post::findOrFail($id);
+        $post->likes = $post->likes + 1;
+        $post->save();
+        return redirect()->back();
+    }
+
 
     public function destroy($id)
     {

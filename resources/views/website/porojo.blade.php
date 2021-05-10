@@ -230,7 +230,7 @@
       </div>
       <!-- End News Content -->
 
-      @include('website.partials.footer');
+      @include('website.partials.footer')
 
       <!-- Go To -->
       <a class="js-go-to u-go-to-v2" href="#!"

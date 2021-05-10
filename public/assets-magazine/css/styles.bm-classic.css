@@ -24,6 +24,9 @@ a {
   outline: none;
 }
 
+
+
+
 a:focus,
 a:hover {
   color: #4f72c1;
@@ -49327,6 +49330,8 @@ p {
   color: #858993;
   line-height: 1.8;
 }
+
+
 
 /*------------------------------------
   Font Family

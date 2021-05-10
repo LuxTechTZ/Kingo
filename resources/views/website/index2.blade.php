@@ -361,9 +361,9 @@
                                   <figure class="u-shadow-v25 g-pos-rel g-mb-20">
                                       <a href="{{url('/')}}/post/{{$popular->title}}/{{$popular->id}}">
                                           @if($popular->category->id == 5)
-                                            <video class="img-fluid w-100"
-                                                 src="{{url('/')}}/{{Illuminate\Support\Facades\Storage::url($popular->image_url)}}"
-                                                   alt="{{$popular->title}}"></video>
+                                            <img class="img-fluid w-100"
+                                                 src="https://img.youtube.com/vi/{{$popular->image_url}}/hqdefault.jpg"
+                                                   alt="{{$popular->title}}">
                                           @else
                                               <img class="img-fluid w-100"
                                                  src="{{url('/')}}/{{Illuminate\Support\Facades\Storage::url($popular->image_url)}}"
@@ -371,14 +371,16 @@
                                           @endif
                                       </a>
                                     <figcaption class="g-pos-abs g-top-20 g-left-20">
-                                      <a class="btn btn-xs u-btn-teal text-uppercase rounded-0" href="#!">
+                                      <a class="btn btn-xs u-btn-teal text-uppercase rounded-0"
+                                         href="#!">
                                           {{$popular->category->name}}
                                       </a>
                                     </figcaption>
                                   </figure>
 
                                   <h3 class="h4 g-mb-10">
-                                    <a class="u-link-v5 g-color-gray-dark-v1 g-color-primary--hover" href="#!">
+                                    <a class="u-link-v5 g-color-gray-dark-v1 g-color-primary--hover"
+                                       href="{{url('/')}}/post/{{$popular->title}}/{{$popular->id}}">
                                         {{$popular->title}}
                                     </a>
                                   </h3>
@@ -393,7 +395,7 @@
                                     </li>
                                     <li class="list-inline-item">/</li>
                                     <li class="list-inline-item">
-                                      <a class="u-link-v5 g-color-gray-dark-v4 g-color-primary--hover" href="#!">
+                                      <a class="u-link-v5 g-color-gray-dark-v4 g-color-primary--hover" >
                                         <i class="icon-eye u-line-icon-pro align-middle g-pos-rel g-top-1 mr-1"></i>
                                           {{$popular->views}}
                                       </a>
@@ -432,7 +434,7 @@
 
                                           <div class="media-body">
                                             <h3 class="g-font-size-16">
-                                              <a class="g-color-gray-dark-v1" href="#!">
+                                              <a class="g-color-gray-dark-v1" href="{{url('/')}}/post/{{$popular->title}}/{{$popular->id}}">
                                                   {{$popular->title}}
                                               </a>
                                             </h3>

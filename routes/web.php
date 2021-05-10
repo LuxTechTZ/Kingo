@@ -19,7 +19,9 @@ Route::group(['middleware' => ['web']], function () {
     Route::get('/', [SiteController::class, 'index']);
     Route::get('/category/{category}', [SiteController::class, 'category'])->name('site_category');
     Route::get('/post/{name}/{id}', [SiteController::class, 'post'])->name('site_post');
+
     Route::get('/search', [PostController::class, 'search'])->name('search');
+    Route::get('/like/{id}', [PostController::class, 'like'])->name('like');
 });
 
 Route::get('/site', function () {
