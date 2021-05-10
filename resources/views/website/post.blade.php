@@ -13,7 +13,7 @@
 
     <meta property="og:title"       content="{{$post->title}}">
     @if($post->category->id == 5)
-        <meta property="og:video"       content="{{url('/')}}/{{Illuminate\Support\Facades\Storage::url($post->image_url)}}">
+        <meta property="og:image"       content="https://img.youtube.com/vi/{{$post->image_url}}/hqdefault.jpg">
     @else
         <meta property="og:image"       content="{{url('/')}}/{{Illuminate\Support\Facades\Storage::url($post->image_url)}}">
     @endif
