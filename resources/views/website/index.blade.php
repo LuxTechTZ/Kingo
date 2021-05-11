@@ -273,7 +273,7 @@
                         <article class="u-block-hover">
                             <figure class="u-shadow-v25 g-bg-cover g-bg-white-gradient-opacity-v1--after">
                                 <img class="img-fluid w-100 u-block-hover__main--zoom-v1"
-                                    src="{{url('/')}}/{{Illuminate\Support\Facades\Storage::url($domokaya->image_url)}}"
+                                    src="https://kingo.s3-eu-west-1.amazonaws.com/dynamic-content/images/medium-1901-20210108130443-557922.jpg"
                                     alt="Image Description">
                             </figure>
 
@@ -285,14 +285,14 @@
 
                         <h5 class="h5"
                             style="border-bottom: 1px solid rgb(195, 193, 193); margin-bottom: 20px;padding-bottom: 10px">
-                            <a class="u-link-v5 g-color-gray-dark-v1 g-color-primary--hover" href="#!">{{$domokaya->title}}</a>
+                            <a class="u-link-v5 g-color-gray-dark-v1 g-color-primary--hover" href="#!">Title</a>
                         </h5>
 
                         {{-- article --}}
                         <article class="u-block-hover">
                             <figure class="u-shadow-v25 g-bg-cover g-bg-white-gradient-opacity-v1--after">
                                 <img class="img-fluid w-100 u-block-hover__main--zoom-v1"
-                                    src="{{url('/')}}/{{Illuminate\Support\Facades\Storage::url($porojo->image_url)}}"
+                                    src="https://kingo.s3-eu-west-1.amazonaws.com/dynamic-content/images/medium-1901-20210108130443-557922.jpg"
                                     alt="Image Description">
                             </figure>
 
@@ -303,13 +303,9 @@
                         </span>
 
                         <h5 class="h5 g-mb-10">
-                            <a class="u-link-v5 g-color-gray-dark-v1 g-color-primary--hover" href="#!">{{$porojo->title}}</a>
+                            <a class="u-link-v5 g-color-gray-dark-v1 g-color-primary--hover" href="#!">title</a>
                             <p>
-                                @if (strlen($porojo->content) > 60)
-                                    {{$porojo->content = substr($porojo->content, 0, 57) . '...'}}
-                                @else
-                                    {{$porojo->content}}
-                                @endif
+                                Content
                             </p>
                         </h5>
 
