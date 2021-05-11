@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Post;
 use App\Models\PostCategory;
+use App\Models\PostImage;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Storage;
 
@@ -26,31 +27,6 @@ class PostController extends Controller
         return view('cms.post.index',compact('posts','category'));
     }
 
-    public function createPorojo()
-    {
-        //
-        return view('cms.porojo.create');
-    }
-
-    public function storePorojo(Request $request)
-    {
-        if (isset($request['image'])) {
-            $request['image_url'] = Storage::putFile('public/porojo', $request->file('image'));
-        }
-
-        if ($request['status'] == 1){
-            $posts = Post::where('post_category_id','1')->where('status',1)->get();
-            foreach ($posts as $post){
-                $post->status = 0;
-                $post->save();
-            }
-        }
-
-        $request['post_category_id'] = 1;
-        $request['desc'] = $request['title'];
-        Post::create($request->all());
-        return redirect()->route('porojo');
-    }
 
 //    Domokaya
 
@@ -60,33 +36,6 @@ class PostController extends Controller
         $category = "Domokaya";
 
         return view('cms.post.index',compact('posts','category'));
-    }
-
-    public function createDomokaya()
-    {
-        //
-        return view('cms.domokaya.create');
-    }
-
-
-    public function storeDomokaya(Request $request)
-    {
-        if (isset($request['image'])) {
-            $request['image_url'] = Storage::putFile('public/domokaya', $request->file('image'), 'public');
-        }
-
-        if ($request['status'] == 1){
-            $posts = Post::where('post_category_id','2')->where('status',1)->get();
-            foreach ($posts as $post){
-                $post->status = 0;
-                $post->save();
-            }
-        }
-
-        $request['post_category_id'] = 2;
-        $request['desc'] = $request['title'];
-        Post::create($request->all());
-        return redirect()->route('domokaya');
     }
 
 //    Porojo Live
@@ -99,32 +48,46 @@ class PostController extends Controller
         return view('cms.post.index',compact('posts','category'));
     }
 
-    public function createLive()
+    //    Mjue Maarufu
+
+    public function mjueMaarufu()
     {
-        //
-        return view('cms.domokaya.create');
+        $posts = Post::where('post_category_id','4')->get();
+        $category = 'Mjue Maarufu';
+
+        return view('cms.post.index',compact('posts','category'));
     }
 
+        //    Video
 
-    public function storeLive(Request $request)
+    public function video()
     {
-        if (isset($request['image'])) {
-            $request['image_url'] = Storage::putFile('public/domokaya', $request->file('image'), 'public');
-        }
+        $posts = Post::where('post_category_id','5')->get();
+        $category = 'Video';
 
-        if ($request['status'] == 1){
-            $posts = Post::where('post_category_id','2')->where('status',1)->get();
-            foreach ($posts as $post){
-                $post->status = 0;
-                $post->save();
-            }
-        }
-
-        $request['post_category_id'] = 2;
-        $request['desc'] = $request['title'];
-        Post::create($request->all());
-        return redirect()->route('domokaya');
+        return view('cms.post.index',compact('posts','category'));
     }
+
+        //    Riwaya
+
+    public function riwaya()
+    {
+        $posts = Post::where('post_category_id','6')->get();
+        $category = 'Riwaya';
+
+        return view('cms.post.index',compact('posts','category'));
+    }
+
+        //    Kingo Katunu
+
+    public function kingoKatuni()
+    {
+        $posts = Post::where('post_category_id','7')->get();
+        $category = 'Kingo Katuni';
+
+        return view('cms.post.index',compact('posts','category'));
+    }
+
 
 //    All Posts
     public function showPost($id)
@@ -147,9 +110,7 @@ class PostController extends Controller
 
     public function store(Request $request)
     {
-        if (isset($request['image'])) {
-            $request['image_url'] = Storage::putFile('public/posts', $request->file('image'), 'public');
-        }
+
 
         if ($request['status'] == 1){
             $posts = Post::where('post_category_id',$request['post_category_id'])->where('status',1)->get();
@@ -160,37 +121,97 @@ class PostController extends Controller
         }
 
         $request['desc'] = $request['title'];
-        $post = Post::create($request->all());
+        if (isset($request['image'])) {
+            if (is_array($request['image'])){
+                $first_image = $request['image'][0];
+                $request['image_url'] = Storage::putFile('public/posts', $first_image, 'public');
+                $post = Post::create($request->all());
+                foreach ($request['image'] as $img){
+                    $data['post_id'] = $post->id;
+                    $data['path'] =  Storage::putFile('public/posts', $img, 'public');
+                    PostImage::create($data);
+                }
+            }else{
+                $request['image_url'] = Storage::putFile('public/posts', $request->file('image'), 'public');
+                $post = Post::create($request->all());
+            }
+        }elseif (isset($request['youtube'])){
+            $link = $request['youtube'];
+            $code = explode('.be/',$link);
+            if (isset($code[1])){
+
+            $request['image_url'] = $code[1];
+            $post = Post::create($request->all());
+            }else{
+                redirect()->back();
+            }
+        }
         return redirect('home/post/show/'.$post->id);
     }
 
     public function update(Request $request, $id)
     {
+//        return $request['status'];
         $post = Post::findOrFail($id);
         if ($request['status'] == 1){
-            $posts = Post::where('post_category_id',$post->category->id)->where('status',1)->get();
+            $posts = Post::where('post_category_id',$post->category->id)->where('status',1)->where('id','!=',$post->id)->get();
             foreach ($posts as $pre_post){
                 $pre_post->status = 0;
                 $pre_post->save();
             }
+
         }
+
+        if (isset($request['image'])) {
+            $fmg = $request['image'];
+            $first_image = end($fmg);
+            if (is_array($request['image'])){
+                $request['image_url'] = Storage::putFile('public/posts', $first_image, 'public');
+                foreach ($request['image'] as $img){
+                    $data['post_id'] = $post->id;
+                    $data['path'] =  Storage::putFile('public/posts', $img, 'public');
+                    PostImage::create($data);
+                }
+            }else{
+                $request['image_url'] = Storage::putFile('public/posts', $request->file('image'), 'public');
+            }
+        }elseif (isset($request['youtube'])){
+            $link = $request['youtube'];
+            $code = explode('.be/',$link);
+            if (isset($code[1])){
+            $request['image_url'] = $code[1];
+            }else{
+                redirect()->back();
+            }
+        }
+
         $post->update($request->all());
-        return redirect('/home/post/'.$post->id);
+        return redirect('/home/post/show/'.$post->id);
 //        return view('cms.post.show',compact('post'));
     }
 
-    /**
-     * Remove the specified resource from storage.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
+    public function search(Request $request)
+    {
+        $porojo = Post::where('title','Like','%'.$request['key'].'%')->get();
+        $category  = "Matokeo";
+        return view('website.porojo',compact('porojo','category'));
+    }
+
+    public function like($id)
+    {
+        $post = Post::findOrFail($id);
+        $post->likes = $post->likes + 1;
+        $post->save();
+        return redirect()->back();
+    }
+
+
     public function destroy($id)
     {
         $post = Post::findOrFail($id);
         $category = $post->category->name;
         Post::destroy($id);
-        return redirect()->route(strtolower($category));
+        return redirect()->route(str_replace(' ','_',strtolower($category)));
 
     }
 

@@ -14,12 +14,22 @@ use Illuminate\Support\Facades\Route;
 | contains the "web" middleware group. Now create something great!
 |
 */
+Route::group(['middleware' => ['web']], function () {
 
-Route::get('/', [SiteController::class, 'index']);
+    Route::get('/', [SiteController::class, 'index']);
+    Route::get('/category/{category}', [SiteController::class, 'category'])->name('site_category');
+    Route::get('/post/{name}/{id}', [SiteController::class, 'post'])->name('site_post');
 
+    Route::get('/search', [PostController::class, 'search'])->name('search');
+    Route::get('/like/{id}', [PostController::class, 'like'])->name('like');
+});
 
 Route::get('/site', function () {
     return view('website.index');
+});
+
+Route::get('/register', function () {
+    return redirect()->route('login');
 });
 
 Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
@@ -47,6 +57,12 @@ Route::group(['middleware' => ['auth']], function () {
     Route::get('/home/post/edit/{id}', [PostController::class, 'editPost'])->name('edit_post');
     Route::post('/home/post/update/{id}', [PostController::class, 'update'])->name('update_post');
     Route::get('/home/post/delete/{id}', [PostController::class, 'destroy'])->name('delete_post');
+
+
+    Route::get('/home/mjue_maarufu', [PostController::class, 'mjueMaarufu'])->name('mjue_maarufu');
+    Route::get('/home/video', [PostController::class, 'video'])->name('video');
+    Route::get('/home/riwaya', [PostController::class, 'riwaya'])->name('riwaya');
+    Route::get('/home/kingo_katuni', [PostController::class, 'kingoKatuni'])->name('kingo_katuni');
 
     Route::prefix('home/porojo')->group(function () {
         Route::get('/', [PostController::class, 'porojo'])->name('porojo');

@@ -1,7 +1,7 @@
 <x-app-layout>
     <x-slot name="header">
         <h2 class="font-semibold text-xl text-gray-800 leading-tight">
-            {{ __('Porojo') }}
+            {{ __($category) }}
             <a href="{{url('/')}}/home/create/{{$category}}" class="inline-flex justify-center py-2 px-4
                                             border border-transparent shadow-sm text-sm font-medium rounded-md
                                             text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none
@@ -32,19 +32,28 @@
                                             Status
                                         </th>
 
+                                        <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                                            Views
+                                        </th>
+
                                         <th scope="col" class="relative px-6 py-3">
                                             <span class="sr-only">Edit</span>
                                         </th>
                                     </tr>
                                     </thead>
                                     <tbody class="bg-white divide-y divide-gray-200">
-                                    @foreach($posts as $post)
+                                    @foreach($posts->reverse() as $post)
                                         <tr>
                                             <td class="px-6 py-4 whitespace-nowrap">
                                                 <div class="flex items-center">
                                                     <div class="flex-shrink-0 h-10 w-10">
-                                                        <img class="h-10 w-10 rounded-full"
+                                                        @if($post->category->id == 5)
+                                                        <video class="h-10 w-10 rounded-full"
                                                              src="{{url('/')}}/{{Illuminate\Support\Facades\Storage::url($post->image_url)}}" alt="">
+                                                        @else
+                                                            <img class="h-10 w-10 rounded-full"
+                                                             src="{{url('/')}}/{{Illuminate\Support\Facades\Storage::url($post->image_url)}}" alt="">
+                                                        @endif
                                                     </div>
 
                                                     <div class="ml-4">
@@ -53,9 +62,9 @@
                                                         </div>
                                                         <div class="text-sm text-gray-500">
                                                             @if (strlen($post->content) > 40)
-                                                            {{$post->content = substr($post->content, 0, 37) . '...'}}
+                                                            {!! $post->content = substr($post->content, 0, 37) . '...'!!}
                                                             @else
-                                                                {{$post->content}}
+                                                                {!! $post->content !!}
                                                             @endif
                                                         </div>
                                                     </div>
@@ -74,11 +83,16 @@
                                                     Main
                                                 @endif
                                             </td>
+                                            <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">
+                                                {{$post->views}}
+                                            </td>
 
                                             <td class="px-6 py-4 whitespace-nowrap text-right text-sm font-medium">
                                                 <a href="/home/post/show/{{$post->id}}" class="inline-block rounded-lg shadow-lg text-xs px-3 py-1 bg-green-500 text-white ">View</a>
                                                 <a href="/home/post/edit/{{$post->id}}" class="inline-block rounded-lg shadow-lg text-xs px-3 py-1 bg-indigo-500 text-white ">Edit</a>
+                                                @if($post->status != 1)
                                                 <a href="/home/post/delete/{{$post->id}}" class="inline-block rounded-lg shadow-lg text-xs px-3 py-1 bg-red-500 text-white ">Delete</a>
+                                                @endif
                                             </td>
                                         </tr>
                                     @endforeach

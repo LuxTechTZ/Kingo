@@ -18,22 +18,22 @@
                     <x-jet-nav-link href="{{ route('porojo') }}" :active="request()->routeIs('porojo','create_porojo')">
                         Porojo
                     </x-jet-nav-link>
-                    <x-jet-nav-link href="{{ route('domokaya') }}" :active="request()->routeIs('domokaya','create_domokaya','edit_post')">
+                    <x-jet-nav-link href="{{ route('domokaya') }}" :active="request()->routeIs('domokaya','create_domokaya')">
                         Domokaya
                     </x-jet-nav-link>
                     <x-jet-nav-link href="{{ route('porojo_live') }}" :active="request()->routeIs('porojo_live')">
                         Porojo Live
                     </x-jet-nav-link>
-                    <x-jet-nav-link href="{{ route('dashboard') }}" :active="request()->routeIs('dashboard')">
+                    <x-jet-nav-link href="{{ route('mjue_maarufu') }}" :active="request()->routeIs('mjue_maarufu')">
                         Mjue Maarufu
                     </x-jet-nav-link>
-                    <x-jet-nav-link href="{{ route('dashboard') }}" :active="request()->routeIs('dashboard')">
+                    <x-jet-nav-link href="{{ route('video') }}" :active="request()->routeIs('video')">
                         Video
                     </x-jet-nav-link>
-                    <x-jet-nav-link href="{{ route('dashboard') }}" :active="request()->routeIs('dashboard')">
+                    <x-jet-nav-link href="{{ route('riwaya') }}" :active="request()->routeIs('riwaya')">
                         Riwaya
                     </x-jet-nav-link>
-                    <x-jet-nav-link href="{{ route('dashboard') }}" :active="request()->routeIs('dashboard')">
+                    <x-jet-nav-link href="{{ route('kingo_katuni') }}" :active="request()->routeIs('kingo_katuni')">
                         Kingo Katuni
                     </x-jet-nav-link>
                     <x-jet-nav-link href="{{ route('dashboard') }}" :active="request()->routeIs('dashboard')">
@@ -163,33 +163,34 @@
     <!-- Responsive Navigation Menu -->
     <div :class="{'block': open, 'hidden': ! open}" class="hidden sm:hidden">
         <div class="pt-2 pb-3 space-y-1">
+
             <x-jet-responsive-nav-link href="{{ route('dashboard') }}" :active="request()->routeIs('dashboard')">
-                {{ __('Dashboard') }}
-            </x-jet-responsive-nav-link>
-            <x-jet-responsive-nav-link href="{{ route('dashboard') }}" :active="request()->routeIs('dashboard')">
-                Sebuleni
-            </x-jet-responsive-nav-link>
-            <x-jet-responsive-nav-link href="{{ route('dashboard') }}" :active="request()->routeIs('dashboard')">
-                Porojo
-            </x-jet-responsive-nav-link>
-            <x-jet-responsive-nav-link href="{{ route('dashboard') }}" :active="request()->routeIs('dashboard')">
-                Domokaya
-            </x-jet-responsive-nav-link>
-            <x-jet-responsive-nav-link href="{{ route('dashboard') }}" :active="request()->routeIs('dashboard')">
-                Porojo Live
-            </x-jet-responsive-nav-link>
-            <x-jet-responsive-nav-link href="{{ route('dashboard') }}" :active="request()->routeIs('dashboard')">
-                Mjue Maarufu
-            </x-jet-responsive-nav-link>
-            <x-jet-responsive-nav-link href="{{ route('dashboard') }}" :active="request()->routeIs('dashboard')">
-                Video
-            </x-jet-responsive-nav-link>
-            <x-jet-responsive-nav-link href="{{ route('dashboard') }}" :active="request()->routeIs('dashboard')">
-                Riwaya
-            </x-jet-responsive-nav-link>
-            <x-jet-responsive-nav-link href="{{ route('dashboard') }}" :active="request()->routeIs('dashboard')">
-                Kingo Katuni
-            </x-jet-responsive-nav-link>
+                        {{ __('Dashboard') }}
+                    </x-jet-responsive-nav-link>
+                    <x-jet-responsive-nav-link href="{{ route('porojo') }}" :active="request()->routeIs('porojo','create_porojo')">
+                        Porojo
+                    </x-jet-responsive-nav-link>
+                    <x-jet-responsive-nav-link href="{{ route('domokaya') }}" :active="request()->routeIs('domokaya','create_domokaya')">
+                        Domokaya
+                    </x-jet-responsive-nav-link>
+                    <x-jet-responsive-nav-link href="{{ route('porojo_live') }}" :active="request()->routeIs('porojo_live')">
+                        Porojo Live
+                    </x-jet-responsive-nav-link>
+                    <x-jet-responsive-nav-link href="{{ route('mjue_maarufu') }}" :active="request()->routeIs('mjue_maarufu')">
+                        Mjue Maarufu
+                    </x-jet-responsive-nav-link>
+                    <x-jet-responsive-nav-link href="{{ route('video') }}" :active="request()->routeIs('video')">
+                        Video
+                    </x-jet-responsive-nav-link>
+                    <x-jet-responsive-nav-link href="{{ route('riwaya') }}" :active="request()->routeIs('riwaya')">
+                        Riwaya
+                    </x-jet-responsive-nav-link>
+                    <x-jet-responsive-nav-link href="{{ route('kingo_katuni') }}" :active="request()->routeIs('kingo_katuni')">
+                        Kingo Katuni
+                    </x-jet-responsive-nav-link>
+                    <x-jet-responsive-nav-link href="{{ route('dashboard') }}" :active="request()->routeIs('dashboard')">
+                        Settings
+                    </x-jet-responsive-nav-link>
         </div>
 
         <!-- Responsive Settings Options -->

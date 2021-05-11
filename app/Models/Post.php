@@ -21,6 +21,10 @@ class Post extends Model
         'status',
         'post_date',
         'image_url',
+        'likes',
+        'shares',
+        'views',
+        'tags',
     ];
 
     public function category()

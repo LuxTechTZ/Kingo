@@ -1,7 +1,7 @@
 <x-app-layout>
     <x-slot name="header">
         <h2 class="font-semibold text-xl text-gray-800 leading-tight">
-            Create A Porojo Post
+            Create A {{ __($category->name) }} Post
         </h2>
     </x-slot>
 
@@ -52,18 +52,26 @@
 
                                                 </div>
 
-
-                                                @if($category->id != 3)
-                                                <div class="col-span-6">
+                                                @if($category->id == 1 || $category->id == 4 || $category->id == 6)
+                                                <div class="col-span-12">
                                                     <label for="desc"
                                                            class="block text-sm font-medium
                                                             text-gray-700">Description/Article</label>
-                                                    <textarea name="content" required
-                                                           id="content" rows="10" class="mt-1 focus:ring-indigo-500
+                                                    <textarea id="editor" name="content"
+                                                           rows="10" class="mt-1 focus:ring-indigo-500
                                                            focus:border-indigo-500 block w-full shadow-sm
                                                            sm:text-sm border-gray-300 rounded-md"></textarea>
                                                 </div>
                                                 @endif
+                                                <div class="col-span-12">
+                                                    <label for="tags" class="block text-sm
+                                                    font-medium text-gray-700">Tags (Separate With Coma ,)</label>
+                                                    <input type="text" name="tags" id="tags" placeholder="Siasa, Kichekesho"
+                                                           class="mt-1
+                                                           focus:ring-indigo-500 focus:border-indigo-500
+                                                           block w-full shadow-sm sm:text-sm border-gray-300
+                                                            rounded-md">
+                                                </div>
 
                                                 <div class="col-span-6 sm:col-span-6 lg:col-span-3">
                                                     <label for="button" class="block text-sm font-medium
@@ -81,9 +89,22 @@
                                                     w-full shadow-sm sm:text-sm border-gray-300 rounded-md">
                                                 </div>
 
+                                                @if($category->id == 5)
+                                                    <div class="col-span-12">
+                                                    <label for="tags" class="block text-sm
+                                                    font-medium text-gray-700">Youtube Url</label>
+                                                    <input type="text" name="youtube" id="youtube"
+                                                           class="mt-1
+                                                           focus:ring-indigo-500 focus:border-indigo-500
+                                                           block w-full shadow-sm sm:text-sm border-gray-300
+                                                            rounded-md">
+                                                </div>
+                                                @endif
+
 
 
                                             </div>
+                                            @if($category->id != 5)
                                             <div>
                                                 <label class="block text-sm font-medium text-gray-700">
                                                     Post Image
@@ -107,9 +128,15 @@
                                                             focus-within:outline-none focus-within:ring-2
                                                             focus-within:ring-offset-2
                                                             focus-within:ring-indigo-500">
-                                                                <span>Upload a file</span>
-                                                                <input required id="image" name="image"
+                                                                @if($category->id == 3)
+                                                                <span>Upload Multiple Image Files</span>
+                                                                <input multiple required id="image" name="image[]"
                                                                        type="file" class="sr-only" accept="image/jpeg, image/png">
+                                                                @else
+                                                                    <span>Upload An Image File</span>
+                                                                    <input required id="image" name="image"
+                                                                       type="file" class="sr-only" accept="image/jpeg, image/png">
+                                                                @endif
                                                             </label>
                                                             <p class="pl-1"></p>
                                                         </div>
@@ -119,6 +146,7 @@
                                                     </div>
                                                 </div>
                                             </div>
+                                            @endif
                                         </div>
                                         <div class="px-4 py-3 bg-gray-50 text-right sm:px-6">
                                             <button type="submit" class="inline-flex justify-center py-2 px-4
