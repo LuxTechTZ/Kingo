@@ -450,8 +450,8 @@
                                   </ul>
 
                                   <p class="g-color-gray-dark-v2">
-                                      @if (strlen($popular->content) > 200)
-                                            {!! $popular->content = substr($popular->content, 0, 197) . '...' !!}
+                                      @if (strlen($popular->content) > 90)
+                                            {!! $popular->content = substr($popular->content, 0, 87) . '...' !!}
                                         @else
                                             {!! $popular->content !!}
                                         @endif
