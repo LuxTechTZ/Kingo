@@ -330,9 +330,9 @@
 
                       <p class="g-color-gray-dark-v2">
                           @if (strlen($new_porojo->content) > 200)
-                              {{$new_porojo->content = substr($new_porojo->content, 0, 197) . '...'}}
+                              {!!  $new_porojo->content = substr($new_porojo->content, 0, 197) . '...' !!}
                           @else
-                              {{$new_porojo->content}}
+                              {!! $new_porojo->content !!}
                           @endif
                       </p>
                       <a class="g-font-size-12" href="{{url('/')}}/post/{{$new_porojo->title}}/{{$new_porojo->id}}">
