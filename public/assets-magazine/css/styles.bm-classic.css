@@ -9,7 +9,7 @@ html {
 body {
   font-weight: 400;
   font-size: 1rem;
-  font-family: "Open Sans", Helvetica, Arial, sans-serif;
+  font-family: "Open Sans", Helvetica, Arial, sans-serif,Libre Baskerville;
   line-height: 1.6;
   color: #2c2f37;
   -webkit-font-smoothing: antialiased;
@@ -20,12 +20,16 @@ body {
 }
 
 a {
+    font-family: Libre Baskerville, Serif;
+    font-weight: bold;
   color: #6281c8;
   outline: none;
 }
 
 
-
+.p {
+    font-family: Georgia, serif !important;
+}
 
 a:focus,
 a:hover {

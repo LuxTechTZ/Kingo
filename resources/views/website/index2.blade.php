@@ -19,6 +19,7 @@
 
     <!-- CSS Global Compulsory -->
     <link rel="stylesheet" href="{{url('/')}}/assets-main/vendor/bootstrap/bootstrap.min.css">
+    <link rel="stylesheet" href="{{url('/')}}/assets/LibreBaskerville-Regular.ttf">
 
     <!-- CSS Implementing Plugins -->
     <link rel="stylesheet" href="{{url('/')}}/assets-main/vendor/icon-awesome/css/font-awesome.min.css">
@@ -76,7 +77,7 @@
 
                         <h5 class="h5 mt-2"
                             style="border-bottom: 1px solid rgb(195, 193, 193); margin-bottom: 20px; padding-bottom: 5px">
-                            <a style="font-family: 'Bookman Old Style'" class="u-link-v5 g-color-gray-dark-v1 g-color-primary--hover"
+                            <a style="font-family: 'Libre Baskerville'" class="u-link-v5 g-color-gray-dark-v1 g-color-primary--hover"
                                href="{{route('single_post',[$domokaya2[1]->id,$domokaya2[1]->title])}}">
                                 {{$domokaya2[1]->title}}
                             </a>
