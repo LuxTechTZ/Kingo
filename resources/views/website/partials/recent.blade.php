@@ -12,7 +12,6 @@
                         <span class="g-width-60 g-height-60"
                               style="background-image: url(https://img.youtube.com/vi/{{$recent->image_url}}/0.jpg);
                                   background-size: contain; background-repeat: no-repeat; background-position: center"></span>
-
                     @else
                         <img class="g-width-60 g-height-60" src="{{url('/')}}/{{Illuminate\Support\Facades\Storage::url($recent->image_url)}}"
                        alt="{{$recent->title}}">
@@ -41,5 +40,4 @@
               </article>
               <!-- End Article -->
         @endforeach
-
 </div>
