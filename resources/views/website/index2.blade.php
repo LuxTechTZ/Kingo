@@ -1,8 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<!-- Mirrored from htmlstream.com/preview/unify-v2.6/multipage/blog-magazine/classic/bm-classic-home-page-1.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 19 Feb 2021 07:25:02 GMT -->
-
 <head>
     <!-- Title -->
     <title>{{ config('app.name', 'Kingo') }}</title>
@@ -21,6 +19,7 @@
 
     <!-- CSS Global Compulsory -->
     <link rel="stylesheet" href="{{url('/')}}/assets-main/vendor/bootstrap/bootstrap.min.css">
+    <link rel="stylesheet" href="{{url('/')}}/assets/LibreBaskerville-Regular.ttf">
 
     <!-- CSS Implementing Plugins -->
     <link rel="stylesheet" href="{{url('/')}}/assets-main/vendor/icon-awesome/css/font-awesome.min.css">
@@ -52,56 +51,67 @@
         <!-- Promo Block -->
         <section class="g-py-50">
             <div class="container">
-
                 <div class="row">
                     {{-- first column --}}
                     <div class="col-lg-3 g-mb-30 g-mb-2--lg"
                         style="padding-right: 15px;border-right: 1px solid rgb(195, 193, 193)">
 
                         {{-- article --}}
-                        <article class="u-block-hover">
+                        <article class="u-block-hover mb-2">
+                            <a href="{{route('single_post',[$domokaya2[1]->id,$domokaya2[1]->title])}}">
                             <figure class="u-shadow-v25 g-bg-cover ">
                                 <img class="img-fluid w-100 u-block-hover__main--zoom-v1"
-                                    src="https://kingo.s3-eu-west-1.amazonaws.com/dynamic-content/images/small-4206-20210427073010-157595.jpg"
-                                    alt="Image Description">
+                                    src="{{url('/')}}/{{Storage::url($domokaya2[1]->image_url)}}"
+                                    alt="{{$domokaya2[0]->title}}">
                             </figure>
+                            </a>
 
                         </article>
-
                         <span class="g-mb-10">
-                            <a class="btn btn-xs u-btn-red text-uppercase rounded-0" href="#!">POST MPYA</a>
+                            <strong>
+                            <a class="text-danger" href="{{url('/category/domokaya')}}">
+                                <i class="icon-arrow-right"></i>
+                                Domokaya Iliyopita</a>
+                            </strong>
                         </span>
 
-                        <h5 class="h5"
+                        <h5 class="h5 mt-2"
                             style="border-bottom: 1px solid rgb(195, 193, 193); margin-bottom: 20px; padding-bottom: 5px">
-                            <a class="u-link-v5 g-color-gray-dark-v1 g-color-primary--hover" href="#!">Mwana wa Kondoo
-                                Kafufuka</a>
+                            <a style="font-family: 'Libre Baskerville'" class="u-link-v5 g-color-gray-dark-v1 g-color-primary--hover"
+                               href="{{route('single_post',[$domokaya2[1]->id,$domokaya2[1]->title])}}">
+                                {{$domokaya2[1]->title}}
+                            </a>
                         </h5>
 
 
                         {{-- article --}}
-                        <article class="u-block-hover">
+                        <article class="u-block-hover mb-2">
+                            <a href="{{route('single_post',[$porojo2[1]->id,$porojo2[1]->title])}}">
                             <figure class="u-shadow-v25 g-bg-cover ">
                                 <img class="img-fluid w-100 u-block-hover__main--zoom-v1"
-                                    src="https://kingo.s3-eu-west-1.amazonaws.com/dynamic-content/images/small-6779-20210424121250-399198.jpg"
-                                    alt="Image Description">
+                                    src="{{url('/')}}/{{Storage::url($porojo2[1]->image_url)}}"
+                                    alt="{{$porojo2[1]->title}}">
                             </figure>
-
+                            </a>
                         </article>
 
                         <span class="g-mb-10">
-                            <a class="btn btn-xs u-btn-red text-uppercase rounded-0" href="#!">METHALI MPYA</a>
+                            <strong>
+                            <a class="text-danger" href="{{url('/category/porojo')}}">
+                                <i class="icon-arrow-right"></i>
+                                Porojo Iliyopita</a>
+                            </strong>
                         </span>
 
-                        <h5 class="h5"
+                        <h5 class="h5 mt-2"
                             style="border-bottom: 1px solid rgb(195, 193, 193); margin-bottom: 20px; padding-bottom: 5px">
-                            <a class="u-link-v5 g-color-gray-dark-v1 g-color-primary--hover" href="#!">Mwana wa Kondoo
+                            <a class="u-link-v5 g-color-gray-dark-v1 g-color-primary--hover" href="{{route('single_post',[$porojo2[1]->id,$porojo2[1]->title])}}">Mwana wa Kondoo
                                 Kafufuka</a>
                         </h5>
 
                         {{-- article --}}
-                        <article class="u-block-hover">
-                            <a href="{{url('/')}}/post/{{$video->title}}/{{$video->id}}">
+                        <article class="u-block-hover mb-2">
+                            <a href="{{url('/')}}/post/{{$video->id}}/{{$video->title}}">
                             <figure class="u-shadow-v25 g-bg-cover ">
                                 <iframe style="width: 100%; height: 150px"
                                       src="https://www.youtube.com/embed/{{$video->image_url}}"
@@ -118,107 +128,139 @@
                         </article>
 
                         <span class="g-mb-10">
-                            <a class="btn btn-xs u-btn-red text-uppercase rounded-0" href="#!">VIDEO</a>
+                            <strong>
+                            <a class="text-danger" href="{{url('/category/video')}}">
+                                <i class="icon-arrow-right"></i>Video</a>
+                            </strong>
                         </span>
 
-                        <h5 class="h5 g-mb-10">
-                            <a class="u-link-v5 g-color-gray-dark-v1 g-color-primary--hover" href="#!">{{$video->title}}</a>
+                        <h5 class="h5 g-mb-10 mt-2">
+                            <a class="u-link-v5 g-color-gray-dark-v1 g-color-primary--hover"
+                               href="{{route('single_post',[$video->id,$video->title])}}">{{$video->title}}</a>
                         </h5>
 
                     </div>
 
                     {{-- second column --}}
-                    <div class="col-lg-6 g-mb-30 g-mb-2--lg" style="padding: 0 40px 0 40px">
-
-
+                    <div class="col-lg-6 g-mb-30 g-mb-2--lg" >
                         {{-- article --}}
-                        <article class="u-block-hover">
+                        <article class="u-block-hover mb-2">
+                            <a href="{{route('single_post',[$domokaya2[0]->id,$domokaya2[0]->title])}}">
                             <figure class="u-shadow-v25 g-bg-cover ">
                                 <img class="img-fluid w-100 u-block-hover__main--zoom-v1"
-                                    src="{{url('/')}}/{{Illuminate\Support\Facades\Storage::url($domokaya->image_url)}}"
+                                    src="{{url('/')}}/{{Storage::url($domokaya2[0]->image_url)}}"
                                     alt="Image Description">
                             </figure>
-
+                            </a>
                         </article>
 
                         <span class="g-mb-10">
-                            <a class="btn btn-xs u-btn-red text-uppercase rounded-0" href="#!">DOMOKAYA</a>
+                            <strong>
+                            <a class="text-danger" href="{{url('/category/domokaya')}}">
+                                <i class="icon-arrow-right"></i>
+                                Domokaya</a>
+                            </strong>
                         </span>
 
-                        <h5 class="h5"
+                        <h5 class="h5 mt-2"
                             style="border-bottom: 1px solid rgb(195, 193, 193); margin-bottom: 20px;padding-bottom: 10px">
-                            <a class="u-link-v5 g-color-gray-dark-v1 g-color-primary--hover" href="#!">{{$domokaya->title}}</a>
+                            <a class="u-link-v5 g-color-gray-dark-v1 g-color-primary--hover"
+                               href="{{route('single_post',[$domokaya2[0]->id,$domokaya2[0]->title])}}">
+                                {{$domokaya2[0]->title}}</a>
                         </h5>
 
                         {{-- article --}}
-                        <article class="u-block-hover">
+                        <article class="u-block-hover mb-2">
+                            <a href="{{route('single_post',[$porojo2[0]->id,$porojo2[0]->title])}}">
                             <figure class="u-shadow-v25 g-bg-cover ">
                                 <img class="img-fluid w-100 u-block-hover__main--zoom-v1"
-                                    src="{{url('/')}}/{{Illuminate\Support\Facades\Storage::url($porojo->image_url)}}"
+                                    src="{{url('/')}}/{{Storage::url($porojo2[0]->image_url)}}"
                                     alt="Image Description">
                             </figure>
-
+                            </a>
                         </article>
 
                         <span class="g-mb-10">
-                            <a class="btn btn-xs u-btn-red text-uppercase rounded-0" href="#!">POROJO</a>
+                            <strong>
+                            <a class="text-danger" href="{{url('/category/porojo')}}">
+                                <i class="icon-arrow-right"></i>
+                                Porojo </a>
+                            </strong>
                         </span>
 
-                        <h5 class="h5 g-mb-10">
-                            <a class="u-link-v5 g-color-gray-dark-v1 g-color-primary--hover" href="#!">{{$porojo->title}}</a>
+                        <h5 class="h5 g-mb-10 mt-2">
+                            <a class="u-link-v5 g-color-gray-dark-v1 g-color-primary--hover"
+                               href="{{route('single_post',[$porojo2[0]->id,$porojo2[0]->title])}}">
+                                {{$porojo2[0]->title}}
                             <p>
-                                @if (strlen($porojo->content) > 60)
-                                    {{$porojo->content = substr($porojo->content, 0, 57) . '...'}}
+                                @if (strlen($porojo2[0]->content) > 120)
+                                    {!! $porojo2[0]->content = substr($porojo2[0]->content, 0, 117) . '...' !!}
                                 @else
-                                    {{$porojo->content}}
+                                    {!! $porojo2[0]->content !!}
                                 @endif
                             </p>
+                                </a>
                         </h5>
 
                     </div>
 
                     {{-- third column --}}
                     <div class="col-lg-3 g-mb-30 g-mb-2--lg"
-                        style="padding-left: 15px;border-left: 1px solid rgb(195, 193, 193)">
+                        style="border-left: 1px solid rgb(195, 193, 193)">
 
                         {{-- article --}}
-                        <article class="u-block-hover">
+                        <article class="u-block-hover mb-2">
+                            <a href="{{route('single_post',[$porojo_live->id,$porojo_live->title])}}">
                             <figure class="u-shadow-v25 g-bg-cover "
                                 style="height: 308px">
                                 <img class="img-fluid w-100 u-block-hover__main--zoom-v1"
-                                    src="{{url('/')}}/{{Illuminate\Support\Facades\Storage::url($porojo_live->image_url)}}"
+                                    src="{{url('/')}}/{{Storage::url($porojo_live->image_url)}}"
                                     alt="Image Description">
                             </figure>
-
+                            </a>
                         </article>
 
                         <span class="g-mb-10">
-                            <a class="btn btn-xs u-btn-red text-uppercase rounded-0" href="#!">Porojo Live</a>
+                            <strong>
+                            <a class="text-danger" href="{{url('/category/porojo_live')}}">
+                                <i class="icon-arrow-right"></i>
+                                Porojo Live</a>
+                            </strong>
                         </span>
 
-                        <h5 class="h5"
+                        <h5 class="h5 mt-2"
                             style="border-bottom: 1px solid rgb(195, 193, 193); margin-bottom: 20px;padding-bottom: 5px">
-                            <a class="u-link-v5 g-color-gray-dark-v1 g-color-primary--hover" href="#!">{{$porojo_live->title}}</a>
+                            <a class="u-link-v5 g-color-gray-dark-v1 g-color-primary--hover" href="{{route('single_post',[$porojo_live->id,$porojo_live->title])}}">
+                                {{$porojo_live->title}}</a>
                         </h5>
 
                         {{-- article --}}
-                        <article class="u-block-hover">
+                        @foreach($kingo_katuni as $katun)
+                        <article class="u-block-hover mb-2">
+                            <a href="{{route('single_post',[$katun->id,$katun->title])}}">
                             <figure class="u-shadow-v25 g-bg-cover ">
                                 <img class="img-fluid w-100 u-block-hover__main--zoom-v1"
-                                    src="{{url('/')}}/{{Illuminate\Support\Facades\Storage::url($kingo_katuni->image_url)}}"
+                                    src="{{url('/')}}/{{Storage::url($katun->image_url)}}"
                                     alt="Image Description">
                             </figure>
-
+                            </a>
                         </article>
 
-                        <span class="g-mb-10">
-                            <a class="btn btn-xs u-btn-red text-uppercase rounded-0" href="#!">KINGO</a>
+                        <span class="g-mb-10 mt-2">
+                            <strong>
+                            <a class="text-danger" href="{{url('/category/kingo_katuni')}}">
+                                <i class="icon-arrow-right"></i>
+                                Kingo</a>
+                            </strong>
                         </span>
 
-                        <h5 class="h5" style="margin-bottom: 20px">
-                            <a class="u-link-v5 g-color-gray-dark-v1 g-color-primary--hover" href="#!">{{$kingo_katuni->title}}</a>
+                        <h5 class="h5 mt-2" style="margin-bottom: 20px">
+                            <a class="u-link-v5 g-color-gray-dark-v1 g-color-primary--hover"
+                               href="{{route('single_post',[$katun->id,$katun->title])}}">
+                                {{$katun->title}}</a>
                         </h5>
-
+                            <hr>
+                        @endforeach
                     </div>
                 </div>
 
@@ -250,15 +292,17 @@
                             $new_porojo = \App\Models\Post::where('post_category_id','1')->orderBy('id','desc')->first();
                         @endphp
                       <figure class="u-shadow-v25 g-pos-rel g-mb-20">
-                        <img class="img-fluid w-100"
-                             src="{{url('/')}}/{{Illuminate\Support\Facades\Storage::url(\App\Models\Post::where('post_category_id','1')->orderBy('id','desc')->first()->image_url)}}"
-                             alt="Image Description">
+                          <a href="{{route('single_post',[$new_porojo->id,$new_porojo->title])}}">
+                            <img class="img-fluid w-100"
+                                 src="{{url('/')}}/{{Storage::url($new_porojo->image_url)}}"
+                                 alt="{{$new_porojo->title}}">
 
-                        <figcaption class="g-pos-abs g-top-20 g-left-20">
-                          <a class="btn btn-xs u-btn-teal text-uppercase rounded-0" href="{{url('/')}}/post/{{$new_porojo->title}}/{{$new_porojo->id}}">
-                              {{\App\Models\Post::where('post_category_id','1')->orderBy('id','desc')->first()->category->name}}
+                            <figcaption class="g-pos-abs g-top-20 g-left-20">
+                              <a class="btn btn-xs u-btn-teal text-uppercase rounded-0" href="{{url('/')}}/post/{{$new_porojo->title}}/{{$new_porojo->id}}">
+                                  {{\App\Models\Post::where('post_category_id','1')->orderBy('id','desc')->first()->category->name}}
+                              </a>
+                            </figcaption>
                           </a>
-                        </figcaption>
                       </figure>
 
                       <h3 class="h4 g-mb-10">
@@ -286,9 +330,9 @@
 
                       <p class="g-color-gray-dark-v2">
                           @if (strlen($new_porojo->content) > 200)
-                              {{$new_porojo->content = substr($new_porojo->content, 0, 197) . '...'}}
+                              {!!  $new_porojo->content = substr($new_porojo->content, 0, 197) . '...' !!}
                           @else
-                              {{$new_porojo->content}}
+                              {!! $new_porojo->content !!}
                           @endif
                       </p>
                       <a class="g-font-size-12" href="{{url('/')}}/post/{{$new_porojo->title}}/{{$new_porojo->id}}">
@@ -304,8 +348,8 @@
                       @foreach(\App\Models\Post::where('post_category_id','!=','7')->where('post_category_id','!=','5')->orderBy('id','desc')->limit(4)->get() as $new_post)
                     <article class="media">
                       <a class="d-flex u-shadow-v25 align-self-center mr-3"
-                         href="{{url('/')}}/post/{{$new_post->title}}/{{$new_post->id}}">
-                        <img class="g-width-80 g-height-80"
+                         href="{{route('single_post',[$new_post->id,$new_post->title])}}">
+                        <img style="max-width: 120px"
                              src="{{url('/')}}/{{Illuminate\Support\Facades\Storage::url($new_post->image_url)}}"
                              alt="{{$new_post->title}}">
                       </a>
@@ -313,7 +357,7 @@
                       <div class="media-body">
                         <h3 class="h6">
                           <a class="u-link-v5 g-color-gray-dark-v1 g-color-primary--hover"
-                             href="{{url('/')}}/post/{{$new_post->title}}/{{$new_post->id}}">
+                             href="{{route('single_post',[$new_post->id,$new_post->title])}}">
                               {{$new_post->title}}
                           </a>
                         </h3>
@@ -357,17 +401,20 @@
                         @if($loop->iteration == 1 || $loop->iteration == 6)
                             <div class="col-lg-6 g-mb-50 g-mb-0--lg">
                                 <!-- Article -->
-                                <article class="g-mb-40">
+                                <article class="g-mb-40" style="height: 400px">
                                   <figure class="u-shadow-v25 g-pos-rel g-mb-20">
                                       <a href="{{url('/')}}/post/{{$popular->title}}/{{$popular->id}}">
                                           @if($popular->category->id == 5)
-                                            <img class="img-fluid w-100"
-                                                 src="https://img.youtube.com/vi/{{$popular->image_url}}/hqdefault.jpg"
-                                                   alt="{{$popular->title}}">
+                                              <div  style="height: 250px;
+                                                  background-image: url('https://img.youtube.com/vi/{{$popular->image_url}}/hqdefault.jpg');
+                                                  background-position: center; background-repeat: no-repeat; background-size: 100%">
+                                              </div>
                                           @else
-                                              <img class="img-fluid w-100"
-                                                 src="{{url('/')}}/{{Illuminate\Support\Facades\Storage::url($popular->image_url)}}"
-                                                 alt="{{$popular->title}}">
+                                              <div  style="height: 250px;
+                                                  background-image: url({{url('/')}}/{{Storage::url($popular->image_url)}});
+                                                  background-position: center; background-repeat: no-repeat; background-size: 100%">
+                                              </div>
+
                                           @endif
                                       </a>
                                     <figcaption class="g-pos-abs g-top-20 g-left-20">
@@ -403,8 +450,8 @@
                                   </ul>
 
                                   <p class="g-color-gray-dark-v2">
-                                      @if (strlen($popular->content) > 200)
-                                            {!! $popular->content = substr($popular->content, 0, 197) . '...' !!}
+                                      @if (strlen($popular->content) > 90)
+                                            {!! $popular->content = substr($popular->content, 0, 87) . '...' !!}
                                         @else
                                             {!! $popular->content !!}
                                         @endif
@@ -526,13 +573,20 @@
                           <figure class="u-shadow-v25 g-pos-rel g-mb-20">
                               <a href="{{url('/')}}/post/{{str_replace('?','',strtolower($post->title))}}/{{$post->id}}">
                                   @if($category->id == 5)
-                                  <img class="img-fluid w-100"
-                                       src="https://img.youtube.com/vi/{{$post->image_url}}/0.jpg"
-                                         alt="{{$post->title}}">
+                                      <div  style="height: 150px;
+                                          background-image: url('https://img.youtube.com/vi/{{$post->image_url}}/0.jpg');
+                                          background-position: center; background-repeat: no-repeat; background-size: 120%">
+                                      </div>
                                   @else
-                                      <img class="img-fluid w-100"
-                                       src="{{url('/')}}/{{Illuminate\Support\Facades\Storage::url($post->image_url)}}"
-                                       alt="{{$post->title}}">
+                                      <div  class="g-hidden-sm-down" style="height: 150px;
+                                          background-image: url({{url('/')}}/{{Storage::url($post->image_url)}});
+                                          background-position: center; background-repeat: no-repeat; background-size: 100%">
+                                      </div>
+                                      <div  class="g-hidden-md-up" style="height: 250px;
+                                          background-image: url({{url('/')}}/{{Storage::url($post->image_url)}});
+                                          background-position: center; background-repeat: no-repeat; background-size: 100%">
+                                      </div>
+
                                   @endif
 
                               </a>
@@ -811,7 +865,4 @@
 
     </script>
 </body>
-
-<!-- Mirrored from htmlstream.com/preview/unify-v2.6/multipage/blog-magazine/classic/bm-classic-home-page-1.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 19 Feb 2021 07:25:31 GMT -->
-
 </html>
