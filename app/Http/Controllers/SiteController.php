@@ -21,7 +21,7 @@ class SiteController extends Controller
         $mjue_maarufu = Post::where('post_category_id','4')->where('status',1)->orderBy('id','desc')->first();
         $video = Post::where('post_category_id','5')->where('status',1)->orderBy('id','desc')->first();
         $riwaya = Post::where('post_category_id','6')->where('status',1)->orderBy('id','desc')->first();
-        $kingo_katuni = Post::where('post_category_id','7')->orderBy('id','desc')->limit(2)->get();
+        $kingo_katuni = Post::where('post_category_id','7')->orderBy('id','desc')->limit(1)->get();
 
         return view('website.index2',compact('porojo', 'porojo2',
             'domokaya','domokaya2','porojo_live','mjue_maarufu','video','riwaya','kingo_katuni'));
