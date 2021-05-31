@@ -70,7 +70,7 @@
 
                         <!-- Subscribe Form -->
                         <div class="col-md-4">
-                            <form class="input-group rounded">
+                            {{-- <form class="input-group rounded">
                                 <input
                                     class="form-control g-brd-secondary-light-v2 g-brd-primary--focus g-color-secondary-dark-v1 g-placeholder-secondary-dark-v1 g-bg-white g-font-weight-400 g-font-size-13 g-px-20 g-py-12"
                                     type="text" placeholder="Tafuta...">
@@ -82,7 +82,7 @@
                                         <i class="g-hidden-lg-up fa fa-search"></i>
                                     </button>
                                 </span>
-                            </form>
+                            </form> --}}
                         </div>
                         <!-- End Subscribe Form -->
 
@@ -245,9 +245,9 @@
                         {{-- article --}}
                         <article class="u-block-hover">
                             <figure class="u-shadow-v25 g-bg-cover g-bg-white-gradient-opacity-v1--after">
-                                <video class="img-fluid w-100 u-block-hover__main--zoom-v1"
+                                {{-- <video class="img-fluid w-100 u-block-hover__main--zoom-v1"
                                     src="{{url('/')}}/{{Illuminate\Support\Facades\Storage::url($video->image_url)}}"
-                                    alt="{{$video->title}}">
+                                    alt="{{$video->title}}"> --}}
 
                                 <span
                                     class="u-icon-v3 u-icon-size--sm g-font-size-13 g-bg-white g-bg-black--hover g-color-white--hover rounded-circle g-cursor-pointer g-absolute-centered">
@@ -261,9 +261,9 @@
                             <a class="btn btn-xs u-btn-red text-uppercase rounded-0" href="#!">VIDEO</a>
                         </span>
 
-                        <h5 class="h5 g-mb-10">
+                        {{-- <h5 class="h5 g-mb-10">
                             <a class="u-link-v5 g-color-gray-dark-v1 g-color-primary--hover" href="#!">{{$video->title}}</a>
-                        </h5>
+                        </h5> --}}
 
                     </div>
 
