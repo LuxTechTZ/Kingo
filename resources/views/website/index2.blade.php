@@ -70,8 +70,8 @@
                         <span class="g-mb-10">
                             <strong>
                             <a class="text-danger" href="{{url('/category/domokaya')}}">
-                                <i class="icon-arrow-right"></i>
-                                Domokaya Iliyopita</a>
+
+                                DOMOKAYA ILIYOPITA</a>
                             </strong>
                         </span>
 
@@ -98,8 +98,8 @@
                         <span class="g-mb-10">
                             <strong>
                             <a class="text-danger" href="{{url('/category/porojo')}}">
-                                <i class="icon-arrow-right"></i>
-                                Porojo Iliyopita</a>
+
+                                POROJO ILIYOPITA</a>
                             </strong>
                         </span>
 
@@ -130,7 +130,7 @@
                         <span class="g-mb-10">
                             <strong>
                             <a class="text-danger" href="{{url('/category/video')}}">
-                                <i class="icon-arrow-right"></i>Video</a>
+                                VIDEO</a>
                             </strong>
                         </span>
 
@@ -157,8 +157,8 @@
                         <span class="g-mb-10">
                             <strong>
                             <a class="text-danger" href="{{url('/category/domokaya')}}">
-                                <i class="icon-arrow-right"></i>
-                                Domokaya</a>
+
+                                DOMOKAYA</a>
                             </strong>
                         </span>
 
@@ -183,8 +183,8 @@
                         <span class="g-mb-10">
                             <strong>
                             <a class="text-danger" href="{{url('/category/porojo')}}">
-                                <i class="icon-arrow-right"></i>
-                                Porojo </a>
+
+                                POROJO </a>
                             </strong>
                         </span>
 
@@ -223,8 +223,8 @@
                         <span class="g-mb-10">
                             <strong>
                             <a class="text-danger" href="{{url('/category/porojo_live')}}">
-                                <i class="icon-arrow-right"></i>
-                                Porojo Live</a>
+
+                                POROJO LIVE</a>
                             </strong>
                         </span>
 
@@ -233,6 +233,32 @@
                             <a class="u-link-v5 g-color-gray-dark-v1 g-color-primary--hover" href="{{route('single_post',[$porojo_live->id,$porojo_live->title])}}">
                                 {{$porojo_live->title}}</a>
                         </h5>
+
+
+                            <article class="u-block-hover mb-2">
+                                <a href="{{route('single_post',[$riwaya->id,$riwaya->title])}}">
+                                    <figure class="u-shadow-v25 g-bg-cover ">
+                                        <img class="img-fluid w-100 u-block-hover__main--zoom-v1"
+                                             src="{{url('/')}}/{{Storage::url($riwaya->image_url)}}"
+                                             alt="Image Description">
+                                    </figure>
+                                </a>
+                            </article>
+
+                            <span class="g-mb-10 mt-2">
+                            <strong>
+                            <a class="text-danger" href="{{url('/category/kingo_katuni')}}">
+
+                                METHALI</a>
+                            </strong>
+                        </span>
+
+                        <h5 class="h5 mt-2"
+                            style="border-bottom: 1px solid rgb(195, 193, 193); margin-bottom: 20px;padding-bottom: 5px">
+                            <a class="u-link-v5 g-color-gray-dark-v1 g-color-primary--hover" href="{{route('single_post',[$porojo_live->id,$porojo_live->title])}}">
+                                {{$riwaya->title}}</a>
+                        </h5>
+                        <p></p>
 
                         {{-- article --}}
                         @foreach($kingo_katuni as $katun)
@@ -249,17 +275,10 @@
                         <span class="g-mb-10 mt-2">
                             <strong>
                             <a class="text-danger" href="{{url('/category/kingo_katuni')}}">
-                                <i class="icon-arrow-right"></i>
-                                Kingo</a>
+
+                                KINGO</a>
                             </strong>
                         </span>
-
-                        <h5 class="h5 mt-2" style="margin-bottom: 20px">
-                            <a class="u-link-v5 g-color-gray-dark-v1 g-color-primary--hover"
-                               href="{{route('single_post',[$katun->id,$katun->title])}}">
-                                {{$katun->title}}</a>
-                        </h5>
-                            <hr>
                         @endforeach
                     </div>
                 </div>
