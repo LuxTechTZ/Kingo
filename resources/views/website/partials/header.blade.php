@@ -77,7 +77,7 @@
 
                         <!-- Mega Porojo Item -->
                         <li class="g-hidden-md-up nav-item g-mx-10--lg g-mx-20--xl">
-                            <a id="nav-link--pages" class=" nav-link text-uppercase g-color-primary--hover g-px-0"
+                            <a id="nav-link--pages" style="font-family: ProximaNovaCond;font-size: 15px;" class=" nav-link text-uppercase g-color-primary--hover g-px-0"
                                 href="{{url('/')}}/category/porojo">
                                 Porojo
                             </a>
@@ -318,7 +318,7 @@
 
                         <!-- Mjue Maarufu -->
                         <li class="nav-item g-mx-10--lg g-mx-20--xl">
-                            <a id="nav-link--pages" class="nav-link text-uppercase g-color-primary--hover g-px-0"
+                            <a id="nav-link--pages" style="font-family: ProximaNovaCond;font-size: 15px;" class="nav-link text-uppercase g-color-primary--hover g-px-0"
                                 href="{{url('/')}}/category/mjue_maarufu">
                                 Mjue Maarufu
                             </a>

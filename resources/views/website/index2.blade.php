@@ -339,13 +339,15 @@
                                  src="{{url('/')}}/{{Storage::url($new_porojo->image_url)}}"
                                  alt="{{$new_porojo->title}}">
 
-                            <figcaption class="g-pos-abs g-top-20 g-left-20">
-                              <a class="btn btn-xs u-btn-teal text-uppercase rounded-0" href="{{url('/')}}/post/{{$new_porojo->title}}/{{$new_porojo->id}}">
-                                  {{\App\Models\Post::where('post_category_id','1')->orderBy('id','desc')->first()->category->name}}
-                              </a>
-                            </figcaption>
                           </a>
                       </figure>
+
+                      <span class="g-mb-10">
+                        <strong>
+                        <a class="kingo-category" href="{{url('/')}}/post/{{$new_porojo->title}}/{{$new_porojo->id}}">
+                          {{Str::upper(\App\Models\Post::where('post_category_id','1')->orderBy('id','desc')->first()->category->name)}}</a>
+                        </strong>
+                    </span>
 
                       <h3 class="h4 g-mb-10">
                         <a class="u-link-v5 g-color-gray-dark-v1 g-color-primary--hover" href="#!">
