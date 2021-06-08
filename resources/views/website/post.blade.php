@@ -48,6 +48,33 @@
 
     <!-- CSS Customization -->
     <link rel="stylesheet" href="{{url('/')}}/assets-main/css/custom.css">
+
+    {{-- Fonts --}}
+    <style>
+      @font-face {
+        font-family: "ProximaNovaCond";
+        src: url("{{url('/')}}/fonts/proximanovacond-regular.otf");
+      }
+      @font-face{
+        font-family: "Libra";
+        src: url("{{url('/')}}/fonts/LibreBaskerville-Bold.ttf")
+      }
+      .kingo-title{
+        font-family: "Libra";
+        font-weight: bold;
+      }
+      .kingo-category{
+        font-family: "ProximaNovaCond";
+        color: red
+      }
+      .header-font{
+        font-family: "ProximaNovaCond";
+        font-size: 15px;
+      }
+      .kingo-category:hover{
+        text-decoration: none;
+      }
+    </style>
   </head>
 
   <body>
@@ -68,14 +95,14 @@
             <div class="col-lg-9 g-mb-50 g-mb-0--lg">
               <article class="g-mb-60">
                 <header class="g-mb-30">
-                  <h2 class="h1 g-mb-15">{{$post->title}}</h2>
-
+                  <h2 class="h1 g-mb-15 kingo-title">{{$post->title}}</h2>
+                  
                   <ul class="list-inline d-sm-flex g-color-gray-dark-v4 mb-0">
-                    <li class="list-inline-item">
-                      <a class="u-link-v5 g-color-gray-dark-v4 g-color-primary--hover" href="#!">{{$post->artist_name}}</a>
+                    {{-- <li class="list-inline-item">
+                      <a class="u-link-v5 g-color-gray-dark-v4 g-color-primary--hover" style="font-family: 'Libre Baskerville';font-family: 'ProximaNovaCond'"  href="#!">{{$post->artist_name}}</a>
                     </li>
-                    <li class="list-inline-item g-mx-10">/</li>
-                    <li class="list-inline-item">
+                    <li class="list-inline-item g-mx-10">/</li> --}}
+                    <li class="list-inline-item" style="font-family: 'ProximaNovaCond'" >
                       {{date('M d, Y',strtotime($post->post_date))}}
                     </li>
                     <li class="list-inline-item g-mx-10">/</li>
@@ -110,15 +137,15 @@
                           @if(count($post->images) > 0)
                           @foreach($post->images as $image)
                               <div class="js-slide">
-                                <img class="img-fluid" src="{{url('/')}}/{{Illuminate\Support\Facades\Storage::url($image->path)}}" alt="Image Description">
+                                <img class="img-fluid" src="{{Illuminate\Support\Facades\Storage::url($image->path)}}" alt="Image Description">
                               </div>
                           @endforeach
                           @else
-                              <img class="img-fluid" src="{{url('/')}}/{{Illuminate\Support\Facades\Storage::url($post->image_url)}}" alt="Image Description">
+                              <img class="img-fluid" src="{{Illuminate\Support\Facades\Storage::url($post->image_url)}}" alt="Image Description">
                           @endif
                     </div>
                       @else
-                    <img class="img-fluid w-100" src="{{url('/')}}/{{Illuminate\Support\Facades\Storage::url($post->image_url)}}" alt="Image Description">
+                    <img class="img-fluid w-100" src="{{Illuminate\Support\Facades\Storage::url($post->image_url)}}" alt="Image Description">
                       @endif
                   </figure>
 

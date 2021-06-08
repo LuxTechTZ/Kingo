@@ -40,6 +40,31 @@
 
     <!-- CSS Customization -->
     <link rel="stylesheet" href="{{url('/')}}/assets-main/css/custom.css">
+
+    {{-- Fonts --}}
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@700&display=swap" rel="stylesheet">
+
+    <style>
+      @font-face {
+        font-family: "ProximaNovaCond";
+        src: url("{{url('/')}}/fonts/proximanovacond-regular.otf");
+      }
+      .kingo-title{
+        font-family: 'Libre Baskerville', serif;
+      }
+      .kingo-category{
+        font-family: "ProximaNovaCond";
+        color: red
+      }
+      .header-font{
+        font-family: "ProximaNovaCond";
+        font-size: 15px;
+      }
+      .kingo-category:hover{
+        text-decoration: none;
+      }
+    </style>
 </head>
 
 <body>
@@ -61,7 +86,7 @@
                             <a href="{{route('single_post',[$domokaya2[1]->id,$domokaya2[1]->title])}}">
                             <figure class="u-shadow-v25 g-bg-cover ">
                                 <img class="img-fluid w-100 u-block-hover__main--zoom-v1"
-                                    src="{{url('/')}}/{{Storage::url($domokaya2[1]->image_url)}}"
+                                    src="{{Storage::url($domokaya2[1]->image_url)}}"
                                     alt="{{$domokaya2[0]->title}}">
                             </figure>
                             </a>
@@ -69,27 +94,25 @@
                         </article>
                         <span class="g-mb-10">
                             <strong>
-                            <a class="text-danger" href="{{url('/category/domokaya')}}">
-
+                            <a class="kingo-category" href="{{url('/category/domokaya')}}">
                                 DOMOKAYA ILIYOPITA</a>
                             </strong>
                         </span>
 
-                        <h5 class="h5 mt-2"
-                            style="border-bottom: 1px solid rgb(195, 193, 193); margin-bottom: 20px; padding-bottom: 5px">
-                            <a style="font-family: 'Libre Baskerville'" class="u-link-v5 g-color-gray-dark-v1 g-color-primary--hover"
+                        <h5 class="kingo-title mt-2"
+                            style="font-weight: 800;border-bottom: 1px solid rgb(195, 193, 193); margin-bottom: 20px; padding-bottom: 5px">
+                            <a class="u-link-v5 g-color-gray-dark-v1 g-color-primary--hover"
                                href="{{route('single_post',[$domokaya2[1]->id,$domokaya2[1]->title])}}">
                                 {{$domokaya2[1]->title}}
                             </a>
                         </h5>
-
 
                         {{-- article --}}
                         <article class="u-block-hover mb-2">
                             <a href="{{route('single_post',[$porojo2[1]->id,$porojo2[1]->title])}}">
                             <figure class="u-shadow-v25 g-bg-cover ">
                                 <img class="img-fluid w-100 u-block-hover__main--zoom-v1"
-                                    src="{{url('/')}}/{{Storage::url($porojo2[1]->image_url)}}"
+                                    src="/{{Storage::url($porojo2[1]->image_url)}}"
                                     alt="{{$porojo2[1]->title}}">
                             </figure>
                             </a>
@@ -97,13 +120,13 @@
 
                         <span class="g-mb-10">
                             <strong>
-                            <a class="text-danger" href="{{url('/category/porojo')}}">
+                            <a class="kingo-category" href="{{url('/category/porojo')}}">
 
                                 POROJO ILIYOPITA</a>
                             </strong>
                         </span>
 
-                        <h5 class="h5 mt-2"
+                        <h5 class="kingo-title mt-2"
                             style="border-bottom: 1px solid rgb(195, 193, 193); margin-bottom: 20px; padding-bottom: 5px">
                             <a class="u-link-v5 g-color-gray-dark-v1 g-color-primary--hover" href="{{route('single_post',[$porojo2[1]->id,$porojo2[1]->title])}}">Mwana wa Kondoo
                                 Kafufuka</a>
@@ -129,7 +152,7 @@
 
                         <span class="g-mb-10">
                             <strong>
-                            <a class="text-danger" href="{{url('/category/video')}}">
+                            <a class="kingo-category" href="{{url('/category/video')}}">
                                 VIDEO</a>
                             </strong>
                         </span>
@@ -148,7 +171,7 @@
                             <a href="{{route('single_post',[$domokaya2[0]->id,$domokaya2[0]->title])}}">
                             <figure class="u-shadow-v25 g-bg-cover ">
                                 <img class="img-fluid w-100 u-block-hover__main--zoom-v1"
-                                    src="{{url('/')}}/{{Storage::url($domokaya2[0]->image_url)}}"
+                                    src="{{Storage::url($domokaya2[0]->image_url)}}"
                                     alt="Image Description">
                             </figure>
                             </a>
@@ -156,14 +179,14 @@
 
                         <span class="g-mb-10">
                             <strong>
-                            <a class="text-danger" href="{{url('/category/domokaya')}}">
+                            <a class="kingo-category" href="{{url('/category/domokaya')}}">
 
                                 DOMOKAYA</a>
                             </strong>
                         </span>
 
-                        <h5 class="h5 mt-2"
-                            style="border-bottom: 1px solid rgb(195, 193, 193); margin-bottom: 20px;padding-bottom: 10px">
+                        <h5 class="kingo-title mt-2"
+                            style="border-bottom: 1px solid rgb(195, 193, 193); margin-bottom: 20px;padding-bottom: 10px; font-size: 24px">
                             <a class="u-link-v5 g-color-gray-dark-v1 g-color-primary--hover"
                                href="{{route('single_post',[$domokaya2[0]->id,$domokaya2[0]->title])}}">
                                 {{$domokaya2[0]->title}}</a>
@@ -174,7 +197,7 @@
                             <a href="{{route('single_post',[$porojo2[0]->id,$porojo2[0]->title])}}">
                             <figure class="u-shadow-v25 g-bg-cover ">
                                 <img class="img-fluid w-100 u-block-hover__main--zoom-v1"
-                                    src="{{url('/')}}/{{Storage::url($porojo2[0]->image_url)}}"
+                                    src="{{Storage::url($porojo2[0]->image_url)}}"
                                     alt="Image Description">
                             </figure>
                             </a>
@@ -182,14 +205,14 @@
 
                         <span class="g-mb-10">
                             <strong>
-                            <a class="text-danger" href="{{url('/category/porojo')}}">
+                            <a class="kingo-category" href="{{url('/category/porojo')}}">
 
                                 POROJO </a>
                             </strong>
                         </span>
 
-                        <h5 class="h5 g-mb-10 mt-2">
-                            <a class="u-link-v5 g-color-gray-dark-v1 g-color-primary--hover"
+                        <h5 class="kingo-title g-mb-10 mt-2">
+                            <a class="u-link-v5 g-color-gray-dark-v1 g-color-primary--hover" style="font-size: 24px"
                                href="{{route('single_post',[$porojo2[0]->id,$porojo2[0]->title])}}">
                                 {{$porojo2[0]->title}}
                             <p>
@@ -214,7 +237,7 @@
                             <figure class="u-shadow-v25 g-bg-cover "
                                 style="height: 308px">
                                 <img class="img-fluid w-100 u-block-hover__main--zoom-v1"
-                                    src="{{url('/')}}/{{Storage::url($porojo_live->image_url)}}"
+                                    src="{{Storage::url($porojo_live->image_url)}}"
                                     alt="Image Description">
                             </figure>
                             </a>
@@ -222,13 +245,13 @@
 
                         <span class="g-mb-10">
                             <strong>
-                            <a class="text-danger" href="{{url('/category/porojo_live')}}">
+                            <a class="kingo-category" href="{{url('/category/porojo_live')}}">
 
                                 POROJO LIVE</a>
                             </strong>
                         </span>
 
-                        <h5 class="h5 mt-2"
+                        <h5 class="kingo-title mt-2"
                             style="border-bottom: 1px solid rgb(195, 193, 193); margin-bottom: 20px;padding-bottom: 5px">
                             <a class="u-link-v5 g-color-gray-dark-v1 g-color-primary--hover" href="{{route('single_post',[$porojo_live->id,$porojo_live->title])}}">
                                 {{$porojo_live->title}}</a>
@@ -239,7 +262,7 @@
                                 <a href="{{route('single_post',[$riwaya->id,$riwaya->title])}}">
                                     <figure class="u-shadow-v25 g-bg-cover ">
                                         <img class="img-fluid w-100 u-block-hover__main--zoom-v1"
-                                             src="{{url('/')}}/{{Storage::url($riwaya->image_url)}}"
+                                             src="{{Storage::url($riwaya->image_url)}}"
                                              alt="Image Description">
                                     </figure>
                                 </a>
@@ -247,13 +270,13 @@
 
                             <span class="g-mb-10 mt-2">
                             <strong>
-                            <a class="text-danger" href="{{url('/category/kingo_katuni')}}">
+                            <a class="kingo-category" href="{{url('/category/kingo_katuni')}}">
 
                                 METHALI</a>
                             </strong>
                         </span>
 
-                        <h5 class="h5 mt-2"
+                        <h5 class="kingo-title mt-2"
                             style="border-bottom: 1px solid rgb(195, 193, 193); margin-bottom: 20px;padding-bottom: 5px">
                             <a class="u-link-v5 g-color-gray-dark-v1 g-color-primary--hover" href="{{route('single_post',[$porojo_live->id,$porojo_live->title])}}">
                                 {{$riwaya->title}}</a>
@@ -266,7 +289,7 @@
                             <a href="{{route('single_post',[$katun->id,$katun->title])}}">
                             <figure class="u-shadow-v25 g-bg-cover ">
                                 <img class="img-fluid w-100 u-block-hover__main--zoom-v1"
-                                    src="{{url('/')}}/{{Storage::url($katun->image_url)}}"
+                                    src="{{Storage::url($katun->image_url)}}"
                                     alt="Image Description">
                             </figure>
                             </a>
@@ -276,6 +299,27 @@
                             <strong>
                             <a class="text-danger" href="{{url('/category/kingo_katuni')}}">
                                 KINGO
+                            </a>
+                            </strong>
+                        </span>
+                        @endforeach
+
+                        {{-- article --}}
+                        @foreach($methali as $mwthali)
+                        <article class="u-block-hover mb-2">
+                            <a href="{{route('single_post',[$mwthali->id,$mwthali->title])}}">
+                            <figure class="u-shadow-v25 g-bg-cover ">
+                                <img class="img-fluid w-100 u-block-hover__main--zoom-v1"
+                                    src="{{Storage::url($mwthali->image_url)}}"
+                                    alt="Image Description">
+                            </figure>
+                            </a>
+                        </article>
+
+                        <span class="g-mb-10 mt-2">
+                            <strong>
+                            <a class="text-danger" href="{{url('/category/methali')}}">
+                                METHALI
                             </a>
                             </strong>
                         </span>
@@ -316,13 +360,15 @@
                                  src="{{url('/')}}/{{Storage::url($new_porojo->image_url)}}"
                                  alt="{{$new_porojo->title}}">
 
-                            <figcaption class="g-pos-abs g-top-20 g-left-20">
-                              <a class="btn btn-xs u-btn-teal text-uppercase rounded-0" href="{{url('/')}}/post/{{$new_porojo->title}}/{{$new_porojo->id}}">
-                                  {{\App\Models\Post::where('post_category_id','1')->orderBy('id','desc')->first()->category->name}}
-                              </a>
-                            </figcaption>
                           </a>
                       </figure>
+
+                      <span class="g-mb-10">
+                        <strong>
+                        <a class="kingo-category" href="{{url('/')}}/post/{{$new_porojo->title}}/{{$new_porojo->id}}">
+                          {{Str::upper(\App\Models\Post::where('post_category_id','1')->orderBy('id','desc')->first()->category->name)}}</a>
+                        </strong>
+                    </span>
 
                       <h3 class="h4 g-mb-10">
                         <a class="u-link-v5 g-color-gray-dark-v1 g-color-primary--hover" href="#!">
