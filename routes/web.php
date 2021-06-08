@@ -64,6 +64,7 @@ Route::group(['middleware' => ['auth']], function () {
     Route::get('/home/video', [PostController::class, 'video'])->name('video');
     Route::get('/home/riwaya', [PostController::class, 'riwaya'])->name('riwaya');
     Route::get('/home/kingo_katuni', [PostController::class, 'kingoKatuni'])->name('kingo_katuni');
+    Route::get('/home/methali', [PostController::class, 'methali'])->name('methali');
 
     Route::prefix('home/porojo')->group(function () {
         Route::get('/', [PostController::class, 'porojo'])->name('porojo');

@@ -36,6 +36,9 @@
                     <x-jet-nav-link href="{{ route('kingo_katuni') }}" :active="request()->routeIs('kingo_katuni')">
                         Kingo Katuni
                     </x-jet-nav-link>
+                    <x-jet-nav-link href="{{ route('methali') }}" :active="request()->routeIs('kingo_katuni')">
+                        Methali
+                    </x-jet-nav-link>
                     <x-jet-nav-link href="{{ route('dashboard') }}" :active="request()->routeIs('dashboard')">
                         Settings
                     </x-jet-nav-link>

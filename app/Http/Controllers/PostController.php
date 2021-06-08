@@ -88,6 +88,14 @@ class PostController extends Controller
         return view('cms.post.index',compact('posts','category'));
     }
 
+    public function methali()
+    {
+        $posts = Post::where('post_category_id','8')->get();
+        $category = 'Methali';
+
+        return view('cms.post.index',compact('posts','category'));
+    }
+
 
 //    All Posts
     public function showPost($id)

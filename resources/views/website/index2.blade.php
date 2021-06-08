@@ -275,8 +275,8 @@
                         <span class="g-mb-10 mt-2">
                             <strong>
                             <a class="text-danger" href="{{url('/category/kingo_katuni')}}">
-
-                                KINGO</a>
+                                KINGO
+                            </a>
                             </strong>
                         </span>
                         @endforeach
