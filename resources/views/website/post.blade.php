@@ -96,7 +96,7 @@
               <article class="g-mb-60">
                 <header class="g-mb-30">
                   <h2 class="h1 g-mb-15 kingo-title">{{$post->title}}</h2>
-                  
+
                   <ul class="list-inline d-sm-flex g-color-gray-dark-v4 mb-0">
                     {{-- <li class="list-inline-item">
                       <a class="u-link-v5 g-color-gray-dark-v4 g-color-primary--hover" style="font-family: 'Libre Baskerville';font-family: 'ProximaNovaCond'"  href="#!">{{$post->artist_name}}</a>
@@ -252,7 +252,8 @@
                   </div>
 
                   <div class="media g-brd-around g-brd-gray-light-v4 rounded g-pa-30 g-mb-20">
-                    <img class="d-flex u-shadow-v25 g-width-80 g-height-80 rounded-circle g-mr-15" src="{{url('/')}}/assets-magazine/img-temp/100x100/img8.jpg" alt="Image Description">
+                    <img class="d-flex u-shadow-v25 g-width-80 g-height-80 rounded-circle g-mr-15"
+                         src="{{url('/')}}/assets-magazine/img-temp/100x100/img9.jpg" alt="Image Description">
 
                     <div class="media-body">
                       <h4 class="g-color-gray-dark-v1 g-mb-15">
