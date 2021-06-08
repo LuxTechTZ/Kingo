@@ -44,6 +44,8 @@ class SiteController extends Controller
             $porojo = Post::where('post_category_id','6')->orderBy('id','desc')->get();
         }elseif ($category == 'kingo_katuni'){
             $porojo = Post::where('post_category_id','7')->orderBy('id','desc')->get();
+        }elseif ($category == 'methali'){
+            $porojo = Post::where('post_category_id','8')->orderBy('id','desc')->get();
         }
 
         return view('website.porojo',compact('porojo','category'));

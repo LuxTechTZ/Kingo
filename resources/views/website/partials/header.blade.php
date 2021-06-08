@@ -233,7 +233,7 @@
                                 Porojo Live
                             </a>
                         </li>
-                        
+
                         <li class="g-hidden-sm-down hs-has-mega-menu nav-item g-mx-10--lg g-mx-20--xl"
                             data-animation-in="fadeIn" data-animation-out="fadeOut" data-position="right">
                             <a id="mega-menu-label-3" style="font-family: ProximaNovaCond;font-size: 15px;" class="nav-link text-uppercase g-px-0"
@@ -452,6 +452,14 @@
                             <a id="nav-link--pages" style="font-family: ProximaNovaCond;font-size: 15px;" class="nav-link text-uppercase g-color-primary--hover g-px-0"
                                 href="{{url('/')}}/category/kingo_katuni">
                                 Kingo Katuni
+                            </a>
+                        </li>
+                        <!-- End Main -->
+                        <!-- Main -->
+                        <li class="nav-item g-mx-10--lg g-mx-20--xl">
+                            <a id="nav-link--pages" style="font-family: ProximaNovaCond;font-size: 15px;" class="nav-link text-uppercase g-color-primary--hover g-px-0"
+                                href="{{url('/')}}/category/methali">
+                                Methali
                             </a>
                         </li>
                         <!-- End Main -->
