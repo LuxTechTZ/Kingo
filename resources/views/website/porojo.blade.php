@@ -69,7 +69,7 @@
                           @if(count($post->images) > 0)
                           @foreach($post->images as $image)
                               <div class="js-slide">
-                                <img class="img-fluid"
+                                  <img class="img-fluid"
                                      src="{{url('/')}}/{{Illuminate\Support\Facades\Storage::url($image->path)}}"
                                      alt="Image Description">
                               </div>

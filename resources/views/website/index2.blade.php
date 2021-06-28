@@ -216,8 +216,8 @@
                                href="{{route('single_post',[$porojo2[0]->id,$porojo2[0]->title])}}">
                                 {{$porojo2[0]->title}}
                             <p>
-                                @if (strlen($porojo2[0]->content) > 120)
-                                    {!! $porojo2[0]->content = substr($porojo2[0]->content, 0, 117) . '...' !!}
+                                @if (strlen($porojo2[0]->content) > 70)
+                                    {!! $porojo2[0]->content = substr($porojo2[0]->content, 0, 67) . '...' !!}
                                 @else
                                     {!! $porojo2[0]->content !!}
                                 @endif
