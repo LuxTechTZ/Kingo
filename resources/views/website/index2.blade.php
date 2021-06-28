@@ -211,18 +211,19 @@
                         <span class="g-mb-10">
                             <strong>
                             <a class="kingo-category" href="{{url('/category/porojo')}}">
-
-                                POROJO </a>
+                                POROJO
+                            </a>
                             </strong>
                         </span>
 
                         <h5 class="kingo-title g-mb-10 mt-2">
-                            <a class="u-link-v5 g-color-gray-dark-v1 g-color-primary--hover" style="font-size: 24px"
+                            <a class="u-link-v5 g-color-gray-dark-v1 g-color-primary--hover"
+                               style="font-size: 24px"
                                href="{{route('single_post',[$porojo2[0]->id,$porojo2[0]->title])}}">
                                 {{$porojo2[0]->title}}
-                            <p>
-                                @if (strlen($porojo2[0]->content) > 70)
-                                    {!! $porojo2[0]->content = substr($porojo2[0]->content, 0, 67) . '...' !!}
+                            <p style="font-size: 14px; color: black">
+                                @if (strlen($porojo2[0]->content) > 220)
+                                    {!! $porojo2[0]->content = substr($porojo2[0]->content, 0, 217) . '...' !!}
                                 @else
                                     {!! $porojo2[0]->content !!}
                                 @endif
