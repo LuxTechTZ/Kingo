@@ -69,7 +69,7 @@
         p{
             line-height: 130%;
             font-family: Georgia, serif;
-            /*font-size: 15px !important;*/
+            font-size: 15px !important;
             color: black !important;
         }
         .kingo-mpya{
@@ -412,7 +412,7 @@
                         </li>
                       </ul>
 
-                      <p class="kingo-mpya g-color-gray-dark-v2" style="font-size: 16px">
+                      <p class="kingo-mpya g-color-gray-dark-v2" >
                           @if (strlen($new_porojo->content) > 200)
                               {!!  $new_porojo->content = substr($new_porojo->content, 0, 197) . '...' !!}
                           @else
