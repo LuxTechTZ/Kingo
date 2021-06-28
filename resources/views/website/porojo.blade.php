@@ -53,7 +53,9 @@
               @foreach($porojo as $post)
             <!-- Article -->
             <article class="text-center g-mb-100">
+
               <figure class="g-pos-rel mb-5 ">
+                  <a href="{{url('/')}}/category/{{str_replace(' ','_',strtolower($post->category->name))}}">{{$post->category->name}}>
                   @if($post->category->id == 5)
                       <img class="img-fluid"
                                    src="https://img.youtube.com/vi/{{$post->image_url}}/hqdefault.jpg"
@@ -82,6 +84,7 @@
                 <img class="img-fluid" src="{{url('/')}}/{{Illuminate\Support\Facades\Storage::url($post->image_url)}}"
                      alt="Image Description">
                 @endif
+                  </a>
                 <!-- Figcaption -->
                 <figcaption class="w-100 g-pos-abs g-bottom-0 g-left-0 g-pa-15">
                   <ul class="d-flex justify-content-start list-inline mb-0 ">

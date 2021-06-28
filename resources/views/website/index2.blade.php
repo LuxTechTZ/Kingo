@@ -112,7 +112,7 @@
                             <a href="{{route('single_post',[$porojo2[1]->id,$porojo2[1]->title])}}">
                             <figure class="u-shadow-v25 g-bg-cover ">
                                 <img class="img-fluid w-100 u-block-hover__main--zoom-v1"
-                                    src="/{{Storage::url($porojo2[1]->image_url)}}"
+                                    src="{{Storage::url($porojo2[1]->image_url)}}"
                                     alt="{{$porojo2[1]->title}}">
                             </figure>
                             </a>
