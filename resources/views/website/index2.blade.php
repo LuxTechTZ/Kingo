@@ -246,7 +246,6 @@
                         <span class="g-mb-10">
                             <strong>
                             <a class="kingo-category" href="{{url('/category/porojo_live')}}">
-
                                 POROJO LIVE</a>
                             </strong>
                         </span>
@@ -297,7 +296,7 @@
 
                         <span class="g-mb-10 mt-2">
                             <strong>
-                            <a class="text-danger" href="{{url('/category/kingo_katuni')}}">
+                            <a class="kingo-category" href="{{url('/category/kingo_katuni')}}">
                                 KINGO
                             </a>
                             </strong>
@@ -318,7 +317,7 @@
 
                         <span class="g-mb-10 mt-2">
                             <strong>
-                            <a class="text-danger" href="{{url('/category/methali')}}">
+                            <a class="kingo-category" href="{{url('/category/methali')}}">
                                 METHALI
                             </a>
                             </strong>
