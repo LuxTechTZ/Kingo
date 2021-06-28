@@ -169,7 +169,7 @@
                   </figure>
 
                     <div class="row">
-                        <div class="col col-md-1"></div>
+                        <div class="col col-md-1 g-hidden-sm-down"></div>
                         <div class="col col-md-11">
                             <p class="kingo-mpya">
                                 {!! $post->content !!}
