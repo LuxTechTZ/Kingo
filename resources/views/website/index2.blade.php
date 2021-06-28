@@ -412,7 +412,7 @@
                         </li>
                       </ul>
 
-                      <p class="kingo-mpya g-color-gray-dark-v2" >
+                      <p class="kingo-mpya g-color-gray-dark-v2" style="font-size: 16px">
                           @if (strlen($new_porojo->content) > 200)
                               {!!  $new_porojo->content = substr($new_porojo->content, 0, 197) . '...' !!}
                           @else
@@ -498,7 +498,6 @@
                                                   background-image: url({{url('/')}}/{{Storage::url($popular->image_url)}});
                                                   background-position: center; background-repeat: no-repeat; background-size: 100%">
                                               </div>
-
                                           @endif
                                       </a>
                                     <figcaption class="g-pos-abs g-top-20 g-left-20">
@@ -533,7 +532,7 @@
                                     </li>
                                   </ul>
 
-                                  <p class="g-color-gray-dark-v2">
+                                  <p class="g-color-gray-dark-v2" style="font-size: 16px">
                                       @if (strlen($popular->content) > 90)
                                             {!! $popular->content = substr($popular->content, 0, 87) . '...' !!}
                                         @else
