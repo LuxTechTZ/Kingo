@@ -200,7 +200,7 @@
                 <div class="g-mb-30">
                   <ul class="list-inline text-uppercase mb-0">
                     <li class="list-inline-item g-mr-10">
-                      <strong class="align-middle g-font-size-24">{{$post->likes}}</strong>
+                      <strong class="align-middle g-font-size-24">{{$post->views}}</strong>
                     </li>
                     <li class="list-inline-item g-mr-10">
                       <span class="g-color-gray-dark-v5">|</span>
