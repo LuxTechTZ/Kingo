@@ -215,13 +215,13 @@
                             <a class="u-link-v5 g-color-gray-dark-v1 g-color-primary--hover" style="font-size: 24px"
                                href="{{route('single_post',[$porojo2[0]->id,$porojo2[0]->title])}}">
                                 {{$porojo2[0]->title}}
-                            <p>
-                                @if (strlen($porojo2[0]->content) > 70)
-                                    {!! $porojo2[0]->content = substr($porojo2[0]->content, 0, 67) . '...' !!}
-                                @else
-                                    {!! $porojo2[0]->content !!}
-                                @endif
-                            </p>
+{{--                            <p>--}}
+{{--                                @if (strlen($porojo2[0]->content) > 70)--}}
+{{--                                    {!! $porojo2[0]->content = substr($porojo2[0]->content, 0, 67) . '...' !!}--}}
+{{--                                @else--}}
+{{--                                    {!! $porojo2[0]->content !!}--}}
+{{--                                @endif--}}
+{{--                            </p>--}}
                                 </a>
                         </h5>
 
