@@ -221,7 +221,7 @@
                                style="font-size: 24px"
                                href="{{route('single_post',[$porojo2[0]->id,$porojo2[0]->title])}}">
                                 {{$porojo2[0]->title}}
-                            <p style="font-size: 14px; color: black">
+                            <p style="font-size: 14px !important; color: black !important">
                                 @if (strlen($porojo2[0]->content) > 220)
                                     {!! $porojo2[0]->content = substr($porojo2[0]->content, 0, 217) . '...' !!}
                                 @else
@@ -399,7 +399,7 @@
                         </li>
                       </ul>
 
-                      <p class="g-color-gray-dark-v2" style="font-family:Libre Baskerville, serif; text-align: justify;text-justify: inter-word;">
+                      <p class="g-color-gray-dark-v2" style="font-family:Libre Baskerville !important;, serif; text-align: justify;text-justify: inter-word;">
                           @if (strlen($new_porojo->content) > 200)
                               {!!  $new_porojo->content = substr($new_porojo->content, 0, 197) . '...' !!}
                           @else
