@@ -69,7 +69,7 @@
       }
       .header-font{
         font-family: "ProximaNovaCond";
-        font-size: 15px;
+        font-size: 16px;
       }
       .kingo-category:hover{
         text-decoration: none;
@@ -86,6 +86,11 @@
             color: black;
             text-align: justify;
             text-justify: inter-word;
+        }
+        p{
+            color: black;
+            font-size: 19px;
+            font-family:Libre Baskerville  serif !important;
         }
     </style>
   </head>

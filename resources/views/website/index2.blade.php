@@ -59,7 +59,7 @@
       }
       .header-font{
         font-family: "ProximaNovaCond";
-        font-size: 15px;
+        font-size: 16px;
       }
       .kingo-category:hover{
         text-decoration: none;
@@ -232,6 +232,7 @@
                                style="font-size: 24px"
                                href="{{route('single_post',[$porojo2[0]->id,$porojo2[0]->title])}}">
                                 {{$porojo2[0]->title}}
+                            </a>
                             <p class="para">
                                 @if (strlen($porojo2[0]->content) > 220)
                                     {!! $porojo2[0]->content = substr($porojo2[0]->content, 0, 217) . '...' !!}
@@ -239,7 +240,6 @@
                                     {!! $porojo2[0]->content !!}
                                 @endif
                             </p>
-                                </a>
                         </h5>
 
                     </div>

@@ -77,14 +77,14 @@
 
                         <!-- Mega Porojo Item -->
                         <li class="g-hidden-md-up nav-item g-mx-10--lg g-mx-20--xl">
-                            <a id="nav-link--pages" style="font-family: ProximaNovaCond;font-size: 15px;" class=" nav-link text-uppercase g-color-primary--hover g-px-0"
+                            <a id="nav-link--pages" class="nav-link text-uppercase g-color-primary--hover g-px-0 header-font"
                                 href="{{url('/')}}/category/porojo">
                                 Porojo
                             </a>
                         </li>
                         <li class="g-hidden-sm-down hs-has-mega-menu nav-item g-mx-10--lg g-mx-20--xl"
                             data-animation-in="fadeIn" data-animation-out="fadeOut" data-position="right">
-                            <a id="mega-menu-label-1" style="font-family: ProximaNovaCond;font-size: 15px;"
+                            <a id="mega-menu-label-1" style="font-family: ProximaNovaCond;font-size: 16px;"
                                 class="nav-link text-uppercase g-px-0" href="{{url('/')}}/category/porojo"
                                 aria-haspopup="true" aria-expanded="false">
                                 Porojo
@@ -151,7 +151,7 @@
 
                         <!-- Mega Domokaya Item -->
                         <li class="g-hidden-md-up nav-item g-mx-10--lg g-mx-20--xl">
-                            <a id="nav-link--pages" style="font-family: ProximaNovaCond;font-size: 15px;"
+                            <a id="nav-link--pages" style="font-family: ProximaNovaCond;font-size: 16px;"
                                 class="nav-link text-uppercase g-color-primary--hover g-px-0"
                                 href="{{url('/')}}/category/domokaya">
                                 Domokaya
@@ -159,7 +159,7 @@
                         </li>
                         <li class="g-hidden-sm-down hs-has-mega-menu nav-item g-mx-10--lg g-mx-20--xl"
                             data-animation-in="fadeIn" data-animation-out="fadeOut" data-position="right">
-                            <a id="mega-menu-label-1" style="font-family: ProximaNovaCond;font-size: 15px;"
+                            <a id="mega-menu-label-1" style="font-family: ProximaNovaCond;font-size: 16px;"
                                 class="nav-link text-uppercase g-px-0" href="{{url('/')}}/category/domokaya"
                                 aria-haspopup="true" aria-expanded="false">
                                 Domokaya
@@ -227,7 +227,7 @@
 
                         <!-- Mega Porojo Live Item -->
                         <li class="g-hidden-md-up nav-item g-mx-10--lg g-mx-20--xl">
-                            <a id="nav-link--pages" style="font-family: ProximaNovaCond;font-size: 15px;"
+                            <a id="nav-link--pages" style="font-family: ProximaNovaCond;font-size: 16px;"
                                 class="nav-link text-uppercase g-color-primary--hover g-px-0"
                                 href="{{url('/')}}/category/porojo_live">
                                 Porojo Live
@@ -236,7 +236,7 @@
 
                         <li class="g-hidden-sm-down hs-has-mega-menu nav-item g-mx-10--lg g-mx-20--xl"
                             data-animation-in="fadeIn" data-animation-out="fadeOut" data-position="right">
-                            <a id="mega-menu-label-3" style="font-family: ProximaNovaCond;font-size: 15px;" class="nav-link text-uppercase g-px-0"
+                            <a id="mega-menu-label-3" style="font-family: ProximaNovaCond;font-size: 16px;" class="nav-link text-uppercase g-px-0"
                                 href="{{url('/')}}/category/porojo_live" aria-haspopup="true" aria-expanded="false">
                                 Porojo Live
                                 <i class="hs-icon hs-icon-arrow-bottom g-font-size-11 g-ml-5"></i>
@@ -318,7 +318,7 @@
 
                         <!-- Mjue Maarufu -->
                         <li class="nav-item g-mx-10--lg g-mx-20--xl">
-                            <a id="nav-link--pages" style="font-family: ProximaNovaCond;font-size: 15px;" class="nav-link text-uppercase g-color-primary--hover g-px-0"
+                            <a id="nav-link--pages" style="font-family: ProximaNovaCond;font-size: 16px;" class="nav-link text-uppercase g-color-primary--hover g-px-0"
                                 href="{{url('/')}}/category/mjue_maarufu">
                                 Mjue Maarufu
                             </a>
@@ -327,7 +327,7 @@
 
                         <!-- Mega Video Item -->
                         <li class="g-hidden-md-up nav-item g-mx-10--lg g-mx-20--xl">
-                            <a id="nav-link--pages" style="font-family: ProximaNovaCond;font-size: 15px;"
+                            <a id="nav-link--pages" style="font-family: ProximaNovaCond;font-size: 16px;"
                                 class="nav-link text-uppercase g-color-primary--hover g-px-0"
                                 href="{{url('/')}}/category/video">
                                 Video
@@ -335,7 +335,7 @@
                         </li>
                         <li class="g-hidden-sm-down hs-has-mega-menu nav-item g-mx-10--lg g-mx-20--xl"
                             data-animation-in="fadeIn" data-animation-out="fadeOut" data-position="right">
-                            <a id="mega-menu-label-4" style="font-family: ProximaNovaCond;font-size: 15px;" class="nav-link text-uppercase g-px-0"
+                            <a id="mega-menu-label-4" style="font-family: ProximaNovaCond;font-size: 16px;" class="nav-link text-uppercase g-px-0"
                                 href="{{url('/')}}/category/video" aria-haspopup="true" aria-expanded="false">
                                 Video
                                 <i class="hs-icon hs-icon-arrow-bottom g-font-size-11 g-ml-5"></i></a>
@@ -385,14 +385,14 @@
 
                         <!-- Mega Riwaya Item -->
                         <li class="g-hidden-md-up nav-item g-mx-10--lg g-mx-20--xl">
-                            <a id="nav-link--pages" style="font-family: ProximaNovaCond;font-size: 15px;" class="nav-link text-uppercase g-color-primary--hover g-px-0"
+                            <a id="nav-link--pages" style="font-family: ProximaNovaCond;font-size: 16px;" class="nav-link text-uppercase g-color-primary--hover g-px-0"
                                 href="{{url('/')}}/category/riwaya">
                                 Riwaya
                             </a>
                         </li>
                         <li class="g-hidden-sm-down hs-has-mega-menu nav-item g-mx-10--lg g-mx-20--xl"
                             data-animation-in="fadeIn" data-animation-out="fadeOut" data-position="right">
-                            <a id="mega-menu-label-6" style="font-family: ProximaNovaCond;font-size: 15px;" class="nav-link text-uppercase g-px-0"
+                            <a id="mega-menu-label-6" style="font-family: ProximaNovaCond;font-size: 16px;" class="nav-link text-uppercase g-px-0"
                                 href="{{url('/')}}/category/riwaya" aria-haspopup="true" aria-expanded="false">
                                 Riwaya
                                 <i class="hs-icon hs-icon-arrow-bottom g-font-size-11 g-ml-5"></i></a>
@@ -449,7 +449,7 @@
 
                         <!-- Main -->
                         <li class="nav-item g-mx-10--lg g-mx-20--xl">
-                            <a id="nav-link--pages" style="font-family: ProximaNovaCond;font-size: 15px;" class="nav-link text-uppercase g-color-primary--hover g-px-0"
+                            <a id="nav-link--pages" style="font-family: ProximaNovaCond;font-size: 16px;" class="nav-link text-uppercase g-color-primary--hover g-px-0"
                                 href="{{url('/')}}/category/kingo_katuni">
                                 Kingo Katuni
                             </a>
@@ -457,7 +457,7 @@
                         <!-- End Main -->
                         <!-- Main -->
                         <li class="nav-item g-mx-10--lg g-mx-20--xl">
-                            <a id="nav-link--pages" style="font-family: ProximaNovaCond;font-size: 15px;" class="nav-link text-uppercase g-color-primary--hover g-px-0"
+                            <a id="nav-link--pages" style="font-family: ProximaNovaCond;font-size: 16px;" class="nav-link text-uppercase g-color-primary--hover g-px-0"
                                 href="{{url('/')}}/category/methali">
                                 Methali
                             </a>

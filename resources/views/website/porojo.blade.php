@@ -38,19 +38,29 @@
     <link rel="stylesheet" href="{{url('/')}}/assets-main/css/custom.css">
 
     <style>
+        @font-face {
+            font-family: "ProximaNovaCond";
+            src: url("{{url('/')}}/fonts/proximanovacond-regular.otf");
+          }
+        .header-font{
+            font-family: "ProximaNovaCond";
+            font-size: 16px;
+          }
         .para{
             font-size: 14px !important;
             color: black !important;
         }
         .kingo-mpya{
+
             font-size: 19px;
             font-family:Libre Baskerville  serif !important;
         }
         p{
             color: black;
-            text-align: justify;
+            /*text-align: justify;*/
             font-size: 19px;
             font-family:Libre Baskerville  serif !important;
+            line-height: normal;
         }
     </style>
   </head>
@@ -152,7 +162,7 @@
                        href="{{url('/')}}/post/{{$post->title}}/{{$post->id}}">
                         {{$post->title}}</a>
                 </h2>
-                <p class="kingo-mpya">
+                <p style="text-align: left !important;">
                     @if (strlen($post->content) > 200)
                         {!! $post->content = substr($post->content, 0, 197) . '...' !!}
                     @else
