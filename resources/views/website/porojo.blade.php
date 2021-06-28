@@ -59,7 +59,7 @@
             color: black;
             /*text-align: justify;*/
             font-size: 19px;
-            font-family:Georgia  serif !important;
+            font-family: Georgia, serif !important;
             line-height: normal;
         }
     </style>
