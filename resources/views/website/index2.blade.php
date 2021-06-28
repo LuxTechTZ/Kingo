@@ -65,6 +65,12 @@
         text-decoration: none;
       }
     </style>
+    <style>
+        .para{
+            font-size: 14px !important;
+            color: black !important;
+        }
+    </style>
 </head>
 
 <body>
@@ -221,7 +227,7 @@
                                style="font-size: 24px"
                                href="{{route('single_post',[$porojo2[0]->id,$porojo2[0]->title])}}">
                                 {{$porojo2[0]->title}}
-                            <p style="font-size: 14px !important; color: black !important">
+                            <p class="para">
                                 @if (strlen($porojo2[0]->content) > 220)
                                     {!! $porojo2[0]->content = substr($porojo2[0]->content, 0, 217) . '...' !!}
                                 @else
