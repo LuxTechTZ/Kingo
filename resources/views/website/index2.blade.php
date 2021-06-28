@@ -131,35 +131,7 @@
                                 {{$porojo2[1]->title}}</a>
                         </h5>
 
-                        {{-- article --}}
-                        <article class="u-block-hover mb-2">
-                            <a href="{{url('/')}}/post/{{$video->id}}/{{$video->title}}">
-                            <figure class="u-shadow-v25 g-bg-cover ">
-                                <iframe style="width: 100%; height: 150px"
-                                      src="https://www.youtube.com/embed/{{$video->image_url}}"
-                                      title="{{$video->title}}" frameborder="0"
-                                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
-                              </iframe>
-                                <span
-                                    class="u-icon-v3 u-icon-size--sm g-font-size-13 g-bg-white g-bg-black--hover g-color-white--hover rounded-circle g-cursor-pointer g-absolute-centered">
-                                    <i class="fa fa-play g-left-2"></i>
-                                </span>
-                            </figure>
-                                </a>
-
-                        </article>
-
-                        <span class="g-mb-10">
-                            <strong>
-                            <a class="kingo-category" href="{{url('/category/video')}}">
-                                VIDEO</a>
-                            </strong>
-                        </span>
-
-                        <h5 class="kingo-title mt-2" style="border-bottom: 1px solid rgb(195, 193, 193); margin-bottom: 20px; padding-bottom: 5px">
-                            <a class="u-link-v5 g-color-gray-dark-v1 g-color-primary--hover"
-                               href="{{route('single_post',[$video->id,$video->title])}}">{{$video->title}}</a>
-                        </h5>
+                        @foreach($top_videos as $video)
 
                         {{-- article --}}
                         <article class="u-block-hover mb-2">
@@ -186,10 +158,13 @@
                             </strong>
                         </span>
 
-                        <h5 class="kingo-title mt-2" >
+                        <h5 class="kingo-title mt-2" @if($loop->first) style="border-bottom: 1px solid rgb(195, 193, 193); margin-bottom: 20px; padding-bottom: 5px" @endif>
                             <a class="u-link-v5 g-color-gray-dark-v1 g-color-primary--hover"
                                href="{{route('single_post',[$video->id,$video->title])}}">{{$video->title}}</a>
                         </h5>
+
+                        @endforeach
+
 
 
                     </div>

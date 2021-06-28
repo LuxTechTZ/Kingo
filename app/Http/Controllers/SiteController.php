@@ -19,13 +19,13 @@ class SiteController extends Controller
 
         $porojo_live =  Post::where('post_category_id','3')->where('status',1)->orderBy('id','desc')->first();
         $mjue_maarufu = Post::where('post_category_id','4')->where('status',1)->orderBy('id','desc')->first();
-        $video =    Post::where('post_category_id','5')->where('status',1)->orderBy('id','desc')->first();
+        $top_videos =    Post::where('post_category_id','5')->orderBy('id','desc')->limit(2)->get();
         $riwaya =   Post::where('post_category_id','6')->where('status',1)->orderBy('id','desc')->first();
         $kingo_katuni = Post::where('post_category_id','7')->where('status',1)->orderBy('id','desc')->limit(2)->get();
         $methali = Post::where('post_category_id','8')->orderBy('id','desc')->limit(2)->get();
 
         return view('website.index2',compact('porojo', 'porojo2',
-            'domokaya','domokaya2','porojo_live','mjue_maarufu','video','riwaya','kingo_katuni','methali'));
+            'domokaya','domokaya2','porojo_live','mjue_maarufu','top_videos','riwaya','kingo_katuni','methali'));
     }
 
     public function category($category)
