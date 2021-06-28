@@ -70,6 +70,11 @@
             font-size: 14px !important;
             color: black !important;
         }
+        .kingo-mpya{
+            font-family:Libre Baskerville  serif;
+            text-align: justify;
+            text-justify: inter-word;
+        }
     </style>
 </head>
 
@@ -405,7 +410,7 @@
                         </li>
                       </ul>
 
-                      <p class="g-color-gray-dark-v2" style="font-family:Libre Baskerville !important;, serif; text-align: justify;text-justify: inter-word;">
+                      <p class="kingo-mpya g-color-gray-dark-v2" >
                           @if (strlen($new_porojo->content) > 200)
                               {!!  $new_porojo->content = substr($new_porojo->content, 0, 197) . '...' !!}
                           @else

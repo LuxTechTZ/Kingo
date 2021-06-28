@@ -36,6 +36,23 @@
 
     <!-- CSS Customization -->
     <link rel="stylesheet" href="{{url('/')}}/assets-main/css/custom.css">
+
+    <style>
+        .para{
+            font-size: 14px !important;
+            color: black !important;
+        }
+        .kingo-mpya{
+            font-size: 19px;
+            font-family:Libre Baskerville  serif !important;
+        }
+        p{
+            color: black;
+            text-align: justify;
+            font-size: 19px;
+            font-family:Libre Baskerville  serif !important;
+        }
+    </style>
   </head>
 
   <body>
@@ -55,7 +72,7 @@
             <article class="text-center g-mb-100">
 
               <figure class="g-pos-rel mb-5 ">
-                  <a href="{{url('/')}}/category/{{str_replace(' ','_',strtolower($post->category->name))}}">{{$post->category->name}}>
+                  <a href="{{url('/')}}/category/{{str_replace(' ','_',strtolower($post->category->name))}}">
                   @if($post->category->id == 5)
                       <img class="img-fluid"
                                    src="https://img.youtube.com/vi/{{$post->image_url}}/hqdefault.jpg"
@@ -135,7 +152,7 @@
                        href="{{url('/')}}/post/{{$post->title}}/{{$post->id}}">
                         {{$post->title}}</a>
                 </h2>
-                <p style="font-size: 18px">
+                <p class="kingo-mpya">
                     @if (strlen($post->content) > 200)
                         {!! $post->content = substr($post->content, 0, 197) . '...' !!}
                     @else

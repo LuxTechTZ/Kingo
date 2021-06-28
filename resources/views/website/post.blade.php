@@ -75,6 +75,19 @@
         text-decoration: none;
       }
     </style>
+        <style>
+        .para{
+            font-size: 14px !important;
+            color: black !important;
+        }
+        .kingo-mpya{
+            font-size: 19px;
+            font-family:Libre Baskerville  serif;
+            color: black;
+            text-align: justify;
+            text-justify: inter-word;
+        }
+    </style>
   </head>
 
   <body>
@@ -149,7 +162,9 @@
                       @endif
                   </figure>
 
+                    <p class="kingo-mpya">
                         {!! $post->content !!}
+                    </p>
                 </div>
 
                 <!-- Sources & Tags -->
@@ -261,7 +276,7 @@
                       </h4>
 
                       <div class="g-mb-15">
-                        <p class="g-color-gray-dark-v2">About my site amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin. Cras purus odio, vestibulum in vulputate at.</p>
+                        <p class="g-color-gray-dark-v2" style="font-family: 'Liberation Sans'">About my site amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin. Cras purus odio, vestibulum in vulputate at.</p>
                       </div>
 
                       <ul class="list-inline mb-0">
