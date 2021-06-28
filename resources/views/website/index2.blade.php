@@ -66,10 +66,10 @@
       }
     </style>
     <style>
-        .para{
+        p{
             line-height: 120%;
             font-family: 'Libre Baskerville', serif;
-            font-size: 15px !important;
+            /*font-size: 15px !important;*/
             color: black !important;
         }
         .kingo-mpya{
@@ -235,7 +235,7 @@
                                href="{{route('single_post',[$porojo2[0]->id,$porojo2[0]->title])}}">
                                 {{$porojo2[0]->title}}
                             </a>
-                            <p class="para">
+                            <p style="font-size: 15px !important;">
                                 @if (strlen($porojo2[0]->content) > 220)
                                     {!! $porojo2[0]->content = substr($porojo2[0]->content, 0, 217) . '...' !!}
                                 @else
