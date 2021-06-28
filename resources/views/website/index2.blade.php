@@ -121,15 +121,14 @@
                         <span class="g-mb-10">
                             <strong>
                             <a class="kingo-category" href="{{url('/category/porojo')}}">
-
                                 POROJO ILIYOPITA</a>
                             </strong>
                         </span>
 
                         <h5 class="kingo-title mt-2"
                             style="border-bottom: 1px solid rgb(195, 193, 193); margin-bottom: 20px; padding-bottom: 5px">
-                            <a class="u-link-v5 g-color-gray-dark-v1 g-color-primary--hover" href="{{route('single_post',[$porojo2[1]->id,$porojo2[1]->title])}}">Mwana wa Kondoo
-                                Kafufuka</a>
+                            <a class="u-link-v5 g-color-gray-dark-v1 g-color-primary--hover" href="{{route('single_post',[$porojo2[1]->id,$porojo2[1]->title])}}">
+                                {{$porojo2[1]->title}}</a>
                         </h5>
 
                         {{-- article --}}
@@ -157,10 +156,41 @@
                             </strong>
                         </span>
 
-                        <h5 class="h5 g-mb-10 mt-2">
+                        <h5 class="kingo-title mt-2" style="border-bottom: 1px solid rgb(195, 193, 193); margin-bottom: 20px; padding-bottom: 5px">
                             <a class="u-link-v5 g-color-gray-dark-v1 g-color-primary--hover"
                                href="{{route('single_post',[$video->id,$video->title])}}">{{$video->title}}</a>
                         </h5>
+
+                        {{-- article --}}
+                        <article class="u-block-hover mb-2">
+                            <a href="{{url('/')}}/post/{{$video->id}}/{{$video->title}}">
+                            <figure class="u-shadow-v25 g-bg-cover ">
+                                <iframe style="width: 100%; height: 150px"
+                                      src="https://www.youtube.com/embed/{{$video->image_url}}"
+                                      title="{{$video->title}}" frameborder="0"
+                                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
+                              </iframe>
+                                <span
+                                    class="u-icon-v3 u-icon-size--sm g-font-size-13 g-bg-white g-bg-black--hover g-color-white--hover rounded-circle g-cursor-pointer g-absolute-centered">
+                                    <i class="fa fa-play g-left-2"></i>
+                                </span>
+                            </figure>
+                                </a>
+
+                        </article>
+
+                        <span class="g-mb-10">
+                            <strong>
+                            <a class="kingo-category" href="{{url('/category/video')}}">
+                                VIDEO</a>
+                            </strong>
+                        </span>
+
+                        <h5 class="kingo-title mt-2" >
+                            <a class="u-link-v5 g-color-gray-dark-v1 g-color-primary--hover"
+                               href="{{route('single_post',[$video->id,$video->title])}}">{{$video->title}}</a>
+                        </h5>
+
 
                     </div>
 
@@ -215,13 +245,13 @@
                             <a class="u-link-v5 g-color-gray-dark-v1 g-color-primary--hover" style="font-size: 24px"
                                href="{{route('single_post',[$porojo2[0]->id,$porojo2[0]->title])}}">
                                 {{$porojo2[0]->title}}
-{{--                            <p>--}}
-{{--                                @if (strlen($porojo2[0]->content) > 70)--}}
-{{--                                    {!! $porojo2[0]->content = substr($porojo2[0]->content, 0, 67) . '...' !!}--}}
-{{--                                @else--}}
-{{--                                    {!! $porojo2[0]->content !!}--}}
-{{--                                @endif--}}
-{{--                            </p>--}}
+                            <p>
+                                @if (strlen($porojo2[0]->content) > 70)
+                                    {!! $porojo2[0]->content = substr($porojo2[0]->content, 0, 67) . '...' !!}
+                                @else
+                                    {!! $porojo2[0]->content !!}
+                                @endif
+                            </p>
                                 </a>
                         </h5>
 
@@ -271,7 +301,7 @@
                             <strong>
                             <a class="kingo-category" href="{{url('/category/kingo_katuni')}}">
 
-                                METHALI</a>
+                                Riwaya</a>
                             </strong>
                         </span>
 
@@ -302,7 +332,7 @@
                             </strong>
                         </span>
                         @endforeach
-
+                        <hr>
                         {{-- article --}}
                         @foreach($methali as $mwthali)
                         <article class="u-block-hover mb-2">
@@ -322,6 +352,7 @@
                             </a>
                             </strong>
                         </span>
+
                         @endforeach
                     </div>
                 </div>
