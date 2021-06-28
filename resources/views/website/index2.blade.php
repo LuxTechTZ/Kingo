@@ -69,7 +69,7 @@
         p{
             line-height: 130%;
             font-family: Georgia, serif;
-            font-size: 15px !important;
+            font-size: 16px !important;
             color: black !important;
         }
         .kingo-mpya{
