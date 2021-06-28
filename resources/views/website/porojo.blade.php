@@ -82,7 +82,7 @@
             <article class="text-center g-mb-100">
 
               <figure class="g-pos-rel mb-5 ">
-                  <a href="{{url('/')}}/category/{{str_replace(' ','_',strtolower($post->category->name))}}">
+                  <a href="{{url('/')}}/post/{{$post->title}}/{{$post->id}}">
                   @if($post->category->id == 5)
                       <img class="img-fluid"
                                    src="https://img.youtube.com/vi/{{$post->image_url}}/hqdefault.jpg"
@@ -192,7 +192,6 @@
 
 
             <div id="stickyblock-end"></div>
-
                   @if(count($porojo) > 20)
             <!-- Pagination -->
             <nav class="g-pb-50" aria-label="Page Navigation">
