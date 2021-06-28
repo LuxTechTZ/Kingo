@@ -59,7 +59,7 @@
             color: black;
             /*text-align: justify;*/
             font-size: 19px;
-            font-family:Libre Baskerville  serif !important;
+            /*font-family:Libre Baskerville  serif !important;*/
             line-height: normal;
         }
     </style>

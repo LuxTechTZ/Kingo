@@ -66,12 +66,12 @@
       }
     </style>
     <style>
-        p{
-            line-height: 130%;
-            font-family: 'Libre Baskerville', serif;
-            /*font-size: 15px !important;*/
-            color: black !important;
-        }
+        /*p{*/
+        /*    line-height: 130%;*/
+        /*    font-family: 'Libre Baskerville', serif;*/
+        /*    !*font-size: 15px !important;*!*/
+        /*    color: black !important;*/
+        /*}*/
         .kingo-mpya{
             font-family:Libre Baskerville  serif;
             text-align: justify;

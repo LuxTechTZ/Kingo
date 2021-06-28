@@ -6,6 +6,7 @@ html {
   font-size: 14px;
 }
 
+
 body {
   font-weight: 400;
   font-size: 1rem;
@@ -20,7 +21,7 @@ body {
 }
 
 a {
-    font-family: Libre Baskerville, Serif;
+    font-family: Libre Baskerville, serif;
     font-weight: bold;
   color: #6281c8;
   outline: none;
@@ -29,6 +30,7 @@ a {
 
 .p {
     font-family: Georgia, serif !important;
+    color: black !important;
 }
 
 a:focus,
