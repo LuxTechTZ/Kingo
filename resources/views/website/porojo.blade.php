@@ -164,9 +164,9 @@
                 </h2>
                 <p style="text-align: left !important;">
                     @if (strlen($post->content) > 200)
-                        {!! $post->content = substr($post->content, 0, 197) . '...' !!}
+                        {!! $post->content = substr(str_replace('<p>','<p style="text-align: left !important;">',$post->content), 0, 197) . '...' !!}
                     @else
-                        {!! $post->content !!}
+                        {!! str_replace('<p>','<p style="text-align: left !important;">',$post->content) !!}
                     @endif
                 </p>
               </div>
