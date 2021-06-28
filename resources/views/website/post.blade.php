@@ -168,9 +168,14 @@
                       @endif
                   </figure>
 
-                    <p class="kingo-mpya">
-                        {!! $post->content !!}
-                    </p>
+                    <div class="row">
+                        <div class="col col-md-1"></div>
+                        <div class="col col-md-11">
+                            <p class="kingo-mpya">
+                                {!! $post->content !!}
+                            </p>
+                        </div>
+                    </div>
                 </div>
 
                 <!-- Sources & Tags -->
