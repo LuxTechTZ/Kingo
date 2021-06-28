@@ -66,7 +66,7 @@
       }
     </style>
     <style>
-        .para{
+        p.para{
             font-size: 14px !important;
             color: black !important;
         }
