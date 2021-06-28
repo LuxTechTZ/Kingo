@@ -89,8 +89,9 @@
         }
         p{
             color: black;
-            font-size: 19px;
-            font-family:Georgia  serif !important;
+            font-size: 18px;
+            font-family:Georgia, serif !important;
+            line-height: 29px;
         }
     </style>
   </head>
