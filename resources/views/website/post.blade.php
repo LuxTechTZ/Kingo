@@ -170,11 +170,12 @@
 
                     <div class="row">
                         <div class="col col-md-1 g-hidden-sm-down"></div>
-                        <div class="col col-md-11">
+                        <div class="col col-md-10">
                             <p class="kingo-mpya">
                                 {!! $post->content !!}
                             </p>
                         </div>
+                        <div class="col col-md-1 g-hidden-sm-down"></div>
                     </div>
                 </div>
 

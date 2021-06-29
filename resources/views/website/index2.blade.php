@@ -484,10 +484,10 @@
                 <div class="row">
                     @foreach(App\Models\Post::where('post_category_id','!=','3')->orderBy('views','desc')->limit(10)->get() as $popular)
                         @if($loop->iteration == 1 || $loop->iteration == 6)
-                            <div class="col-lg-6 g-mb-50 g-mb-0--lg">
+                            <div class="col-lg-6 g-mb-3 g-mb-0--lg">
                                 <!-- Article -->
-                                <article class="g-mb-40" style="height: 400px">
-                                  <figure class="u-shadow-v25 g-pos-rel g-mb-20">
+                                <article class="g-mb-2" style="height: 400px">
+                                  <figure class="u-shadow-v25 g-pos-rel g-mb-2">
                                       <a href="{{url('/')}}/post/{{$popular->title}}/{{$popular->id}}">
                                           @if($popular->category->id == 5)
                                               <div  style="height: 250px;
@@ -501,7 +501,7 @@
                                               </div>
                                           @endif
                                       </a>
-                                    <figcaption class="g-pos-abs g-top-20 g-left-20">
+                                    <figcaption class="g-pos-abs g-top-2 g-left-20">
                                       <a class="btn btn-xs u-btn-teal text-uppercase rounded-0"
                                          href="#!">
                                           {{$popular->category->name}}
@@ -509,14 +509,14 @@
                                     </figcaption>
                                   </figure>
 
-                                  <h3 class="h4 g-mb-10">
+                                  <h3 class="h4 g-mb-1">
                                     <a class="u-link-v5 g-color-gray-dark-v1 g-color-primary--hover"
                                        href="{{url('/')}}/post/{{$popular->title}}/{{$popular->id}}">
                                         {{$popular->title}}
                                     </a>
                                   </h3>
 
-                                  <ul class="list-inline g-color-gray-dark-v4 g-font-size-12">
+                                  <ul class="list-inline g-color-gray-dark-v4 g-font-size-12 mb-1">
                                     <li class="list-inline-item">
                                       <a class="u-link-v5 g-color-gray-dark-v4 g-color-primary--hover" href="#!">Mike Coolman</a>
                                     </li>
@@ -533,6 +533,7 @@
                                     </li>
                                   </ul>
 
+                                    @if(isset($popular->content))
                                   <p class="g-color-gray-dark-v2" style="font-size: 16px">
                                       @if (strlen($popular->content) > 90)
                                             {!! $popular->content = substr($popular->content, 0, 87) . '...' !!}
@@ -540,31 +541,33 @@
                                             {!! $popular->content !!}
                                         @endif
                                   </p>
-                                  <a class="g-font-size-12" href="#!">Read More..</a>
+                                    @endif
+                                  <a class="g-font-size-12"
+                                     href="{{url('/')}}/post/{{$popular->title}}/{{$popular->id}}">Read More..</a>
                                 </article>
                                 <!-- Article -->
                             @elseif($loop->iteration == 6)
                             @else
                                 <!-- Other Articles -->
                                     <article class="media">
-                                              <a href="{{url('/')}}/post/{{$popular->title}}/{{$popular->id}}">
-                                          <figure class="d-flex u-shadow-v25 mr-3 g-pos-rel">
-                                                  @if($popular->category->id == 5)
-                                                      <iframe class="g-width-140 g-height-80"
-                                                              src="https://www.youtube.com/embed/{{$popular->image_url}}"
-                                                              title="{{$popular->title}}" frameborder="0"
-                                                              allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
-                                                      </iframe>
-                                                  @else
-                                                      <img class="g-width-140 g-height-80"
-                                                         src="{{url('/')}}/{{Illuminate\Support\Facades\Storage::url($popular->image_url)}}"
-                                                         alt="Image Description">
-                                                  @endif
+                                        <a href="{{url('/')}}/post/{{$popular->title}}/{{$popular->id}}">
+                                          <figure class="d-flex u-shadow-v25 mr-2 g-pos-rel">
+                                              @if($popular->category->id == 5)
+                                                  <iframe class="g-width-140 g-height-80"
+                                                          src="https://www.youtube.com/embed/{{$popular->image_url}}"
+                                                          title="{{$popular->title}}" frameborder="0"
+                                                          allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
+                                                  </iframe>
+                                              @else
+                                                  <img class="g-width-140 g-height-80"
+                                                       src="{{url('/')}}/{{Illuminate\Support\Facades\Storage::url($popular->image_url)}}"
+                                                       alt="{{$popular->title}}">
+                                              @endif
                                           </figure>
-                                              </a>
+                                        </a>
 
                                           <div class="media-body">
-                                            <h3 class="g-font-size-16">
+                                            <h3 class="g-font-size-16 mb-0">
                                               <a class="g-color-gray-dark-v1" href="{{url('/')}}/post/{{$popular->title}}/{{$popular->id}}">
                                                   {{$popular->title}}
                                               </a>
@@ -653,8 +656,8 @@
                     @foreach($category->posts as $post)
                     <div class="col-lg-4 g-mb-30 g-mb-0--lg">
                         <!-- Article -->
-                        <article class="g-mb-30">
-                          <figure class="u-shadow-v25 g-pos-rel g-mb-20">
+                        <article class="g-mb-1">
+                          <figure class="u-shadow-v25 g-pos-rel g-mb-2">
                               <a href="{{url('/')}}/post/{{str_replace('?','',strtolower($post->title))}}/{{$post->id}}">
                                   @if($category->id == 5)
                                       <div  style="height: 150px;
@@ -676,14 +679,14 @@
                               </a>
                           </figure>
 
-                          <h3 class="h4 g-mb-10">
+                          <h3 class="h4 g-mb-2">
                             <a class="u-link-v5 g-color-gray-dark-v1 g-color-primary--hover"
                                href="{{url('/')}}/post/{{str_replace('?','',strtolower($post->title))}}/{{$post->id}}">
                                 {{$post->title}}
                             </a>
                           </h3>
 
-                          <ul class="list-inline g-color-gray-dark-v4 g-font-size-12">
+                          <ul class="list-inline g-color-gray-dark-v4 g-font-size-12 mb-2">
                             <li class="list-inline-item">
                               <a class="u-link-v5 g-color-gray-dark-v4 g-color-primary--hover" href="#!">
                                   {{$post->artist_name}}
@@ -739,7 +742,7 @@
                     <div class="row g-mb-30">
                       <!-- Article Image -->
                       <div class="col-md-5">
-                        <figure class="u-shadow-v25 g-pos-rel g-mb-20 g-mb-0--lg">
+                        <figure class="u-shadow-v25 g-pos-rel g-mb-2 g-mb-0--lg">
                           <img class="img-fluid w-100"
                                src="{{url('/')}}/{{Illuminate\Support\Facades\Storage::url($riwaya->image_url)}}"
                                alt="{{$riwaya->title}}">
@@ -755,14 +758,14 @@
 
                       <!-- Article Content -->
                       <div class="col-md-7 align-self-center">
-                        <h3 class="h4 g-mb-15">
+                        <h3 class="h4 g-mb-2">
                           <a class="u-link-v5 g-color-gray-dark-v1 g-color-primary--hover"
                              href="{{url('/')}}/post/{{$riwaya->title}}/{{$riwaya->id}}">
                               {{$riwaya->title}}
                           </a>
                         </h3>
 
-                        <ul class="list-inline g-color-gray-dark-v4 g-font-size-12">
+                        <ul class="list-inline g-color-gray-dark-v4 g-font-size-12 mb-2">
                           <li class="list-inline-item">
                             <a class="u-link-v5 g-color-gray-dark-v4 g-color-primary--hover" >
                                 {{$riwaya->artist_name}}
@@ -781,7 +784,7 @@
                           </li>
                         </ul>
 
-                        <p class="g-color-gray-dark-v2">
+                        <p class="g-color-gray-dark-v2 mb-2">
                             @if (strlen($riwaya->content) > 200)
                                 {!! $riwaya->content = substr($riwaya->content, 0, 197) . '...' !!}
                             @else
