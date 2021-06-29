@@ -373,7 +373,7 @@
                         @php
                             $new_porojo = \App\Models\Post::where('post_category_id','1')->orderBy('id','desc')->first();
                         @endphp
-                      <figure class="u-shadow-v25 g-pos-rel g-mb-20">
+                      <figure class="u-shadow-v25 g-pos-rel g-mb-2">
                           <a href="{{route('single_post',[$new_porojo->id,$new_porojo->title])}}">
                             <img class="img-fluid w-100"
                                  src="{{url('/')}}/{{Storage::url($new_porojo->image_url)}}"
@@ -382,22 +382,23 @@
                           </a>
                       </figure>
 
-                      <span class="g-mb-10">
+                      <span class="g-mb-0">
                         <strong>
                         <a class="kingo-category" href="{{url('/')}}/post/{{$new_porojo->title}}/{{$new_porojo->id}}">
                           {{Str::upper(\App\Models\Post::where('post_category_id','1')->orderBy('id','desc')->first()->category->name)}}</a>
                         </strong>
                     </span>
 
-                      <h3 class="h4 g-mb-10">
+                      <h3 class="h4 g-mb-0">
                         <a class="u-link-v5 g-color-gray-dark-v1 g-color-primary--hover" href="#!">
                             {{\App\Models\Post::where('post_category_id','1')->orderBy('id','desc')->first()->title}}
                         </a>
                       </h3>
 
-                      <ul class="list-inline g-color-gray-dark-v4 g-font-size-12">
+                      <ul class="list-inline g-color-gray-dark-v4 g-font-size-12 mb-0">
                         <li class="list-inline-item">
-                          <a class="u-link-v5 g-color-gray-dark-v4 g-color-primary--hover" href="#!">{{$new_porojo->artist_name}}</a>
+                          <a class="u-link-v5 g-color-gray-dark-v4 g-color-primary--hover"
+                             href="#!">{{$new_porojo->artist_name}}</a>
                         </li>
                         <li class="list-inline-item">/</li>
                         <li class="list-inline-item">
@@ -412,7 +413,7 @@
                         </li>
                       </ul>
 
-                      <p class="kingo-mpya g-color-gray-dark-v2" >
+                      <p class="kingo-mpya g-color-gray-dark-v2 mb-0" >
                           @if (strlen($new_porojo->content) > 200)
                               {!!  $new_porojo->content = substr($new_porojo->content, 0, 197) . '...' !!}
                           @else
@@ -427,19 +428,19 @@
                   <!-- End Article (Leftside) -->
 
                   <!-- Article (Rightside) -->
-                  <div class="col-lg-5">
+                  <div class="col-lg-5 p-0">
                     <!-- Article -->
                       @foreach(\App\Models\Post::where('post_category_id','!=','7')->where('post_category_id','!=','5')->orderBy('id','desc')->limit(4)->get() as $new_post)
-                    <article class="media">
-                      <a class="d-flex u-shadow-v25 align-self-center mr-3"
+                    <article class="media mb-0 p-0">
+                      <a class="d-flex u-shadow-v25 align-self-center mr-2"
                          href="{{route('single_post',[$new_post->id,$new_post->title])}}">
                         <img style="max-width: 120px"
                              src="{{url('/')}}/{{Illuminate\Support\Facades\Storage::url($new_post->image_url)}}"
                              alt="{{$new_post->title}}">
                       </a>
 
-                      <div class="media-body">
-                        <h3 class="h6">
+                      <div class="media-body mb-0">
+                        <h3 class="h6 mb-0">
                           <a class="u-link-v5 g-color-gray-dark-v1 g-color-primary--hover"
                              href="{{route('single_post',[$new_post->id,$new_post->title])}}">
                               {{$new_post->title}}
