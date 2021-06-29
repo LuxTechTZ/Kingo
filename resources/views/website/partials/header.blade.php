@@ -6,34 +6,102 @@
             <div class="row align-items-center">
                 <!-- Logo -->
                 <div class="col-md-3 g-hidden-md-down">
-                    <a href="{{url('/')}}" class="navbar-brand">
-                        <img style="max-height: 70px" src="{{url('/')}}/assets-magazine/img/logo.png" alt="Logo">
+                    <a href="{{url('/')}}" class="navbar-brand" style="position: relative; ">
+                        <img style="max-height: 70px" src="{{url('/')}}/assets-magazine/img/logo.png" alt="Kingo Logo">
+                        <span style="position: absolute;bottom: 0; color: black; font-size: 30px;font-family: ProximaNovaCond,serif;">| Jarida la Porojo na Mizaha </span>
                     </a>
                 </div>
                 <!-- End Logo -->
 
+
+
                 <!-- Search Form -->
-                <div class="col-6 col-md-5">
-                    {{-- <form class="input-group rounded" action="{{route('search')}}" method="GET">
-                    <input
-                        class="form-control g-brd-secondary-light-v2 g-brd-primary--focus g-color-secondary-dark-v1 g-placeholder-secondary-dark-v1 g-bg-white g-font-weight-400 g-font-size-13 g-px-20 g-py-12"
-                        type="text" name="key" placeholder="Search the entire site">
-                    <span class="input-group-append g-brd-none g-py-0 g-pr-0">
-                        <button
-                            class="btn u-btn-white g-color-primary--hover g-bg-secondary g-font-weight-600 g-font-size-13 text-uppercase g-py-12 g-px-20"
-                            type="submit">
-                            <span class="g-hidden-md-down">Tafuta</span>
-                            <i class="g-hidden-lg-up fa fa-search"></i>
-                        </button>
-                    </span>
-                    </form> --}}
+                <div class="col-6 col-md-4 g-hidden-md-down">
+{{--                     <form class="input-group rounded" action="{{route('search')}}" method="GET">--}}
+{{--                    <input--}}
+{{--                        class="form-control g-brd-secondary-light-v2 g-brd-primary--focus g-color-secondary-dark-v1 g-placeholder-secondary-dark-v1 g-bg-white g-font-weight-400 g-font-size-13 g-px-20 g-py-12"--}}
+{{--                        type="text" name="key" placeholder="Search the entire site">--}}
+{{--                    <span class="input-group-append g-brd-none g-py-0 g-pr-0">--}}
+{{--                        <button--}}
+{{--                            class="btn u-btn-white g-color-primary--hover g-bg-secondary g-font-weight-600 g-font-size-13 text-uppercase g-py-12 g-px-20"--}}
+{{--                            type="submit">--}}
+{{--                            <span class="g-hidden-md-down">Tafuta</span>--}}
+{{--                            <i class="g-hidden-lg-up fa fa-search"></i>--}}
+{{--                        </button>--}}
+{{--                    </span>--}}
+{{--                    </form> --}}
                 </div>
-                <!-- End Search Form -->
-                <div class="col-md-3 g-hidden-md-down">
-                    <a href="{{url('/')}}" class="navbar-brand">
-                        <img style="max-height: 80px" src="{{url('/')}}/kingo-assets/kingo-footer.png" alt="Kingo Logo">
-                    </a>
+
+                <div class="col-md-4 ml-auto g-mb-0 d-inline-block" >
+                    <!-- Social Icons -->
+                    <ul class="list-inline mb-0">
+                        <li class="list-inline-item g-mx-2">
+                            <a class="u-icon-v2 u-icon-size--sm g-brd-secondary-light-v2 g-color-secondary-dark-v2 g-color-white--hover g-bg-primary--hover g-font-size-default rounded"
+                               href="https://web.facebook.com/kingomagazine"
+                               target="_blank"
+                               data-toggle="tooltip"
+                               data-placement="top"
+                               title="Like Us on Facebook">
+                                <i class="fa fa-facebook"></i>
+                            </a>
+                        </li>
+                        <li class="list-inline-item g-mx-2">
+                            <a class="u-icon-v2 u-icon-size--sm g-brd-secondary-light-v2 g-color-secondary-dark-v2 g-color-white--hover g-bg-primary--hover g-font-size-default rounded"
+                               href="https://twitter.com/kingomagazine"
+                               target="_blank"
+                               data-toggle="tooltip"
+                               data-placement="top"
+                               title="Follow Us on Twitter">
+                                <i class="fa fa-twitter"></i>
+                            </a>
+                        </li>
+                        <li class="list-inline-item g-mx-2">
+                            <a class="u-icon-v2 u-icon-size--sm g-brd-secondary-light-v2 g-color-secondary-dark-v2 g-color-white--hover g-bg-primary--hover g-font-size-default rounded"
+                               href="https://www.youtube.com/channel/UCmb989XkSPIIPJ0yMuaVMBg"
+                               target="_blank"
+                               data-toggle="tooltip"
+                               data-placement="top"
+                               title="Subscribe to Our YouTube Channel">
+                                <i class="fa fa-youtube"></i>
+                            </a>
+                        </li>
+                        <li class="list-inline-item g-mx-2">
+                            <a class="u-icon-v2 u-icon-size--sm g-brd-secondary-light-v2 g-color-secondary-dark-v2 g-color-white--hover g-bg-primary--hover g-font-size-default rounded"
+                               target="_blank"
+                               href="https://www.instagram.com/official.kingomagazine/"
+                               data-toggle="tooltip"
+                               data-placement="top"
+                               title="Follow Us on Instagram">
+                                <i class="fa fa-instagram"></i>
+                            </a>
+                        </li>
+
+                    </ul>
+                    <!-- End Social Icons -->
                 </div>
+
+                <!-- Search -->
+                <div class="d-inline-block g-pos-rel g-valign-middle g-ml-30 g-ml-0--lg g-hidden-md-down">
+                  <a href="#!" class="g-font-size-18 g-color-main" aria-haspopup="true" aria-expanded="false" aria-controls="searchform-1" data-dropdown-target="#searchform-1" data-dropdown-type="css-animation" data-dropdown-duration="300" data-dropdown-animation-in="fadeInUp"
+                  data-dropdown-animation-out="fadeOutDown">
+                    <i class="fa fa-search"></i>
+                  </a>
+
+                  <!-- Search Form -->
+                  <form id="searchform-1" action="{{route('search')}}" method="GET" class="u-searchform-v1 u-dropdown--css-animation u-dropdown--hidden g-bg-white g-pa-10 g-mt-25--lg g-mt-15--lg--scrolling">
+                    <div class="input-group g-brd-primary--focus">
+                      <input class="form-control rounded-0 u-form-control" name="key" type="search" placeholder="Enter Your Search Here...">
+
+                      <div class="input-group-addon p-0">
+                        <button class="btn rounded-0 btn-primary btn-md g-font-size-14 g-px-18" type="submit">Go</button>
+                      </div>
+                    </div>
+                  </form>
+                  <!-- End Search Form -->
+                </div>
+                <!-- End Search -->
+
+
 
 
             </div>
@@ -49,6 +117,27 @@
                     <img style="max-height: 50px" src="{{url('/')}}/assets-magazine/img/logo.png" alt="Kingo Logo">
                 </a>
                 <!-- End Logo -->
+
+                <!-- Search -->
+                <div class="d-inline-block g-pos-rel g-valign-middle g-ml-30 g-ml-0--lg g-hidden-lg-up">
+                  <a href="#!" class="g-font-size-18 g-color-main" aria-haspopup="true" aria-expanded="false" aria-controls="searchform-1" data-dropdown-target="#searchform-2" data-dropdown-type="css-animation" data-dropdown-duration="300" data-dropdown-animation-in="fadeInUp"
+                  data-dropdown-animation-out="fadeOutDown">
+                    <i class="fa fa-search"></i>
+                  </a>
+
+                  <!-- Search Form -->
+                  <form id="searchform-2" action="{{route('search')}}" method="GET" class="u-searchform-v1 u-dropdown--css-animation u-dropdown--hidden g-bg-white g-pa-10 g-mt-25--lg g-mt-15--lg--scrolling">
+                    <div class="input-group g-brd-primary--focus">
+                      <input class="form-control rounded-0 u-form-control" name="key" type="search" placeholder="Enter Your Search Here...">
+
+                      <div class="input-group-addon p-0">
+                        <button class="btn rounded-0 btn-primary btn-md g-font-size-14 g-px-18" type="submit">Go</button>
+                      </div>
+                    </div>
+                  </form>
+                  <!-- End Search Form -->
+                </div>
+                <!-- End Search -->
 
                 <!-- Responsive Toggle Button -->
                 <button class="navbar-toggler navbar-toggler-right btn g-line-height-1 g-brd-none g-pa-0 ml-auto"
