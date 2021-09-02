@@ -31,21 +31,21 @@ class SiteController extends Controller
     public function category($category)
     {
         if ($category == 'porojo'){
-            $porojo = Post::where('post_category_id','1')->orderBy('id','desc')->get();
+            $porojo = Post::where('post_category_id','1')->orderBy('post_date')->get();
         }elseif ($category == 'domokaya'){
-            $porojo = Post::where('post_category_id','2')->orderBy('id','desc')->get();
+            $porojo = Post::where('post_category_id','2')->orderBy('post_date')->get();
         }elseif ($category == 'porojo_live'){
-            $porojo = Post::where('post_category_id','3')->orderBy('id','desc')->get();
+            $porojo = Post::where('post_category_id','3')->orderBy('post_date')->get();
         }elseif ($category == 'mjue_maarufu'){
-            $porojo = Post::where('post_category_id','4')->orderBy('id','desc')->get();
+            $porojo = Post::where('post_category_id','4')->orderBy('post_date')->get();
         }elseif ($category == 'video'){
-            $porojo = Post::where('post_category_id','5')->orderBy('id','desc')->get();
+            $porojo = Post::where('post_category_id','5')->orderBy('post_date')->get();
         }elseif ($category == 'riwaya'){
-            $porojo = Post::where('post_category_id','6')->orderBy('id','desc')->get();
+            $porojo = Post::where('post_category_id','6')->orderBy('post_date')->get();
         }elseif ($category == 'kingo_katuni'){
-            $porojo = Post::where('post_category_id','7')->orderBy('id','desc')->get();
+            $porojo = Post::where('post_category_id','7')->orderBy('post_date')->get();
         }elseif ($category == 'methali'){
-            $porojo = Post::where('post_category_id','8')->orderBy('id','desc')->get();
+            $porojo = Post::where('post_category_id','8')->orderBy('post_date')->get();
         }
 
         return view('website.porojo',compact('porojo','category'));
