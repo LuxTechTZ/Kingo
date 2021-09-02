@@ -430,7 +430,7 @@
                   <!-- Article (Rightside) -->
                   <div class="col-lg-5 p-0">
                     <!-- Article -->
-                      @foreach(\App\Models\Post::where('post_category_id','!=','7')->where('post_category_id','!=','5')->orderBy('post_date')->limit(4)->get() as $new_post)
+                      @foreach(\App\Models\Post::where('post_category_id','!=','7')->where('post_category_id','!=','5')->orderBy('post_date','desc')->limit(4)->get() as $new_post)
                     <article class="media mb-0 p-0">
                       <a class="d-flex u-shadow-v25 align-self-center mr-2"
                          href="{{route('single_post',[$new_post->id,$new_post->title])}}">
