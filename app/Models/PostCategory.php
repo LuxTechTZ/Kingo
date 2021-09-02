@@ -17,6 +17,6 @@ class PostCategory extends Model
 
     public function posts()
     {
-        return $this->hasMany('App\Models\Post');
+        return $this->hasMany('App\Models\Post')->orderBy('post_date','desc');
     }
 }
