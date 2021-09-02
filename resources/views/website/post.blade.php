@@ -424,7 +424,7 @@
 
 
                 <!-- Top Authors -->
-              @include('website.partials.authors')
+{{--              @include('website.partials.authors')--}}
                 <!-- End Top Authors -->
               </div>
             </div>
