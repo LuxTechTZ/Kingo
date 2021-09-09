@@ -24,7 +24,7 @@ class SiteController extends Controller
         $kingo_katuni = Post::where('post_category_id','7')->where('status',1)->orderBy('id','desc')->limit(2)->get();
         $methali = Post::where('post_category_id','8')->orderBy('id','desc')->limit(2)->get();
 
-        return view('website.index3');
+//        return view('website.index3');
 
         return view('website.index2',compact('porojo', 'porojo2',
             'domokaya','domokaya2','porojo_live','mjue_maarufu','top_videos','riwaya','kingo_katuni','methali'));

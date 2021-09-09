@@ -12,6 +12,6 @@
 
 </head>
 <body>
-    <iframe width="100%" height="1000" src="http://34.242.107.242/"></iframe>
+    <iframe style="margin: 0px; padding: 0px" width="100%" height="1000" src="http://34.242.107.242/"></iframe>
 </body>
 </html>
