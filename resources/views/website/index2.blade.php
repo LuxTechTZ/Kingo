@@ -19,7 +19,7 @@
 
     <!-- CSS Global Compulsory -->
     <link rel="stylesheet" href="{{url('/')}}/assets-main/vendor/bootstrap/bootstrap.min.css">
-    <link rel="stylesheet" href="{{url('/')}}/assets/LibreBaskerville-Regular.ttf">
+    <link rel="stylesheet" href="{{url('/')}}/assets/fnt/LibreBaskerville-Regular.ttf">
 
     <!-- CSS Implementing Plugins -->
     <link rel="stylesheet" href="{{url('/')}}/assets-main/vendor/icon-awesome/css/font-awesome.min.css">
