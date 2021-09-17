@@ -92,7 +92,7 @@
                 <div class="row">
                     {{-- first column --}}
                     <div class="col-lg-3 g-mb-30 g-mb-2--lg"
-                        style="padding-right: 15px;border-right: 1px solid rgb(195, 193, 193)">
+                        style="padding-right: 15px;border-right: 1px solid black">
 
                         {{-- article --}}
                         <article class="u-block-hover mb-2">
@@ -113,7 +113,7 @@
                         </span>
 
                         <h5 class="kingo-title mt-2"
-                            style="font-weight: 800;border-bottom: 1px solid rgb(195, 193, 193); margin-bottom: 20px; padding-bottom: 5px">
+                            style="font-weight: 800;border-bottom: 1px solid black; margin-bottom: 20px; padding-bottom: 5px">
                             <a class="u-link-v5 g-color-gray-dark-v1 g-color-primary--hover"
                                href="{{route('single_post',[$domokaya2[1]->id,$domokaya2[1]->title])}}">
                                 {{$domokaya2[1]->title}}
@@ -139,7 +139,7 @@
                         </span>
 
                         <h5 class="kingo-title mt-2"
-                            style="border-bottom: 1px solid rgb(195, 193, 193); margin-bottom: 20px; padding-bottom: 5px">
+                            style="border-bottom: 1px solid black; margin-bottom: 20px; padding-bottom: 5px">
                             <a class="u-link-v5 g-color-gray-dark-v1 g-color-primary--hover" href="{{route('single_post',[$porojo2[1]->id,$porojo2[1]->title])}}">
                                 {{$porojo2[1]->title}}</a>
                         </h5>
@@ -171,7 +171,7 @@
                             </strong>
                         </span>
 
-                        <h5 class="kingo-title mt-2" @if($loop->first) style="border-bottom: 1px solid rgb(195, 193, 193); margin-bottom: 20px; padding-bottom: 5px" @endif>
+                        <h5 class="kingo-title mt-2" @if($loop->first) style="border-bottom: 1px solid black; margin-bottom: 20px; padding-bottom: 5px" @endif>
                             <a class="u-link-v5 g-color-gray-dark-v1 g-color-primary--hover"
                                href="{{route('single_post',[$video->id,$video->title])}}">{{$video->title}}</a>
                         </h5>
@@ -204,7 +204,7 @@
                         </span>
 
                         <h5 class="kingo-title mt-2"
-                            style="border-bottom: 1px solid rgb(195, 193, 193); margin-bottom: 20px;padding-bottom: 10px; font-size: 24px">
+                            style="border-bottom: 1px solid black; margin-bottom: 20px;padding-bottom: 10px; font-size: 24px">
                             <a class="u-link-v5 g-color-gray-dark-v1 g-color-primary--hover"
                                href="{{route('single_post',[$domokaya2[0]->id,$domokaya2[0]->title])}}">
                                 {{$domokaya2[0]->title}}</a>
@@ -248,7 +248,7 @@
 
                     {{-- third column --}}
                     <div class="col-lg-3 g-mb-30 g-mb-2--lg"
-                        style="border-left: 1px solid rgb(195, 193, 193)">
+                        style="border-left: 1px solid black">
 
                         {{-- article --}}
                         <article class="u-block-hover mb-2">
@@ -270,7 +270,7 @@
                         </span>
 
                         <h5 class="kingo-title mt-2"
-                            style="border-bottom: 1px solid rgb(195, 193, 193); margin-bottom: 20px;padding-bottom: 5px">
+                            style="border-bottom: 1px solid black; margin-bottom: 20px;padding-bottom: 5px">
                             <a class="u-link-v5 g-color-gray-dark-v1 g-color-primary--hover" href="{{route('single_post',[$porojo_live->id,$porojo_live->title])}}">
                                 {{$porojo_live->title}}</a>
                         </h5>
@@ -295,7 +295,7 @@
                         </span>
 
                         <h5 class="kingo-title mt-2"
-                            style="border-bottom: 1px solid rgb(195, 193, 193); margin-bottom: 20px;padding-bottom: 5px">
+                            style="border-bottom: 1px solid black; margin-bottom: 20px;padding-bottom: 5px">
                             <a class="u-link-v5 g-color-gray-dark-v1 g-color-primary--hover" href="{{route('single_post',[$porojo_live->id,$porojo_live->title])}}">
                                 {{$riwaya->title}}</a>
                         </h5>
