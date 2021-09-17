@@ -301,11 +301,31 @@
                         </h5>
                         <p></p>
 
+                        @foreach($methali as $mwthali)
+                            <article class="u-block-hover mb-2">
+                                <a href="{{route('single_post',[$mwthali->id,$mwthali->title])}}">
+                                    <figure class="u-shadow-v25 g-bg-cover ">
+                                        <img class="img-fluid w-100 u-block-hover__main--zoom-v1"
+                                             src="{{Storage::url($mwthali->image_url)}}"
+                                             alt="Image Description">
+                                    </figure>
+                                </a>
+                            </article>
+
+                            <span class="g-mb-10 mt-2">
+                            <strong>
+                            <a class="kingo-category" href="{{url('/category/methali')}}">
+                                METHALI
+                            </a>
+                            </strong>
+                        </span>
+                        <hr>
+                        {{-- article --}}
                         {{-- article --}}
                         @foreach($kingo_katuni as $katun)
-                        <article class="u-block-hover mb-2">
-                            <a href="{{route('single_post',[$katun->id,$katun->title])}}">
-                            <figure class="u-shadow-v25 g-bg-cover ">
+                        <article class="u-block-hover mb-2" >
+                            <a href="{{route('single_post',[$katun->id,$katun->title])}}"  >
+                            <figure class="u-shadow-v25 g-bg-cover " style="border-style: solid; border-color: black">
                                 <img class="img-fluid w-100 u-block-hover__main--zoom-v1"
                                     src="{{Storage::url($katun->image_url)}}"
                                     alt="Image Description">
@@ -321,26 +341,6 @@
                             </strong>
                         </span>
                         @endforeach
-                        <hr>
-                        {{-- article --}}
-                        @foreach($methali as $mwthali)
-                        <article class="u-block-hover mb-2">
-                            <a href="{{route('single_post',[$mwthali->id,$mwthali->title])}}">
-                            <figure class="u-shadow-v25 g-bg-cover ">
-                                <img class="img-fluid w-100 u-block-hover__main--zoom-v1"
-                                    src="{{Storage::url($mwthali->image_url)}}"
-                                    alt="Image Description">
-                            </figure>
-                            </a>
-                        </article>
-
-                        <span class="g-mb-10 mt-2">
-                            <strong>
-                            <a class="kingo-category" href="{{url('/category/methali')}}">
-                                METHALI
-                            </a>
-                            </strong>
-                        </span>
 
                         @endforeach
                     </div>

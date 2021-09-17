@@ -73,15 +73,15 @@
       <!-- End Promo Articles -->
 
       <!-- News Content -->
-      <div class="container g-pt-100 g-pb-50">
+      <div class="container g-pt-10 g-pb-50">
         <div class="row">
           <!-- Articles Content -->
           <div class="col-lg-9 g-mb-50 g-mb-0--lg">
               @foreach($porojo as $post)
             <!-- Article -->
-            <article class="text-center g-mb-100">
+            <article class="text-center g-mb-10">
 
-              <figure class="g-pos-rel mb-5 ">
+              <figure class="g-pos-rel mb-2 ">
                   <a href="{{url('/')}}/post/{{$post->title}}/{{$post->id}}">
                   @if($post->category->id == 5)
                       <img class="img-fluid"
@@ -109,11 +109,11 @@
                     </div>
                   @else
                 <img class="img-fluid" src="{{url('/')}}/{{Illuminate\Support\Facades\Storage::url($post->image_url)}}"
-                     alt="Image Description">
+                     alt="{{$post->title}}">
                 @endif
                   </a>
                 <!-- Figcaption -->
-                <figcaption class="w-100 g-pos-abs g-bottom-0 g-left-0 g-pa-15">
+                <figcaption class="w-100 g-pos-abs g-bottom-0 g-left-0 ">
                   <ul class="d-flex justify-content-start list-inline mb-0 ">
                     <li class="list-inline-item mx-0">
                       <a class=" bg-dark d-inline-block g-brd-around g-brd-white-opacity-0_3 g-brd-primary-opacity-0_6--hover g-color-white g-bg-primary-opacity-0_6--hover g-text-underline--none--hover rounded-left g-px-15 g-py-4" href="#!">
@@ -156,8 +156,8 @@
               <!-- End Category & Date -->
 
               <!-- Info -->
-              <div class="g-px-50 g-px-100--md mb-4">
-                <h2 class="h3 mb-4" style="font-size: 35px">
+              <div class="mb-1">
+                <h2 class="mb-2" style="font-size: 35px; text-align: left">
                     <a class="u-link-v5 g-color-main g-color-primary--hover"
                        href="{{url('/')}}/post/{{$post->title}}/{{$post->id}}">
                         {{$post->title}}</a>
@@ -172,7 +172,7 @@
               </div>
               <!-- End Info -->
 
-              <div class="g-mb-25">
+              <div class="g-mb-3" style="text-align: left !important;">
                 <a class="g-font-weight-600 g-font-size-13 text-uppercase" href="{{url('/')}}/post/{{$post->title}}/{{$post->id}}">
                     Soma zaidi
                 </a>
