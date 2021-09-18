@@ -372,7 +372,7 @@
                                         <article class="media g-mb-20">
                                             <a class="d-flex mr-3"
                                                 href="{{url('/')}}/post/{{$main_porojo_live_d->title}}/{{$main_porojo_live_d->id}}">
-                                                <img class="g-width-120"
+                                                <img class="g-width-120 g-height-180"
                                                     src="{{url('/')}}/{{Illuminate\Support\Facades\Storage::url($main_porojo_live_d->image_url)}}"></a>
                                             <div class="media-body">
                                                 <h3 class="h6">

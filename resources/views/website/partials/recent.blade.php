@@ -4,7 +4,7 @@
             Mpya
         </h2>
     </div>
-@foreach(\App\Models\Post::orderBy('id','desc')->limit(5)->get() as $recent)
+@foreach(\App\Models\Post::orderBy('post_date','desc')->limit(5)->get() as $recent)
     <!-- Article -->
         <article class="media g-mb-10">
             <a class="d-flex u-shadow-v25 mr-2" href="{{url('/')}}/post/{{str_replace('?','',$recent->title)}}/{{$recent->id}}">
@@ -13,7 +13,7 @@
                           style="background-image: url(https://img.youtube.com/vi/{{$recent->image_url}}/0.jpg);
                                   background-size: contain; background-repeat: no-repeat; background-position: center"></span>
                     @else
-                    <img class="g-width-100" src="{{url('/')}}/{{Illuminate\Support\Facades\Storage::url($recent->image_url)}}" alt="{{$recent->title}}">
+                    <img class="g-width-100 g-height-60" src="{{url('/')}}/{{Illuminate\Support\Facades\Storage::url($recent->image_url)}}" alt="{{$recent->title}}">
                 @endif
             </a>
 

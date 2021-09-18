@@ -375,7 +375,7 @@
                         @endphp
                       <figure class="u-shadow-v25 g-pos-rel g-mb-2">
                           <a href="{{route('single_post',[$new_porojo->id,$new_porojo->title])}}">
-                            <img class="img-fluid w-100"
+                            <img class="img-fluid w-100" loading="lazy"
                                  src="{{url('/')}}/{{Storage::url($new_porojo->image_url)}}"
                                  alt="{{$new_porojo->title}}">
 
@@ -434,7 +434,7 @@
                     <article class="media mb-0 p-0">
                       <a class="d-flex u-shadow-v25 align-self-center mr-2"
                          href="{{route('single_post',[$new_post->id,$new_post->title])}}">
-                        <img style="max-width: 120px"
+                        <img class="g-width-120 g-height-70" loading="lazy"
                              src="{{url('/')}}/{{Illuminate\Support\Facades\Storage::url($new_post->image_url)}}"
                              alt="{{$new_post->title}}">
                       </a>
