@@ -1,5 +1,5 @@
 <div class="g-mb-30">
-    <div class="u-heading-v3-1 g-mb-30">
+    <div class="u-heading-v3-1 g-mb-10">
         <h2 class="h5 u-heading-v3__title g-color-gray-dark-v1 text-uppercase g-brd-primary">
             Mpya
         </h2>
@@ -38,5 +38,6 @@
             </div>
         </article>
         <!-- End Article -->
+    <hr class="my-1">
     @endforeach
 </div>

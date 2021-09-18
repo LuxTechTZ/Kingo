@@ -107,14 +107,14 @@
       <!-- End Promo Articles -->
 
       <!-- News Content -->
-      <section class="g-pt-50 g-pb-100">
+      <section class="g-pt-10 g-pb-100">
         <div class="container">
           <div class="row">
             <!-- Articles Content -->
             <div class="col-lg-9 g-mb-50 g-mb-0--lg">
               <article class="g-mb-60">
-                <header class="g-mb-30">
-                  <h2 class="h1 g-mb-15 kingo-title">{{$post->title}}</h2>
+                <header class="g-mb-5">
+                  <h2 class="h1 g-mb-7 kingo-title">{{$post->title}}</h2>
 
                   <ul class="list-inline d-sm-flex g-color-gray-dark-v4 mb-0">
                     {{-- <li class="list-inline-item">
@@ -135,12 +135,12 @@
                     </li>
                   </ul>
 
-                  <hr class="g-brd-gray-light-v4 g-my-15">
+                  <hr class="g-brd-gray-light-v4 g-my-5">
 
                 </header>
 
-                <div class="g-font-size-16 g-line-height-1_8 g-mb-30">
-                  <figure class="u-shadow-v25 g-mb-30">
+                <div class="g-font-size-16 g-line-height-1_8 g-mb-10">
+                  <figure class="u-shadow-v25 g-mb-5">
                       @if($post->category->id == 5)
                           <iframe style="width: 100%; height: 500px"
                                   src="https://www.youtube.com/embed/{{$post->image_url}}"
@@ -180,7 +180,7 @@
                 </div>
 
                 <!-- Sources & Tags -->
-                <div class="g-mb-30">
+                <div class="g-mb-10">
 
                       @if(isset($post->tags))
                   <h6 class="g-color-gray-dark-v1">
@@ -198,7 +198,7 @@
                 <hr class="g-brd-gray-light-v4">
 
                 <!-- Social Shares -->
-                <div class="g-mb-30">
+                <div class="g-mb-10">
                   <ul class="list-inline text-uppercase mb-0">
                     <li class="list-inline-item g-mr-10">
                       <strong class="align-middle g-font-size-24">{{$post->views}}</strong>
@@ -208,35 +208,37 @@
                     </li>
 
                     <li class="list-inline-item g-mr-10">
-                      <a class="twitter-share-button"
-                         data-size="large">
-                        <i class="fa fa-twitter g-mr-5--sm"></i>
-                          <span class="g-hidden-xs-down">Tweet on Twitter</span>
-                      </a>
-                    </li>
-                      <li class="list-inline-item g-mr-10">
+                        <div>
+
+                              <a class="twitter-share-button"
+                                 data-size="large">
+                                <i class="fa fa-twitter g-mr-5--sm"></i>
+                                  <span class="g-hidden-xs-down">Tweet on Twitter</span>
+                              </a>
+                            <br>
                           <!-- Your share button code -->
-                            <div class="fb-share-button g-py-5"
+                            <a class="fb-share-button"
                                  data-href="{{URL::full()}}"
                                  data-size="large"
-                                 data-layout="button_count">
-                            </div>
+                                 data-layout="button">
+                            </a>
+                        </div>
                       </li>
-                    <li class="list-inline-item">
-                      <a class="btn u-btn-lightred g-font-size-12 rounded g-py-5" href="{{route('like',$post->id)}}">
-                        <i class="fa fa-heart"></i>
-                          <span class="g-hidden-xs-down">Like Post</span>
-                      </a>
-                    </li>
+{{--                    <li class="list-inline-item">--}}
+{{--                      <a class="btn u-btn-lightred g-font-size-12 rounded g-py-5" href="{{route('like',$post->id)}}">--}}
+{{--                        <i class="fa fa-heart"></i>--}}
+{{--                          <span class="g-hidden-xs-down">Like Post</span>--}}
+{{--                      </a>--}}
+{{--                    </li>--}}
                   </ul>
                 </div>
                 <!-- End Social Shares -->
 
-                <hr class="g-brd-gray-light-v4 g-mb-40">
+                <hr class="g-brd-gray-light-v4 g-mb-10">
 
                 <!-- Related Articles -->
-                <div class="g-mb-40">
-                  <div class="u-heading-v3-1 g-mb-30">
+                <div class="g-mb-10">
+                  <div class="u-heading-v3-1 g-mb-10">
                     <h2 class="h5 u-heading-v3__title g-color-gray-dark-v1 text-uppercase g-brd-primary">
                         Zinazofanana
                     </h2>
@@ -245,22 +247,21 @@
                   <div class="row">
                   @foreach(\App\Models\Post::where('post_category_id',$post->category->id)->where('id','!=',$post->id)->limit(12)->get() as $popular)
                     <!-- Article Video -->
-                    <div class="col-lg-4 col-sm-6 g-mb-30">
+                    <div class="col-lg-4 col-sm-6 g-mb-10">
                       <article>
                           <a href="{{url('/')}}/post/{{str_replace('?','',strtolower($popular->title))}}/{{$popular->id}}">
-                        <figure class="u-shadow-v25 g-pos-rel g-mb-20">
-                            @if($popular->category->id == 5)
-                                <img class="img-fluid w-100"
-                               src="https://img.youtube.com/vi/{{$popular->image_url}}/0.jpg" alt="Image Description">
-                            @else
-                                <img class="img-fluid w-100"
-                               src="{{url('/')}}/{{Illuminate\Support\Facades\Storage::url($popular->image_url)}}" alt="Image Description">
-                            @endif
-
-                        </figure>
+                            <figure class="u-shadow-v25 g-pos-rel g-mb-10">
+                                @if($popular->category->id == 5)
+                                    <img class="img-fluid w-100"
+                                   src="https://img.youtube.com/vi/{{$popular->image_url}}/0.jpg" alt="Image Description">
+                                @else
+                                    <img class="img-fluid w-100"
+                                   src="{{url('/')}}/{{Illuminate\Support\Facades\Storage::url($popular->image_url)}}" alt="Image Description">
+                                @endif
+                            </figure>
                           </a>
 
-                        <h3 class="g-font-size-16 g-mb-10">
+                        <h3 class="g-font-size-16 g-mb-0">
                           <a class="u-link-v5 g-color-gray-dark-v1 g-color-primary--hover"
                              href="{{url('/')}}/post/{{str_replace('?','',strtolower($popular->title))}}/{{$popular->id}}"">
                               {{$popular->title}}</a>
@@ -314,7 +315,7 @@
                 <!-- End Author Block -->
 
                   <div class="g-mb-40">
-                  <div class="u-heading-v3-1 g-mb-30">
+                  <div class="u-heading-v3-1 g-mb-10">
                     <h2 class="h5 u-heading-v3__title g-color-gray-dark-v1 text-uppercase g-brd-primary">
                         Mengineyo
                     </h2>
@@ -323,16 +324,16 @@
                   <div class="row">
                   @foreach(\App\Models\Post::where('status','1')->where('post_category_id','!=','3')->limit(6)->get() as $popular)
                     <!-- Article Video -->
-                    <div class="col-lg-4 col-sm-6 g-mb-30">
+                    <div class="col-lg-4 col-sm-6 g-mb-10">
                       <article>
                           <a href="{{url('/')}}/post/{{str_replace('?','',strtolower($popular->title))}}/{{$popular->id}}">
-                        <figure class="u-shadow-v25 g-pos-rel g-mb-20">
+                        <figure class="u-shadow-v25 g-pos-rel g-mb-5">
                             @if($popular->category->id == 5)
-                                <img class="img-fluid w-100"
+                                <img class="img-fluid w-100 h-70"
                                src="https://img.youtube.com/vi/{{$popular->image_url}}/0.jpg" alt="Image Description">
                             @else
                                 <img class="img-fluid w-100"
-                               src="{{url('/')}}/{{Illuminate\Support\Facades\Storage::url($popular->image_url)}}" alt="Image Description">
+                                     src="{{url('/')}}/{{Illuminate\Support\Facades\Storage::url($popular->image_url)}}" alt="Image Description">
                             @endif
 
                           <figcaption class="g-pos-abs g-top-10 g-left-10">

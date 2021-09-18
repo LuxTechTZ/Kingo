@@ -817,46 +817,45 @@
                 <div class="g-mb-40">
                   <div class="u-heading-v3-1 g-mb-30">
                     <h2 class="h5 u-heading-v3__title g-font-primary g-font-weight-700 g-color-gray-dark-v1 text-uppercase g-brd-primary">
-                        Mithali
+                        Zinaopendwa
                     </h2>
                   </div>
 
-                  <!-- Article -->
-                  <article>
-                    <span class="g-font-size-12">
-                      <a class="u-link-v5 g-color-gray-dark-v4" href="#!">Jonathan Owen</a>
-                    </span>
-                    <h3 class="h6">
-                      <a class="g-color-gray-dark-v1" href="#!">Architects plan to stop skyscrapers from blocking out sunlight</a>
-                    </h3>
-                  </article>
-                  <!-- End Article -->
+                  @foreach(\App\Models\Post::orderBy('views','asc')->limit(5)->get() as $recent)
+    <!-- Article -->
+        <article class="media g-mb-10">
+            <a class="d-flex u-shadow-v25 mr-2" href="{{url('/')}}/post/{{str_replace('?','',$recent->title)}}/{{$recent->id}}">
+                @if($recent->category->id == 5)
+                    <span class="g-width-100 g-height-60"
+                          style="background-image: url(https://img.youtube.com/vi/{{$recent->image_url}}/0.jpg);
+                                  background-size: contain; background-repeat: no-repeat; background-position: center"></span>
+                    @else
+                    <img class="g-width-100 g-height-60" src="{{url('/')}}/{{Illuminate\Support\Facades\Storage::url($recent->image_url)}}" alt="{{$recent->title}}">
+                @endif
+            </a>
 
-                  <hr class="g-brd-gray-light-v4 g-mt-15 g-mb-10">
+            <div class="media-body">
+                <h3 class="h6 mb-2">
+                    <a class="u-link-v5 g-color-gray-dark-v1 g-color-primary--hover" href="{{url('/')}}/post/{{str_replace('?','',$recent->title)}}/{{$recent->id}}">
+                        {{$recent->title}}
+                    </a>
+                </h3>
 
-                  <!-- Article -->
-                  <article>
-                    <span class="g-font-size-12">
-                      <a class="u-link-v5 g-color-gray-dark-v4" href="#!">James Doe</a>
-                    </span>
-                    <h3 class="h6">
-                      <a class="g-color-gray-dark-v1" href="#!">Cooltex is one of the best technology company of our age and future</a>
-                    </h3>
-                  </article>
-                  <!-- End Article -->
-
-                  <hr class="g-brd-gray-light-v4 g-mt-15 g-mb-10">
-
-                  <!-- Article -->
-                  <article>
-                    <span class="g-font-size-12">
-                      <a class="u-link-v5 g-color-gray-dark-v4" href="#!">Albert Coolmen</a>
-                    </span>
-                    <h3 class="h6">
-                      <a class="g-color-gray-dark-v1" href="#!">Some text goes here with plain English and much more other texts go there..</a>
-                    </h3>
-                  </article>
-                  <!-- End Article -->
+                <ul class="u-list-inline g-font-size-12 g-color-gray-dark-v4">
+                    <li class="list-inline-item">
+                      {{date('M d, Y',strtotime($recent->post_date))}}
+                    </li>
+                    <li class="list-inline-item">/</li>
+                    <li class="list-inline-item">
+                      <a class="g-color-gray-dark-v4 g-text-underline--none--hover" href="#!">
+                        <i class="icon-finance-206 u-line-icon-pro align-middle g-pos-rel g-top-1 mr-1"></i> {{$recent->shares}}
+                      </a>
+                    </li>
+                </ul>
+            </div>
+        </article>
+        <!-- End Article -->
+    @endforeach
                 </div>
                 <!-- End News Feed -->
 
