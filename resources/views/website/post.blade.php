@@ -245,7 +245,7 @@
                   </div>
 
                   <div class="row">
-                  @foreach(\App\Models\Post::where('post_category_id',$post->category->id)->where('id','!=',$post->id)->limit(12)->get() as $popular)
+                  @foreach(\App\Models\Post::where('post_category_id',$post->category->id)->orderBy('post_date','desc')->where('id','!=',$post->id)->limit(12)->get() as $popular)
                     <!-- Article Video -->
                     <div class="col-lg-4 col-sm-6 g-mb-10">
                       <article>
