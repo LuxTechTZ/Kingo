@@ -13,10 +13,11 @@
 
     <meta property="og:title"       content="{{$post->title}}">
     @if($post->category->id == 5)
-        <meta property="og:image"       content="https://img.youtube.com/vi/{{$post->image_url}}/hqdefault.jpg">
+    <meta property="og:image"       content="https://img.youtube.com/vi/{{$post->image_url}}/hqdefault.jpg">
     @else
-        <meta property="og:image"       content="{{url('/')}}/{{Illuminate\Support\Facades\Storage::url($post->image_url)}}">
+    <meta property="og:image"       content="{{url('/')}}/{{Illuminate\Support\Facades\Storage::url($post->image_url)}}">
     @endif
+
     <meta property="og:description" content="{!! $post->content !!}">
     <meta property="og:url"         content="{{URL::full()}}">
     <meta property="og:type"        content="website" />
@@ -24,7 +25,7 @@
     <link rel="canonical" href="{{URL::full()}}">
 
     <!-- Favicon -->
-        <link rel="shortcut icon" href="{{url('/')}}/assets/kingo-favi.png">
+    <link rel="shortcut icon" href="{{url('/')}}/assets/kingo-favi.png">
 
     <!-- Google Fonts -->
     <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Roboto+Slab:300,400,700%7COpen+Sans:400,600,700">
@@ -252,10 +253,10 @@
                           <a href="{{url('/')}}/post/{{str_replace('?','',strtolower($popular->title))}}/{{$popular->id}}">
                             <figure class="u-shadow-v25 g-pos-rel g-mb-10">
                                 @if($popular->category->id == 5)
-                                    <img class="img-fluid w-100"
+                                    <img class="img-fluid g-width-300 g-height-150"
                                    src="https://img.youtube.com/vi/{{$popular->image_url}}/0.jpg" alt="Image Description">
                                 @else
-                                    <img class="img-fluid w-100"
+                                    <img class="img-fluid g-width-300 g-height-150"
                                    src="{{url('/')}}/{{Illuminate\Support\Facades\Storage::url($popular->image_url)}}" alt="Image Description">
                                 @endif
                             </figure>
@@ -329,10 +330,10 @@
                           <a href="{{url('/')}}/post/{{str_replace('?','',strtolower($popular->title))}}/{{$popular->id}}">
                         <figure class="u-shadow-v25 g-pos-rel g-mb-5">
                             @if($popular->category->id == 5)
-                                <img class="img-fluid w-100 h-70"
+                                <img class="img-fluid g-width-300 g-height-150"
                                src="https://img.youtube.com/vi/{{$popular->image_url}}/0.jpg" alt="Image Description">
                             @else
-                                <img class="img-fluid w-100"
+                                <img class="img-fluid g-width-300 g-height-150"
                                      src="{{url('/')}}/{{Illuminate\Support\Facades\Storage::url($popular->image_url)}}" alt="Image Description">
                             @endif
 
