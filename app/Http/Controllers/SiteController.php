@@ -61,6 +61,14 @@ class SiteController extends Controller
         return view('website.post',compact('post'));
     }
 
+    public function myPost($id,$name)
+    {
+        $post = Post::findOrFail($id);
+        $post->views = $post->views + 1;
+        $post->save();
+        return view('website.post',compact('post'));
+    }
+
     public function singlePost($id,$name)
     {
         $post = Post::findOrFail($id);

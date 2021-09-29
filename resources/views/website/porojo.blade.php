@@ -82,7 +82,7 @@
             <article class="text-center g-mb-10">
 
               <figure class="g-pos-rel mb-2 ">
-                  <a href="{{url('/')}}/post/{{$post->title}}/{{$post->id}}">
+                  <a href="{{url('/')}}/my_post/{{$post->id}}/{{$post->title}}">
                   @if($post->category->id == 5)
                       <img class="img-fluid"
                                    src="https://img.youtube.com/vi/{{$post->image_url}}/hqdefault.jpg"
@@ -159,7 +159,7 @@
               <div class="mb-1">
                 <h2 class="mb-2" style="font-size: 35px; text-align: left">
                     <a class="u-link-v5 g-color-main g-color-primary--hover"
-                       href="{{url('/')}}/post/{{$post->title}}/{{$post->id}}">
+                       href="{{url('/')}}/my_post/{{$post->id}}/{{$post->title}}">
                         {{$post->title}}</a>
                 </h2>
                 <p style="text-align: left !important;">
@@ -173,7 +173,7 @@
               <!-- End Info -->
 
               <div class="g-mb-3" style="text-align: left !important;">
-                <a class="g-font-weight-600 g-font-size-13 text-uppercase" href="{{url('/')}}/post/{{$post->title}}/{{$post->id}}">
+                <a class="g-font-weight-600 g-font-size-13 text-uppercase" href="{{url('/')}}/my_post/{{$post->id}}/{{$post->title}}">
                     Soma zaidi
                 </a>
               </div>
