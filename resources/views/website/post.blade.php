@@ -241,7 +241,7 @@
                 <div class="g-mb-10">
                   <div class="u-heading-v3-1 g-mb-10">
                     <h2 class="h5 u-heading-v3__title g-color-gray-dark-v1 text-uppercase g-brd-primary">
-                        Zinazofanana
+                        Zinazofanana na hii
                     </h2>
                   </div>
 
