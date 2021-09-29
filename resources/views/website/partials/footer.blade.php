@@ -42,7 +42,7 @@
                 <article class="media g-bg-white g-pa-10">
                   <figure class="d-flex g-width-70 g-height-70 g-pos-rel mr-3">
                       @if($popular->category->id == 5)
-                        <img class="img-fluid g-width-50 g-height-25"
+                        <img class="img-fluid g-width-100 g-height-50"
                            src="https://img.youtube.com/vi/{{$popular->image_url}}/0.jpg" alt="{{$popular->title}}">
                           <figcaption class="g-absolute-centered">
                               <a class="js-fancybox d-block" href="javascript:;"
@@ -55,7 +55,7 @@
                               </a>
                             </figcaption>
                       @else
-                          <img class="img-fluid g-width-50 g-height-25" src="{{url('/')}}/{{Illuminate\Support\Facades\Storage::url($popular->image_url)}}" alt="{{$popular->title}}">
+                          <img class="img-fluid g-width-100 g-height-50" src="{{url('/')}}/{{Illuminate\Support\Facades\Storage::url($popular->image_url)}}" alt="{{$popular->title}}">
                       @endif
 
                   </figure>
