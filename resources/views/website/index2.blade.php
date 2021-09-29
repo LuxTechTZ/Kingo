@@ -148,7 +148,7 @@
 
                         {{-- article --}}
                         <article class="u-block-hover mb-2">
-                            <a href="{{url('/')}}/post/{{$video->id}}/{{$video->title}}">
+                            <a href="{{url('/')}}/single_post/{{$video->id}}/{{$video->title}}">
                             <figure class="u-shadow-v25 g-bg-cover ">
                                 <iframe style="width: 100%; height: 150px"
                                       src="https://www.youtube.com/embed/{{$video->image_url}}"
