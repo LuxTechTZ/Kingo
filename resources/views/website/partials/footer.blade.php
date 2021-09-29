@@ -110,7 +110,7 @@
                     <!-- Listing & More -->
                       <div>
 
-                        <p style="font-family: 'Liberation Sans'; color: black">
+                        <p style="font-family: 'Liberation Sans'; color: black; font-size: 14px" >
                             Kingo ni jarida la katuni na vichekesho linalolenga kuburudisha <br>
                             kwa namna ya mizaha kupitia matukio ya kawaida katika jamii. <br>
                             Kwa zaidi ya miaka 28 ya uchapishaji Kingo, Kingo limejizolea umaarufu<br>
