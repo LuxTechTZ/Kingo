@@ -1,5 +1,5 @@
 <!-- Footer -->
-      <footer class="g-bg-secondary">
+      <footer class="g-bg-secondary" style="background-color: red">
         <div class="g-brd-bottom g-brd-secondary-light-v2 g-py-50 g-mb-50">
           <div class="container">
             <h3 class="h6 g-font-primary g-font-weight-700 text-uppercase mb-3">Zilizovuma!</h3>
