@@ -210,13 +210,13 @@
 
           <!-- Footer - Bottom Section -->
           <div class="row align-items-center">
-            <div class="col-md-4 g-brd-right--md g-brd-secondary-light-v2 g-mb-30">
+            <div class="col-md-4 mr-auto g-brd-secondary-light-v2 g-mb-30">
               <!-- Copyright -->
               <p class="g-color-secondary-light-v2 g-font-size-12 mb-0">&copy; {{date('Y')}} Kingo. Haki zimehifadhiwa</p>
               <!-- End Copyright -->
             </div>
 
-            <div class="col-md-8 g-brd-secondary-light-v2 g-mb-30">
+            <div class="col-md-8 ml-auto g-brd-secondary-light-v2 g-mb-30">
               <!-- Links -->
               <ul class="list-inline mb-0">
                 <li class="list-inline-item g-pl-0 g-pr-10">
