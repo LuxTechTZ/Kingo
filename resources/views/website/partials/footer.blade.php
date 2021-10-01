@@ -138,15 +138,15 @@
           <!-- Footer - Top Section -->
           <div class="g-brd-bottom g-brd-secondary-light-v2 g-mb-30">
             <div class="row align-items-center">
-              <div class="col-md-4 g-hidden-sm-down g-mb-30">
-                <!-- Logo -->
-                <a href="bm-classic-home-2.html">
-                  <img style="max-height: 70px" class="g-width-150" src="{{url('/')}}/assets-magazine/img/logo.png" alt="Kingo Logo">
-                </a>
-                <!-- End Logo -->
-              </div>
+{{--              <div class="col-md-4 g-hidden-sm-down g-mb-30">--}}
+{{--                <!-- Logo -->--}}
+{{--                <a href="bm-classic-home-2.html">--}}
+{{--                  <img style="max-height: 70px" class="g-width-150" src="{{url('/')}}/assets-magazine/img/logo.png" alt="Kingo Logo">--}}
+{{--                </a>--}}
+{{--                <!-- End Logo -->--}}
+{{--              </div>--}}
 
-              <div class="col-md-4 ml-auto g-mb-30">
+              <div class="col-md-4 mr-auto g-mb-30">
                 <!-- Social Icons -->
                 <ul class="list-inline mb-0">
                   <li class="list-inline-item g-mx-2">
@@ -210,24 +210,24 @@
 
           <!-- Footer - Bottom Section -->
           <div class="row align-items-center">
-            <div class="col-md-2 g-brd-right--md g-brd-secondary-light-v2 g-mb-30">
+            <div class="col-md-4 g-brd-right--md g-brd-secondary-light-v2 g-mb-30">
               <!-- Copyright -->
-              <p class="g-color-secondary-light-v2 g-font-size-12 mb-0">&copy; {{date('Y')}} Kingo.</p>
+              <p class="g-color-secondary-light-v2 g-font-size-12 mb-0">&copy; {{date('Y')}} Kingo. Haki zimehifadhiwa</p>
               <!-- End Copyright -->
             </div>
 
-            <div class="col-md-8 g-brd-right--md g-brd-secondary-light-v2 g-mb-30">
+            <div class="col-md-8 g-brd-secondary-light-v2 g-mb-30">
               <!-- Links -->
               <ul class="list-inline mb-0">
                 <li class="list-inline-item g-pl-0 g-pr-10">
-                  <a class="u-link-v5 g-color-secondary-light-v2 g-font-size-12" href="#!">Contact Us</a>
+                  <a class="u-link-v5 g-color-secondary-light-v2 g-font-size-12" href="#!">Wasiliana nasi</a>
                 </li>
                 <li class="list-inline-item g-px-10">
-                  <a class="u-link-v5 g-color-secondary-light-v2 g-font-size-12" href="#!">Help</a>
+                  <a class="u-link-v5 g-color-secondary-light-v2 g-font-size-12" href="#!">Msaada</a>
                 </li>
 
                 <li class="list-inline-item g-px-10">
-                  <a class="u-link-v5 g-color-secondary-light-v2 g-font-size-12" href="#!">Terms of Use</a>
+                  <a class="u-link-v5 g-color-secondary-light-v2 g-font-size-12" href="#!">Sera ya Matumizi</a>
                 </li>
 
               </ul>
