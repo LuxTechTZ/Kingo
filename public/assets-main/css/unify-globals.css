@@ -437,6 +437,10 @@
   background-color: #fafafa !important;
 }
 
+.g-bg-secondary-red {
+  background-color: red !important;
+}
+
 /* Primary Colors */
 .g-bg-primary {
   background-color: #72c02c !important;

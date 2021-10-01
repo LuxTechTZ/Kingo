@@ -115,18 +115,18 @@
                 <!-- Figcaption -->
                 <figcaption class="w-100 g-pos-abs g-bottom-0 g-left-0 ">
                   <ul class="d-flex justify-content-start list-inline mb-0 ">
-                    <li class="list-inline-item mx-0">
-                      <a class=" bg-dark d-inline-block g-brd-around g-brd-white-opacity-0_3 g-brd-primary-opacity-0_6--hover g-color-white g-bg-primary-opacity-0_6--hover g-text-underline--none--hover rounded-left g-px-15 g-py-4" href="#!">
-                        <i class="align-middle mr-2 icon-medical-022 u-line-icon-pro"></i>
-                          {{$post->likes}}
-                      </a>
-                    </li>
-                    <li class="list-inline-item g-ml-minus-1 mr-0">
-                      <a class="bg-dark d-inline-block g-brd-around g-brd-white-opacity-0_3 g-brd-primary-opacity-0_6--hover g-color-white g-bg-primary-opacity-0_6--hover g-text-underline--none--hover rounded-right g-px-15 g-py-4" href="#!">
-                        <i class="align-middle mr-2 icon-education-007 u-line-icon-pro"></i>
-                          {{$post->views}}
-                      </a>
-                    </li>
+{{--                    <li class="list-inline-item mx-0">--}}
+{{--                      <a class=" bg-dark d-inline-block g-brd-around g-brd-white-opacity-0_3 g-brd-primary-opacity-0_6--hover g-color-white g-bg-primary-opacity-0_6--hover g-text-underline--none--hover rounded-left g-px-15 g-py-4" href="#!">--}}
+{{--                        <i class="align-middle mr-2 icon-medical-022 u-line-icon-pro"></i>--}}
+{{--                          {{$post->likes}}--}}
+{{--                      </a>--}}
+{{--                    </li>--}}
+{{--                    <li class="list-inline-item g-ml-minus-1 mr-0">--}}
+{{--                      <a class="bg-dark d-inline-block g-brd-around g-brd-white-opacity-0_3 g-brd-primary-opacity-0_6--hover g-color-white g-bg-primary-opacity-0_6--hover g-text-underline--none--hover rounded-right g-px-15 g-py-4" href="#!">--}}
+{{--                        <i class="align-middle mr-2 icon-education-007 u-line-icon-pro"></i>--}}
+{{--                          {{$post->views}}--}}
+{{--                      </a>--}}
+{{--                    </li>--}}
                     <li class="list-inline-item ml-auto mr-0">
                       <a class="bg-dark d-inline-block g-color-white g-font-size-15 g-text-underline--none--hover g-px-15 g-py-4" href="#!"
                          data-toggle="tooltip"

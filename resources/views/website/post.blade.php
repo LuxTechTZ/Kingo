@@ -125,15 +125,15 @@
                     <li class="list-inline-item" style="font-family: 'ProximaNovaCond'" >
                       {{date('M d, Y',strtotime($post->post_date))}}
                     </li>
-                    <li class="list-inline-item g-mx-10">/</li>
-                    <li class="list-inline-item g-mr-10">
-                      <a class="u-link-v5 g-color-gray-dark-v4 g-color-primary--hover" href="#!">
-                        <i class="icon-finance-206 u-line-icon-pro align-middle g-pos-rel g-top-1 mr-1"></i> {{$post->shares}}
-                      </a>
-                    </li>
-                    <li class="list-inline-item ml-auto">
-                      <i class="icon-eye u-line-icon-pro align-middle mr-1"></i> Views {{$post->views}}
-                    </li>
+{{--                    <li class="list-inline-item g-mx-10">/</li>--}}
+{{--                    <li class="list-inline-item g-mr-10">--}}
+{{--                      <a class="u-link-v5 g-color-gray-dark-v4 g-color-primary--hover" href="#!">--}}
+{{--                        <i class="icon-finance-206 u-line-icon-pro align-middle g-pos-rel g-top-1 mr-1"></i> {{$post->shares}}--}}
+{{--                      </a>--}}
+{{--                    </li>--}}
+{{--                    <li class="list-inline-item ml-auto">--}}
+{{--                      <i class="icon-eye u-line-icon-pro align-middle mr-1"></i> Views {{$post->views}}--}}
+{{--                    </li>--}}
                   </ul>
 
                   <hr class="g-brd-gray-light-v4 g-my-5">
@@ -201,12 +201,12 @@
                 <!-- Social Shares -->
                 <div class="g-mb-10">
                   <ul class="list-inline text-uppercase mb-0">
-                    <li class="list-inline-item g-mr-10">
-                      <strong class="align-middle g-font-size-24">{{$post->views}}</strong>
-                    </li>
-                    <li class="list-inline-item g-mr-10">
-                      <span class="g-color-gray-dark-v5">|</span>
-                    </li>
+{{--                    <li class="list-inline-item g-mr-10">--}}
+{{--                      <strong class="align-middle g-font-size-24">{{$post->views}}</strong>--}}
+{{--                    </li>--}}
+{{--                    <li class="list-inline-item g-mr-10">--}}
+{{--                      <span class="g-color-gray-dark-v5">|</span>--}}
+{{--                    </li>--}}
 
                     <li class="list-inline-item g-mr-10">
                         <div>

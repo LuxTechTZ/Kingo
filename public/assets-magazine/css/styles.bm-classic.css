@@ -49399,6 +49399,11 @@ p {
   border-color: #e0e4ea !important;
 }
 
+.g-brd-secondary-light-v22 {
+  border-color: red !important;
+  background-color: red !important;
+}
+
 /*------------------------------------
   Placeholder
 ------------------------------------*/
