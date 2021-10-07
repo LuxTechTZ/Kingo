@@ -187,16 +187,16 @@
                                         <ul class="list-unstyled mb-0">
                                             <li class="g-brd-bottom g-brd-gray-light-v4 g-py-10">
                                                 <a class="g-color-main g-color-main--hover"
-                                                    href="{{url('/')}}/porojo">Porojo</a></li>
+                                                    href="{{url('/')}}/category/porojo">Porojo</a></li>
                                             <li class="g-brd-bottom g-brd-gray-light-v4 g-py-10">
                                                 <a class="g-color-main g-color-main--hover"
-                                                    href="{{url('/')}}/porojo">Zinazokiki</a></li>
+                                                    href="{{url('/')}}/category/porojo">Zinazokiki</a></li>
                                             <li class="g-brd-bottom g-brd-gray-light-v4 g-py-10">
                                                 <a class="g-color-main g-color-main--hover"
-                                                    href="{{url('/')}}/porojo">Mpya</a></li>
+                                                    href="{{url('/')}}/category/porojo">Mpya</a></li>
                                             <li class="g-brd-bottom g-brd-gray-light-v4 g-py-10">
                                                 <a class="g-color-main g-color-main--hover"
-                                                    href="{{url('/')}}/porojo">Vichekesho</a></li>
+                                                    href="{{url('/')}}/category/porojo">Vichekesho</a></li>
 
                                         </ul>
                                     </div>
@@ -262,16 +262,16 @@
                                         <ul class="list-unstyled mb-0">
                                             <li class="g-brd-bottom g-brd-gray-light-v4 g-py-10">
                                                 <a class="g-color-main g-color-main--hover"
-                                                    href="{{url('/')}}/domokaya">Domokaya</a></li>
+                                                    href="{{url('/')}}/category/domokaya">Domokaya</a></li>
                                             <li class="g-brd-bottom g-brd-gray-light-v4 g-py-10">
                                                 <a class="g-color-main g-color-main--hover"
-                                                    href="{{url('/')}}/domokaya">Zinazokiki</a></li>
+                                                    href="{{url('/')}}/category/domokaya">Zinazokiki</a></li>
                                             <li class="g-brd-bottom g-brd-gray-light-v4 g-py-10">
                                                 <a class="g-color-main g-color-main--hover"
-                                                    href="{{url('/')}}/domokaya">Mpya</a></li>
+                                                    href="{{url('/')}}/category/domokaya">Mpya</a></li>
                                             <li class="g-brd-bottom g-brd-gray-light-v4 g-py-10">
                                                 <a class="g-color-main g-color-main--hover"
-                                                    href="{{url('/')}}/domokaya">Vichekesho</a></li>
+                                                    href="{{url('/')}}/category/domokaya">Vichekesho</a></li>
 
                                         </ul>
                                     </div>
