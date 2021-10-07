@@ -1,5 +1,6 @@
 <!-- Footer -->
-      <footer class="g-bg-secondary">
+<hr>
+      <footer class="g-bg-white">
         <div class="g-brd-bottom g-brd-secondary-light-v2 g-py-50">
           <div class="container">
             <h3 class="h6 g-font-primary g-font-weight-700 text-uppercase mb-3">Zilizovuma!</h3>
