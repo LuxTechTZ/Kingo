@@ -201,8 +201,7 @@
                                         </ul>
                                     </div>
                                     <div class="col-lg-5">
-                                        @foreach(\App\Models\Post::where('post_category_id','1')->limit(6)->get() as
-                                        $poj)
+                                        @foreach(\App\Models\Post::where('post_category_id','1')->limit(6)->get() as $poj)
                                         <article class="media g-mb-20">
                                             <a class="d-flex mr-3"
                                                 href="{{url('/')}}/post/{{str_replace('?','',$poj->title)}}/{{$poj->id}}">
